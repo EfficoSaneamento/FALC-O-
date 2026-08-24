@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard SST · Falcão</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+<style>
+  :root {
+    color-scheme: light;
+    --surface-1:      #fcfcfb;
+    --page-plane:     #f9f9f7;
+    --text-primary:   #0b0b0b;
+    --text-secondary: #52514e;
+    --text-muted:     #898781;
+    --gridline:       #e1e0d9;
+    --baseline:       #c3c2b7;
+    --border:         rgba(11,11,11,0.10);
+    --series-1:       #2a78d6;
+    --status-good:      #0ca30c;
+    --status-warning:   #fab219;
+    --status-critical:  #d03b3b;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      color-scheme: dark;
+      --surface-1:      #1a1a19;
+      --page-plane:     #0d0d0d;
+      --text-primary:   #ffffff;
+      --text-secondary: #c3c2b7;
+      --text-muted:     #898781;
+      --gridline:       #2c2c2a;
+      --baseline:       #383835;
+      --border:         rgba(255,255,255,0.10);
+      --series-1:       #3987e5;
+      --status-good:      #0ca30c;
+      --status-warning:   #fab219;
+      --status-critical:  #d03b3b;
+    }
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--page-plane);
+    color: var(--text-primary);
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 24px 20px 60px; }
+
+  header.top { display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+  header.top h1 { font-size: 1.4rem; margin: 0; }
+  header.top .updated { font-size: 0.85rem; color: var(--text-muted); }
+
+  .controls { display: flex; align-items: center; gap: 10px; margin-bottom: 20px; }
+  .controls label { font-size: 0.85rem; color: var(--text-secondary); }
+  .controls select {
+    font-size: 0.9rem;
+    padding: 6px 10px;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    background: var(--surface-1);
+    color: var(--text-primary);
+  }
+
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin-bottom: 24px; }
+  .card {
+    background: var(--surface-1);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px;
+  }
+  .card .label { font-size: 0.78rem; color: var(--text-secondary); margin-bottom: 6px; }
+  .card .value { font-size: 1.7rem; font-weight: 600; font-variant-numeric: normal; }
+  .card .sub { font-size: 0.78rem; color: var(--text-muted); margin-top: 4px; }
+
+  .charts { display: grid; grid-template-columns: 2fr 1fr; gap: 12px; margin-bottom: 24px; }
+  @media (max-width: 800px) { .charts { grid-template-columns: 1fr; } }
+  .chart-box {
+    background: var(--surface-1);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px;
+  }
+  .chart-box h2 { font-size: 0.95rem; margin: 0 0 12px; font-weight: 600; }
+  .chart-box canvas { max-height: 260px; }
+
+  table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+  .table-box {
+    background: var(--surface-1);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px;
+    overflow-x: auto;
+  }
+  .table-box h2 { font-size: 0.95rem; margin: 0 0 12px; font-weight: 600; }
+  th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--gridline); white-space: nowrap; }
+  th { color: var(--text-secondary); font-weight: 600; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.02em; }
+  td.wrap-cell, th.wrap-cell { white-space: normal; min-width: 220px; }
+  td.num { font-variant-numeric: tabular-nums; text-align: right; }
+
+  .farol { display: inline-flex; align-items: center; gap: 6px; font-weight: 500; }
+
+  .state-msg { text-align: center; padding: 60px 20px; color: var(--text-secondary); }
+  .state-msg code { background: var(--surface-1); padding: 2px 6px; border-radius: 4px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <h1>Dashboard SST · Falcão</h1>
+    <span class="updated" id="updated-at"></span>
+  </header>
+
+  <div id="app" hidden>
+    <div class="controls">
+      <label for="mes-select">Mês de referência</label>
+      <select id="mes-select"></select>
+    </div>
+
+    <section class="cards" id="cards"></section>
+
+    <section class="charts">
+      <div class="chart-box">
+        <h2>Evolução da nota média SST</h2>
+        <canvas id="chart-evolucao"></canvas>
+      </div>
+      <div class="chart-box">
+        <h2>Contratos por farol no mês</h2>
+        <canvas id="chart-farol"></canvas>
+      </div>
+    </section>
+
+    <section class="table-box">
+      <h2>Contratos no mês selecionado</h2>
+      <table id="tabela-contratos">
+        <thead>
+          <tr>
+            <th>Contrato</th>
+            <th>Diretor</th>
+            <th>Gerente</th>
+            <th class="num">Nota SST</th>
+            <th>Farol</th>
+            <th class="num">Acidentes</th>
+            <th class="wrap-cell">Resumo de acidentes</th>
+            <th class="wrap-cell">Documentos reprovados</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+  </div>
+
+  <div class="state-msg" id="state-msg">Carregando dados…</div>
+</div>
+
+<script>
+const FAROL_LABEL = { verde: "Verde", amarelo: "Amarelo", vermelho: "Vermelho" };
+const FAROL_ICON = { verde: "🟢", amarelo: "🟡", vermelho: "🔴" };
+
+function cssVar(name) {
+  return getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+}
+
+function fmtNota(v) {
+  if (v === null || v === undefined) return "—";
+  return Number(v).toLocaleString("pt-BR", { maximumFractionDigits: 1 });
+}
+
+let DATA = null;
+let evolucaoChart = null;
+let farolChart = null;
+
+function renderCards(mesAno) {
+  const registros = DATA.registros.filter(r => r.mes_ano === mesAno);
+  const total = registros.length;
+  const media = total > 0
+    ? registros.reduce((s, r) => s + (r.nota_effico_sst || 0), 0) / total
+    : null;
+  const counts = { verde: 0, amarelo: 0, vermelho: 0 };
+  registros.forEach(r => { counts[r.farol] = (counts[r.farol] || 0) + 1; });
+  const acidentes = registros.reduce((s, r) => s + (r.qtd_acidentes || 0), 0);
+  const fatalidades = registros.reduce((s, r) => s + (r.qtd_fatalidades || 0), 0);
+
+  const pct = n => total > 0 ? Math.round((n / total) * 100) : 0;
+
+  const cards = document.getElementById("cards");
+  cards.innerHTML = `
+    <div class="card">
+      <div class="label">Contratos monitorados</div>
+      <div class="value">${total}</div>
+      <div class="sub">no mês selecionado</div>
+    </div>
+    <div class="card">
+      <div class="label">Nota média SST</div>
+      <div class="value">${fmtNota(media)}</div>
+      <div class="sub">escala consolidada</div>
+    </div>
+    <div class="card">
+      <div class="label">🟢 Verde / 🟡 Amarelo / 🔴 Vermelho</div>
+      <div class="value">${counts.verde} / ${counts.amarelo} / ${counts.vermelho}</div>
+      <div class="sub">${pct(counts.verde)}% verde no mês</div>
+    </div>
+    <div class="card">
+      <div class="label">Acidentes / Fatalidades</div>
+      <div class="value">${acidentes} / ${fatalidades}</div>
+      <div class="sub">no mês selecionado</div>
+    </div>
+  `;
+}
+
+function renderTabela(mesAno) {
+  const registros = DATA.registros
+    .filter(r => r.mes_ano === mesAno)
+    .slice()
+    .sort((a, b) => (a.nota_effico_sst ?? 0) - (b.nota_effico_sst ?? 0));
+
+  const tbody = document.querySelector("#tabela-contratos tbody");
+  if (registros.length === 0) {
+    tbody.innerHTML = `<tr><td colspan="8">Nenhum registro para este mês.</td></tr>`;
+    return;
+  }
+  tbody.innerHTML = registros.map(r => `
+    <tr>
+      <td>${r.id_pc ?? "—"}</td>
+      <td>${r.diretor ?? "—"}</td>
+      <td>${r.gerente ?? "—"}</td>
+      <td class="num">${fmtNota(r.nota_effico_sst)}</td>
+      <td><span class="farol ${r.farol}"><span class="dot"></span>${FAROL_ICON[r.farol] || ""} ${FAROL_LABEL[r.farol] || r.farol}</span></td>
+      <td class="num">${r.qtd_acidentes ?? 0}</td>
+      <td class="wrap-cell">${r.resumo_acidentes ?? "—"}</td>
+      <td class="wrap-cell">${r.documentos_reprovados ?? "—"}</td>
+    </tr>
+  `).join("");
+}
+
+function renderChartEvolucao() {
+  const labels = DATA.evolucao_mensal.map(e => e.mes_ano_label);
+  const valores = DATA.evolucao_mensal.map(e => e.media_nota_sst);
+  const ctx = document.getElementById("chart-evolucao");
+
+  if (evolucaoChart) evolucaoChart.destroy();
+  evolucaoChart = new Chart(ctx, {
+    type: "line",
+    data: {
+      labels,
+      datasets: [{
+        label: "Nota média SST",
+        data: valores,
+        borderColor: cssVar("--series-1"),
+        backgroundColor: cssVar("--series-1"),
+        borderWidth: 2,
+        pointRadius: 3,
+        pointHoverRadius: 5,
+        tension: 0.25,
+      }],
+    },
+    options: {
+      responsive: true,
+      plugins: { legend: { display: false } },
+      scales: {
+        x: { grid: { color: cssVar("--gridline") }, ticks: { color: cssVar("--text-muted") } },
+        y: { grid: { color: cssVar("--gridline") }, ticks: { color: cssVar("--text-muted") } },
+      },
+    },
+  });
+}
+
+function renderChartFarol(mesAno) {
+  const registros = DATA.registros.filter(r => r.mes_ano === mesAno);
+  const counts = { verde: 0, amarelo: 0, vermelho: 0 };
+  registros.forEach(r => { counts[r.farol] = (counts[r.farol] || 0) + 1; });
+
+  const ctx = document.getElementById("chart-farol");
+  if (farolChart) farolChart.destroy();
+  farolChart = new Chart(ctx, {
+    type: "bar",
+    data: {
+      labels: ["Verde", "Amarelo", "Vermelho"],
+      datasets: [{
+        data: [counts.verde, counts.amarelo, counts.vermelho],
+        backgroundColor: [cssVar("--status-good"), cssVar("--status-warning"), cssVar("--status-critical")],
+        borderRadius: 4,
+      }],
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        legend: { display: false },
+        tooltip: { callbacks: { label: (c) => `${c.raw} contrato(s)` } },
+      },
+      scales: {
+        x: { grid: { display: false }, ticks: { color: cssVar("--text-muted") } },
+        y: { beginAtZero: true, ticks: { precision: 0, color: cssVar("--text-muted") }, grid: { color: cssVar("--gridline") } },
+      },
+    },
+  });
+}
+
+function onMesChange() {
+  const mesAno = document.getElementById("mes-select").value;
+  renderCards(mesAno);
+  renderTabela(mesAno);
+  renderChartFarol(mesAno);
+}
+
+function init(data) {
+  DATA = data;
+  document.getElementById("state-msg").hidden = true;
+  document.getElementById("app").hidden = false;
+  document.getElementById("updated-at").textContent = data.gerado_em
+    ? `Atualizado em ${new Date(data.gerado_em).toLocaleString("pt-BR")}`
+    : "";
+
+  const meses = data.evolucao_mensal.map(e => ({ value: e.mes_ano, label: e.mes_ano_label }));
+  const select = document.getElementById("mes-select");
+  select.innerHTML = meses.map(m => `<option value="${m.value}">${m.label}</option>`).join("");
+  if (data.resumo && data.resumo.mes_mais_recente) {
+    select.value = data.resumo.mes_mais_recente;
+  } else if (meses.length > 0) {
+    select.value = meses[meses.length - 1].value;
+  }
+  select.addEventListener("change", onMesChange);
+
+  renderChartEvolucao();
+  onMesChange();
+}
+
+fetch("data/falcao_sst.json")
+  .then(r => {
+    if (!r.ok) throw new Error(`HTTP ${r.status}`);
+    return r.json();
+  })
+  .then(init)
+  .catch(err => {
+    document.getElementById("state-msg").innerHTML =
+      `Não foi possível carregar <code>data/falcao_sst.json</code>.<br>` +
+      `Rode o script de exportação localmente ou aguarde a primeira execução do GitHub Actions.<br>` +
+      `<small>${err.message}</small>`;
+  });
+</script>
+</body>
+</html>
