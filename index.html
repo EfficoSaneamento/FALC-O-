@@ -86,7 +86,7 @@
 
   /* ---- KPI row ---- */
   .kpi-row{
-    display:grid; grid-template-columns:repeat(4,1fr);
+    display:grid; grid-template-columns:repeat(auto-fit, minmax(190px, 1fr));
     gap:12px;
     margin-bottom:24px;
   }
@@ -103,9 +103,6 @@
   .kpi.is-highlight{ background:var(--accent-tint); border-color:var(--accent); border-left-color:var(--institutional); border-left-width:4px; }
   .kpi.is-highlight .kpi__label{ color:var(--institutional); }
   .kpi.is-highlight .kpi__value{ color:var(--institutional); font-size:1.85rem; }
-  @media (max-width:900px){ .kpi-row{ grid-template-columns:repeat(2,1fr); } }
-  @media (max-width:480px){ .kpi-row{ grid-template-columns:1fr; } }
-
   /* ---- layout ---- */
   .split{ display:grid; grid-template-columns:1.3fr 1fr; gap:16px; margin-bottom:16px; align-items:start; }
   @media (max-width:960px){ .split{ grid-template-columns:1fr; } }
