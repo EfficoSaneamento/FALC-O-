@@ -3,169 +3,254 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dashboard SST · Falcão</title>
+<title>Falcão SST · Gestão 360</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
 <style>
-  :root {
-    color-scheme: light;
-    --surface-1:      #fcfcfb;
-    --page-plane:     #f9f9f7;
-    --text-primary:   #0b0b0b;
-    --text-secondary: #52514e;
-    --text-muted:     #898781;
-    --gridline:       #e1e0d9;
-    --baseline:       #c3c2b7;
-    --border:         rgba(11,11,11,0.10);
-    --series-1:       #2a78d6;
-    --status-good:      #0ca30c;
-    --status-warning:   #fab219;
-    --status-critical:  #d03b3b;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root:not([data-theme="light"]) {
-      color-scheme: dark;
-      --surface-1:      #1a1a19;
-      --page-plane:     #0d0d0d;
-      --text-primary:   #ffffff;
-      --text-secondary: #c3c2b7;
-      --text-muted:     #898781;
-      --gridline:       #2c2c2a;
-      --baseline:       #383835;
-      --border:         rgba(255,255,255,0.10);
-      --series-1:       #3987e5;
-      --status-good:      #0ca30c;
-      --status-warning:   #fab219;
-      --status-critical:  #d03b3b;
-    }
-  }
+  :root{
+    --bg:            #172014;
+    --surface:        #263326;
+    --surface-raised: #2d3c2b;
+    --line:           #3a4a37;
+    --institutional:  #687B58;
+    --accent:         #A8C47A;
+    --text:           #D9E3C5;
+    --text-dim:       #8fa082;
+    --white:          #FFFFFF;
 
-  * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    background: var(--page-plane);
-    color: var(--text-primary);
-    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
-    -webkit-font-smoothing: antialiased;
+    --farol-verde:    #8fd15a;
+    --farol-amarelo:  #e0c15c;
+    --farol-vermelho: #e0766a;
+    --cat-documento:  #A8C47A;
+    --cat-evento:     #7FB8C4;
+    --cat-ocorrencia: #D9A253;
+    --cat-deflator:   #C4645A;
+
+    --f-display: 'Inter', -apple-system, 'Segoe UI', sans-serif;
+    --f-body:    'Inter', -apple-system, 'Segoe UI', sans-serif;
+    --f-mono:    'IBM Plex Mono', 'SFMono-Regular', monospace;
+
+    --radius: 3px;
+    --gutter: clamp(20px, 5vw, 64px);
+    --maxw: 1360px;
   }
-  .wrap { max-width: 1180px; margin: 0 auto; padding: 24px 20px 60px; }
+  *,*::before,*::after{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family:var(--f-body);
+    font-size:15px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  .container{ max-width:var(--maxw); margin-inline:auto; padding-inline:var(--gutter); }
+  ::selection{ background:var(--accent); color:var(--bg); }
 
-  header.top { display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
-  header.top h1 { font-size: 1.4rem; margin: 0; }
-  header.top .updated { font-size: 0.85rem; color: var(--text-muted); }
-
-  .controls { display: flex; align-items: center; gap: 10px; margin-bottom: 20px; }
-  .controls label { font-size: 0.85rem; color: var(--text-secondary); }
-  .controls select {
-    font-size: 0.9rem;
-    padding: 6px 10px;
-    border-radius: 6px;
-    border: 1px solid var(--border);
-    background: var(--surface-1);
-    color: var(--text-primary);
+  .grid-field{
+    position:fixed; inset:0; pointer-events:none; z-index:0;
+    background-image:
+      linear-gradient(var(--line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--line) 1px, transparent 1px);
+    background-size: 64px 64px;
+    opacity:0.12;
+    mask-image: radial-gradient(ellipse at 50% 0%, black 0%, transparent 75%);
   }
 
-  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin-bottom: 24px; }
-  .card {
-    background: var(--surface-1);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 16px;
+  /* ---- navbar ---- */
+  .navbar{
+    position:sticky; top:0; z-index:100;
+    background:rgba(23,32,20,0.9);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
   }
-  .card .label { font-size: 0.78rem; color: var(--text-secondary); margin-bottom: 6px; }
-  .card .value { font-size: 1.7rem; font-weight: 600; font-variant-numeric: normal; }
-  .card .sub { font-size: 0.78rem; color: var(--text-muted); margin-top: 4px; }
-
-  .charts { display: grid; grid-template-columns: 2fr 1fr; gap: 12px; margin-bottom: 24px; }
-  @media (max-width: 800px) { .charts { grid-template-columns: 1fr; } }
-  .chart-box {
-    background: var(--surface-1);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 16px;
+  .navbar__inner{
+    display:flex; align-items:center; justify-content:space-between;
+    gap:24px; height:68px; flex-wrap:wrap;
   }
-  .chart-box h2 { font-size: 0.95rem; margin: 0 0 12px; font-weight: 600; }
-  .chart-box canvas { max-height: 260px; }
+  .navbar__brand{ display:flex; align-items:center; gap:12px; }
+  .navbar__mark{ width:30px; height:30px; border:1.5px solid var(--accent); border-radius:2px; position:relative; flex-shrink:0; }
+  .navbar__mark::before, .navbar__mark::after{ content:''; position:absolute; background:var(--accent); }
+  .navbar__mark::before{ top:50%; left:20%; right:20%; height:1.5px; transform:translateY(-50%); }
+  .navbar__mark::after{ left:50%; top:20%; bottom:20%; width:1.5px; transform:translateX(-50%); }
+  .navbar__name{ display:flex; flex-direction:column; line-height:1.15; }
+  .navbar__name b{ font-family:var(--f-display); font-weight:800; font-size:15px; letter-spacing:0.02em; color:var(--white); }
+  .navbar__name span{ font-family:var(--f-mono); font-size:10.5px; color:var(--text-dim); letter-spacing:0.06em; }
+  .navbar__meta{ font-family:var(--f-mono); font-size:11px; color:var(--text-dim); }
 
-  table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
-  .table-box {
-    background: var(--surface-1);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 16px;
-    overflow-x: auto;
+  .month-select{
+    font-family:var(--f-mono); font-size:12px; letter-spacing:0.04em;
+    background:var(--surface); border:1px solid var(--line); color:var(--accent);
+    padding:9px 14px; border-radius:2px; cursor:pointer;
   }
-  .table-box h2 { font-size: 0.95rem; margin: 0 0 12px; font-weight: 600; }
-  th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--gridline); white-space: nowrap; }
-  th { color: var(--text-secondary); font-weight: 600; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.02em; }
-  td.wrap-cell, th.wrap-cell { white-space: normal; min-width: 220px; }
-  td.num { font-variant-numeric: tabular-nums; text-align: right; }
+  .month-select:focus-visible{ outline:2px solid var(--accent); outline-offset:2px; }
 
-  .farol { display: inline-flex; align-items: center; gap: 6px; font-weight: 500; }
+  .page-body{ padding-block:36px 96px; position:relative; z-index:1; }
+  h2.section-title{
+    font-family:var(--f-mono); font-size:11px; letter-spacing:0.14em; text-transform:uppercase;
+    color:var(--institutional); margin:0 0 16px;
+  }
 
-  .state-msg { text-align: center; padding: 60px 20px; color: var(--text-secondary); }
-  .state-msg code { background: var(--surface-1); padding: 2px 6px; border-radius: 4px; }
+  /* ---- KPI row ---- */
+  .kpi-row{
+    display:grid; grid-template-columns:repeat(4,1fr);
+    border-top:1px solid var(--line); border-left:1px solid var(--line);
+    margin-bottom:40px;
+  }
+  .kpi{ border-right:1px solid var(--line); border-bottom:1px solid var(--line); padding:22px 20px; background:var(--surface); }
+  .kpi__label{ font-family:var(--f-mono); font-size:10.5px; letter-spacing:0.06em; color:var(--text-dim); margin-bottom:10px; text-transform:uppercase; }
+  .kpi__value{ font-family:var(--f-mono); font-weight:600; font-size:1.7rem; color:var(--accent); }
+  .kpi__sub{ font-size:11.5px; color:var(--institutional); margin-top:6px; font-family:var(--f-mono); }
+  .kpi.is-negative .kpi__value{ color:var(--farol-vermelho); }
+  .kpi.is-highlight{ background:var(--accent); }
+  .kpi.is-highlight .kpi__label{ color:rgba(23,32,20,0.65); }
+  .kpi.is-highlight .kpi__value{ color:var(--bg); font-size:1.9rem; }
+  .kpi.is-highlight .kpi__sub{ color:rgba(23,32,20,0.75); }
+  @media (max-width:900px){ .kpi-row{ grid-template-columns:repeat(2,1fr); } }
+  @media (max-width:480px){ .kpi-row{ grid-template-columns:1fr; } }
+
+  /* ---- layout ---- */
+  .split{ display:grid; grid-template-columns:1.3fr 1fr; gap:24px; margin-bottom:24px; align-items:start; }
+  @media (max-width:960px){ .split{ grid-template-columns:1fr; } }
+  .panel{ background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); padding:22px; }
+  .panel h3{ font-family:var(--f-mono); font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:var(--institutional); margin:0 0 18px; }
+  .panel-scroll{ max-height:420px; overflow-y:auto; }
+
+  /* ---- data table ---- */
+  .data-table{ width:100%; border-collapse:collapse; font-size:12.5px; }
+  .data-table th{
+    text-align:left; font-family:var(--f-mono); font-size:10px; letter-spacing:0.05em; text-transform:uppercase;
+    color:var(--text-dim); padding:9px 12px; border-bottom:1px solid var(--line);
+    background:var(--surface);
+  }
+  .data-table td{ padding:11px 12px; border-bottom:1px solid var(--line); color:var(--text); font-family:var(--f-mono); }
+  .data-table td.prose{ font-family:var(--f-body); }
+  .data-table tr{ cursor:pointer; }
+  .data-table tr:hover td{ background:rgba(168,196,122,0.06); }
+  .data-table tr.is-selected td{ background:rgba(168,196,122,0.12); }
+  .data-table td.num{ text-align:right; }
+
+  .tag{
+    font-family:var(--f-mono); font-size:10px; letter-spacing:0.03em; padding:3px 9px;
+    border-radius:2px; border:1px solid var(--line); color:var(--accent); white-space:nowrap; display:inline-block;
+  }
+  .tag.farol-verde{ color:var(--farol-verde); border-color:rgba(143,209,90,0.4); }
+  .tag.farol-amarelo{ color:var(--farol-amarelo); border-color:rgba(224,193,92,0.4); }
+  .tag.farol-vermelho{ color:var(--farol-vermelho); border-color:rgba(224,118,106,0.4); }
+  .tag-list{ display:flex; flex-wrap:wrap; gap:6px; }
+
+  /* ---- detail panel ---- */
+  .detail-head{ display:flex; justify-content:space-between; align-items:flex-start; gap:16px; margin-bottom:18px; flex-wrap:wrap; }
+  .detail-head__id{ font-family:var(--f-display); font-weight:700; font-size:1.1rem; color:var(--white); }
+  .detail-head__meta{ font-family:var(--f-mono); font-size:11px; color:var(--text-dim); margin-top:2px; }
+  .detail-score{ text-align:right; }
+  .detail-score__value{ font-family:var(--f-mono); font-weight:600; font-size:1.6rem; color:var(--accent); }
+  .detail-score__scale{ font-family:var(--f-mono); font-size:10.5px; color:var(--text-dim); }
+
+  .subscore-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:10px; margin-bottom:20px; }
+  @media (max-width:640px){ .subscore-grid{ grid-template-columns:repeat(2,1fr); } }
+  .subscore{ background:var(--bg); border:1px solid var(--line); border-radius:2px; padding:10px 12px; }
+  .subscore__label{ font-family:var(--f-mono); font-size:9.5px; color:var(--text-dim); text-transform:uppercase; letter-spacing:0.04em; }
+  .subscore__value{ font-family:var(--f-mono); font-size:1rem; color:var(--text); margin-top:4px; }
+
+  .mini-table{ width:100%; border-collapse:collapse; font-size:12px; margin-bottom:18px; }
+  .mini-table td{ padding:6px 0; border-bottom:1px dashed var(--line); font-family:var(--f-mono); color:var(--text-dim); }
+  .mini-table td:last-child{ text-align:right; color:var(--text); }
+  .mini-table tr:last-child td{ border-bottom:none; }
+
+  .detail-block{ margin-bottom:18px; }
+  .detail-block:last-child{ margin-bottom:0; }
+  .detail-block__label{ font-family:var(--f-mono); font-size:10px; letter-spacing:0.05em; text-transform:uppercase; color:var(--institutional); margin-bottom:8px; }
+  .detail-block__prose{ font-size:12.5px; color:var(--text); line-height:1.5; }
+
+  canvas{ max-width:100%; }
+  .composicao-wrap{ position:relative; }
+
+  .state-msg{ text-align:center; padding:80px 20px; color:var(--text-dim); font-family:var(--f-mono); font-size:13px; position:relative; z-index:1; }
+  .state-msg code{ background:var(--surface); padding:2px 6px; border-radius:2px; color:var(--accent); }
 </style>
 </head>
 <body>
-<div class="wrap">
-  <header class="top">
-    <h1>Dashboard SST · Falcão</h1>
-    <span class="updated" id="updated-at"></span>
-  </header>
+<div class="grid-field"></div>
 
-  <div id="app" hidden>
-    <div class="controls">
-      <label for="mes-select">Mês de referência</label>
-      <select id="mes-select"></select>
-    </div>
-
-    <section class="cards" id="cards"></section>
-
-    <section class="charts">
-      <div class="chart-box">
-        <h2>Evolução da nota média SST</h2>
-        <canvas id="chart-evolucao"></canvas>
+<nav class="navbar">
+  <div class="container navbar__inner">
+    <div class="navbar__brand">
+      <div class="navbar__mark"></div>
+      <div class="navbar__name">
+        <b>FALCÃO SST · GESTÃO 360</b>
+        <span>EFFICO SANEAMENTO</span>
       </div>
-      <div class="chart-box">
-        <h2>Contratos por farol no mês</h2>
-        <canvas id="chart-farol"></canvas>
+    </div>
+    <div style="display:flex; align-items:center; gap:16px;">
+      <span class="navbar__meta" id="updated-at"></span>
+      <select id="mes-select" class="month-select"></select>
+    </div>
+  </div>
+</nav>
+
+<div id="app" hidden>
+  <div class="container page-body">
+    <section class="kpi-row" id="kpi-row"></section>
+
+    <section class="split">
+      <div class="panel">
+        <h3 id="ranking-title">Ranking de contratos</h3>
+        <div class="panel-scroll">
+          <table class="data-table" id="tabela-ranking">
+            <thead>
+              <tr>
+                <th>PC</th>
+                <th>Diretor</th>
+                <th>Gerente</th>
+                <th class="num">Nota</th>
+                <th>Farol</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+      <div class="panel">
+        <h3>Evolução da nota média SST</h3>
+        <canvas id="chart-evolucao" height="220"></canvas>
       </div>
     </section>
 
-    <section class="table-box">
-      <h2>Contratos no mês selecionado</h2>
-      <table id="tabela-contratos">
-        <thead>
-          <tr>
-            <th>Contrato</th>
-            <th>Diretor</th>
-            <th>Gerente</th>
-            <th class="num">Nota SST</th>
-            <th>Farol</th>
-            <th class="num">Acidentes</th>
-            <th class="wrap-cell">Resumo de acidentes</th>
-            <th class="wrap-cell">Documentos reprovados</th>
-          </tr>
-        </thead>
-        <tbody></tbody>
-      </table>
+    <section class="split">
+      <div class="panel" id="panel-detalhe"></div>
+      <div class="panel">
+        <h3>Farol dos contratos no mês</h3>
+        <canvas id="chart-farol" height="220"></canvas>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h3>Composição da nota por contrato — documento · evento · ocorrência · deflator</h3>
+      <div class="composicao-wrap">
+        <canvas id="chart-composicao"></canvas>
+      </div>
     </section>
   </div>
-
-  <div class="state-msg" id="state-msg">Carregando dados…</div>
 </div>
+
+<div class="state-msg" id="state-msg">Carregando dados…</div>
 
 <script>
 const FAROL_LABEL = { verde: "Verde", amarelo: "Amarelo", vermelho: "Vermelho" };
 const FAROL_ICON = { verde: "🟢", amarelo: "🟡", vermelho: "🔴" };
+const FAROL_VAR = { verde: "--farol-verde", amarelo: "--farol-amarelo", vermelho: "--farol-vermelho" };
 
 function cssVar(name) {
   return getComputedStyle(document.documentElement).getPropertyValue(name).trim();
 }
 
-// Escapa qualquer texto vindo do ArcGIS antes de inserir no innerHTML —
-// os campos de texto (diretor, gerente, resumos) são preenchidos por
-// usuários do formulário e não podem ser tratados como HTML confiável.
+// Escapa texto vindo do ArcGIS antes de inserir no innerHTML — campos de
+// texto (diretor, gerente, resumos) são preenchidos por usuários do
+// formulário e não podem ser tratados como HTML confiável.
 function esc(v) {
   if (v === null || v === undefined) return "—";
   return String(v)
@@ -176,93 +261,165 @@ function esc(v) {
     .replace(/'/g, "&#39;");
 }
 
-function fmtNota(v) {
+function fmtNota(v, opts) {
   if (v === null || v === undefined) return "—";
-  return Number(v).toLocaleString("pt-BR", { maximumFractionDigits: 1 });
+  return Number(v).toLocaleString("pt-BR", { maximumFractionDigits: (opts && opts.decimals) ?? 1 });
+}
+
+function farolTag(farol) {
+  return `<span class="tag farol-${esc(farol)}">${FAROL_ICON[farol] || ""} ${esc(FAROL_LABEL[farol] || farol)}</span>`;
 }
 
 let DATA = null;
-let evolucaoChart = null;
-let farolChart = null;
+let selectedPc = null;
+let charts = {};
 
-function renderCards(mesAno) {
-  const registros = DATA.registros.filter(r => r.mes_ano === mesAno);
-  const total = registros.length;
-  const media = total > 0
-    ? registros.reduce((s, r) => s + (r.nota_effico_sst || 0), 0) / total
-    : null;
-  const counts = { verde: 0, amarelo: 0, vermelho: 0 };
-  registros.forEach(r => { counts[r.farol] = (counts[r.farol] || 0) + 1; });
-  const acidentes = registros.reduce((s, r) => s + (r.qtd_acidentes || 0), 0);
-  const fatalidades = registros.reduce((s, r) => s + (r.qtd_fatalidades || 0), 0);
+Chart.defaults.font.family = "'IBM Plex Mono', 'SFMono-Regular', monospace";
+Chart.defaults.font.size = 11;
+Chart.defaults.color = "#8fa082";
 
-  const pct = n => total > 0 ? Math.round((n / total) * 100) : 0;
-
-  const cards = document.getElementById("cards");
-  cards.innerHTML = `
-    <div class="card">
-      <div class="label">Contratos monitorados</div>
-      <div class="value">${total}</div>
-      <div class="sub">no mês selecionado</div>
-    </div>
-    <div class="card">
-      <div class="label">Nota média SST</div>
-      <div class="value">${fmtNota(media)}</div>
-      <div class="sub">escala consolidada</div>
-    </div>
-    <div class="card">
-      <div class="label">🟢 Verde / 🟡 Amarelo / 🔴 Vermelho</div>
-      <div class="value">${counts.verde} / ${counts.amarelo} / ${counts.vermelho}</div>
-      <div class="sub">${pct(counts.verde)}% verde no mês</div>
-    </div>
-    <div class="card">
-      <div class="label">Acidentes / Fatalidades</div>
-      <div class="value">${acidentes} / ${fatalidades}</div>
-      <div class="sub">no mês selecionado</div>
-    </div>
-  `;
+function registrosDoMes(mesAno) {
+  return DATA.registros.filter(r => r.mes_ano === mesAno);
 }
 
-function renderTabela(mesAno) {
-  const registros = DATA.registros
-    .filter(r => r.mes_ano === mesAno)
-    .slice()
-    .sort((a, b) => (a.nota_effico_sst ?? 0) - (b.nota_effico_sst ?? 0));
+function renderKPIs(mesAno) {
+  const registros = registrosDoMes(mesAno);
+  const total = registros.length;
+  const avg = (key) => total > 0 ? registros.reduce((s, r) => s + (r[key] || 0), 0) / total : 0;
+  const sum = (key) => registros.reduce((s, r) => s + (r[key] || 0), 0);
+  const acidentes = sum("qtd_acidentes");
+  const fatalidades = sum("qtd_fatalidades");
+  const counts = { verde: 0, amarelo: 0, vermelho: 0 };
+  registros.forEach(r => { counts[r.farol] = (counts[r.farol] || 0) + 1; });
 
-  const tbody = document.querySelector("#tabela-contratos tbody");
+  const tiles = [
+    { label: "Contratos monitorados", value: total, sub: "no período" },
+    { label: "Nota documentação", value: fmtNota(avg("nota_documento")), sub: "média do período" },
+    { label: "Nota eventos", value: fmtNota(avg("nota_evento")), sub: "média do período" },
+    { label: "Nota ocorrências", value: fmtNota(avg("nota_ocorrencia")), sub: "média do período" },
+    { label: "Nota deflatores", value: fmtNota(sum("nota_deflatores")), sub: "soma do período", negative: true },
+    { label: "Acidentes / fatalidades", value: `${acidentes} / ${fatalidades}`, sub: "no período" },
+    { label: "Farol · verde / amarelo / vermelho", value: `${counts.verde} / ${counts.amarelo} / ${counts.vermelho}`, sub: `${total > 0 ? Math.round((counts.verde/total)*100) : 0}% verde` },
+    { label: "Nota Falcão SST", value: fmtNota(avg("nota_effico_sst")), sub: "média do período", highlight: true },
+  ];
+
+  document.getElementById("kpi-row").innerHTML = tiles.map(t => `
+    <div class="kpi ${t.negative ? "is-negative" : ""} ${t.highlight ? "is-highlight" : ""}">
+      <div class="kpi__label">${esc(t.label)}</div>
+      <div class="kpi__value">${t.value}</div>
+      <div class="kpi__sub">${esc(t.sub)}</div>
+    </div>
+  `).join("");
+}
+
+function renderRanking(mesAno) {
+  const registros = registrosDoMes(mesAno).slice().sort((a, b) => (a.nota_effico_sst ?? 0) - (b.nota_effico_sst ?? 0));
+  document.getElementById("ranking-title").textContent = `Ranking de contratos — ${DATA.registros.find(r => r.mes_ano === mesAno)?.mes_ano_label || ""}`;
+
+  const tbody = document.querySelector("#tabela-ranking tbody");
   if (registros.length === 0) {
-    tbody.innerHTML = `<tr><td colspan="8">Nenhum registro para este mês.</td></tr>`;
+    tbody.innerHTML = `<tr><td colspan="5">Nenhum registro para este mês.</td></tr>`;
     return;
   }
+  if (!registros.some(r => r.id_pc === selectedPc)) {
+    selectedPc = registros[0].id_pc;
+  }
   tbody.innerHTML = registros.map(r => `
-    <tr>
+    <tr data-pc="${esc(r.id_pc)}" class="${r.id_pc === selectedPc ? "is-selected" : ""}">
       <td>${esc(r.id_pc)}</td>
-      <td>${esc(r.diretor)}</td>
-      <td>${esc(r.gerente)}</td>
+      <td class="prose">${esc(r.diretor)}</td>
+      <td class="prose">${esc(r.gerente)}</td>
       <td class="num">${fmtNota(r.nota_effico_sst)}</td>
-      <td><span class="farol ${esc(r.farol)}">${FAROL_ICON[r.farol] || ""} ${esc(FAROL_LABEL[r.farol] || r.farol)}</span></td>
-      <td class="num">${r.qtd_acidentes ?? 0}</td>
-      <td class="wrap-cell">${esc(r.resumo_acidentes)}</td>
-      <td class="wrap-cell">${esc(r.documentos_reprovados)}</td>
+      <td>${farolTag(r.farol)}</td>
     </tr>
   `).join("");
+
+  tbody.querySelectorAll("tr[data-pc]").forEach(tr => {
+    tr.addEventListener("click", () => {
+      selectedPc = isNaN(Number(tr.dataset.pc)) ? tr.dataset.pc : Number(tr.dataset.pc);
+      renderRanking(mesAno);
+      renderDetalhe(mesAno);
+    });
+  });
+}
+
+function renderDetalhe(mesAno) {
+  const registros = registrosDoMes(mesAno);
+  const r = registros.find(x => x.id_pc === selectedPc) || registros[0];
+  const panel = document.getElementById("panel-detalhe");
+  if (!r) {
+    panel.innerHTML = `<h3>Detalhamento do contrato</h3><p style="color:var(--text-dim); font-size:12.5px;">Nenhum contrato no período.</p>`;
+    return;
+  }
+
+  const docs = (r.documentos_reprovados && r.documentos_reprovados !== "Nenhum documento reprovado no período")
+    ? r.documentos_reprovados.split(" • ").map(d => `<span class="tag">${esc(d)}</span>`).join("")
+    : `<span style="color:var(--text-dim); font-size:12px;">Nenhum documento reprovado no período</span>`;
+
+  panel.innerHTML = `
+    <h3>Detalhamento do contrato</h3>
+    <div class="detail-head">
+      <div>
+        <div class="detail-head__id">PC ${esc(r.id_pc)}</div>
+        <div class="detail-head__meta">${esc(r.diretor)} · ${esc(r.gerente)} · ${esc(r.mes_ano_label)}</div>
+      </div>
+      <div class="detail-score">
+        <div class="detail-score__value">${fmtNota(r.nota_effico_sst)}</div>
+        <div class="detail-score__scale">de 2.300 pontos</div>
+        ${farolTag(r.farol)}
+      </div>
+    </div>
+
+    <div class="subscore-grid">
+      <div class="subscore"><div class="subscore__label">Documento</div><div class="subscore__value">${fmtNota(r.nota_documento)}</div></div>
+      <div class="subscore"><div class="subscore__label">Evento</div><div class="subscore__value">${fmtNota(r.nota_evento)}</div></div>
+      <div class="subscore"><div class="subscore__label">Ocorrência</div><div class="subscore__value">${fmtNota(r.nota_ocorrencia)}</div></div>
+      <div class="subscore"><div class="subscore__label">Deflatores</div><div class="subscore__value">${fmtNota(r.nota_deflatores)}</div></div>
+    </div>
+
+    <div class="detail-block">
+      <div class="detail-block__label">Acidentes do período</div>
+      <table class="mini-table">
+        <tr><td>Total de acidentes</td><td>${r.qtd_acidentes ?? 0}</td></tr>
+        <tr><td>Com afastamento</td><td>${r.qtd_acidentes_afastamento ?? 0}</td></tr>
+        <tr><td>Sem afastamento</td><td>${r.qtd_acidentes_sem_afastamento ?? 0}</td></tr>
+        <tr><td>Fatalidades</td><td>${r.qtd_fatalidades ?? 0}</td></tr>
+      </table>
+      <div class="detail-block__prose">${esc(r.resumo_acidentes)}</div>
+    </div>
+
+    <div class="detail-block">
+      <div class="detail-block__label">Documentos reprovados</div>
+      <div class="tag-list">${docs}</div>
+    </div>
+
+    <div class="detail-block">
+      <div class="detail-block__label">Eventos SST</div>
+      <table class="mini-table">
+        <tr><td>Total realizado</td><td>${r.qtd_registros_eventos ?? 0}</td></tr>
+        <tr><td>DDS</td><td>${r.qtd_dds ?? 0}</td></tr>
+        <tr><td>Campanha SST</td><td>${r.qtd_campanha_sst ?? 0}</td></tr>
+        <tr><td>Saúde mental</td><td>${r.qtd_saude_mental ?? 0}</td></tr>
+      </table>
+      <div class="detail-block__prose">${esc(r.eventos_realizados)}</div>
+    </div>
+  `;
 }
 
 function renderChartEvolucao() {
   const labels = DATA.evolucao_mensal.map(e => e.mes_ano_label);
   const valores = DATA.evolucao_mensal.map(e => e.media_nota_sst);
   const ctx = document.getElementById("chart-evolucao");
-
-  if (evolucaoChart) evolucaoChart.destroy();
-  evolucaoChart = new Chart(ctx, {
+  if (charts.evolucao) charts.evolucao.destroy();
+  charts.evolucao = new Chart(ctx, {
     type: "line",
     data: {
       labels,
       datasets: [{
         label: "Nota média SST",
         data: valores,
-        borderColor: cssVar("--series-1"),
-        backgroundColor: cssVar("--series-1"),
+        borderColor: cssVar("--accent"),
+        backgroundColor: cssVar("--accent"),
         borderWidth: 2,
         pointRadius: 3,
         pointHoverRadius: 5,
@@ -273,28 +430,28 @@ function renderChartEvolucao() {
       responsive: true,
       plugins: { legend: { display: false } },
       scales: {
-        x: { grid: { color: cssVar("--gridline") }, ticks: { color: cssVar("--text-muted") } },
-        y: { grid: { color: cssVar("--gridline") }, ticks: { color: cssVar("--text-muted") } },
+        x: { grid: { color: cssVar("--line") }, ticks: { color: cssVar("--text-dim") } },
+        y: { grid: { color: cssVar("--line") }, ticks: { color: cssVar("--text-dim") } },
       },
     },
   });
 }
 
 function renderChartFarol(mesAno) {
-  const registros = DATA.registros.filter(r => r.mes_ano === mesAno);
+  const registros = registrosDoMes(mesAno);
   const counts = { verde: 0, amarelo: 0, vermelho: 0 };
   registros.forEach(r => { counts[r.farol] = (counts[r.farol] || 0) + 1; });
 
   const ctx = document.getElementById("chart-farol");
-  if (farolChart) farolChart.destroy();
-  farolChart = new Chart(ctx, {
+  if (charts.farol) charts.farol.destroy();
+  charts.farol = new Chart(ctx, {
     type: "bar",
     data: {
       labels: ["Verde", "Amarelo", "Vermelho"],
       datasets: [{
         data: [counts.verde, counts.amarelo, counts.vermelho],
-        backgroundColor: [cssVar("--status-good"), cssVar("--status-warning"), cssVar("--status-critical")],
-        borderRadius: 4,
+        backgroundColor: [cssVar("--farol-verde"), cssVar("--farol-amarelo"), cssVar("--farol-vermelho")],
+        borderRadius: 2,
       }],
     },
     options: {
@@ -304,8 +461,44 @@ function renderChartFarol(mesAno) {
         tooltip: { callbacks: { label: (c) => `${c.raw} contrato(s)` } },
       },
       scales: {
-        x: { grid: { display: false }, ticks: { color: cssVar("--text-muted") } },
-        y: { beginAtZero: true, ticks: { precision: 0, color: cssVar("--text-muted") }, grid: { color: cssVar("--gridline") } },
+        x: { grid: { display: false }, ticks: { color: cssVar("--text-dim") } },
+        y: { beginAtZero: true, ticks: { precision: 0, color: cssVar("--text-dim") }, grid: { color: cssVar("--line") } },
+      },
+    },
+  });
+}
+
+function renderChartComposicao(mesAno) {
+  const registros = registrosDoMes(mesAno).slice().sort((a, b) => (a.nota_effico_sst ?? 0) - (b.nota_effico_sst ?? 0));
+  const labels = registros.map(r => `PC ${r.id_pc}`);
+  const ctx = document.getElementById("chart-composicao");
+
+  const container = ctx.parentElement;
+  container.style.height = Math.max(220, registros.length * 32) + "px";
+  ctx.style.height = "100%";
+
+  if (charts.composicao) charts.composicao.destroy();
+  charts.composicao = new Chart(ctx, {
+    type: "bar",
+    data: {
+      labels,
+      datasets: [
+        { label: "Documento", data: registros.map(r => r.nota_documento || 0), backgroundColor: cssVar("--cat-documento") },
+        { label: "Evento", data: registros.map(r => r.nota_evento || 0), backgroundColor: cssVar("--cat-evento") },
+        { label: "Ocorrência", data: registros.map(r => r.nota_ocorrencia || 0), backgroundColor: cssVar("--cat-ocorrencia") },
+        { label: "Deflator", data: registros.map(r => r.nota_deflatores || 0), backgroundColor: cssVar("--cat-deflator") },
+      ],
+    },
+    options: {
+      indexAxis: "y",
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { position: "top", labels: { color: cssVar("--text-dim"), boxWidth: 12, font: { size: 10.5 } } },
+      },
+      scales: {
+        x: { stacked: true, grid: { color: cssVar("--line") }, ticks: { color: cssVar("--text-dim") } },
+        y: { stacked: true, grid: { display: false }, ticks: { color: cssVar("--text-dim"), font: { size: 10 } } },
       },
     },
   });
@@ -313,9 +506,12 @@ function renderChartFarol(mesAno) {
 
 function onMesChange() {
   const mesAno = document.getElementById("mes-select").value;
-  renderCards(mesAno);
-  renderTabela(mesAno);
+  selectedPc = null;
+  renderKPIs(mesAno);
+  renderRanking(mesAno);
+  renderDetalhe(mesAno);
   renderChartFarol(mesAno);
+  renderChartComposicao(mesAno);
 }
 
 function init(data) {
@@ -328,7 +524,7 @@ function init(data) {
 
   const meses = data.evolucao_mensal.map(e => ({ value: e.mes_ano, label: e.mes_ano_label }));
   const select = document.getElementById("mes-select");
-  select.innerHTML = meses.map(m => `<option value="${m.value}">${m.label}</option>`).join("");
+  select.innerHTML = meses.map(m => `<option value="${esc(m.value)}">${esc(m.label)}</option>`).join("");
   if (data.resumo && data.resumo.mes_mais_recente) {
     select.value = data.resumo.mes_mais_recente;
   } else if (meses.length > 0) {
@@ -350,7 +546,7 @@ fetch("data/falcao_sst.json")
     document.getElementById("state-msg").innerHTML =
       `Não foi possível carregar <code>data/falcao_sst.json</code>.<br>` +
       `Rode o script de exportação localmente ou aguarde a primeira execução do GitHub Actions.<br>` +
-      `<small>${err.message}</small>`;
+      `<small>${esc(err.message)}</small>`;
   });
 </script>
 </body>
