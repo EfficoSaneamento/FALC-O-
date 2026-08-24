@@ -200,6 +200,7 @@ def agrupar_docs(df):
             "mes_ano": mes_ano,
             "diretor": g["diretor"].iloc[0],
             "gerente": g["gerente"].iloc[0],
+            "projeto": g["projeto"].iloc[0],
             "mes_ano_label": g["mes_ano_label"].iloc[0],
             "soma_doc": g["nota_analise_documental"].fillna(0).astype(float).sum(),
             "qtd_doc": len(g),
@@ -220,6 +221,7 @@ def agrupar_eventos(df):
             "mes_ano": mes_ano,
             "diretor": g["diretor"].iloc[0],
             "gerente": g["gerente"].iloc[0],
+            "projeto": g["projeto"].iloc[0],
             "mes_ano_label": g["mes_ano_label"].iloc[0],
             "soma_evt": qual["notaEventoNum"].sum(),
             "qtd_evt": len(qual),
@@ -241,6 +243,7 @@ def agrupar_ocorrencias(df):
             "mes_ano": mes_ano,
             "diretor": g["diretor"].iloc[0],
             "gerente": g["gerente"].iloc[0],
+            "projeto": g["projeto"].iloc[0],
             "mes_ano_label": g["mes_ano_label"].iloc[0],
             "qtd_registros_ocorrencias_total": len(g),
             "soma_ocor": campo.sum(),
@@ -287,7 +290,7 @@ def clean_records(records):
 def main():
     token = get_token()
 
-    pcs = get_layer_data(token, 0, "globalid,id_pc,diretor,gerente")
+    pcs = get_layer_data(token, 0, "globalid,id_pc,diretor,gerente,projeto")
     ocorrencias = get_layer_data(
         token, 1, "parentglobalid,data_registro,tipo_ocorrencia,status_acidente,nota_ocorrencia,nota_analise_sst"
     )
@@ -365,19 +368,19 @@ def main():
 
     # ---- consolidação final ----
     chaves = pd.concat([
-        docs_grouped[["id_pc", "mes_ano", "diretor", "gerente", "mes_ano_label"]],
-        eventos_grouped[["id_pc", "mes_ano", "diretor", "gerente", "mes_ano_label"]],
-        ocorrencias_grouped[["id_pc", "mes_ano", "diretor", "gerente", "mes_ano_label"]],
+        docs_grouped[["id_pc", "mes_ano", "diretor", "gerente", "projeto", "mes_ano_label"]],
+        eventos_grouped[["id_pc", "mes_ano", "diretor", "gerente", "projeto", "mes_ano_label"]],
+        ocorrencias_grouped[["id_pc", "mes_ano", "diretor", "gerente", "projeto", "mes_ano_label"]],
     ], ignore_index=True).drop_duplicates(subset=["id_pc", "mes_ano"])
 
     final = chaves.merge(
-        docs_grouped.drop(columns=["diretor", "gerente", "mes_ano_label"]), on=["id_pc", "mes_ano"], how="left"
+        docs_grouped.drop(columns=["diretor", "gerente", "projeto", "mes_ano_label"]), on=["id_pc", "mes_ano"], how="left"
     )
     final = final.merge(
-        eventos_grouped.drop(columns=["diretor", "gerente", "mes_ano_label"]), on=["id_pc", "mes_ano"], how="left"
+        eventos_grouped.drop(columns=["diretor", "gerente", "projeto", "mes_ano_label"]), on=["id_pc", "mes_ano"], how="left"
     )
     final = final.merge(
-        ocorrencias_grouped.drop(columns=["diretor", "gerente", "mes_ano_label"]), on=["id_pc", "mes_ano"], how="left"
+        ocorrencias_grouped.drop(columns=["diretor", "gerente", "projeto", "mes_ano_label"]), on=["id_pc", "mes_ano"], how="left"
     )
 
     num_cols = [

@@ -194,6 +194,42 @@
   .farol-legend__dot.farol-amarelo{ background:var(--farol-amarelo-tx); }
   .farol-legend__dot.farol-vermelho{ background:var(--farol-vermelho-tx); }
 
+  /* ---- resumo do farol ---- */
+  .farol-cards{ display:grid; grid-template-columns:repeat(3,1fr); gap:12px; align-content:center; flex:1; }
+  .farol-card{ border:1px solid var(--border); border-radius:8px; overflow:hidden; text-align:center; }
+  .farol-card__head{ padding:8px; font-weight:700; font-size:11.5px; letter-spacing:0.04em; text-transform:uppercase; color:#fff; }
+  .farol-card--vermelho .farol-card__head{ background:var(--farol-vermelho-tx); }
+  .farol-card--amarelo .farol-card__head{ background:var(--farol-amarelo-tx); }
+  .farol-card--verde .farol-card__head{ background:var(--farol-verde-tx); }
+  .farol-card__body{ padding:14px 8px 16px; }
+  .farol-card__range{ font-size:10px; color:var(--text-dim); margin-bottom:10px; }
+  .farol-card__icon{ font-size:1.5rem; margin-bottom:8px; line-height:1; }
+  .farol-card__count{ font-size:1.7rem; font-weight:700; line-height:1; }
+  .farol-card--vermelho .farol-card__count{ color:var(--farol-vermelho-tx); }
+  .farol-card--amarelo .farol-card__count{ color:var(--farol-amarelo-tx); }
+  .farol-card--verde .farol-card__count{ color:var(--farol-verde-tx); }
+  .farol-card__pct{ font-size:11px; color:var(--text-dim); margin-top:4px; }
+
+  /* ---- indicadores gerais ---- */
+  .indicador-list{ display:flex; flex-direction:column; gap:14px; }
+  .indicador{ display:flex; align-items:center; gap:12px; }
+  .indicador__icon{ font-size:1.3rem; flex-shrink:0; width:32px; text-align:center; }
+  .indicador__label{ font-size:11px; color:var(--text-dim); }
+  .indicador__value{ font-size:1.2rem; font-weight:700; color:var(--text); font-variant-numeric:tabular-nums; }
+  .indicador__value small{ font-size:11px; font-weight:500; color:var(--text-dim); }
+
+  /* ---- top 3 contratos ---- */
+  .top3{ display:flex; align-items:center; gap:14px; }
+  .top3__trophy{ font-size:2rem; flex-shrink:0; }
+  .top3__list{ list-style:none; margin:0; padding:0; flex:1; display:flex; flex-direction:column; gap:9px; }
+  .top3__list li{ display:flex; align-items:center; gap:10px; font-size:12.5px; }
+  .top3__rank{
+    width:20px; height:20px; border-radius:50%; background:var(--institutional); color:#fff;
+    font-size:10.5px; font-weight:700; display:flex; align-items:center; justify-content:center; flex-shrink:0;
+  }
+  .top3__name{ flex:1; color:var(--text); font-weight:500; }
+  .top3__score{ font-weight:700; color:var(--institutional); font-variant-numeric:tabular-nums; }
+
   .state-msg{ text-align:center; padding:80px 20px; color:var(--text-dim); font-size:13px; }
   .state-msg code{ background:var(--bg); padding:2px 6px; border-radius:4px; color:var(--institutional); }
 </style>
@@ -240,6 +276,23 @@
       <div class="filter-field">
         <label for="gerente-select">Gerente</label>
         <select id="gerente-select"></select>
+      </div>
+    </section>
+
+    <section class="split" style="align-items:stretch;">
+      <div class="panel" style="margin-bottom:0; display:flex; flex-direction:column;">
+        <h3>Resumo do farol</h3>
+        <div class="farol-cards" id="farol-cards"></div>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:16px;">
+        <div class="panel" style="margin-bottom:0;">
+          <h3>Indicadores gerais</h3>
+          <div class="indicador-list" id="indicador-list"></div>
+        </div>
+        <div class="panel" style="margin-bottom:0; flex:1;">
+          <h3>Top 3 contratos</h3>
+          <div class="top3" id="top3"></div>
+        </div>
       </div>
     </section>
 
@@ -361,14 +414,11 @@ function renderKPIs(mesAno) {
   registros.forEach(r => { counts[r.farol] = (counts[r.farol] || 0) + 1; });
 
   const tiles = [
-    { label: "Contratos monitorados", value: total, sub: "no período" },
     { label: "Nota conformidade legal", value: fmtNota(avg("nota_documento")), sub: "média do período" },
     { label: "Nota boas práticas", value: fmtNota(avg("nota_evento")), sub: "média do período" },
     { label: "Nota conformidade campo", value: fmtNota(avg("nota_ocorrencia")), sub: "média do período" },
     { label: "Nota deflatores", value: fmtNota(sum("nota_deflatores")), sub: "soma do período", negative: true },
     { label: "Acidentes / fatalidades", value: `${acidentes} / ${fatalidades}`, sub: "no período" },
-    { label: "Farol · verde / amarelo / vermelho", value: `${counts.verde} / ${counts.amarelo} / ${counts.vermelho}`, sub: `${total > 0 ? Math.round((counts.verde/total)*100) : 0}% verde` },
-    { label: "Nota Falcão", value: fmtNota(avg("nota_effico_sst")), sub: "média do período", highlight: true },
   ];
 
   document.getElementById("kpi-row").innerHTML = tiles.map(t => `
@@ -378,6 +428,72 @@ function renderKPIs(mesAno) {
       <div class="kpi__sub">${esc(t.sub)}</div>
     </div>
   `).join("");
+}
+
+function renderFarolSummary(mesAno) {
+  const registros = registrosFiltrados(mesAno);
+  const total = registros.length;
+  const counts = { verde: 0, amarelo: 0, vermelho: 0 };
+  registros.forEach(r => { counts[r.farol] = (counts[r.farol] || 0) + 1; });
+  const pct = (n) => total > 0 ? ((n / total) * 100).toLocaleString("pt-BR", { minimumFractionDigits: 1, maximumFractionDigits: 1 }) : "0,0";
+
+  const cards = [
+    { key: "vermelho", label: "Vermelho", range: "Até 1.000 pontos", icon: "🔔" },
+    { key: "amarelo", label: "Amarelo", range: "1.001 a 1.600 pontos", icon: "⚠️" },
+    { key: "verde", label: "Verde", range: "Acima de 1.600 pontos", icon: "✅" },
+  ];
+
+  document.getElementById("farol-cards").innerHTML = cards.map(c => `
+    <div class="farol-card farol-card--${c.key}">
+      <div class="farol-card__head">${c.label}</div>
+      <div class="farol-card__body">
+        <div class="farol-card__range">${c.range}</div>
+        <div class="farol-card__icon">${c.icon}</div>
+        <div class="farol-card__count">${counts[c.key]}</div>
+        <div class="farol-card__pct">(${pct(counts[c.key])}%)</div>
+      </div>
+    </div>
+  `).join("");
+}
+
+function renderIndicadoresGerais(mesAno) {
+  const registros = registrosFiltrados(mesAno);
+  const total = registros.length;
+  const media = total > 0 ? registros.reduce((s, r) => s + (r.nota_effico_sst || 0), 0) / total : 0;
+  let melhor = null;
+  registros.forEach(r => { if (!melhor || (r.nota_effico_sst || 0) > (melhor.nota_effico_sst || 0)) melhor = r; });
+
+  const items = [
+    { icon: "📈", label: "Pontuação média geral", value: `${fmtNota(media)} <small>pontos</small>` },
+    { icon: "🎯", label: "Melhor pontuação", value: melhor ? `${fmtNota(melhor.nota_effico_sst)} <small>${esc(melhor.projeto || ("PC " + melhor.id_pc))}</small>` : "—" },
+    { icon: "📋", label: "Contratos avaliados", value: `${total} <small>total</small>` },
+  ];
+
+  document.getElementById("indicador-list").innerHTML = items.map(i => `
+    <div class="indicador">
+      <span class="indicador__icon">${i.icon}</span>
+      <div>
+        <div class="indicador__label">${esc(i.label)}</div>
+        <div class="indicador__value">${i.value}</div>
+      </div>
+    </div>
+  `).join("");
+}
+
+function renderTop3(mesAno) {
+  const registros = registrosFiltrados(mesAno).slice().sort((a, b) => (b.nota_effico_sst ?? 0) - (a.nota_effico_sst ?? 0)).slice(0, 3);
+  const list = registros.map((r, i) => `
+    <li>
+      <span class="top3__rank">${i + 1}</span>
+      <span class="top3__name">${esc(r.projeto || ("PC " + r.id_pc))}</span>
+      <span class="top3__score">${fmtNota(r.nota_effico_sst)}</span>
+    </li>
+  `).join("") || `<li style="color:var(--text-dim);">Nenhum contrato no período.</li>`;
+
+  document.getElementById("top3").innerHTML = `
+    <div class="top3__trophy">🏆</div>
+    <ol class="top3__list">${list}</ol>
+  `;
 }
 
 function renderRanking(mesAno) {
@@ -395,7 +511,7 @@ function renderRanking(mesAno) {
   tbody.innerHTML = registros.map(r => `
     <tr data-pc="${esc(r.id_pc)}" data-farol="${esc(r.farol)}" class="${r.id_pc === selectedPc ? "is-selected" : ""}">
       <td>
-        <div class="info-pc">PC ${esc(r.id_pc)}</div>
+        <div class="info-pc">${esc(r.projeto || ("PC " + r.id_pc))}</div>
         <div class="info-line">${esc(r.diretor)} · ${esc(r.gerente)}</div>
       </td>
       <td>${fmtNota(r.nota_evento)}</td>
@@ -435,8 +551,8 @@ function renderDetalhe(mesAno) {
     <h3>Detalhamento do contrato</h3>
     <div class="detail-head">
       <div>
-        <div class="detail-head__id">PC ${esc(r.id_pc)}</div>
-        <div class="detail-head__meta">${esc(r.diretor)} · ${esc(r.gerente)} · ${esc(r.mes_ano_label)}</div>
+        <div class="detail-head__id">${esc(r.projeto || ("PC " + r.id_pc))}</div>
+        <div class="detail-head__meta">PC ${esc(r.id_pc)} · ${esc(r.diretor)} · ${esc(r.gerente)} · ${esc(r.mes_ano_label)}</div>
       </div>
       <div class="detail-score">
         <div class="detail-score__value">${fmtNota(r.nota_effico_sst)}</div>
@@ -496,7 +612,8 @@ function renderChartEvolucao() {
       .sort((a, b) => a.mes_ano.localeCompare(b.mes_ano));
     labels = historico.map(r => r.mes_ano_label);
     valores = historico.map(r => r.nota_effico_sst);
-    document.getElementById("evolucao-title").textContent = `Evolução da nota Falcão — PC ${pcFilter}`;
+    const nome = historico[0]?.projeto || `PC ${pcFilter}`;
+    document.getElementById("evolucao-title").textContent = `Evolução da nota Falcão — ${nome}`;
   }
 
   const ctx = document.getElementById("chart-evolucao");
@@ -565,6 +682,9 @@ function onFiltersChange() {
   } else {
     selectedPc = null;
   }
+  renderFarolSummary(mesAno);
+  renderIndicadoresGerais(mesAno);
+  renderTop3(mesAno);
   renderKPIs(mesAno);
   renderRanking(mesAno);
   renderDetalhe(mesAno);
@@ -591,10 +711,10 @@ function init(data) {
   mesSelect.addEventListener("change", onFiltersChange);
 
   const contratos = [...new Map(data.registros.map(r => [String(r.id_pc), r])).values()]
-    .sort((a, b) => String(a.id_pc).localeCompare(String(b.id_pc), undefined, { numeric: true }));
+    .sort((a, b) => (a.projeto || "").localeCompare(b.projeto || "", "pt-BR"));
   const pcSelect = document.getElementById("pc-select");
   pcSelect.innerHTML = `<option value="todos">Todos os contratos</option>` +
-    contratos.map(r => `<option value="${esc(r.id_pc)}">PC ${esc(r.id_pc)} — ${esc(r.diretor)}</option>`).join("");
+    contratos.map(r => `<option value="${esc(r.id_pc)}">${esc(r.projeto || ("PC " + r.id_pc))}</option>`).join("");
   pcSelect.addEventListener("change", () => {
     pcFilter = pcSelect.value;
     onFiltersChange();
