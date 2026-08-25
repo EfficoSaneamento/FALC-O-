@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-08-25T17:59:24Z",
+  "gerado_em": "2026-08-25T18:50:14Z",
   "resumo": {
     "total_contratos": 19,
     "mes_mais_recente": "2026-07",
@@ -72,6 +72,21 @@
       "soma_doc": 928.1,
       "qtd_registros_documento": 1.0,
       "documentos_reprovados": "Análise Preliminar de Risco – APR • Caixa de Primeiros Socorros • Extintor de Incêndio • Ficha de Dados de Segurança – FDS • Laudo Ergonômico • Plano de Atendimento e Emergência – PAE • Permissão de Entrada e Trabalho – PET • Permissão de Trabalho – PT • Procedimentos para Escavações e Valas • Registro do SESMT",
+      "soma_total_analisados": 139.0,
+      "soma_total_nao_conforme": 10.0,
+      "soma_colaboradores_avaliados": 30.0,
+      "soma_treinamentos_nrs": 90.0,
+      "documentos_detalhe": [
+        {
+          "data": "2026-01-30",
+          "tipo": "Análise Preliminar de Risco – APR • Anotação de Responsabilidade Técnica – ART • Check-list – Ferramentas e Equipamentos • Check-list – Veículo • Comissão Interna de Prevenção de Acidentes e Assédios – CIPA • Caixa de Primeiros Socorros • Extintor de Incêndio • Ficha de Dados de Segurança – FDS • Laudo Ergonômico • Laudo Técnico de Condições Ambientais de Trabalho – LTCAT • Plano de Atendimento e Emergência – PAE • Programa de Controle Médico e Saúde Ocupacional – PCMSO • Permissão de Entrada e Trabalho – PET • Registro do SESMT • Permissão de Trabalho – PT • Procedimentos para Escavações e Valas • Programa de Gerenciamento de Risco – PGR • Laudo de Ruído • Laudo de Insalubridade • Treinamentos das NRs • Ficha de Equipamento de Proteção Individual – EPI",
+          "nota": 928.1,
+          "total_analisados": 139,
+          "total_nao_conforme": 10,
+          "arquivos_nao_conforme": "Análise Preliminar de Risco – APR • Caixa de Primeiros Socorros • Extintor de Incêndio • Ficha de Dados de Segurança – FDS • Laudo Ergonômico • Plano de Atendimento e Emergência – PAE • Permissão de Entrada e Trabalho – PET • Permissão de Trabalho – PT • Procedimentos para Escavações e Valas • Registro do SESMT",
+          "responsavel": "Elvys de Souza Silva"
+        }
+      ],
       "soma_evt": 100.0,
       "qtd_registros_eventos": 4.0,
       "qtd_dds": 4.0,
@@ -97,8 +112,6 @@
           "data": "2026-01-14",
           "tipo_label": "Acidente – Sem afastamento",
           "situacao": "Trajeto",
-          "cid": "Não Informado",
-          "n_cat": "Não Informado",
           "dias_afastado": 0,
           "custo_afastamento": 0.0,
           "houve_tratativa": "sim",
@@ -108,8 +121,6 @@
           "data": "2026-01-16",
           "tipo_label": "Acidente – Sem afastamento",
           "situacao": "Trajeto",
-          "cid": "Não buscou atendimento médico",
-          "n_cat": "Não buscou atendimento médico",
           "dias_afastado": 0,
           "custo_afastamento": 0.0,
           "houve_tratativa": "sim",
@@ -135,6 +146,21 @@
       "soma_doc": 790.4,
       "qtd_registros_documento": 1.0,
       "documentos_reprovados": "Análise Preliminar de Risco – APR • Comissão Interna de Prevenção de Acidentes e Assédios – CIPA • Caixa de Primeiros Socorros • Ficha de Dados de Segurança – FDS • Registro do SESMT • Plano de Atendimento e Emergência – PAE • Atestado de Saúde Ocupacional – ASO • Ficha de Equipamento de Proteção Individual – EPI • Integração SST • Ordem de Serviço – OS • Treinamentos das NRs",
+      "soma_total_analisados": 3063.0,
+      "soma_total_nao_conforme": 642.0,
+      "soma_colaboradores_avaliados": 218.0,
+      "soma_treinamentos_nrs": 2178.0,
+      "documentos_detalhe": [
+        {
+          "data": "2026-01-30",
+          "tipo": "Análise Preliminar de Risco – APR • Anotação de Responsabilidade Técnica – ART • Comissão Interna de Prevenção de Acidentes e Assédios – CIPA • Caixa de Primeiros Socorros • Extintor de Incêndio • Ficha de Dados de Segurança – FDS • Programa de Conservação Auditiva – PCA • Programa de Controle Médico e Saúde Ocupacional – PCMSO • Programa de Gerenciamento de Risco – PGR • Plano de Atendimento e Emergência – PAE • Registro do SESMT • Programa de Proteção Respiratória – PPR • Laudo de Periculosidade • Atestado de Saúde Ocupacional – ASO • Ficha de Equipamento de Proteção Individual – EPI • Integração SST • Ordem de Serviço – OS • Treinamentos das NRs",
+          "nota": 790.4,
+          "total_analisados": 3063,
+          "total_nao_conforme": 642,
+          "arquivos_nao_conforme": "Análise Preliminar de Risco – APR • Comissão Interna de Prevenção de Acidentes e Assédios – CIPA • Caixa de Primeiros Socorros • Ficha de Dados de Segurança – FDS • Registro do SESMT • Plano de Atendimento e Emergência – PAE • Atestado de Saúde Ocupacional – ASO • Ficha de Equipamento de Proteção Individual – EPI • Integração SST • Ordem de Serviço – OS • Treinamentos das NRs",
+          "responsavel": "Elvys de Souza Silva"
+        }
+      ],
       "soma_evt": 100.0,
       "qtd_registros_eventos": 4.0,
       "qtd_dds": 4.0,
@@ -175,6 +201,21 @@
       "soma_doc": 963.6,
       "qtd_registros_documento": 1.0,
       "documentos_reprovados": "Check-list – Ferramentas e Equipamentos • Check-list – Veículo • Ficha de Dados de Segurança – FDS • Plano de Atendimento e Emergência – PAE",
+      "soma_total_analisados": 110.0,
+      "soma_total_nao_conforme": 4.0,
+      "soma_colaboradores_avaliados": 5.0,
+      "soma_treinamentos_nrs": 76.0,
+      "documentos_detalhe": [
+        {
+          "data": "2026-01-30",
+          "tipo": "Análise Preliminar de Risco – APR • Anotação de Responsabilidade Técnica – ART • Check-list – Ferramentas e Equipamentos • Check-list – Veículo • Comissão Interna de Prevenção de Acidentes e Assédios – CIPA • Caixa de Primeiros Socorros • Ficha de Dados de Segurança – FDS • Laudo Técnico de Condições Ambientais de Trabalho – LTCAT • Plano de Atendimento e Emergência – PAE • Programa de Controle Médico e Saúde Ocupacional – PCMSO • Programa de Gerenciamento de Risco – PGR • Permissão de Trabalho – PT • Permissão de Entrada e Trabalho – PET • Registro do SESMT • Atestado de Saúde Ocupacional – ASO • Ficha de Equipamento de Proteção Individual – EPI • Integração SST • Treinamentos das NRs • Ordem de Serviço – OS",
+          "nota": 963.6,
+          "total_analisados": 110,
+          "total_nao_conforme": 4,
+          "arquivos_nao_conforme": "Check-list – Ferramentas e Equipamentos • Check-list – Veículo • Ficha de Dados de Segurança – FDS • Plano de Atendimento e Emergência – PAE",
+          "responsavel": "Elvys de Souza Silva"
+        }
+      ],
       "soma_evt": 25.0,
       "qtd_registros_eventos": 1.0,
       "qtd_dds": 1.0,
@@ -215,6 +256,21 @@
       "soma_doc": 736.8,
       "qtd_registros_documento": 1.0,
       "documentos_reprovados": "Caixa de Primeiros Socorros • Ficha de Dados de Segurança – FDS • Laudo Ergonômico • Registro do SESMT",
+      "soma_total_analisados": 19.0,
+      "soma_total_nao_conforme": 5.0,
+      "soma_colaboradores_avaliados": 1.0,
+      "soma_treinamentos_nrs": 0.0,
+      "documentos_detalhe": [
+        {
+          "data": "2026-01-30",
+          "tipo": "Análise Preliminar de Risco – APR • Anotação de Responsabilidade Técnica – ART • Check-list – Ferramentas e Equipamentos • Check-list – Veículo • Comissão Interna de Prevenção de Acidentes e Assédios – CIPA • Caixa de Primeiros Socorros • Extintor de Incêndio • Ficha de Dados de Segurança – FDS • Laudo de Potabilidade de Água • Laudo Ergonômico • Laudo de Ruído • Laudo Técnico de Condições Ambientais de Trabalho – LTCAT • Plano de Atendimento e Emergência – PAE • Programa de Controle Médico e Saúde Ocupacional – PCMSO • Permissão de Entrada e Trabalho – PET • Programa de Gerenciamento de Risco – PGR • Permissão de Trabalho – PT • Registro do SESMT • Procedimentos para Escavações e Valas",
+          "nota": 736.8,
+          "total_analisados": 19,
+          "total_nao_conforme": 5,
+          "arquivos_nao_conforme": "Caixa de Primeiros Socorros • Ficha de Dados de Segurança – FDS • Laudo Ergonômico • Registro do SESMT",
+          "responsavel": "Elvys de Souza Silva"
+        }
+      ],
       "soma_evt": 75.0,
       "qtd_registros_eventos": 3.0,
       "qtd_dds": 3.0,
@@ -240,8 +296,6 @@
           "data": "2026-01-23",
           "tipo_label": "Acidente – Com afastamento",
           "situacao": "Típico",
-          "cid": "S00.5",
-          "n_cat": "1.1.0000000037385390324",
           "dias_afastado": 3,
           "custo_afastamento": 330.0,
           "houve_tratativa": "sim",
@@ -267,6 +321,21 @@
       "soma_doc": 750.0,
       "qtd_registros_documento": 1.0,
       "documentos_reprovados": "Caixa de Primeiros Socorros • Ficha de Dados de Segurança – FDS • Laudo Ergonômico • Registro do SESMT",
+      "soma_total_analisados": 20.0,
+      "soma_total_nao_conforme": 5.0,
+      "soma_colaboradores_avaliados": 1.0,
+      "soma_treinamentos_nrs": 0.0,
+      "documentos_detalhe": [
+        {
+          "data": "2026-01-30",
+          "tipo": "Análise Preliminar de Risco – APR • Anotação de Responsabilidade Técnica – ART • Check-list – Ferramentas e Equipamentos • Check-list – Veículo • Comissão Interna de Prevenção de Acidentes e Assédios – CIPA • Caixa de Primeiros Socorros • Extintor de Incêndio • Ficha de Dados de Segurança – FDS • Laudo de Potabilidade de Água • Laudo Ergonômico • Laudo de Ruído • Laudo Técnico de Condições Ambientais de Trabalho – LTCAT • Mapa de Risco • Plano de Atendimento e Emergência – PAE • Programa de Controle Médico e Saúde Ocupacional – PCMSO • Permissão de Entrada e Trabalho – PET • Programa de Gerenciamento de Risco – PGR • Permissão de Trabalho – PT • Procedimentos para Escavações e Valas • Registro do SESMT",
+          "nota": 750.0,
+          "total_analisados": 20,
+          "total_nao_conforme": 5,
+          "arquivos_nao_conforme": "Caixa de Primeiros Socorros • Ficha de Dados de Segurança – FDS • Laudo Ergonômico • Registro do SESMT",
+          "responsavel": "Elvys de Souza Silva"
+        }
+      ],
       "soma_evt": 75.0,
       "qtd_registros_eventos": 3.0,
       "qtd_dds": 3.0,
@@ -307,6 +376,21 @@
       "soma_doc": 919.6,
       "qtd_registros_documento": 1.0,
       "documentos_reprovados": "Registro do SESMT • Atestado de Saúde Ocupacional – ASO • Ficha de Equipamento de Proteção Individual – EPI • Treinamentos das NRs",
+      "soma_total_analisados": 1293.0,
+      "soma_total_nao_conforme": 104.0,
+      "soma_colaboradores_avaliados": 74.0,
+      "soma_treinamentos_nrs": 978.0,
+      "documentos_detalhe": [
+        {
+          "data": "2026-01-30",
+          "tipo": "Auto de Vistoria do Corpo de Bombeiros – AVCB • Anotação de Responsabilidade Técnica – ART • Análise Preliminar de Risco – APR • Comissão Interna de Prevenção de Acidentes e Assédios – CIPA • Caixa de Primeiros Socorros • Extintor de Incêndio • Ficha de Dados de Segurança – FDS • Laudo de Insalubridade • Laudo Técnico de Condições Ambientais de Trabalho – LTCAT • Laudo de Ruído • Programa de Conservação Auditiva – PCA • Plano de Atendimento e Emergência – PAE • Programa de Controle Médico e Saúde Ocupacional – PCMSO • Permissão de Entrada e Trabalho – PET • Programa de Gerenciamento de Risco – PGR • Programa de Proteção Respiratória – PPR • Permissão de Trabalho – PT • Registro do SESMT • Laudo Ergonômico • Laudo de Periculosidade • Atestado de Saúde Ocupacional – ASO • Ficha de Equipamento de Proteção Individual – EPI • Integração SST • Ordem de Serviço – OS • Treinamentos das NRs",
+          "nota": 919.6,
+          "total_analisados": 1293,
+          "total_nao_conforme": 104,
+          "arquivos_nao_conforme": "Registro do SESMT • Atestado de Saúde Ocupacional – ASO • Ficha de Equipamento de Proteção Individual – EPI • Treinamentos das NRs",
+          "responsavel": "Elvys de Souza Silva"
+        }
+      ],
       "soma_evt": 0.0,
       "qtd_registros_eventos": 0.0,
       "qtd_dds": 0.0,
@@ -347,6 +431,21 @@
       "soma_doc": 884.6,
       "qtd_registros_documento": 1.0,
       "documentos_reprovados": "Check-list – Ferramentas e Equipamentos • Check-list – Veículo • Plano de Atendimento e Emergência – PAE",
+      "soma_total_analisados": 26.0,
+      "soma_total_nao_conforme": 3.0,
+      "soma_colaboradores_avaliados": 2.0,
+      "soma_treinamentos_nrs": 6.0,
+      "documentos_detalhe": [
+        {
+          "data": "2026-01-30",
+          "tipo": "Análise Preliminar de Risco – APR • Anotação de Responsabilidade Técnica – ART • Check-list – Ferramentas e Equipamentos • Check-list – Veículo • Comissão Interna de Prevenção de Acidentes e Assédios – CIPA • Caixa de Primeiros Socorros • Ficha de Dados de Segurança – FDS • Laudo Técnico de Condições Ambientais de Trabalho – LTCAT • Plano de Atendimento e Emergência – PAE • Programa de Controle Médico e Saúde Ocupacional – PCMSO • Programa de Gerenciamento de Risco – PGR • Registro do SESMT • Atestado de Saúde Ocupacional – ASO • Ficha de Equipamento de Proteção Individual – EPI • Integração SST • Ordem de Serviço – OS • Treinamentos das NRs",
+          "nota": 884.6,
+          "total_analisados": 26,
+          "total_nao_conforme": 3,
+          "arquivos_nao_conforme": "Check-list – Ferramentas e Equipamentos • Check-list – Veículo • Plano de Atendimento e Emergência – PAE",
+          "responsavel": "Elvys de Souza Silva"
+        }
+      ],
       "soma_evt": 75.0,
       "qtd_registros_eventos": 3.0,
       "qtd_dds": 3.0,
@@ -387,6 +486,21 @@
       "soma_doc": 942.0,
       "qtd_registros_documento": 1.0,
       "documentos_reprovados": "Análise Preliminar de Risco – APR • Check-list – Ferramentas e Equipamentos • Check-list – Veículo • Plano de Atendimento e Emergência – PAE",
+      "soma_total_analisados": 69.0,
+      "soma_total_nao_conforme": 4.0,
+      "soma_colaboradores_avaliados": 11.0,
+      "soma_treinamentos_nrs": 11.0,
+      "documentos_detalhe": [
+        {
+          "data": "2026-01-30",
+          "tipo": "Check-list – Ferramentas e Equipamentos • Check-list – Veículo • Comissão Interna de Prevenção de Acidentes e Assédios – CIPA • Caixa de Primeiros Socorros • Ficha de Dados de Segurança – FDS • Registro do SESMT • Programa de Proteção Respiratória – PPR • Programa de Conservação Auditiva – PCA • Programa de Controle Médico e Saúde Ocupacional – PCMSO • Programa de Gerenciamento de Risco – PGR • Plano de Atendimento e Emergência – PAE • Laudo Técnico de Condições Ambientais de Trabalho – LTCAT • Análise Preliminar de Risco – APR • Anotação de Responsabilidade Técnica – ART • Atestado de Saúde Ocupacional – ASO • Ficha de Equipamento de Proteção Individual – EPI • Integração SST • Ordem de Serviço – OS • Treinamentos das NRs",
+          "nota": 942.0,
+          "total_analisados": 69,
+          "total_nao_conforme": 4,
+          "arquivos_nao_conforme": "Análise Preliminar de Risco – APR • Check-list – Ferramentas e Equipamentos • Check-list – Veículo • Plano de Atendimento e Emergência – PAE",
+          "responsavel": "Elvys de Souza Silva"
+        }
+      ],
       "soma_evt": 125.0,
       "qtd_registros_eventos": 5.0,
       "qtd_dds": 5.0,
@@ -412,8 +526,6 @@
           "data": "2026-01-06",
           "tipo_label": "Acidente – Com afastamento",
           "situacao": "Típico",
-          "cid": "S602",
-          "n_cat": "1.1.0000000037019170444",
           "dias_afastado": 7,
           "custo_afastamento": 678.16,
           "houve_tratativa": "sim",
@@ -439,6 +551,21 @@
       "soma_doc": 973.5,
       "qtd_registros_documento": 1.0,
       "documentos_reprovados": "Análise Preliminar de Risco – APR • Auto de Vistoria do Corpo de Bombeiros – AVCB • Check-list – Ferramentas e Equipamentos • Check-list – Veículo",
+      "soma_total_analisados": 151.0,
+      "soma_total_nao_conforme": 4.0,
+      "soma_colaboradores_avaliados": 11.0,
+      "soma_treinamentos_nrs": 88.0,
+      "documentos_detalhe": [
+        {
+          "data": "2026-01-30",
+          "tipo": "Análise Preliminar de Risco – APR • Anotação de Responsabilidade Técnica – ART • Auto de Vistoria do Corpo de Bombeiros – AVCB • Check-list – Ferramentas e Equipamentos • Check-list – Veículo • Comissão Interna de Prevenção de Acidentes e Assédios – CIPA • Caixa de Primeiros Socorros • Ficha de Dados de Segurança – FDS • Laudo de Iluminação • Laudo Ergonômico • Laudo de Ruído • Laudo Técnico de Condições Ambientais de Trabalho – LTCAT • Mapa de Risco • Plano de Atendimento e Emergência – PAE • Programa de Controle Médico e Saúde Ocupacional – PCMSO • Permissão de Entrada e Trabalho – PET • Programa de Gerenciamento de Risco – PGR • Permissão de Trabalho – PT • Registro do SESMT • Atestado de Saúde Ocupacional – ASO • Ficha de Equipamento de Proteção Individual – EPI • Integração SST • Ordem de Serviço – OS • Treinamentos das NRs",
+          "nota": 973.5,
+          "total_analisados": 151,
+          "total_nao_conforme": 4,
+          "arquivos_nao_conforme": "Análise Preliminar de Risco – APR • Auto de Vistoria do Corpo de Bombeiros – AVCB • Check-list – Ferramentas e Equipamentos • Check-list – Veículo",
+          "responsavel": "Elvys de Souza Silva"
+        }
+      ],
       "soma_evt": 2.5,
       "qtd_registros_eventos": 1.0,
       "qtd_dds": 1.0,
@@ -479,6 +606,21 @@
       "soma_doc": 866.7,
       "qtd_registros_documento": 1.0,
       "documentos_reprovados": "Análise Preliminar de Risco – APR • Check-list – Ferramentas e Equipamentos • Check-list – Veículo • Ficha de Dados de Segurança – FDS • Plano de Atendimento e Emergência – PAE • Ordem de Serviço – OS • Ficha de Equipamento de Proteção Individual – EPI",
+      "soma_total_analisados": 60.0,
+      "soma_total_nao_conforme": 8.0,
+      "soma_colaboradores_avaliados": 2.0,
+      "soma_treinamentos_nrs": 39.0,
+      "documentos_detalhe": [
+        {
+          "data": "2026-01-30",
+          "tipo": "Análise Preliminar de Risco – APR • Anotação de Responsabilidade Técnica – ART • Check-list – Ferramentas e Equipamentos • Check-list – Veículo • Comissão Interna de Prevenção de Acidentes e Assédios – CIPA • Caixa de Primeiros Socorros • Ficha de Dados de Segurança – FDS • Laudo Técnico de Condições Ambientais de Trabalho – LTCAT • Plano de Atendimento e Emergência – PAE • Programa de Controle Médico e Saúde Ocupacional – PCMSO • Permissão de Entrada e Trabalho – PET • Programa de Gerenciamento de Risco – PGR • Registro do SESMT • Atestado de Saúde Ocupacional – ASO • Ficha de Equipamento de Proteção Individual – EPI • Treinamentos das NRs • Integração SST • Ordem de Serviço – OS",
+          "nota": 866.7,
+          "total_analisados": 60,
+          "total_nao_conforme": 8,
+          "arquivos_nao_conforme": "Análise Preliminar de Risco – APR • Check-list – Ferramentas e Equipamentos • Check-list – Veículo • Ficha de Dados de Segurança – FDS • Plano de Atendimento e Emergência – PAE • Ordem de Serviço – OS • Ficha de Equipamento de Proteção Individual – EPI",
+          "responsavel": "Elvys de Souza Silva"
+        }
+      ],
       "soma_evt": 87.5,
       "qtd_registros_eventos": 7.0,
       "qtd_dds": 7.0,
@@ -519,6 +661,21 @@
       "soma_doc": 959.0,
       "qtd_registros_documento": 1.0,
       "documentos_reprovados": "Check-list – Veículo • Caixa de Primeiros Socorros • Ficha de Dados de Segurança – FDS • Laudo de Potabilidade de Água • Laudo Ergonômico • Mapa de Risco • Análise Preliminar de Risco – APR • Check-list – Ferramentas e Equipamentos • Atestado de Saúde Ocupacional – ASO • Treinamentos das NRs",
+      "soma_total_analisados": 293.0,
+      "soma_total_nao_conforme": 12.0,
+      "soma_colaboradores_avaliados": 20.0,
+      "soma_treinamentos_nrs": 195.0,
+      "documentos_detalhe": [
+        {
+          "data": "2026-01-30",
+          "tipo": "Análise Preliminar de Risco – APR • Anotação de Responsabilidade Técnica – ART • Auto de Vistoria do Corpo de Bombeiros – AVCB • Check-list – Ferramentas e Equipamentos • Check-list – Veículo • Comissão Interna de Prevenção de Acidentes e Assédios – CIPA • Caixa de Primeiros Socorros • Extintor de Incêndio • Ficha de Dados de Segurança – FDS • Laudo de Potabilidade de Água • Laudo Ergonômico • Layout do Canteiro de Obras • Laudo Técnico de Condições Ambientais de Trabalho – LTCAT • Mapa de Risco • Plano de Atendimento e Emergência – PAE • Programa de Controle Médico e Saúde Ocupacional – PCMSO • Programa de Gerenciamento de Risco – PGR • Registro do SESMT • Atestado de Saúde Ocupacional – ASO • Ficha de Equipamento de Proteção Individual – EPI • Integração SST • Ordem de Serviço – OS • Treinamentos das NRs",
+          "nota": 959.0,
+          "total_analisados": 293,
+          "total_nao_conforme": 12,
+          "arquivos_nao_conforme": "Check-list – Veículo • Caixa de Primeiros Socorros • Ficha de Dados de Segurança – FDS • Laudo de Potabilidade de Água • Laudo Ergonômico • Mapa de Risco • Análise Preliminar de Risco – APR • Check-list – Ferramentas e Equipamentos • Atestado de Saúde Ocupacional – ASO • Treinamentos das NRs",
+          "responsavel": "Elvys de Souza Silva"
+        }
+      ],
       "soma_evt": 75.0,
       "qtd_registros_eventos": 4.0,
       "qtd_dds": 4.0,
@@ -559,6 +716,21 @@
       "soma_doc": 345.9,
       "qtd_registros_documento": 1.0,
       "documentos_reprovados": "Análise Preliminar de Risco – APR • Check-list – Ferramentas e Equipamentos • Check-list – Veículo • Comissão Interna de Prevenção de Acidentes e Assédios – CIPA • Caixa de Primeiros Socorros • Ficha de Dados de Segurança – FDS • Laudo de Potabilidade de Água • Laudo Ergonômico • Laudo Técnico de Condições Ambientais de Trabalho – LTCAT • Plano de Atendimento e Emergência – PAE • Programa de Conservação Auditiva – PCA • Programa de Proteção Respiratória – PPR • Permissão de Trabalho – PT • Registro do SESMT • Atestado de Saúde Ocupacional – ASO • Ficha de Equipamento de Proteção Individual – EPI • Integração SST • Ordem de Serviço – OS • Treinamentos das NRs",
+      "soma_total_analisados": 159.0,
+      "soma_total_nao_conforme": 104.0,
+      "soma_colaboradores_avaliados": 28.0,
+      "soma_treinamentos_nrs": 207.0,
+      "documentos_detalhe": [
+        {
+          "data": "2026-01-30",
+          "tipo": "Análise Preliminar de Risco – APR • Anotação de Responsabilidade Técnica – ART • Auto de Vistoria do Corpo de Bombeiros – AVCB • Check-list – Ferramentas e Equipamentos • Check-list – Veículo • Comissão Interna de Prevenção de Acidentes e Assédios – CIPA • Caixa de Primeiros Socorros • Extintor de Incêndio • Ficha de Dados de Segurança – FDS • Laudo de Potabilidade de Água • Laudo Ergonômico • Laudo Técnico de Condições Ambientais de Trabalho – LTCAT • Plano de Atendimento e Emergência – PAE • Programa de Conservação Auditiva – PCA • Programa de Controle Médico e Saúde Ocupacional – PCMSO • Programa de Gerenciamento de Risco – PGR • Programa de Proteção Respiratória – PPR • Permissão de Trabalho – PT • Registro do SESMT • Atestado de Saúde Ocupacional – ASO • Ficha de Equipamento de Proteção Individual – EPI • Integração SST • Ordem de Serviço – OS • Treinamentos das NRs",
+          "nota": 345.9,
+          "total_analisados": 159,
+          "total_nao_conforme": 104,
+          "arquivos_nao_conforme": "Análise Preliminar de Risco – APR • Check-list – Ferramentas e Equipamentos • Check-list – Veículo • Comissão Interna de Prevenção de Acidentes e Assédios – CIPA • Caixa de Primeiros Socorros • Ficha de Dados de Segurança – FDS • Laudo de Potabilidade de Água • Laudo Ergonômico • Laudo Técnico de Condições Ambientais de Trabalho – LTCAT • Plano de Atendimento e Emergência – PAE • Programa de Conservação Auditiva – PCA • Programa de Proteção Respiratória – PPR • Permissão de Trabalho – PT • Registro do SESMT • Atestado de Saúde Ocupacional – ASO • Ficha de Equipamento de Proteção Individual – EPI • Integração SST • Ordem de Serviço – OS • Treinamentos das NRs",
+          "responsavel": "Elvys de Souza Silva"
+        }
+      ],
       "soma_evt": 0.0,
       "qtd_registros_eventos": 0.0,
       "qtd_dds": 0.0,
@@ -599,6 +771,11 @@
       "soma_doc": 0.0,
       "qtd_registros_documento": 0.0,
       "documentos_reprovados": "Nenhum documento reprovado no período",
+      "soma_total_analisados": 0.0,
+      "soma_total_nao_conforme": 0.0,
+      "soma_colaboradores_avaliados": 0.0,
+      "soma_treinamentos_nrs": 0.0,
+      "documentos_detalhe": [],
       "soma_evt": 37.5,
       "qtd_registros_eventos": 3.0,
       "qtd_dds": 3.0,
@@ -639,6 +816,21 @@
       "soma_doc": 703.0,
       "qtd_registros_documento": 1.0,
       "documentos_reprovados": "Análise Preliminar de Risco – APR • Check-list – Ferramentas e Equipamentos • Check-list – Veículo • Comissão Interna de Prevenção de Acidentes e Assédios – CIPA • Caixa de Primeiros Socorros • Ficha de Dados de Segurança – FDS • Plano de Atendimento e Emergência – PAE • Permissão de Trabalho – PT • Registro do SESMT • Atestado de Saúde Ocupacional – ASO • Ficha de Equipamento de Proteção Individual – EPI • Integração SST • Ordem de Serviço – OS • Treinamentos das NRs",
+      "soma_total_analisados": 101.0,
+      "soma_total_nao_conforme": 30.0,
+      "soma_colaboradores_avaliados": 8.0,
+      "soma_treinamentos_nrs": 56.0,
+      "documentos_detalhe": [
+        {
+          "data": "2026-02-27",
+          "tipo": "Análise Preliminar de Risco – APR • Anotação de Responsabilidade Técnica – ART • Check-list – Ferramentas e Equipamentos • Check-list – Veículo • Comissão Interna de Prevenção de Acidentes e Assédios – CIPA • Caixa de Primeiros Socorros • Ficha de Dados de Segurança – FDS • Laudo Técnico de Condições Ambientais de Trabalho – LTCAT • Plano de Atendimento e Emergência – PAE • Programa de Controle Médico e Saúde Ocupacional – PCMSO • Programa de Gerenciamento de Risco – PGR • Permissão de Trabalho – PT • Registro do SESMT • Atestado de Saúde Ocupacional – ASO • Ficha de Equipamento de Proteção Individual – EPI • Integração SST • Ordem de Serviço – OS • Treinamentos das NRs",
+          "nota": 703.0,
+          "total_analisados": 101,
+          "total_nao_conforme": 30,
+          "arquivos_nao_conforme": "Análise Preliminar de Risco – APR • Check-list – Ferramentas e Equipamentos • Check-list – Veículo • Comissão Interna de Prevenção de Acidentes e Assédios – CIPA • Caixa de Primeiros Socorros • Ficha de Dados de Segurança – FDS • Plano de Atendimento e Emergência – PAE • Permissão de Trabalho – PT • Registro do SESMT • Atestado de Saúde Ocupacional – ASO • Ficha de Equipamento de Proteção Individual – EPI • Integração SST • Ordem de Serviço – OS • Treinamentos das NRs",
+          "responsavel": "Elvys de Souza Silva"
+        }
+      ],
       "soma_evt": 75.0,
       "qtd_registros_eventos": 3.0,
       "qtd_dds": 3.0,
@@ -679,6 +871,21 @@
       "soma_doc": 284.9,
       "qtd_registros_documento": 1.0,
       "documentos_reprovados": "Ficha de Dados de Segurança – FDS • Análise Preliminar de Risco – APR • Atestado de Saúde Ocupacional – ASO • Ficha de Equipamento de Proteção Individual – EPI • Integração SST • Ordem de Serviço – OS • Treinamentos das NRs",
+      "soma_total_analisados": 1825.0,
+      "soma_total_nao_conforme": 1305.0,
+      "soma_colaboradores_avaliados": 180.0,
+      "soma_treinamentos_nrs": 1096.0,
+      "documentos_detalhe": [
+        {
+          "data": "2026-02-27",
+          "tipo": "Análise Preliminar de Risco – APR • Anotação de Responsabilidade Técnica – ART • Check-list – Ferramentas e Equipamentos • Ficha de Dados de Segurança – FDS • Laudo Técnico de Condições Ambientais de Trabalho – LTCAT • Plano de Atendimento e Emergência – PAE • Programa de Controle Médico e Saúde Ocupacional – PCMSO • Programa de Gerenciamento de Risco – PGR • Permissão de Trabalho – PT • Atestado de Saúde Ocupacional – ASO • Ficha de Equipamento de Proteção Individual – EPI • Integração SST • Ordem de Serviço – OS • Treinamentos das NRs",
+          "nota": 284.9,
+          "total_analisados": 1825,
+          "total_nao_conforme": 1305,
+          "arquivos_nao_conforme": "Ficha de Dados de Segurança – FDS • Análise Preliminar de Risco – APR • Atestado de Saúde Ocupacional – ASO • Ficha de Equipamento de Proteção Individual – EPI • Integração SST • Ordem de Serviço – OS • Treinamentos das NRs",
+          "responsavel": "Elvys de Souza Silva"
+        }
+      ],
       "soma_evt": 33.7,
       "qtd_registros_eventos": 2.0,
       "qtd_dds": 2.0,
@@ -704,8 +911,6 @@
           "data": "2026-02-17",
           "tipo_label": "Acidente – Com afastamento",
           "situacao": "Típico",
-          "cid": "S698",
-          "n_cat": "1.1.0000000038111652779",
           "dias_afastado": 10,
           "custo_afastamento": 1244.0,
           "houve_tratativa": "sim",
@@ -715,8 +920,6 @@
           "data": "2026-02-17",
           "tipo_label": "Acidente – Com afastamento",
           "situacao": "Típico",
-          "cid": "S602",
-          "n_cat": "1.1.0000000038111653057",
           "dias_afastado": 1,
           "custo_afastamento": 121.12,
           "houve_tratativa": "sim",
@@ -742,6 +945,21 @@
       "soma_doc": 961.5,
       "qtd_registros_documento": 1.0,
       "documentos_reprovados": "Permissão de Entrada e Trabalho – PET • Ficha de Dados de Segurança – FDS",
+      "soma_total_analisados": 52.0,
+      "soma_total_nao_conforme": 2.0,
+      "soma_colaboradores_avaliados": 5.0,
+      "soma_treinamentos_nrs": 24.0,
+      "documentos_detalhe": [
+        {
+          "data": "2026-02-27",
+          "tipo": "Anotação de Responsabilidade Técnica – ART • Comissão Interna de Prevenção de Acidentes e Assédios – CIPA • Caixa de Primeiros Socorros • Ficha de Dados de Segurança – FDS • Laudo Técnico de Condições Ambientais de Trabalho – LTCAT • Programa de Controle Médico e Saúde Ocupacional – PCMSO • Registro do SESMT • Permissão de Entrada e Trabalho – PET • Atestado de Saúde Ocupacional – ASO • Ficha de Equipamento de Proteção Individual – EPI • Integração SST • Ordem de Serviço – OS • Treinamentos das NRs",
+          "nota": 961.5,
+          "total_analisados": 52,
+          "total_nao_conforme": 2,
+          "arquivos_nao_conforme": "Permissão de Entrada e Trabalho – PET • Ficha de Dados de Segurança – FDS",
+          "responsavel": "Elvys de Souza Silva"
+        }
+      ],
       "soma_evt": 8.3,
       "qtd_registros_eventos": 1.0,
       "qtd_dds": 1.0,
@@ -782,6 +1000,21 @@
       "soma_doc": 484.5,
       "qtd_registros_documento": 1.0,
       "documentos_reprovados": "Análise Preliminar de Risco – APR • Check-list – Ferramentas e Equipamentos • Check-list – Veículo • Comissão Interna de Prevenção de Acidentes e Assédios – CIPA • Ficha de Dados de Segurança – FDS • Registro do SESMT • Atestado de Saúde Ocupacional – ASO • Ficha de Equipamento de Proteção Individual – EPI • Integração SST • Ordem de Serviço – OS • Treinamentos das NRs",
+      "soma_total_analisados": 194.0,
+      "soma_total_nao_conforme": 100.0,
+      "soma_colaboradores_avaliados": 20.0,
+      "soma_treinamentos_nrs": 100.0,
+      "documentos_detalhe": [
+        {
+          "data": "2026-02-27",
+          "tipo": "Análise Preliminar de Risco – APR • Anotação de Responsabilidade Técnica – ART • Check-list – Ferramentas e Equipamentos • Check-list – Veículo • Comissão Interna de Prevenção de Acidentes e Assédios – CIPA • Caixa de Primeiros Socorros • Ficha de Dados de Segurança – FDS • Laudo Técnico de Condições Ambientais de Trabalho – LTCAT • Plano de Atendimento e Emergência – PAE • Programa de Controle Médico e Saúde Ocupacional – PCMSO • Permissão de Entrada e Trabalho – PET • Programa de Gerenciamento de Risco – PGR • Permissão de Trabalho – PT • Registro do SESMT • Atestado de Saúde Ocupacional – ASO • Ficha de Equipamento de Proteção Individual – EPI • Integração SST • Ordem de Serviço – OS • Treinamentos das NRs",
+          "nota": 484.5,
+          "total_analisados": 194,
+          "total_nao_conforme": 100,
+          "arquivos_nao_conforme": "Análise Preliminar de Risco – APR • Check-list – Ferramentas e Equipamentos • Check-list – Veículo • Comissão Interna de Prevenção de Acidentes e Assédios – CIPA • Ficha de Dados de Segurança – FDS • Registro do SESMT • Atestado de Saúde Ocupacional – ASO • Ficha de Equipamento de Proteção Individual – EPI • Integração SST • Ordem de Serviço – OS • Treinamentos das NRs",
+          "responsavel": "Elvys de Souza Silva"
+        }
+      ],
       "soma_evt": 25.0,
       "qtd_registros_eventos": 1.0,
       "qtd_dds": 1.0,
@@ -822,6 +1055,21 @@
       "soma_doc": 520.8,
       "qtd_registros_documento": 1.0,
       "documentos_reprovados": "Análise Preliminar de Risco – APR • Check-list – Ferramentas e Equipamentos • Check-list – Veículo • Comissão Interna de Prevenção de Acidentes e Assédios – CIPA • Ficha de Dados de Segurança – FDS • Registro do SESMT • Ordem de Serviço – OS • Treinamentos das NRs • Ficha de Equipamento de Proteção Individual – EPI • Atestado de Saúde Ocupacional – ASO",
+      "soma_total_analisados": 192.0,
+      "soma_total_nao_conforme": 92.0,
+      "soma_colaboradores_avaliados": 20.0,
+      "soma_treinamentos_nrs": 100.0,
+      "documentos_detalhe": [
+        {
+          "data": "2026-02-27",
+          "tipo": "Análise Preliminar de Risco – APR • Anotação de Responsabilidade Técnica – ART • Check-list – Ferramentas e Equipamentos • Check-list – Veículo • Comissão Interna de Prevenção de Acidentes e Assédios – CIPA • Caixa de Primeiros Socorros • Ficha de Dados de Segurança – FDS • Laudo Técnico de Condições Ambientais de Trabalho – LTCAT • Plano de Atendimento e Emergência – PAE • Programa de Controle Médico e Saúde Ocupacional – PCMSO • Programa de Gerenciamento de Risco – PGR • Registro do SESMT • Atestado de Saúde Ocupacional – ASO • Ficha de Equipamento de Proteção Individual – EPI • Integração SST • Ordem de Serviço – OS • Treinamentos das NRs",
+          "nota": 520.8,
+          "total_analisados": 192,
+          "total_nao_conforme": 92,
+          "arquivos_nao_conforme": "Análise Preliminar de Risco – APR • Check-list – Ferramentas e Equipamentos • Check-list – Veículo • Comissão Interna de Prevenção de Acidentes e Assédios – CIPA • Ficha de Dados de Segurança – FDS • Registro do SESMT • Ordem de Serviço – OS • Treinamentos das NRs • Ficha de Equipamento de Proteção Individual – EPI • Atestado de Saúde Ocupacional – ASO",
+          "responsavel": "Elvys de Souza Silva"
+        }
+      ],
       "soma_evt": 79.2,
       "qtd_registros_eventos": 2.0,
       "qtd_dds": 1.0,
@@ -862,6 +1110,21 @@
       "soma_doc": 862.1,
       "qtd_registros_documento": 1.0,
       "documentos_reprovados": "Análise Preliminar de Risco – APR • Check-list – Ferramentas e Equipamentos • Ficha de Dados de Segurança – FDS • Plano de Atendimento e Emergência – PAE",
+      "soma_total_analisados": 29.0,
+      "soma_total_nao_conforme": 4.0,
+      "soma_colaboradores_avaliados": 1.0,
+      "soma_treinamentos_nrs": 13.0,
+      "documentos_detalhe": [
+        {
+          "data": "2026-02-23",
+          "tipo": "Análise Preliminar de Risco – APR • Anotação de Responsabilidade Técnica – ART • Check-list – Ferramentas e Equipamentos • Check-list – Veículo • Comissão Interna de Prevenção de Acidentes e Assédios – CIPA • Caixa de Primeiros Socorros • Ficha de Dados de Segurança – FDS • Laudo Técnico de Condições Ambientais de Trabalho – LTCAT • Plano de Atendimento e Emergência – PAE • Programa de Controle Médico e Saúde Ocupacional – PCMSO • Programa de Gerenciamento de Risco – PGR • Registro do SESMT • Atestado de Saúde Ocupacional – ASO • Ficha de Equipamento de Proteção Individual – EPI • Integração SST • Ordem de Serviço – OS • Treinamentos das NRs",
+          "nota": 862.1,
+          "total_analisados": 29,
+          "total_nao_conforme": 4,
+          "arquivos_nao_conforme": "Análise Preliminar de Risco – APR • Check-list – Ferramentas e Equipamentos • Ficha de Dados de Segurança – FDS • Plano de Atendimento e Emergência – PAE",
+          "responsavel": "Elvys de Souza Silva"
+        }
+      ],
       "soma_evt": 0.0,
       "qtd_registros_eventos": 0.0,
       "qtd_dds": 0.0,
@@ -902,6 +1165,21 @@
       "soma_doc": 504.7,
       "qtd_registros_documento": 1.0,
       "documentos_reprovados": "Atestado de Saúde Ocupacional – ASO • Ficha de Equipamento de Proteção Individual – EPI • Integração SST • Ordem de Serviço – OS • Treinamentos das NRs",
+      "soma_total_analisados": 2019.0,
+      "soma_total_nao_conforme": 1000.0,
+      "soma_colaboradores_avaliados": 121.0,
+      "soma_treinamentos_nrs": 1523.0,
+      "documentos_detalhe": [
+        {
+          "data": "2026-02-23",
+          "tipo": "Análise Preliminar de Risco – APR • Anotação de Responsabilidade Técnica – ART • Comissão Interna de Prevenção de Acidentes e Assédios – CIPA • Caixa de Primeiros Socorros • Ficha de Dados de Segurança – FDS • Laudo Técnico de Condições Ambientais de Trabalho – LTCAT • Plano de Atendimento e Emergência – PAE • Programa de Controle Médico e Saúde Ocupacional – PCMSO • Permissão de Entrada e Trabalho – PET • Programa de Gerenciamento de Risco – PGR • Permissão de Trabalho – PT • Registro do SESMT • Atestado de Saúde Ocupacional – ASO • Ficha de Equipamento de Proteção Individual – EPI • Integração SST • Ordem de Serviço – OS • Treinamentos das NRs",
+          "nota": 504.7,
+          "total_analisados": 2019,
+          "total_nao_conforme": 1000,
+          "arquivos_nao_conforme": "Atestado de Saúde Ocupacional – ASO • Ficha de Equipamento de Proteção Individual – EPI • Integração SST • Ordem de Serviço – OS • Treinamentos das NRs",
+          "responsavel": "Elvys de Souza Silva"
+        }
+      ],
       "soma_evt": 0.0,
       "qtd_registros_eventos": 0.0,
       "qtd_dds": 0.0,
@@ -942,6 +1220,21 @@
       "soma_doc": 944.4,
       "qtd_registros_documento": 1.0,
       "documentos_reprovados": "Treinamentos das NRs",
+      "soma_total_analisados": 18.0,
+      "soma_total_nao_conforme": 1.0,
+      "soma_colaboradores_avaliados": 1.0,
+      "soma_treinamentos_nrs": 7.0,
+      "documentos_detalhe": [
+        {
+          "data": "2026-02-27",
+          "tipo": "Anotação de Responsabilidade Técnica – ART • Comissão Interna de Prevenção de Acidentes e Assédios – CIPA • Caixa de Primeiros Socorros • Laudo Técnico de Condições Ambientais de Trabalho – LTCAT • Programa de Gerenciamento de Risco – PGR • Registro do SESMT • Programa de Controle Médico e Saúde Ocupacional – PCMSO • Atestado de Saúde Ocupacional – ASO • Ficha de Equipamento de Proteção Individual – EPI • Integração SST • Ordem de Serviço – OS • Treinamentos das NRs",
+          "nota": 944.4,
+          "total_analisados": 18,
+          "total_nao_conforme": 1,
+          "arquivos_nao_conforme": "Treinamentos das NRs",
+          "responsavel": "Elvys de Souza Silva"
+        }
+      ],
       "soma_evt": 125.0,
       "qtd_registros_eventos": 5.0,
       "qtd_dds": 4.0,
@@ -982,6 +1275,21 @@
       "soma_doc": 974.7,
       "qtd_registros_documento": 1.0,
       "documentos_reprovados": "Ficha de Dados de Segurança – FDS • Plano de Atendimento e Emergência – PAE",
+      "soma_total_analisados": 79.0,
+      "soma_total_nao_conforme": 2.0,
+      "soma_colaboradores_avaliados": 14.0,
+      "soma_treinamentos_nrs": 14.0,
+      "documentos_detalhe": [
+        {
+          "data": "2026-02-27",
+          "tipo": "Anotação de Responsabilidade Técnica – ART • Comissão Interna de Prevenção de Acidentes e Assédios – CIPA • Caixa de Primeiros Socorros • Ficha de Dados de Segurança – FDS • Laudo Técnico de Condições Ambientais de Trabalho – LTCAT • Programa de Controle Médico e Saúde Ocupacional – PCMSO • Programa de Gerenciamento de Risco – PGR • Registro do SESMT • Plano de Atendimento e Emergência – PAE • Atestado de Saúde Ocupacional – ASO • Ficha de Equipamento de Proteção Individual – EPI • Integração SST • Ordem de Serviço – OS • Treinamentos das NRs",
+          "nota": 974.7,
+          "total_analisados": 79,
+          "total_nao_conforme": 2,
+          "arquivos_nao_conforme": "Ficha de Dados de Segurança – FDS • Plano de Atendimento e Emergência – PAE",
+          "responsavel": "Elvys de Souza Silva"
+        }
+      ],
       "soma_evt": 120.0,
       "qtd_registros_eventos": 4.0,
       "qtd_dds": 3.0,
@@ -1022,6 +1330,21 @@
       "soma_doc": 1000.0,
       "qtd_registros_documento": 1.0,
       "documentos_reprovados": "Nenhum documento reprovado no período",
+      "soma_total_analisados": 109.0,
+      "soma_total_nao_conforme": 0.0,
+      "soma_colaboradores_avaliados": 7.0,
+      "soma_treinamentos_nrs": 70.0,
+      "documentos_detalhe": [
+        {
+          "data": "2026-02-27",
+          "tipo": "Anotação de Responsabilidade Técnica – ART • Comissão Interna de Prevenção de Acidentes e Assédios – CIPA • Caixa de Primeiros Socorros • Ficha de Dados de Segurança – FDS • Laudo Técnico de Condições Ambientais de Trabalho – LTCAT • Plano de Atendimento e Emergência – PAE • Programa de Controle Médico e Saúde Ocupacional – PCMSO • Laudo de Ruído • Programa de Gerenciamento de Risco – PGR • Programa de Proteção Respiratória – PPR • Registro do SESMT • Atestado de Saúde Ocupacional – ASO • Ficha de Equipamento de Proteção Individual – EPI • Integração SST • Ordem de Serviço – OS • Treinamentos das NRs",
+          "nota": 1000.0,
+          "total_analisados": 109,
+          "total_nao_conforme": 0,
+          "arquivos_nao_conforme": null,
+          "responsavel": "Elvys de Souza Silva"
+        }
+      ],
       "soma_evt": 15.6,
       "qtd_registros_eventos": 3.0,
       "qtd_dds": 3.0,
@@ -1062,6 +1385,21 @@
       "soma_doc": 916.7,
       "qtd_registros_documento": 1.0,
       "documentos_reprovados": "Ficha de Dados de Segurança – FDS • Plano de Atendimento e Emergência – PAE • Permissão de Entrada e Trabalho – PET",
+      "soma_total_analisados": 36.0,
+      "soma_total_nao_conforme": 3.0,
+      "soma_colaboradores_avaliados": 2.0,
+      "soma_treinamentos_nrs": 18.0,
+      "documentos_detalhe": [
+        {
+          "data": "2026-02-27",
+          "tipo": "Anotação de Responsabilidade Técnica – ART • Comissão Interna de Prevenção de Acidentes e Assédios – CIPA • Caixa de Primeiros Socorros • Ficha de Dados de Segurança – FDS • Laudo Técnico de Condições Ambientais de Trabalho – LTCAT • Plano de Atendimento e Emergência – PAE • Programa de Controle Médico e Saúde Ocupacional – PCMSO • Permissão de Entrada e Trabalho – PET • Programa de Gerenciamento de Risco – PGR • Registro do SESMT • Atestado de Saúde Ocupacional – ASO • Ficha de Equipamento de Proteção Individual – EPI • Integração SST • Ordem de Serviço – OS • Treinamentos das NRs",
+          "nota": 916.7,
+          "total_analisados": 36,
+          "total_nao_conforme": 3,
+          "arquivos_nao_conforme": "Ficha de Dados de Segurança – FDS • Plano de Atendimento e Emergência – PAE • Permissão de Entrada e Trabalho – PET",
+          "responsavel": "Elvys de Souza Silva"
+        }
+      ],
       "soma_evt": 62.5,
       "qtd_registros_eventos": 3.0,
       "qtd_dds": 3.0,
@@ -1102,6 +1440,21 @@
       "soma_doc": 957.0,
       "qtd_registros_documento": 1.0,
       "documentos_reprovados": "Treinamentos das NRs",
+      "soma_total_analisados": 93.0,
+      "soma_total_nao_conforme": 4.0,
+      "soma_colaboradores_avaliados": 19.0,
+      "soma_treinamentos_nrs": 9.0,
+      "documentos_detalhe": [
+        {
+          "data": "2026-02-20",
+          "tipo": "Análise Preliminar de Risco – APR • Anotação de Responsabilidade Técnica – ART • Comissão Interna de Prevenção de Acidentes e Assédios – CIPA • Extintor de Incêndio • Ficha de Dados de Segurança – FDS • Plano de Atendimento e Emergência – PAE • Programa de Controle Médico e Saúde Ocupacional – PCMSO • Programa de Gerenciamento de Risco – PGR • Atestado de Saúde Ocupacional – ASO • Ficha de Equipamento de Proteção Individual – EPI • Integração SST • Ordem de Serviço – OS • Treinamentos das NRs",
+          "nota": 957.0,
+          "total_analisados": 93,
+          "total_nao_conforme": 4,
+          "arquivos_nao_conforme": "Treinamentos das NRs",
+          "responsavel": "Denis David Gomes"
+        }
+      ],
       "soma_evt": 222.8,
       "qtd_registros_eventos": 15.0,
       "qtd_dds": 15.0,
@@ -1142,6 +1495,21 @@
       "soma_doc": 792.4,
       "qtd_registros_documento": 1.0,
       "documentos_reprovados": "Check-list – Ferramentas e Equipamentos • Check-list – Veículo • Caixa de Primeiros Socorros • Ficha de Dados de Segurança – FDS • Atestado de Saúde Ocupacional – ASO • Ficha de Equipamento de Proteção Individual – EPI • Integração SST • Ordem de Serviço – OS • Treinamentos das NRs",
+      "soma_total_analisados": 419.0,
+      "soma_total_nao_conforme": 87.0,
+      "soma_colaboradores_avaliados": 40.0,
+      "soma_treinamentos_nrs": 246.0,
+      "documentos_detalhe": [
+        {
+          "data": "2026-02-27",
+          "tipo": "Análise Preliminar de Risco – APR • Anotação de Responsabilidade Técnica – ART • Comissão Interna de Prevenção de Acidentes e Assédios – CIPA • Check-list – Ferramentas e Equipamentos • Check-list – Veículo • Caixa de Primeiros Socorros • Ficha de Dados de Segurança – FDS • Laudo Técnico de Condições Ambientais de Trabalho – LTCAT • Plano de Atendimento e Emergência – PAE • Programa de Controle Médico e Saúde Ocupacional – PCMSO • Programa de Gerenciamento de Risco – PGR • Permissão de Trabalho – PT • Registro do SESMT • Atestado de Saúde Ocupacional – ASO • Ficha de Equipamento de Proteção Individual – EPI • Integração SST • Ordem de Serviço – OS • Treinamentos das NRs",
+          "nota": 792.4,
+          "total_analisados": 419,
+          "total_nao_conforme": 87,
+          "arquivos_nao_conforme": "Check-list – Ferramentas e Equipamentos • Check-list – Veículo • Caixa de Primeiros Socorros • Ficha de Dados de Segurança – FDS • Atestado de Saúde Ocupacional – ASO • Ficha de Equipamento de Proteção Individual – EPI • Integração SST • Ordem de Serviço – OS • Treinamentos das NRs",
+          "responsavel": "Elvys de Souza Silva"
+        }
+      ],
       "soma_evt": 0.0,
       "qtd_registros_eventos": 0.0,
       "qtd_dds": 0.0,
@@ -1182,6 +1550,21 @@
       "soma_doc": 914.3,
       "qtd_registros_documento": 1.0,
       "documentos_reprovados": "Ficha de Dados de Segurança – FDS • Plano de Atendimento e Emergência – PAE • Permissão de Trabalho – PT",
+      "soma_total_analisados": 35.0,
+      "soma_total_nao_conforme": 3.0,
+      "soma_colaboradores_avaliados": 2.0,
+      "soma_treinamentos_nrs": 18.0,
+      "documentos_detalhe": [
+        {
+          "data": "2026-02-27",
+          "tipo": "Comissão Interna de Prevenção de Acidentes e Assédios – CIPA • Caixa de Primeiros Socorros • Ficha de Dados de Segurança – FDS • Laudo Técnico de Condições Ambientais de Trabalho – LTCAT • Plano de Atendimento e Emergência – PAE • Programa de Controle Médico e Saúde Ocupacional – PCMSO • Permissão de Trabalho – PT • Programa de Gerenciamento de Risco – PGR • Registro do SESMT • Atestado de Saúde Ocupacional – ASO • Ficha de Equipamento de Proteção Individual – EPI • Integração SST • Ordem de Serviço – OS • Treinamentos das NRs",
+          "nota": 914.3,
+          "total_analisados": 35,
+          "total_nao_conforme": 3,
+          "arquivos_nao_conforme": "Ficha de Dados de Segurança – FDS • Plano de Atendimento e Emergência – PAE • Permissão de Trabalho – PT",
+          "responsavel": "Elvys de Souza Silva"
+        }
+      ],
       "soma_evt": 125.0,
       "qtd_registros_eventos": 5.0,
       "qtd_dds": 4.0,
@@ -1222,6 +1605,21 @@
       "soma_doc": 815.3,
       "qtd_registros_documento": 1.0,
       "documentos_reprovados": "Análise Preliminar de Risco – APR • Ficha de Dados de Segurança – FDS • Treinamentos das NRs • Ordem de Serviço – OS • Integração SST • Ficha de Equipamento de Proteção Individual – EPI • Atestado de Saúde Ocupacional – ASO",
+      "soma_total_analisados": 379.0,
+      "soma_total_nao_conforme": 70.0,
+      "soma_colaboradores_avaliados": 42.0,
+      "soma_treinamentos_nrs": 200.0,
+      "documentos_detalhe": [
+        {
+          "data": "2026-03-31",
+          "tipo": "Análise Preliminar de Risco – APR • Anotação de Responsabilidade Técnica – ART • Check-list – Ferramentas e Equipamentos • Check-list – Veículo • Comissão Interna de Prevenção de Acidentes e Assédios – CIPA • Caixa de Primeiros Socorros • Ficha de Dados de Segurança – FDS • Laudo Técnico de Condições Ambientais de Trabalho – LTCAT • Programa de Controle Médico e Saúde Ocupacional – PCMSO • Programa de Gerenciamento de Risco – PGR • Permissão de Trabalho – PT • Atestado de Saúde Ocupacional – ASO • Ficha de Equipamento de Proteção Individual – EPI • Integração SST • Ordem de Serviço – OS • Treinamentos das NRs",
+          "nota": 815.3,
+          "total_analisados": 379,
+          "total_nao_conforme": 70,
+          "arquivos_nao_conforme": "Análise Preliminar de Risco – APR • Ficha de Dados de Segurança – FDS • Treinamentos das NRs • Ordem de Serviço – OS • Integração SST • Ficha de Equipamento de Proteção Individual – EPI • Atestado de Saúde Ocupacional – ASO",
+          "responsavel": "Elvys de Souza Silva"
+        }
+      ],
       "soma_evt": 271.0,
       "qtd_registros_eventos": 8.0,
       "qtd_dds": 7.0,
@@ -1247,8 +1645,6 @@
           "data": "2026-03-05",
           "tipo_label": "Acidente – Com afastamento",
           "situacao": "Típico",
-          "cid": "5934",
-          "n_cat": "1.1.0000000038624994509",
           "dias_afastado": 10,
           "custo_afastamento": 632.0,
           "houve_tratativa": "sim",
@@ -1258,8 +1654,6 @@
           "data": "2026-03-16",
           "tipo_label": "Acidente – Com afastamento",
           "situacao": "Típico",
-          "cid": "M545",
-          "n_cat": "1.1.0000000039172628170",
           "dias_afastado": 3,
           "custo_afastamento": 194.88,
           "houve_tratativa": "sim",
@@ -1285,6 +1679,21 @@
       "soma_doc": 382.8,
       "qtd_registros_documento": 1.0,
       "documentos_reprovados": "Caixa de Primeiros Socorros • Ficha de Dados de Segurança – FDS • Atestado de Saúde Ocupacional – ASO • Ficha de Equipamento de Proteção Individual – EPI • Ordem de Serviço – OS • Treinamentos das NRs",
+      "soma_total_analisados": 2435.0,
+      "soma_total_nao_conforme": 1503.0,
+      "soma_colaboradores_avaliados": 289.0,
+      "soma_treinamentos_nrs": 1266.0,
+      "documentos_detalhe": [
+        {
+          "data": "2026-03-31",
+          "tipo": "Análise Preliminar de Risco – APR • Anotação de Responsabilidade Técnica – ART • Check-list – Ferramentas e Equipamentos • Comissão Interna de Prevenção de Acidentes e Assédios – CIPA • Caixa de Primeiros Socorros • Ficha de Dados de Segurança – FDS • Laudo Técnico de Condições Ambientais de Trabalho – LTCAT • Plano de Atendimento e Emergência – PAE • Programa de Conservação Auditiva – PCA • Programa de Controle Médico e Saúde Ocupacional – PCMSO • Programa de Gerenciamento de Risco – PGR • Programa de Proteção Respiratória – PPR • Registro do SESMT • Atestado de Saúde Ocupacional – ASO • Ficha de Equipamento de Proteção Individual – EPI • Integração SST • Ordem de Serviço – OS • Treinamentos das NRs",
+          "nota": 382.8,
+          "total_analisados": 2435,
+          "total_nao_conforme": 1503,
+          "arquivos_nao_conforme": "Caixa de Primeiros Socorros • Ficha de Dados de Segurança – FDS • Atestado de Saúde Ocupacional – ASO • Ficha de Equipamento de Proteção Individual – EPI • Ordem de Serviço – OS • Treinamentos das NRs",
+          "responsavel": "Elvys de Souza Silva"
+        }
+      ],
       "soma_evt": 160.0,
       "qtd_registros_eventos": 4.0,
       "qtd_dds": 3.0,
@@ -1325,6 +1734,30 @@
       "soma_doc": 1806.1,
       "qtd_registros_documento": 2.0,
       "documentos_reprovados": "Permissão de Trabalho – PT • Permissão de Entrada e Trabalho – PET • Ficha de Dados de Segurança – FDS",
+      "soma_total_analisados": 181.0,
+      "soma_total_nao_conforme": 22.0,
+      "soma_colaboradores_avaliados": 11.0,
+      "soma_treinamentos_nrs": 116.0,
+      "documentos_detalhe": [
+        {
+          "data": "2026-03-19",
+          "tipo": "Anotação de Responsabilidade Técnica – ART • Comissão Interna de Prevenção de Acidentes e Assédios – CIPA • Caixa de Primeiros Socorros • Laudo Técnico de Condições Ambientais de Trabalho – LTCAT • Programa de Controle Médico e Saúde Ocupacional – PCMSO • Permissão de Entrada e Trabalho – PET • Programa de Gerenciamento de Risco – PGR • Registro do SESMT • Permissão de Trabalho – PT • Atestado de Saúde Ocupacional – ASO • Ficha de Equipamento de Proteção Individual – EPI • Integração SST • Ordem de Serviço – OS • Treinamentos das NRs",
+          "nota": 962.3,
+          "total_analisados": 53,
+          "total_nao_conforme": 2,
+          "arquivos_nao_conforme": "Permissão de Trabalho – PT • Permissão de Entrada e Trabalho – PET",
+          "responsavel": "Elvys de Souza Silva"
+        },
+        {
+          "data": "2026-03-31",
+          "tipo": "Análise Preliminar de Risco – APR • Anotação de Responsabilidade Técnica – ART • Comissão Interna de Prevenção de Acidentes e Assédios – CIPA • Caixa de Primeiros Socorros • Ficha de Dados de Segurança – FDS • Laudo Técnico de Condições Ambientais de Trabalho – LTCAT • Plano de Atendimento e Emergência – PAE • Programa de Conservação Auditiva – PCA • Programa de Controle Médico e Saúde Ocupacional – PCMSO • Programa de Gerenciamento de Risco – PGR • Programa de Proteção Respiratória – PPR • Registro do SESMT • Atestado de Saúde Ocupacional – ASO • Ficha de Equipamento de Proteção Individual – EPI • Integração SST • Ordem de Serviço – OS • Treinamentos das NRs",
+          "nota": 843.8,
+          "total_analisados": 128,
+          "total_nao_conforme": 20,
+          "arquivos_nao_conforme": "Ficha de Dados de Segurança – FDS",
+          "responsavel": "Elvys de Souza Silva"
+        }
+      ],
       "soma_evt": 270.3,
       "qtd_registros_eventos": 23.0,
       "qtd_dds": 22.0,
@@ -1365,6 +1798,21 @@
       "soma_doc": 814.0,
       "qtd_registros_documento": 1.0,
       "documentos_reprovados": "Ficha de Dados de Segurança – FDS • Treinamentos das NRs • Ordem de Serviço – OS • Integração SST • Ficha de Equipamento de Proteção Individual – EPI • Atestado de Saúde Ocupacional – ASO",
+      "soma_total_analisados": 172.0,
+      "soma_total_nao_conforme": 32.0,
+      "soma_colaboradores_avaliados": 20.0,
+      "soma_treinamentos_nrs": 80.0,
+      "documentos_detalhe": [
+        {
+          "data": "2026-03-31",
+          "tipo": "Análise Preliminar de Risco – APR • Anotação de Responsabilidade Técnica – ART • Check-list – Ferramentas e Equipamentos • Check-list – Veículo • Comissão Interna de Prevenção de Acidentes e Assédios – CIPA • Caixa de Primeiros Socorros • Ficha de Dados de Segurança – FDS • Laudo Técnico de Condições Ambientais de Trabalho – LTCAT • Programa de Controle Médico e Saúde Ocupacional – PCMSO • Permissão de Entrada e Trabalho – PET • Programa de Gerenciamento de Risco – PGR • Permissão de Trabalho – PT • Atestado de Saúde Ocupacional – ASO • Ficha de Equipamento de Proteção Individual – EPI • Integração SST • Ordem de Serviço – OS • Treinamentos das NRs",
+          "nota": 814.0,
+          "total_analisados": 172,
+          "total_nao_conforme": 32,
+          "arquivos_nao_conforme": "Ficha de Dados de Segurança – FDS • Treinamentos das NRs • Ordem de Serviço – OS • Integração SST • Ficha de Equipamento de Proteção Individual – EPI • Atestado de Saúde Ocupacional – ASO",
+          "responsavel": "Elvys de Souza Silva"
+        }
+      ],
       "soma_evt": 0.0,
       "qtd_registros_eventos": 0.0,
       "qtd_dds": 0.0,
@@ -1405,6 +1853,21 @@
       "soma_doc": 814.0,
       "qtd_registros_documento": 1.0,
       "documentos_reprovados": "Ficha de Dados de Segurança – FDS • Atestado de Saúde Ocupacional – ASO • Ficha de Equipamento de Proteção Individual – EPI • Integração SST • Ordem de Serviço – OS • Treinamentos das NRs",
+      "soma_total_analisados": 172.0,
+      "soma_total_nao_conforme": 32.0,
+      "soma_colaboradores_avaliados": 20.0,
+      "soma_treinamentos_nrs": 80.0,
+      "documentos_detalhe": [
+        {
+          "data": "2026-03-31",
+          "tipo": "Análise Preliminar de Risco – APR • Anotação de Responsabilidade Técnica – ART • Check-list – Ferramentas e Equipamentos • Check-list – Veículo • Comissão Interna de Prevenção de Acidentes e Assédios – CIPA • Caixa de Primeiros Socorros • Ficha de Dados de Segurança – FDS • Laudo Técnico de Condições Ambientais de Trabalho – LTCAT • Programa de Controle Médico e Saúde Ocupacional – PCMSO • Programa de Gerenciamento de Risco – PGR • Permissão de Trabalho – PT • Permissão de Entrada e Trabalho – PET • Atestado de Saúde Ocupacional – ASO • Ficha de Equipamento de Proteção Individual – EPI • Integração SST • Ordem de Serviço – OS • Treinamentos das NRs",
+          "nota": 814.0,
+          "total_analisados": 172,
+          "total_nao_conforme": 32,
+          "arquivos_nao_conforme": "Ficha de Dados de Segurança – FDS • Atestado de Saúde Ocupacional – ASO • Ficha de Equipamento de Proteção Individual – EPI • Integração SST • Ordem de Serviço – OS • Treinamentos das NRs",
+          "responsavel": "Elvys de Souza Silva"
+        }
+      ],
       "soma_evt": 35.4,
       "qtd_registros_eventos": 2.0,
       "qtd_dds": 2.0,
@@ -1430,8 +1893,6 @@
           "data": "2026-03-21",
           "tipo_label": "Acidente – Com afastamento",
           "situacao": "Típico",
-          "cid": "S42.0",
-          "n_cat": "1.1.0000000039242832694",
           "dias_afastado": 90,
           "custo_afastamento": 9885.6,
           "houve_tratativa": "sim",
@@ -1457,6 +1918,21 @@
       "soma_doc": 954.5,
       "qtd_registros_documento": 1.0,
       "documentos_reprovados": "Ficha de Dados de Segurança – FDS",
+      "soma_total_analisados": 22.0,
+      "soma_total_nao_conforme": 1.0,
+      "soma_colaboradores_avaliados": 1.0,
+      "soma_treinamentos_nrs": 10.0,
+      "documentos_detalhe": [
+        {
+          "data": "2026-03-31",
+          "tipo": "Anotação de Responsabilidade Técnica – ART • Comissão Interna de Prevenção de Acidentes e Assédios – CIPA • Caixa de Primeiros Socorros • Ficha de Dados de Segurança – FDS • Laudo Técnico de Condições Ambientais de Trabalho – LTCAT • Programa de Controle Médico e Saúde Ocupacional – PCMSO • Programa de Gerenciamento de Risco – PGR • Registro do SESMT • Atestado de Saúde Ocupacional – ASO • Ficha de Equipamento de Proteção Individual – EPI • Integração SST • Ordem de Serviço – OS • Treinamentos das NRs",
+          "nota": 954.5,
+          "total_analisados": 22,
+          "total_nao_conforme": 1,
+          "arquivos_nao_conforme": "Ficha de Dados de Segurança – FDS",
+          "responsavel": "Elvys de Souza Silva"
+        }
+      ],
       "soma_evt": 45.8,
       "qtd_registros_eventos": 4.0,
       "qtd_dds": 4.0,
@@ -1497,6 +1973,21 @@
       "soma_doc": 530.0,
       "qtd_registros_documento": 1.0,
       "documentos_reprovados": "Atestado de Saúde Ocupacional – ASO • Ficha de Equipamento de Proteção Individual – EPI • Integração SST • Ordem de Serviço – OS • Treinamentos das NRs",
+      "soma_total_analisados": 1915.0,
+      "soma_total_nao_conforme": 900.0,
+      "soma_colaboradores_avaliados": 233.0,
+      "soma_treinamentos_nrs": 968.0,
+      "documentos_detalhe": [
+        {
+          "data": "2026-03-31",
+          "tipo": "Análise Preliminar de Risco – APR • Anotação de Responsabilidade Técnica – ART • Check-list – Ferramentas e Equipamentos • Comissão Interna de Prevenção de Acidentes e Assédios – CIPA • Caixa de Primeiros Socorros • Ficha de Dados de Segurança – FDS • Laudo Técnico de Condições Ambientais de Trabalho – LTCAT • Plano de Atendimento e Emergência – PAE • Programa de Conservação Auditiva – PCA • Programa de Controle Médico e Saúde Ocupacional – PCMSO • Permissão de Entrada e Trabalho – PET • Programa de Gerenciamento de Risco – PGR • Programa de Proteção Respiratória – PPR • Permissão de Trabalho – PT • Registro do SESMT • Atestado de Saúde Ocupacional – ASO • Ficha de Equipamento de Proteção Individual – EPI • Integração SST • Ordem de Serviço – OS • Treinamentos das NRs",
+          "nota": 530.0,
+          "total_analisados": 1915,
+          "total_nao_conforme": 900,
+          "arquivos_nao_conforme": "Atestado de Saúde Ocupacional – ASO • Ficha de Equipamento de Proteção Individual – EPI • Integração SST • Ordem de Serviço – OS • Treinamentos das NRs",
+          "responsavel": "Elvys de Souza Silva"
+        }
+      ],
       "soma_evt": 0.0,
       "qtd_registros_eventos": 0.0,
       "qtd_dds": 0.0,
@@ -1522,8 +2013,6 @@
           "data": "2026-03-02",
           "tipo_label": "Acidente – Sem afastamento",
           "situacao": "Típico",
-          "cid": "S52.5",
-          "n_cat": "1.1.0000000039760021911",
           "dias_afastado": 0,
           "custo_afastamento": 0.0,
           "houve_tratativa": "sim",
@@ -1533,8 +2022,6 @@
           "data": "2026-03-18",
           "tipo_label": "Acidente – Sem afastamento",
           "situacao": "Típico",
-          "cid": "S819",
-          "n_cat": "1.1.0000000039187748209",
           "dias_afastado": 0,
           "custo_afastamento": 0.0,
           "houve_tratativa": "sim",
@@ -1544,8 +2031,6 @@
           "data": "2026-03-21",
           "tipo_label": "Acidente – Sem afastamento",
           "situacao": "Típico",
-          "cid": "S600",
-          "n_cat": "1.1.0000000039435063531",
           "dias_afastado": 0,
           "custo_afastamento": 0.0,
           "houve_tratativa": "sim",
@@ -1571,6 +2056,21 @@
       "soma_doc": 964.9,
       "qtd_registros_documento": 1.0,
       "documentos_reprovados": "Ficha de Dados de Segurança – FDS • Plano de Atendimento e Emergência – PAE",
+      "soma_total_analisados": 57.0,
+      "soma_total_nao_conforme": 2.0,
+      "soma_colaboradores_avaliados": 4.0,
+      "soma_treinamentos_nrs": 30.0,
+      "documentos_detalhe": [
+        {
+          "data": "2026-03-31",
+          "tipo": "Análise Preliminar de Risco – APR • Anotação de Responsabilidade Técnica – ART • Check-list – Veículo • Comissão Interna de Prevenção de Acidentes e Assédios – CIPA • Caixa de Primeiros Socorros • Ficha de Dados de Segurança – FDS • Laudo Técnico de Condições Ambientais de Trabalho – LTCAT • Plano de Atendimento e Emergência – PAE • Programa de Controle Médico e Saúde Ocupacional – PCMSO • Programa de Gerenciamento de Risco – PGR • Registro do SESMT • Atestado de Saúde Ocupacional – ASO • Ficha de Equipamento de Proteção Individual – EPI • Integração SST • Ordem de Serviço – OS • Treinamentos das NRs",
+          "nota": 964.9,
+          "total_analisados": 57,
+          "total_nao_conforme": 2,
+          "arquivos_nao_conforme": "Ficha de Dados de Segurança – FDS • Plano de Atendimento e Emergência – PAE",
+          "responsavel": "Elvys de Souza Silva"
+        }
+      ],
       "soma_evt": 557.5,
       "qtd_registros_eventos": 17.0,
       "qtd_dds": 15.0,
@@ -1611,6 +2111,21 @@
       "soma_doc": 993.5,
       "qtd_registros_documento": 1.0,
       "documentos_reprovados": "Ficha de Dados de Segurança – FDS • Plano de Atendimento e Emergência – PAE",
+      "soma_total_analisados": 307.0,
+      "soma_total_nao_conforme": 2.0,
+      "soma_colaboradores_avaliados": 21.0,
+      "soma_treinamentos_nrs": 210.0,
+      "documentos_detalhe": [
+        {
+          "data": "2026-03-31",
+          "tipo": "Análise Preliminar de Risco – APR • Anotação de Responsabilidade Técnica – ART • Check-list – Veículo • Comissão Interna de Prevenção de Acidentes e Assédios – CIPA • Caixa de Primeiros Socorros • Ficha de Dados de Segurança – FDS • Laudo Técnico de Condições Ambientais de Trabalho – LTCAT • Plano de Atendimento e Emergência – PAE • Programa de Conservação Auditiva – PCA • Programa de Controle Médico e Saúde Ocupacional – PCMSO • Programa de Gerenciamento de Risco – PGR • Programa de Proteção Respiratória – PPR • Registro do SESMT • Atestado de Saúde Ocupacional – ASO • Ficha de Equipamento de Proteção Individual – EPI • Integração SST • Ordem de Serviço – OS • Treinamentos das NRs",
+          "nota": 993.5,
+          "total_analisados": 307,
+          "total_nao_conforme": 2,
+          "arquivos_nao_conforme": "Ficha de Dados de Segurança – FDS • Plano de Atendimento e Emergência – PAE",
+          "responsavel": "Elvys de Souza Silva"
+        }
+      ],
       "soma_evt": 285.0,
       "qtd_registros_eventos": 16.0,
       "qtd_dds": 15.0,
@@ -1651,6 +2166,21 @@
       "soma_doc": 963.6,
       "qtd_registros_documento": 1.0,
       "documentos_reprovados": "Plano de Atendimento e Emergência – PAE • Análise Preliminar de Risco – APR",
+      "soma_total_analisados": 55.0,
+      "soma_total_nao_conforme": 2.0,
+      "soma_colaboradores_avaliados": 3.0,
+      "soma_treinamentos_nrs": 30.0,
+      "documentos_detalhe": [
+        {
+          "data": "2026-03-31",
+          "tipo": "Análise Preliminar de Risco – APR • Anotação de Responsabilidade Técnica – ART • Check-list – Veículo • Comissão Interna de Prevenção de Acidentes e Assédios – CIPA • Caixa de Primeiros Socorros • Ficha de Dados de Segurança – FDS • Laudo Técnico de Condições Ambientais de Trabalho – LTCAT • Plano de Atendimento e Emergência – PAE • Programa de Controle Médico e Saúde Ocupacional – PCMSO • Programa de Gerenciamento de Risco – PGR • Registro do SESMT • Permissão de Trabalho – PT • Permissão de Entrada e Trabalho – PET • Atestado de Saúde Ocupacional – ASO • Ficha de Equipamento de Proteção Individual – EPI • Integração SST • Ordem de Serviço – OS • Treinamentos das NRs",
+          "nota": 963.6,
+          "total_analisados": 55,
+          "total_nao_conforme": 2,
+          "arquivos_nao_conforme": "Plano de Atendimento e Emergência – PAE • Análise Preliminar de Risco – APR",
+          "responsavel": "Elvys de Souza Silva"
+        }
+      ],
       "soma_evt": 9.3,
       "qtd_registros_eventos": 3.0,
       "qtd_dds": 3.0,
@@ -1691,6 +2221,21 @@
       "soma_doc": 925.0,
       "qtd_registros_documento": 1.0,
       "documentos_reprovados": "Permissão de Entrada e Trabalho – PET • Permissão de Trabalho – PT • Ficha de Dados de Segurança – FDS",
+      "soma_total_analisados": 40.0,
+      "soma_total_nao_conforme": 3.0,
+      "soma_colaboradores_avaliados": 2.0,
+      "soma_treinamentos_nrs": 20.0,
+      "documentos_detalhe": [
+        {
+          "data": "2026-03-31",
+          "tipo": "Análise Preliminar de Risco – APR • Anotação de Responsabilidade Técnica – ART • Check-list – Veículo • Comissão Interna de Prevenção de Acidentes e Assédios – CIPA • Caixa de Primeiros Socorros • Ficha de Dados de Segurança – FDS • Laudo Técnico de Condições Ambientais de Trabalho – LTCAT • Programa de Controle Médico e Saúde Ocupacional – PCMSO • Permissão de Entrada e Trabalho – PET • Programa de Gerenciamento de Risco – PGR • Permissão de Trabalho – PT • Registro do SESMT • Atestado de Saúde Ocupacional – ASO • Ficha de Equipamento de Proteção Individual – EPI • Integração SST • Ordem de Serviço – OS • Treinamentos das NRs",
+          "nota": 925.0,
+          "total_analisados": 40,
+          "total_nao_conforme": 3,
+          "arquivos_nao_conforme": "Permissão de Entrada e Trabalho – PET • Permissão de Trabalho – PT • Ficha de Dados de Segurança – FDS",
+          "responsavel": "Elvys de Souza Silva"
+        }
+      ],
       "soma_evt": 212.5,
       "qtd_registros_eventos": 10.0,
       "qtd_dds": 9.0,
@@ -1731,6 +2276,21 @@
       "soma_doc": 964.3,
       "qtd_registros_documento": 1.0,
       "documentos_reprovados": "Treinamentos das NRs",
+      "soma_total_analisados": 112.0,
+      "soma_total_nao_conforme": 4.0,
+      "soma_colaboradores_avaliados": 24.0,
+      "soma_treinamentos_nrs": 9.0,
+      "documentos_detalhe": [
+        {
+          "data": "2026-03-19",
+          "tipo": "Extintor de Incêndio • Ficha de Dados de Segurança – FDS • Programa de Gerenciamento de Risco – PGR • Programa de Controle Médico e Saúde Ocupacional – PCMSO • Anotação de Responsabilidade Técnica – ART • Comissão Interna de Prevenção de Acidentes e Assédios – CIPA • Plano de Atendimento e Emergência – PAE • Atestado de Saúde Ocupacional – ASO • Ficha de Equipamento de Proteção Individual – EPI • Integração SST • Ordem de Serviço – OS • Treinamentos das NRs",
+          "nota": 964.3,
+          "total_analisados": 112,
+          "total_nao_conforme": 4,
+          "arquivos_nao_conforme": "Treinamentos das NRs",
+          "responsavel": "Denis David Gomes"
+        }
+      ],
       "soma_evt": 215.60000000000002,
       "qtd_registros_eventos": 17.0,
       "qtd_dds": 17.0,
@@ -1771,6 +2331,21 @@
       "soma_doc": 714.7,
       "qtd_registros_documento": 1.0,
       "documentos_reprovados": "Caixa de Primeiros Socorros • Ficha de Dados de Segurança – FDS • Programa de Conservação Auditiva – PCA • Atestado de Saúde Ocupacional – ASO • Ficha de Equipamento de Proteção Individual – EPI • Integração SST • Ordem de Serviço – OS • Treinamentos das NRs",
+      "soma_total_analisados": 1034.0,
+      "soma_total_nao_conforme": 295.0,
+      "soma_colaboradores_avaliados": 43.0,
+      "soma_treinamentos_nrs": 849.0,
+      "documentos_detalhe": [
+        {
+          "data": "2026-03-31",
+          "tipo": "Análise Preliminar de Risco – APR • Anotação de Responsabilidade Técnica – ART • Comissão Interna de Prevenção de Acidentes e Assédios – CIPA • Caixa de Primeiros Socorros • Extintor de Incêndio • Ficha de Dados de Segurança – FDS • Laudo Técnico de Condições Ambientais de Trabalho – LTCAT • Plano de Atendimento e Emergência – PAE • Programa de Controle Médico e Saúde Ocupacional – PCMSO • Programa de Gerenciamento de Risco – PGR • Registro do SESMT • Inventário de Máquinas e Equipamentos • Programa de Conservação Auditiva – PCA • Atestado de Saúde Ocupacional – ASO • Ficha de Equipamento de Proteção Individual – EPI • Integração SST • Ordem de Serviço – OS • Treinamentos das NRs",
+          "nota": 714.7,
+          "total_analisados": 1034,
+          "total_nao_conforme": 295,
+          "arquivos_nao_conforme": "Caixa de Primeiros Socorros • Ficha de Dados de Segurança – FDS • Programa de Conservação Auditiva – PCA • Atestado de Saúde Ocupacional – ASO • Ficha de Equipamento de Proteção Individual – EPI • Integração SST • Ordem de Serviço – OS • Treinamentos das NRs",
+          "responsavel": "Elvys de Souza Silva"
+        }
+      ],
       "soma_evt": 138.6,
       "qtd_registros_eventos": 9.0,
       "qtd_dds": 9.0,
@@ -1811,6 +2386,21 @@
       "soma_doc": 833.3,
       "qtd_registros_documento": 1.0,
       "documentos_reprovados": "Treinamentos das NRs",
+      "soma_total_analisados": 36.0,
+      "soma_total_nao_conforme": 6.0,
+      "soma_colaboradores_avaliados": 2.0,
+      "soma_treinamentos_nrs": 15.0,
+      "documentos_detalhe": [
+        {
+          "data": "2026-03-31",
+          "tipo": "Análise Preliminar de Risco – APR • Anotação de Responsabilidade Técnica – ART • Comissão Interna de Prevenção de Acidentes e Assédios – CIPA • Caixa de Primeiros Socorros • Laudo Técnico de Condições Ambientais de Trabalho – LTCAT • Plano de Atendimento e Emergência – PAE • Programa de Conservação Auditiva – PCA • Programa de Controle Médico e Saúde Ocupacional – PCMSO • Programa de Gerenciamento de Risco – PGR • Programa de Proteção Respiratória – PPR • Registro do SESMT • Permissão de Trabalho – PT • Permissão de Entrada e Trabalho – PET • Atestado de Saúde Ocupacional – ASO • Ficha de Equipamento de Proteção Individual – EPI • Integração SST • Ordem de Serviço – OS • Treinamentos das NRs",
+          "nota": 833.3,
+          "total_analisados": 36,
+          "total_nao_conforme": 6,
+          "arquivos_nao_conforme": "Treinamentos das NRs",
+          "responsavel": "Elvys de Souza Silva"
+        }
+      ],
       "soma_evt": 412.5,
       "qtd_registros_eventos": 16.0,
       "qtd_dds": 15.0,
@@ -1851,6 +2441,21 @@
       "soma_doc": 766.1,
       "qtd_registros_documento": 1.0,
       "documentos_reprovados": "Análise Preliminar de Risco – APR • Treinamentos das NRs",
+      "soma_total_analisados": 171.0,
+      "soma_total_nao_conforme": 40.0,
+      "soma_colaboradores_avaliados": 30.0,
+      "soma_treinamentos_nrs": 40.0,
+      "documentos_detalhe": [
+        {
+          "data": "2026-04-30",
+          "tipo": "Anotação de Responsabilidade Técnica – ART • Análise Preliminar de Risco – APR • Check-list – Ferramentas e Equipamentos • Check-list – Veículo • Comissão Interna de Prevenção de Acidentes e Assédios – CIPA • Caixa de Primeiros Socorros • Extintor de Incêndio • Ficha de Dados de Segurança – FDS • Laudo Técnico de Condições Ambientais de Trabalho – LTCAT • Programa de Controle Médico e Saúde Ocupacional – PCMSO • Programa de Gerenciamento de Risco – PGR • Atestado de Saúde Ocupacional – ASO • Ficha de Equipamento de Proteção Individual – EPI • Integração SST • Ordem de Serviço – OS • Treinamentos das NRs",
+          "nota": 766.1,
+          "total_analisados": 171,
+          "total_nao_conforme": 40,
+          "arquivos_nao_conforme": "Análise Preliminar de Risco – APR • Treinamentos das NRs",
+          "responsavel": "Elvys de Souza Silva"
+        }
+      ],
       "soma_evt": 90.9,
       "qtd_registros_eventos": 21.0,
       "qtd_dds": 21.0,
@@ -1891,6 +2496,21 @@
       "soma_doc": 839.2,
       "qtd_registros_documento": 1.0,
       "documentos_reprovados": "Caixa de Primeiros Socorros • Ficha de Dados de Segurança – FDS • Atestado de Saúde Ocupacional – ASO • Ficha de Equipamento de Proteção Individual – EPI • Integração SST • Ordem de Serviço – OS • Treinamentos das NRs",
+      "soma_total_analisados": 311.0,
+      "soma_total_nao_conforme": 50.0,
+      "soma_colaboradores_avaliados": 50.0,
+      "soma_treinamentos_nrs": 100.0,
+      "documentos_detalhe": [
+        {
+          "data": "2026-04-30",
+          "tipo": "Anotação de Responsabilidade Técnica – ART • Comissão Interna de Prevenção de Acidentes e Assédios – CIPA • Caixa de Primeiros Socorros • Ficha de Dados de Segurança – FDS • Laudo Técnico de Condições Ambientais de Trabalho – LTCAT • Plano de Atendimento e Emergência – PAE • Programa de Conservação Auditiva – PCA • Programa de Controle Médico e Saúde Ocupacional – PCMSO • Programa de Gerenciamento de Risco – PGR • Programa de Proteção Respiratória – PPR • Registro do SESMT • Atestado de Saúde Ocupacional – ASO • Ficha de Equipamento de Proteção Individual – EPI • Integração SST • Ordem de Serviço – OS • Treinamentos das NRs",
+          "nota": 839.2,
+          "total_analisados": 311,
+          "total_nao_conforme": 50,
+          "arquivos_nao_conforme": "Caixa de Primeiros Socorros • Ficha de Dados de Segurança – FDS • Atestado de Saúde Ocupacional – ASO • Ficha de Equipamento de Proteção Individual – EPI • Integração SST • Ordem de Serviço – OS • Treinamentos das NRs",
+          "responsavel": "Elvys de Souza Silva"
+        }
+      ],
       "soma_evt": 0.0,
       "qtd_registros_eventos": 0.0,
       "qtd_dds": 0.0,
@@ -1931,6 +2551,21 @@
       "soma_doc": 1000.0,
       "qtd_registros_documento": 1.0,
       "documentos_reprovados": "Nenhum documento reprovado no período",
+      "soma_total_analisados": 85.0,
+      "soma_total_nao_conforme": 0.0,
+      "soma_colaboradores_avaliados": 5.0,
+      "soma_treinamentos_nrs": 59.0,
+      "documentos_detalhe": [
+        {
+          "data": "2026-04-30",
+          "tipo": "Anotação de Responsabilidade Técnica – ART • Comissão Interna de Prevenção de Acidentes e Assédios – CIPA • Caixa de Primeiros Socorros • Programa de Gerenciamento de Risco – PGR • Programa de Controle Médico e Saúde Ocupacional – PCMSO • Programa de Conservação Auditiva – PCA • Atestado de Saúde Ocupacional – ASO • Ficha de Equipamento de Proteção Individual – EPI • Integração SST • Ordem de Serviço – OS • Treinamentos das NRs",
+          "nota": 1000.0,
+          "total_analisados": 85,
+          "total_nao_conforme": 0,
+          "arquivos_nao_conforme": null,
+          "responsavel": "Elvys de Souza Silva"
+        }
+      ],
       "soma_evt": 313.3,
       "qtd_registros_eventos": 30.0,
       "qtd_dds": 30.0,
@@ -1971,6 +2606,21 @@
       "soma_doc": 852.9,
       "qtd_registros_documento": 1.0,
       "documentos_reprovados": "Comissão Interna de Prevenção de Acidentes e Assédios – CIPA • Caixa de Primeiros Socorros • Ficha de Dados de Segurança – FDS • Laudo de Potabilidade de Água • Laudo de Periculosidade • Ordem de Serviço – OS • Integração SST • Ficha de Equipamento de Proteção Individual – EPI • Treinamentos das NRs",
+      "soma_total_analisados": 136.0,
+      "soma_total_nao_conforme": 20.0,
+      "soma_colaboradores_avaliados": 20.0,
+      "soma_treinamentos_nrs": 40.0,
+      "documentos_detalhe": [
+        {
+          "data": "2026-04-30",
+          "tipo": "Análise Preliminar de Risco – APR • Anotação de Responsabilidade Técnica – ART • Check-list – Ferramentas e Equipamentos • Check-list – Veículo • Comissão Interna de Prevenção de Acidentes e Assédios – CIPA • Caixa de Primeiros Socorros • Ficha de Dados de Segurança – FDS • Laudo de Insalubridade • Laudo de Periculosidade • Laudo de Ruído • Laudo Ergonômico • Laudo de Potabilidade de Água • Laudo Técnico de Condições Ambientais de Trabalho – LTCAT • Plano de Atendimento e Emergência – PAE • Programa de Controle Médico e Saúde Ocupacional – PCMSO • Programa de Gerenciamento de Risco – PGR • Ficha de Equipamento de Proteção Individual – EPI • Integração SST • Atestado de Saúde Ocupacional – ASO • Ordem de Serviço – OS • Treinamentos das NRs",
+          "nota": 852.9,
+          "total_analisados": 136,
+          "total_nao_conforme": 20,
+          "arquivos_nao_conforme": "Comissão Interna de Prevenção de Acidentes e Assédios – CIPA • Caixa de Primeiros Socorros • Ficha de Dados de Segurança – FDS • Laudo de Potabilidade de Água • Laudo de Periculosidade • Ordem de Serviço – OS • Integração SST • Ficha de Equipamento de Proteção Individual – EPI • Treinamentos das NRs",
+          "responsavel": "Elvys de Souza Silva"
+        }
+      ],
       "soma_evt": 17.0,
       "qtd_registros_eventos": 1.0,
       "qtd_dds": 1.0,
@@ -2011,6 +2661,21 @@
       "soma_doc": 838.7,
       "qtd_registros_documento": 1.0,
       "documentos_reprovados": "Registro do SESMT • Comissão Interna de Prevenção de Acidentes e Assédios – CIPA • Atestado de Saúde Ocupacional – ASO • Ficha de Equipamento de Proteção Individual – EPI • Integração SST • Ordem de Serviço – OS • Treinamentos das NRs",
+      "soma_total_analisados": 62.0,
+      "soma_total_nao_conforme": 10.0,
+      "soma_colaboradores_avaliados": 10.0,
+      "soma_treinamentos_nrs": 10.0,
+      "documentos_detalhe": [
+        {
+          "data": "2026-04-30",
+          "tipo": "Análise Preliminar de Risco – APR • Anotação de Responsabilidade Técnica – ART • Check-list – Ferramentas e Equipamentos • Check-list – Veículo • Comissão Interna de Prevenção de Acidentes e Assédios – CIPA • Caixa de Primeiros Socorros • Ficha de Dados de Segurança – FDS • Laudo Técnico de Condições Ambientais de Trabalho – LTCAT • Plano de Atendimento e Emergência – PAE • Programa de Controle Médico e Saúde Ocupacional – PCMSO • Programa de Gerenciamento de Risco – PGR • Registro do SESMT • Atestado de Saúde Ocupacional – ASO • Ficha de Equipamento de Proteção Individual – EPI • Integração SST • Ordem de Serviço – OS • Treinamentos das NRs",
+          "nota": 838.7,
+          "total_analisados": 62,
+          "total_nao_conforme": 10,
+          "arquivos_nao_conforme": "Registro do SESMT • Comissão Interna de Prevenção de Acidentes e Assédios – CIPA • Atestado de Saúde Ocupacional – ASO • Ficha de Equipamento de Proteção Individual – EPI • Integração SST • Ordem de Serviço – OS • Treinamentos das NRs",
+          "responsavel": "Elvys de Souza Silva"
+        }
+      ],
       "soma_evt": 170.9,
       "qtd_registros_eventos": 2.0,
       "qtd_dds": 0.0,
@@ -2051,6 +2716,21 @@
       "soma_doc": 928.6,
       "qtd_registros_documento": 1.0,
       "documentos_reprovados": "Check-list – Ferramentas e Equipamentos • Ficha de Dados de Segurança – FDS",
+      "soma_total_analisados": 28.0,
+      "soma_total_nao_conforme": 2.0,
+      "soma_colaboradores_avaliados": 2.0,
+      "soma_treinamentos_nrs": 10.0,
+      "documentos_detalhe": [
+        {
+          "data": "2026-04-30",
+          "tipo": "Análise Preliminar de Risco – APR • Anotação de Responsabilidade Técnica – ART • Check-list – Ferramentas e Equipamentos • Comissão Interna de Prevenção de Acidentes e Assédios – CIPA • Caixa de Primeiros Socorros • Ficha de Dados de Segurança – FDS • Laudo Técnico de Condições Ambientais de Trabalho – LTCAT • Programa de Controle Médico e Saúde Ocupacional – PCMSO • Programa de Gerenciamento de Risco – PGR • Registro do SESMT • Atestado de Saúde Ocupacional – ASO • Ficha de Equipamento de Proteção Individual – EPI • Integração SST • Ordem de Serviço – OS • Treinamentos das NRs",
+          "nota": 928.6,
+          "total_analisados": 28,
+          "total_nao_conforme": 2,
+          "arquivos_nao_conforme": "Check-list – Ferramentas e Equipamentos • Ficha de Dados de Segurança – FDS",
+          "responsavel": "Elvys de Souza Silva"
+        }
+      ],
       "soma_evt": 212.70000000000002,
       "qtd_registros_eventos": 17.0,
       "qtd_dds": 17.0,
@@ -2091,6 +2771,21 @@
       "soma_doc": 766.4,
       "qtd_registros_documento": 1.0,
       "documentos_reprovados": "Inventário de Máquinas e Equipamentos • Registro do SESMT • Atestado de Saúde Ocupacional – ASO • Ficha de Equipamento de Proteção Individual – EPI • Integração SST • Ordem de Serviço – OS • Treinamentos das NRs",
+      "soma_total_analisados": 107.0,
+      "soma_total_nao_conforme": 25.0,
+      "soma_colaboradores_avaliados": 10.0,
+      "soma_treinamentos_nrs": 50.0,
+      "documentos_detalhe": [
+        {
+          "data": "2026-04-30",
+          "tipo": "Análise Preliminar de Risco – APR • Anotação de Responsabilidade Técnica – ART • Auto de Vistoria do Corpo de Bombeiros – AVCB • Check-list – Ferramentas e Equipamentos • Check-list – Veículo • Comissão Interna de Prevenção de Acidentes e Assédios – CIPA • Caixa de Primeiros Socorros • Extintor de Incêndio • Ficha de Dados de Segurança – FDS • Inventário de Máquinas e Equipamentos • Laudo Técnico de Condições Ambientais de Trabalho – LTCAT • Plano de Atendimento e Emergência – PAE • Programa de Conservação Auditiva – PCA • Programa de Controle Médico e Saúde Ocupacional – PCMSO • Programa de Gerenciamento de Risco – PGR • Programa de Proteção Respiratória – PPR • Registro do SESMT • Atestado de Saúde Ocupacional – ASO • Ficha de Equipamento de Proteção Individual – EPI • Integração SST • Treinamentos das NRs • Ordem de Serviço – OS",
+          "nota": 766.4,
+          "total_analisados": 107,
+          "total_nao_conforme": 25,
+          "arquivos_nao_conforme": "Inventário de Máquinas e Equipamentos • Registro do SESMT • Atestado de Saúde Ocupacional – ASO • Ficha de Equipamento de Proteção Individual – EPI • Integração SST • Ordem de Serviço – OS • Treinamentos das NRs",
+          "responsavel": "Elvys de Souza Silva"
+        }
+      ],
       "soma_evt": 3.6000000000000005,
       "qtd_registros_eventos": 19.0,
       "qtd_dds": 19.0,
@@ -2116,8 +2811,6 @@
           "data": "2026-04-21",
           "tipo_label": "Acidente – Sem afastamento",
           "situacao": "Típico",
-          "cid": "S50.0",
-          "n_cat": "1.1.0000000040121343473",
           "dias_afastado": 0,
           "custo_afastamento": 0.0,
           "houve_tratativa": "sim",
@@ -2143,6 +2836,21 @@
       "soma_doc": 950.0,
       "qtd_registros_documento": 1.0,
       "documentos_reprovados": "Ficha de Dados de Segurança – FDS • Plano de Atendimento e Emergência – PAE",
+      "soma_total_analisados": 40.0,
+      "soma_total_nao_conforme": 2.0,
+      "soma_colaboradores_avaliados": 2.0,
+      "soma_treinamentos_nrs": 20.0,
+      "documentos_detalhe": [
+        {
+          "data": "2026-04-30",
+          "tipo": "Análise Preliminar de Risco – APR • Anotação de Responsabilidade Técnica – ART • Comissão Interna de Prevenção de Acidentes e Assédios – CIPA • Caixa de Primeiros Socorros • Ficha de Dados de Segurança – FDS • Laudo Técnico de Condições Ambientais de Trabalho – LTCAT • Plano de Atendimento e Emergência – PAE • Programa de Conservação Auditiva – PCA • Programa de Controle Médico e Saúde Ocupacional – PCMSO • Programa de Gerenciamento de Risco – PGR • Programa de Proteção Respiratória – PPR • Registro do SESMT • Atestado de Saúde Ocupacional – ASO • Ficha de Equipamento de Proteção Individual – EPI • Integração SST • Ordem de Serviço – OS • Treinamentos das NRs",
+          "nota": 950.0,
+          "total_analisados": 40,
+          "total_nao_conforme": 2,
+          "arquivos_nao_conforme": "Ficha de Dados de Segurança – FDS • Plano de Atendimento e Emergência – PAE",
+          "responsavel": "Elvys de Souza Silva"
+        }
+      ],
       "soma_evt": 519.1,
       "qtd_registros_eventos": 28.0,
       "qtd_dds": 28.0,
@@ -2183,6 +2891,21 @@
       "soma_doc": 956.5,
       "qtd_registros_documento": 1.0,
       "documentos_reprovados": "Plano de Atendimento e Emergência – PAE",
+      "soma_total_analisados": 23.0,
+      "soma_total_nao_conforme": 1.0,
+      "soma_colaboradores_avaliados": 1.0,
+      "soma_treinamentos_nrs": 8.0,
+      "documentos_detalhe": [
+        {
+          "data": "2026-04-30",
+          "tipo": "Check-list – Ferramentas e Equipamentos • Anotação de Responsabilidade Técnica – ART • Comissão Interna de Prevenção de Acidentes e Assédios – CIPA • Caixa de Primeiros Socorros • Ficha de Dados de Segurança – FDS • Laudo Técnico de Condições Ambientais de Trabalho – LTCAT • Plano de Atendimento e Emergência – PAE • Programa de Conservação Auditiva – PCA • Programa de Controle Médico e Saúde Ocupacional – PCMSO • Programa de Gerenciamento de Risco – PGR • Registro do SESMT • Atestado de Saúde Ocupacional – ASO • Ficha de Equipamento de Proteção Individual – EPI • Ordem de Serviço – OS • Treinamentos das NRs • Integração SST",
+          "nota": 956.5,
+          "total_analisados": 23,
+          "total_nao_conforme": 1,
+          "arquivos_nao_conforme": "Plano de Atendimento e Emergência – PAE",
+          "responsavel": "Elvys de Souza Silva"
+        }
+      ],
       "soma_evt": 520.9,
       "qtd_registros_eventos": 34.0,
       "qtd_dds": 34.0,
@@ -2223,6 +2946,21 @@
       "soma_doc": 1000.0,
       "qtd_registros_documento": 1.0,
       "documentos_reprovados": "Nenhum documento reprovado no período",
+      "soma_total_analisados": 37.0,
+      "soma_total_nao_conforme": 0.0,
+      "soma_colaboradores_avaliados": 3.0,
+      "soma_treinamentos_nrs": 20.0,
+      "documentos_detalhe": [
+        {
+          "data": "2026-04-30",
+          "tipo": "Comissão Interna de Prevenção de Acidentes e Assédios – CIPA • Caixa de Primeiros Socorros • Laudo Técnico de Condições Ambientais de Trabalho – LTCAT • Programa de Controle Médico e Saúde Ocupacional – PCMSO • Programa de Gerenciamento de Risco – PGR • Atestado de Saúde Ocupacional – ASO • Ficha de Equipamento de Proteção Individual – EPI • Integração SST • Ordem de Serviço – OS • Treinamentos das NRs",
+          "nota": 1000.0,
+          "total_analisados": 37,
+          "total_nao_conforme": 0,
+          "arquivos_nao_conforme": null,
+          "responsavel": "Elvys de Souza Silva"
+        }
+      ],
       "soma_evt": 10.1,
       "qtd_registros_eventos": 2.0,
       "qtd_dds": 2.0,
@@ -2263,6 +3001,21 @@
       "soma_doc": 911.8,
       "qtd_registros_documento": 1.0,
       "documentos_reprovados": "Análise Preliminar de Risco – APR • Ficha de Dados de Segurança – FDS • Plano de Atendimento e Emergência – PAE",
+      "soma_total_analisados": 34.0,
+      "soma_total_nao_conforme": 3.0,
+      "soma_colaboradores_avaliados": 2.0,
+      "soma_treinamentos_nrs": 16.0,
+      "documentos_detalhe": [
+        {
+          "data": "2026-04-30",
+          "tipo": "Análise Preliminar de Risco – APR • Anotação de Responsabilidade Técnica – ART • Comissão Interna de Prevenção de Acidentes e Assédios – CIPA • Caixa de Primeiros Socorros • Ficha de Dados de Segurança – FDS • Laudo Técnico de Condições Ambientais de Trabalho – LTCAT • Plano de Atendimento e Emergência – PAE • Programa de Controle Médico e Saúde Ocupacional – PCMSO • Programa de Gerenciamento de Risco – PGR • Registro do SESMT • Atestado de Saúde Ocupacional – ASO • Ficha de Equipamento de Proteção Individual – EPI • Integração SST • Ordem de Serviço – OS • Treinamentos das NRs",
+          "nota": 911.8,
+          "total_analisados": 34,
+          "total_nao_conforme": 3,
+          "arquivos_nao_conforme": "Análise Preliminar de Risco – APR • Ficha de Dados de Segurança – FDS • Plano de Atendimento e Emergência – PAE",
+          "responsavel": "Elvys de Souza Silva"
+        }
+      ],
       "soma_evt": 112.89999999999999,
       "qtd_registros_eventos": 13.0,
       "qtd_dds": 13.0,
@@ -2303,6 +3056,11 @@
       "soma_doc": 0.0,
       "qtd_registros_documento": 0.0,
       "documentos_reprovados": "Nenhum documento reprovado no período",
+      "soma_total_analisados": 0.0,
+      "soma_total_nao_conforme": 0.0,
+      "soma_colaboradores_avaliados": 0.0,
+      "soma_treinamentos_nrs": 0.0,
+      "documentos_detalhe": [],
       "soma_evt": 177.20000000000005,
       "qtd_registros_eventos": 13.0,
       "qtd_dds": 12.0,
@@ -2343,6 +3101,21 @@
       "soma_doc": 866.7,
       "qtd_registros_documento": 1.0,
       "documentos_reprovados": "Análise Preliminar de Risco – APR • Comissão Interna de Prevenção de Acidentes e Assédios – CIPA • Programa de Conservação Auditiva – PCA • Programa de Proteção Respiratória – PPR • Ficha de Equipamento de Proteção Individual – EPI • Integração SST • Ordem de Serviço – OS • Treinamentos das NRs",
+      "soma_total_analisados": 60.0,
+      "soma_total_nao_conforme": 8.0,
+      "soma_colaboradores_avaliados": 5.0,
+      "soma_treinamentos_nrs": 30.0,
+      "documentos_detalhe": [
+        {
+          "data": "2026-04-30",
+          "tipo": "Análise Preliminar de Risco – APR • Anotação de Responsabilidade Técnica – ART • Auto de Vistoria do Corpo de Bombeiros – AVCB • Comissão Interna de Prevenção de Acidentes e Assédios – CIPA • Laudo Técnico de Condições Ambientais de Trabalho – LTCAT • Programa de Controle Médico e Saúde Ocupacional – PCMSO • Programa de Conservação Auditiva – PCA • Programa de Gerenciamento de Risco – PGR • Programa de Proteção Respiratória – PPR • Registro do SESMT • Atestado de Saúde Ocupacional – ASO • Ficha de Equipamento de Proteção Individual – EPI • Integração SST • Ordem de Serviço – OS • Treinamentos das NRs",
+          "nota": 866.7,
+          "total_analisados": 60,
+          "total_nao_conforme": 8,
+          "arquivos_nao_conforme": "Análise Preliminar de Risco – APR • Comissão Interna de Prevenção de Acidentes e Assédios – CIPA • Programa de Conservação Auditiva – PCA • Programa de Proteção Respiratória – PPR • Ficha de Equipamento de Proteção Individual – EPI • Integração SST • Ordem de Serviço – OS • Treinamentos das NRs",
+          "responsavel": "Elvys de Souza Silva"
+        }
+      ],
       "soma_evt": 0.0,
       "qtd_registros_eventos": 0.0,
       "qtd_dds": 0.0,
@@ -2383,6 +3156,21 @@
       "soma_doc": 897.4,
       "qtd_registros_documento": 1.0,
       "documentos_reprovados": "Análise Preliminar de Risco – APR • Check-list – Ferramentas e Equipamentos • Ficha de Dados de Segurança – FDS • Plano de Atendimento e Emergência – PAE",
+      "soma_total_analisados": 39.0,
+      "soma_total_nao_conforme": 4.0,
+      "soma_colaboradores_avaliados": 2.0,
+      "soma_treinamentos_nrs": 16.0,
+      "documentos_detalhe": [
+        {
+          "data": "2026-04-30",
+          "tipo": "Análise Preliminar de Risco – APR • Check-list – Veículo • Check-list – Ferramentas e Equipamentos • Comissão Interna de Prevenção de Acidentes e Assédios – CIPA • Caixa de Primeiros Socorros • Ficha de Dados de Segurança – FDS • Laudo Técnico de Condições Ambientais de Trabalho – LTCAT • Plano de Atendimento e Emergência – PAE • Programa de Conservação Auditiva – PCA • Programa de Controle Médico e Saúde Ocupacional – PCMSO • Permissão de Entrada e Trabalho – PET • Programa de Gerenciamento de Risco – PGR • Programa de Proteção Respiratória – PPR • Permissão de Trabalho – PT • Registro do SESMT • Atestado de Saúde Ocupacional – ASO • Ficha de Equipamento de Proteção Individual – EPI • Integração SST • Ordem de Serviço – OS • Treinamentos das NRs",
+          "nota": 897.4,
+          "total_analisados": 39,
+          "total_nao_conforme": 4,
+          "arquivos_nao_conforme": "Análise Preliminar de Risco – APR • Check-list – Ferramentas e Equipamentos • Ficha de Dados de Segurança – FDS • Plano de Atendimento e Emergência – PAE",
+          "responsavel": "Elvys de Souza Silva"
+        }
+      ],
       "soma_evt": 137.5,
       "qtd_registros_eventos": 9.0,
       "qtd_dds": 9.0,
@@ -2423,6 +3211,11 @@
       "soma_doc": 0.0,
       "qtd_registros_documento": 0.0,
       "documentos_reprovados": "Nenhum documento reprovado no período",
+      "soma_total_analisados": 0.0,
+      "soma_total_nao_conforme": 0.0,
+      "soma_colaboradores_avaliados": 0.0,
+      "soma_treinamentos_nrs": 0.0,
+      "documentos_detalhe": [],
       "soma_evt": 7.1,
       "qtd_registros_eventos": 10.0,
       "qtd_dds": 10.0,
@@ -2463,6 +3256,11 @@
       "soma_doc": 0.0,
       "qtd_registros_documento": 0.0,
       "documentos_reprovados": "Nenhum documento reprovado no período",
+      "soma_total_analisados": 0.0,
+      "soma_total_nao_conforme": 0.0,
+      "soma_colaboradores_avaliados": 0.0,
+      "soma_treinamentos_nrs": 0.0,
+      "documentos_detalhe": [],
       "soma_evt": 1.1,
       "qtd_registros_eventos": 1.0,
       "qtd_dds": 1.0,
@@ -2503,6 +3301,21 @@
       "soma_doc": 803.1,
       "qtd_registros_documento": 1.0,
       "documentos_reprovados": "Nenhum documento reprovado no período",
+      "soma_total_analisados": 10000.0,
+      "soma_total_nao_conforme": 1969.0,
+      "soma_colaboradores_avaliados": 0.0,
+      "soma_treinamentos_nrs": 0.0,
+      "documentos_detalhe": [
+        {
+          "data": "2026-05-15",
+          "tipo": null,
+          "nota": 803.1,
+          "total_analisados": 10000,
+          "total_nao_conforme": 1969,
+          "arquivos_nao_conforme": null,
+          "responsavel": "Média histórica"
+        }
+      ],
       "soma_evt": 450.0,
       "qtd_registros_eventos": 18.0,
       "qtd_dds": 18.0,
@@ -2543,6 +3356,21 @@
       "soma_doc": 620.46,
       "qtd_registros_documento": 1.0,
       "documentos_reprovados": "Gerenciamento de Risco Ocupacional – GRO • Permissão de Trabalho – PT • Procedimentos para Escavações e Valas • Anotação de Responsabilidade Técnica – ART • Registro do SESMT • Permissão de Entrada e Trabalho – PET • Programa de Gerenciamento de Risco – PGR • Programa de Controle Médico e Saúde Ocupacional – PCMSO • Auto de Vistoria do Corpo de Bombeiros – AVCB • Laudo Técnico de Condições Ambientais de Trabalho – LTCAT • Programa de Conservação Auditiva – PCA • Laudo Elétrico • Laudo de Insalubridade • Plano de Atendimento e Emergência – PAE • Laudo de Periculosidade • Análise Preliminar de Risco – APR • Layout do Canteiro de Obras • Comissão Interna de Prevenção de Acidentes e Assédios – CIPA • Inventário de Máquinas e Equipamentos • Programa de Proteção Respiratória – PPR • Check-list – Veículo • Atestado de Saúde Ocupacional – ASO • Ficha de Equipamento de Proteção Individual – EPI • Ordem de Serviço – OS • Treinamentos das NRs",
+      "soma_total_analisados": 1531.0,
+      "soma_total_nao_conforme": 149.0,
+      "soma_colaboradores_avaliados": 274.0,
+      "soma_treinamentos_nrs": 832.0,
+      "documentos_detalhe": [
+        {
+          "data": "2026-05-31",
+          "tipo": "Layout do Canteiro de Obras • Registro do SESMT • Gerenciamento de Risco Ocupacional – GRO • Anotação de Responsabilidade Técnica – ART • Procedimentos para Escavações e Valas • Permissão de Trabalho – PT • Permissão de Entrada e Trabalho – PET • Check-list – Veículo • Programa de Gerenciamento de Risco – PGR • Programa de Controle Médico e Saúde Ocupacional – PCMSO • Auto de Vistoria do Corpo de Bombeiros – AVCB • Laudo Técnico de Condições Ambientais de Trabalho – LTCAT • Análise Preliminar de Risco – APR • Comissão Interna de Prevenção de Acidentes e Assédios – CIPA • Laudo de Insalubridade • Plano de Atendimento e Emergência – PAE • Laudo de Periculosidade • Programa de Conservação Auditiva – PCA • Programa de Proteção Respiratória – PPR • Inventário de Máquinas e Equipamentos • Laudo Elétrico • Ordem de Serviço – OS • Atestado de Saúde Ocupacional – ASO • Treinamentos das NRs • Ficha de Equipamento de Proteção Individual – EPI",
+          "nota": 620.46,
+          "total_analisados": 1531,
+          "total_nao_conforme": 149,
+          "arquivos_nao_conforme": "Gerenciamento de Risco Ocupacional – GRO • Permissão de Trabalho – PT • Procedimentos para Escavações e Valas • Anotação de Responsabilidade Técnica – ART • Registro do SESMT • Permissão de Entrada e Trabalho – PET • Programa de Gerenciamento de Risco – PGR • Programa de Controle Médico e Saúde Ocupacional – PCMSO • Auto de Vistoria do Corpo de Bombeiros – AVCB • Laudo Técnico de Condições Ambientais de Trabalho – LTCAT • Programa de Conservação Auditiva – PCA • Laudo Elétrico • Laudo de Insalubridade • Plano de Atendimento e Emergência – PAE • Laudo de Periculosidade • Análise Preliminar de Risco – APR • Layout do Canteiro de Obras • Comissão Interna de Prevenção de Acidentes e Assédios – CIPA • Inventário de Máquinas e Equipamentos • Programa de Proteção Respiratória – PPR • Check-list – Veículo • Atestado de Saúde Ocupacional – ASO • Ficha de Equipamento de Proteção Individual – EPI • Ordem de Serviço – OS • Treinamentos das NRs",
+          "responsavel": "Integração SABESP/WeHand"
+        }
+      ],
       "soma_evt": 300.0,
       "qtd_registros_eventos": 3.0,
       "qtd_dds": 1.0,
@@ -2583,6 +3411,21 @@
       "soma_doc": 835.4,
       "qtd_registros_documento": 1.0,
       "documentos_reprovados": "Nenhum documento reprovado no período",
+      "soma_total_analisados": 10000.0,
+      "soma_total_nao_conforme": 1646.0,
+      "soma_colaboradores_avaliados": 0.0,
+      "soma_treinamentos_nrs": 0.0,
+      "documentos_detalhe": [
+        {
+          "data": "2026-05-15",
+          "tipo": null,
+          "nota": 835.4,
+          "total_analisados": 10000,
+          "total_nao_conforme": 1646,
+          "arquivos_nao_conforme": null,
+          "responsavel": "Média histórica do Falcão"
+        }
+      ],
       "soma_evt": 200.0,
       "qtd_registros_eventos": 2.0,
       "qtd_dds": 0.0,
@@ -2623,6 +3466,21 @@
       "soma_doc": 835.4,
       "qtd_registros_documento": 1.0,
       "documentos_reprovados": "Nenhum documento reprovado no período",
+      "soma_total_analisados": 10000.0,
+      "soma_total_nao_conforme": 1646.0,
+      "soma_colaboradores_avaliados": 0.0,
+      "soma_treinamentos_nrs": 0.0,
+      "documentos_detalhe": [
+        {
+          "data": "2026-05-15",
+          "tipo": null,
+          "nota": 835.4,
+          "total_analisados": 10000,
+          "total_nao_conforme": 1646,
+          "arquivos_nao_conforme": null,
+          "responsavel": "Média histórica do Falcão"
+        }
+      ],
       "soma_evt": 200.0,
       "qtd_registros_eventos": 2.0,
       "qtd_dds": 0.0,
@@ -2663,6 +3521,21 @@
       "soma_doc": 840.43,
       "qtd_registros_documento": 1.0,
       "documentos_reprovados": "Gerenciamento de Risco Ocupacional – GRO • Análise Preliminar de Risco – APR • Permissão de Trabalho – PT • Plano de Atendimento e Emergência – PAE • Permissão de Entrada e Trabalho – PET • Laudo Técnico de Condições Ambientais de Trabalho – LTCAT • Check-list – Veículo • Registro do SESMT",
+      "soma_total_analisados": 44.0,
+      "soma_total_nao_conforme": 5.0,
+      "soma_colaboradores_avaliados": 5.0,
+      "soma_treinamentos_nrs": 17.0,
+      "documentos_detalhe": [
+        {
+          "data": "2026-05-31",
+          "tipo": "Programa de Controle Médico e Saúde Ocupacional – PCMSO • Registro do SESMT • Anotação de Responsabilidade Técnica – ART • Gerenciamento de Risco Ocupacional – GRO • Análise Preliminar de Risco – APR • Permissão de Trabalho – PT • Plano de Atendimento e Emergência – PAE • Permissão de Entrada e Trabalho – PET • Laudo Técnico de Condições Ambientais de Trabalho – LTCAT • Check-list – Veículo • Comissão Interna de Prevenção de Acidentes e Assédios – CIPA • Programa de Proteção Respiratória – PPR • Programa de Conservação Auditiva – PCA • Programa de Gerenciamento de Risco – PGR • Laudo de Periculosidade • Auto de Vistoria do Corpo de Bombeiros – AVCB • Laudo de Insalubridade • Inventário de Máquinas e Equipamentos • Layout do Canteiro de Obras • Ordem de Serviço – OS • Treinamentos das NRs • Ficha de Equipamento de Proteção Individual – EPI • Atestado de Saúde Ocupacional – ASO",
+          "nota": 840.43,
+          "total_analisados": 44,
+          "total_nao_conforme": 5,
+          "arquivos_nao_conforme": "Gerenciamento de Risco Ocupacional – GRO • Análise Preliminar de Risco – APR • Permissão de Trabalho – PT • Plano de Atendimento e Emergência – PAE • Permissão de Entrada e Trabalho – PET • Laudo Técnico de Condições Ambientais de Trabalho – LTCAT • Check-list – Veículo • Registro do SESMT",
+          "responsavel": "Integração SABESP/WeHand"
+        }
+      ],
       "soma_evt": 425.0,
       "qtd_registros_eventos": 14.0,
       "qtd_dds": 14.0,
@@ -2703,6 +3576,21 @@
       "soma_doc": 722.0,
       "qtd_registros_documento": 1.0,
       "documentos_reprovados": "Nenhum documento reprovado no período",
+      "soma_total_analisados": 10000.0,
+      "soma_total_nao_conforme": 2780.0,
+      "soma_colaboradores_avaliados": 0.0,
+      "soma_treinamentos_nrs": 0.0,
+      "documentos_detalhe": [
+        {
+          "data": "2026-05-15",
+          "tipo": null,
+          "nota": 722.0,
+          "total_analisados": 10000,
+          "total_nao_conforme": 2780,
+          "arquivos_nao_conforme": null,
+          "responsavel": "Média histórica"
+        }
+      ],
       "soma_evt": 100.0,
       "qtd_registros_eventos": 1.0,
       "qtd_dds": 0.0,
@@ -2743,6 +3631,21 @@
       "soma_doc": 730.9,
       "qtd_registros_documento": 1.0,
       "documentos_reprovados": "Nenhum documento reprovado no período",
+      "soma_total_analisados": 10000.0,
+      "soma_total_nao_conforme": 2691.0,
+      "soma_colaboradores_avaliados": 0.0,
+      "soma_treinamentos_nrs": 0.0,
+      "documentos_detalhe": [
+        {
+          "data": "2026-05-15",
+          "tipo": null,
+          "nota": 730.9,
+          "total_analisados": 10000,
+          "total_nao_conforme": 2691,
+          "arquivos_nao_conforme": null,
+          "responsavel": "Média histórica"
+        }
+      ],
       "soma_evt": 200.0,
       "qtd_registros_eventos": 8.0,
       "qtd_dds": 8.0,
@@ -2783,6 +3686,21 @@
       "soma_doc": 915.1,
       "qtd_registros_documento": 1.0,
       "documentos_reprovados": "Nenhum documento reprovado no período",
+      "soma_total_analisados": 10000.0,
+      "soma_total_nao_conforme": 849.0,
+      "soma_colaboradores_avaliados": 0.0,
+      "soma_treinamentos_nrs": 0.0,
+      "documentos_detalhe": [
+        {
+          "data": "2026-05-15",
+          "tipo": null,
+          "nota": 915.1,
+          "total_analisados": 10000,
+          "total_nao_conforme": 849,
+          "arquivos_nao_conforme": null,
+          "responsavel": "Média histórica"
+        }
+      ],
       "soma_evt": 225.0,
       "qtd_registros_eventos": 9.0,
       "qtd_dds": 9.0,
@@ -2823,6 +3741,21 @@
       "soma_doc": 654.94,
       "qtd_registros_documento": 1.0,
       "documentos_reprovados": "Registro do SESMT • Gerenciamento de Risco Ocupacional – GRO • Anotação de Responsabilidade Técnica – ART • Permissão de Entrada e Trabalho – PET • Procedimentos para Escavações e Valas • Permissão de Trabalho – PT • Laudo Técnico de Condições Ambientais de Trabalho – LTCAT • Check-list – Veículo • Auto de Vistoria do Corpo de Bombeiros – AVCB • Programa de Conservação Auditiva – PCA • Programa de Gerenciamento de Risco – PGR • Programa de Controle Médico e Saúde Ocupacional – PCMSO • Laudo de Periculosidade • Plano de Atendimento e Emergência – PAE • Ficha de Dados de Segurança – FDS • Comissão Interna de Prevenção de Acidentes e Assédios – CIPA • Programa de Proteção Respiratória – PPR • Laudo de Insalubridade • Layout do Canteiro de Obras • Análise Preliminar de Risco – APR • Laudo Elétrico • Inventário de Máquinas e Equipamentos • Atestado de Saúde Ocupacional – ASO • Treinamentos das NRs • Ficha de Equipamento de Proteção Individual – EPI • Ordem de Serviço – OS",
+      "soma_total_analisados": 1348.0,
+      "soma_total_nao_conforme": 81.0,
+      "soma_colaboradores_avaliados": 280.0,
+      "soma_treinamentos_nrs": 644.0,
+      "documentos_detalhe": [
+        {
+          "data": "2026-05-31",
+          "tipo": "Programa de Controle Médico e Saúde Ocupacional – PCMSO • Inventário de Máquinas e Equipamentos • Registro do SESMT • Gerenciamento de Risco Ocupacional – GRO • Anotação de Responsabilidade Técnica – ART • Permissão de Trabalho – PT • Procedimentos para Escavações e Valas • Permissão de Entrada e Trabalho – PET • Laudo Técnico de Condições Ambientais de Trabalho – LTCAT • Check-list – Veículo • Análise Preliminar de Risco – APR • Layout do Canteiro de Obras • Programa de Gerenciamento de Risco – PGR • Auto de Vistoria do Corpo de Bombeiros – AVCB • Laudo de Insalubridade • Programa de Proteção Respiratória – PPR • Programa de Conservação Auditiva – PCA • Ficha de Dados de Segurança – FDS • Comissão Interna de Prevenção de Acidentes e Assédios – CIPA • Plano de Atendimento e Emergência – PAE • Laudo de Periculosidade • Laudo Elétrico • Ordem de Serviço – OS • Treinamentos das NRs • Ficha de Equipamento de Proteção Individual – EPI • Atestado de Saúde Ocupacional – ASO",
+          "nota": 654.94,
+          "total_analisados": 1348,
+          "total_nao_conforme": 81,
+          "arquivos_nao_conforme": "Registro do SESMT • Gerenciamento de Risco Ocupacional – GRO • Anotação de Responsabilidade Técnica – ART • Permissão de Entrada e Trabalho – PET • Procedimentos para Escavações e Valas • Permissão de Trabalho – PT • Laudo Técnico de Condições Ambientais de Trabalho – LTCAT • Check-list – Veículo • Auto de Vistoria do Corpo de Bombeiros – AVCB • Programa de Conservação Auditiva – PCA • Programa de Gerenciamento de Risco – PGR • Programa de Controle Médico e Saúde Ocupacional – PCMSO • Laudo de Periculosidade • Plano de Atendimento e Emergência – PAE • Ficha de Dados de Segurança – FDS • Comissão Interna de Prevenção de Acidentes e Assédios – CIPA • Programa de Proteção Respiratória – PPR • Laudo de Insalubridade • Layout do Canteiro de Obras • Análise Preliminar de Risco – APR • Laudo Elétrico • Inventário de Máquinas e Equipamentos • Atestado de Saúde Ocupacional – ASO • Treinamentos das NRs • Ficha de Equipamento de Proteção Individual – EPI • Ordem de Serviço – OS",
+          "responsavel": "Integração SABESP/WeHand"
+        }
+      ],
       "soma_evt": 775.0,
       "qtd_registros_eventos": 22.0,
       "qtd_dds": 20.0,
@@ -2848,8 +3781,6 @@
           "data": "2026-05-13",
           "tipo_label": "Acidente – Sem afastamento",
           "situacao": "Típico",
-          "cid": "S20.0",
-          "n_cat": "1.1.0000000040803760628",
           "dias_afastado": 0,
           "custo_afastamento": 0.0,
           "houve_tratativa": "nao",
@@ -2859,8 +3790,6 @@
           "data": "2026-05-28",
           "tipo_label": "Acidente – Sem afastamento",
           "situacao": "Típico",
-          "cid": "S93.4",
-          "n_cat": "1.1.0000000042449331953",
           "dias_afastado": 0,
           "custo_afastamento": 0.0,
           "houve_tratativa": "sim",
@@ -2886,6 +3815,21 @@
       "soma_doc": 966.67,
       "qtd_registros_documento": 1.0,
       "documentos_reprovados": "Check-list – Veículo",
+      "soma_total_analisados": 8.0,
+      "soma_total_nao_conforme": 0.0,
+      "soma_colaboradores_avaliados": 2.0,
+      "soma_treinamentos_nrs": 0.0,
+      "documentos_detalhe": [
+        {
+          "data": "2026-05-31",
+          "tipo": "Anotação de Responsabilidade Técnica – ART • Programa de Controle Médico e Saúde Ocupacional – PCMSO • Gerenciamento de Risco Ocupacional – GRO • Check-list – Veículo • Ficha de Equipamento de Proteção Individual – EPI • Ordem de Serviço – OS • Atestado de Saúde Ocupacional – ASO",
+          "nota": 966.67,
+          "total_analisados": 8,
+          "total_nao_conforme": 0,
+          "arquivos_nao_conforme": "Check-list – Veículo",
+          "responsavel": "Integração SABESP/WeHand"
+        }
+      ],
       "soma_evt": 300.0,
       "qtd_registros_eventos": 9.0,
       "qtd_dds": 9.0,
@@ -2926,6 +3870,21 @@
       "soma_doc": 928.57,
       "qtd_registros_documento": 1.0,
       "documentos_reprovados": "Check-list – Veículo",
+      "soma_total_analisados": 51.0,
+      "soma_total_nao_conforme": 0.0,
+      "soma_colaboradores_avaliados": 12.0,
+      "soma_treinamentos_nrs": 12.0,
+      "documentos_detalhe": [
+        {
+          "data": "2026-05-31",
+          "tipo": "Anotação de Responsabilidade Técnica – ART • Programa de Controle Médico e Saúde Ocupacional – PCMSO • Check-list – Veículo • Programa de Gerenciamento de Risco – PGR • Comissão Interna de Prevenção de Acidentes e Assédios – CIPA • Ordem de Serviço – OS • Ficha de Equipamento de Proteção Individual – EPI • Treinamentos das NRs • Atestado de Saúde Ocupacional – ASO",
+          "nota": 928.57,
+          "total_analisados": 51,
+          "total_nao_conforme": 0,
+          "arquivos_nao_conforme": "Check-list – Veículo",
+          "responsavel": "Integração SABESP/WeHand"
+        }
+      ],
       "soma_evt": 600.0,
       "qtd_registros_eventos": 21.0,
       "qtd_dds": 21.0,
@@ -2966,6 +3925,21 @@
       "soma_doc": 984.3,
       "qtd_registros_documento": 1.0,
       "documentos_reprovados": "Nenhum documento reprovado no período",
+      "soma_total_analisados": 10000.0,
+      "soma_total_nao_conforme": 157.0,
+      "soma_colaboradores_avaliados": 0.0,
+      "soma_treinamentos_nrs": 0.0,
+      "documentos_detalhe": [
+        {
+          "data": "2026-05-15",
+          "tipo": null,
+          "nota": 984.3,
+          "total_analisados": 10000,
+          "total_nao_conforme": 157,
+          "arquivos_nao_conforme": null,
+          "responsavel": "Média histórica"
+        }
+      ],
       "soma_evt": 100.0,
       "qtd_registros_eventos": 1.0,
       "qtd_dds": 0.0,
@@ -3006,6 +3980,21 @@
       "soma_doc": 905.0,
       "qtd_registros_documento": 1.0,
       "documentos_reprovados": "Nenhum documento reprovado no período",
+      "soma_total_analisados": 10000.0,
+      "soma_total_nao_conforme": 950.0,
+      "soma_colaboradores_avaliados": 0.0,
+      "soma_treinamentos_nrs": 0.0,
+      "documentos_detalhe": [
+        {
+          "data": "2026-05-15",
+          "tipo": null,
+          "nota": 905.0,
+          "total_analisados": 10000,
+          "total_nao_conforme": 950,
+          "arquivos_nao_conforme": null,
+          "responsavel": "Média histórica"
+        }
+      ],
       "soma_evt": 50.0,
       "qtd_registros_eventos": 2.0,
       "qtd_dds": 2.0,
@@ -3046,6 +4035,21 @@
       "soma_doc": 464.05,
       "qtd_registros_documento": 1.0,
       "documentos_reprovados": "Gerenciamento de Risco Ocupacional – GRO • Anotação de Responsabilidade Técnica – ART • Registro do SESMT • Procedimentos para Escavações e Valas • Check-list – Veículo • Auto de Vistoria do Corpo de Bombeiros – AVCB • Inventário de Máquinas e Equipamentos • Laudo Elétrico • Atestado de Saúde Ocupacional – ASO • Ficha de Equipamento de Proteção Individual – EPI",
+      "soma_total_analisados": 240.0,
+      "soma_total_nao_conforme": 10.0,
+      "soma_colaboradores_avaliados": 33.0,
+      "soma_treinamentos_nrs": 136.0,
+      "documentos_detalhe": [
+        {
+          "data": "2026-05-31",
+          "tipo": "Gerenciamento de Risco Ocupacional – GRO • Registro do SESMT • Anotação de Responsabilidade Técnica – ART • Permissão de Entrada e Trabalho – PET • Procedimentos para Escavações e Valas • Permissão de Trabalho – PT • Layout do Canteiro de Obras • Comissão Interna de Prevenção de Acidentes e Assédios – CIPA • Análise Preliminar de Risco – APR • Plano de Atendimento e Emergência – PAE • Programa de Gerenciamento de Risco – PGR • Programa de Controle Médico e Saúde Ocupacional – PCMSO • Check-list – Veículo • Laudo de Periculosidade • Laudo de Insalubridade • Laudo Técnico de Condições Ambientais de Trabalho – LTCAT • Auto de Vistoria do Corpo de Bombeiros – AVCB • Programa de Proteção Respiratória – PPR • Inventário de Máquinas e Equipamentos • Programa de Conservação Auditiva – PCA • Laudo Elétrico • Atestado de Saúde Ocupacional – ASO • Ordem de Serviço – OS • Treinamentos das NRs • Ficha de Equipamento de Proteção Individual – EPI",
+          "nota": 464.05,
+          "total_analisados": 240,
+          "total_nao_conforme": 10,
+          "arquivos_nao_conforme": "Gerenciamento de Risco Ocupacional – GRO • Anotação de Responsabilidade Técnica – ART • Registro do SESMT • Procedimentos para Escavações e Valas • Check-list – Veículo • Auto de Vistoria do Corpo de Bombeiros – AVCB • Inventário de Máquinas e Equipamentos • Laudo Elétrico • Atestado de Saúde Ocupacional – ASO • Ficha de Equipamento de Proteção Individual – EPI",
+          "responsavel": "Integração SABESP/WeHand"
+        }
+      ],
       "soma_evt": 200.0,
       "qtd_registros_eventos": 2.0,
       "qtd_dds": 0.0,
@@ -3086,6 +4090,21 @@
       "soma_doc": 912.96,
       "qtd_registros_documento": 1.0,
       "documentos_reprovados": "Anotação de Responsabilidade Técnica – ART • Registro do SESMT • Atestado de Saúde Ocupacional – ASO • Treinamentos das NRs",
+      "soma_total_analisados": 242.0,
+      "soma_total_nao_conforme": 4.0,
+      "soma_colaboradores_avaliados": 39.0,
+      "soma_treinamentos_nrs": 129.0,
+      "documentos_detalhe": [
+        {
+          "data": "2026-05-31",
+          "tipo": "Gerenciamento de Risco Ocupacional – GRO • Anotação de Responsabilidade Técnica – ART • Programa de Controle Médico e Saúde Ocupacional – PCMSO • Procedimentos para Escavações e Valas • Permissão de Entrada e Trabalho – PET • Registro do SESMT • Permissão de Trabalho – PT • Inventário de Máquinas e Equipamentos • Análise Preliminar de Risco – APR • Layout do Canteiro de Obras • Plano de Atendimento e Emergência – PAE • Laudo Técnico de Condições Ambientais de Trabalho – LTCAT • Auto de Vistoria do Corpo de Bombeiros – AVCB • Laudo de Periculosidade • Programa de Gerenciamento de Risco – PGR • Laudo de Insalubridade • Laudo Elétrico • Check-list – Veículo • Comissão Interna de Prevenção de Acidentes e Assédios – CIPA • Programa de Proteção Respiratória – PPR • Programa de Conservação Auditiva – PCA • Treinamentos das NRs • Ficha de Equipamento de Proteção Individual – EPI • Ordem de Serviço – OS • Atestado de Saúde Ocupacional – ASO",
+          "nota": 912.96,
+          "total_analisados": 242,
+          "total_nao_conforme": 4,
+          "arquivos_nao_conforme": "Anotação de Responsabilidade Técnica – ART • Registro do SESMT • Atestado de Saúde Ocupacional – ASO • Treinamentos das NRs",
+          "responsavel": "Integração SABESP/WeHand"
+        }
+      ],
       "soma_evt": 400.0,
       "qtd_registros_eventos": 4.0,
       "qtd_dds": 0.0,
@@ -3126,6 +4145,21 @@
       "soma_doc": 881.7,
       "qtd_registros_documento": 1.0,
       "documentos_reprovados": "Nenhum documento reprovado no período",
+      "soma_total_analisados": 10000.0,
+      "soma_total_nao_conforme": 1183.0,
+      "soma_colaboradores_avaliados": 0.0,
+      "soma_treinamentos_nrs": 0.0,
+      "documentos_detalhe": [
+        {
+          "data": "2026-05-15",
+          "tipo": null,
+          "nota": 881.7,
+          "total_analisados": 10000,
+          "total_nao_conforme": 1183,
+          "arquivos_nao_conforme": null,
+          "responsavel": "Média histórica"
+        }
+      ],
       "soma_evt": 150.0,
       "qtd_registros_eventos": 6.0,
       "qtd_dds": 6.0,
@@ -3166,6 +4200,11 @@
       "soma_doc": 0.0,
       "qtd_registros_documento": 0.0,
       "documentos_reprovados": "Nenhum documento reprovado no período",
+      "soma_total_analisados": 0.0,
+      "soma_total_nao_conforme": 0.0,
+      "soma_colaboradores_avaliados": 0.0,
+      "soma_treinamentos_nrs": 0.0,
+      "documentos_detalhe": [],
       "soma_evt": 7.1,
       "qtd_registros_eventos": 11.0,
       "qtd_dds": 11.0,
@@ -3206,6 +4245,21 @@
       "soma_doc": 835.4,
       "qtd_registros_documento": 1.0,
       "documentos_reprovados": "Nenhum documento reprovado no período",
+      "soma_total_analisados": 10000.0,
+      "soma_total_nao_conforme": 1646.0,
+      "soma_colaboradores_avaliados": 0.0,
+      "soma_treinamentos_nrs": 0.0,
+      "documentos_detalhe": [
+        {
+          "data": "2026-05-15",
+          "tipo": null,
+          "nota": 835.4,
+          "total_analisados": 10000,
+          "total_nao_conforme": 1646,
+          "arquivos_nao_conforme": null,
+          "responsavel": "Média histórica do Falcão"
+        }
+      ],
       "soma_evt": 200.0,
       "qtd_registros_eventos": 2.0,
       "qtd_dds": 0.0,
@@ -3246,6 +4300,21 @@
       "soma_doc": 100.0,
       "qtd_registros_documento": 1.0,
       "documentos_reprovados": "Nenhum documento reprovado no período",
+      "soma_total_analisados": 10000.0,
+      "soma_total_nao_conforme": 9000.0,
+      "soma_colaboradores_avaliados": 0.0,
+      "soma_treinamentos_nrs": 0.0,
+      "documentos_detalhe": [
+        {
+          "data": "2026-06-15",
+          "tipo": null,
+          "nota": 100.0,
+          "total_analisados": 10000,
+          "total_nao_conforme": 9000,
+          "arquivos_nao_conforme": null,
+          "responsavel": "Gerente SST"
+        }
+      ],
       "soma_evt": 800.0,
       "qtd_registros_eventos": 20.0,
       "qtd_dds": 16.0,
@@ -3286,6 +4355,21 @@
       "soma_doc": 547.79,
       "qtd_registros_documento": 1.0,
       "documentos_reprovados": "Gerenciamento de Risco Ocupacional – GRO • Anotação de Responsabilidade Técnica – ART • Registro do SESMT • Permissão de Trabalho – PT • Procedimentos para Escavações e Valas • Permissão de Entrada e Trabalho – PET • Programa de Gerenciamento de Risco – PGR • Programa de Controle Médico e Saúde Ocupacional – PCMSO • Auto de Vistoria do Corpo de Bombeiros – AVCB • Laudo Técnico de Condições Ambientais de Trabalho – LTCAT • Inventário de Máquinas e Equipamentos • Layout do Canteiro de Obras • Laudo de Periculosidade • Programa de Proteção Respiratória – PPR • Laudo de Insalubridade • Programa de Conservação Auditiva – PCA • Plano de Atendimento e Emergência – PAE • Check-list – Veículo • Comissão Interna de Prevenção de Acidentes e Assédios – CIPA • Laudo Elétrico",
+      "soma_total_analisados": 18.0,
+      "soma_total_nao_conforme": 18.0,
+      "soma_colaboradores_avaliados": 0.0,
+      "soma_treinamentos_nrs": 0.0,
+      "documentos_detalhe": [
+        {
+          "data": "2026-06-30",
+          "tipo": "Gerenciamento de Risco Ocupacional – GRO • Anotação de Responsabilidade Técnica – ART • Registro do SESMT • Procedimentos para Escavações e Valas • Permissão de Trabalho – PT • Permissão de Entrada e Trabalho – PET • Check-list – Veículo • Programa de Gerenciamento de Risco – PGR • Programa de Controle Médico e Saúde Ocupacional – PCMSO • Auto de Vistoria do Corpo de Bombeiros – AVCB • Layout do Canteiro de Obras • Laudo Técnico de Condições Ambientais de Trabalho – LTCAT • Comissão Interna de Prevenção de Acidentes e Assédios – CIPA • Plano de Atendimento e Emergência – PAE • Laudo de Insalubridade • Laudo de Periculosidade • Programa de Conservação Auditiva – PCA • Programa de Proteção Respiratória – PPR • Inventário de Máquinas e Equipamentos • Laudo Elétrico",
+          "nota": 547.79,
+          "total_analisados": 18,
+          "total_nao_conforme": 18,
+          "arquivos_nao_conforme": "Gerenciamento de Risco Ocupacional – GRO • Anotação de Responsabilidade Técnica – ART • Registro do SESMT • Permissão de Trabalho – PT • Procedimentos para Escavações e Valas • Permissão de Entrada e Trabalho – PET • Programa de Gerenciamento de Risco – PGR • Programa de Controle Médico e Saúde Ocupacional – PCMSO • Auto de Vistoria do Corpo de Bombeiros – AVCB • Laudo Técnico de Condições Ambientais de Trabalho – LTCAT • Inventário de Máquinas e Equipamentos • Layout do Canteiro de Obras • Laudo de Periculosidade • Programa de Proteção Respiratória – PPR • Laudo de Insalubridade • Programa de Conservação Auditiva – PCA • Plano de Atendimento e Emergência – PAE • Check-list – Veículo • Comissão Interna de Prevenção de Acidentes e Assédios – CIPA • Laudo Elétrico",
+          "responsavel": "Integração SABESP/WeHand"
+        }
+      ],
       "soma_evt": 200.0,
       "qtd_registros_eventos": 2.0,
       "qtd_dds": 0.0,
@@ -3326,6 +4410,21 @@
       "soma_doc": 835.4,
       "qtd_registros_documento": 1.0,
       "documentos_reprovados": "Nenhum documento reprovado no período",
+      "soma_total_analisados": 10000.0,
+      "soma_total_nao_conforme": 1646.0,
+      "soma_colaboradores_avaliados": 0.0,
+      "soma_treinamentos_nrs": 0.0,
+      "documentos_detalhe": [
+        {
+          "data": "2026-06-15",
+          "tipo": null,
+          "nota": 835.4,
+          "total_analisados": 10000,
+          "total_nao_conforme": 1646,
+          "arquivos_nao_conforme": null,
+          "responsavel": "Média histórica do Falcão"
+        }
+      ],
       "soma_evt": 200.0,
       "qtd_registros_eventos": 2.0,
       "qtd_dds": 0.0,
@@ -3366,6 +4465,21 @@
       "soma_doc": 835.4,
       "qtd_registros_documento": 1.0,
       "documentos_reprovados": "Nenhum documento reprovado no período",
+      "soma_total_analisados": 10000.0,
+      "soma_total_nao_conforme": 1646.0,
+      "soma_colaboradores_avaliados": 0.0,
+      "soma_treinamentos_nrs": 0.0,
+      "documentos_detalhe": [
+        {
+          "data": "2026-06-15",
+          "tipo": null,
+          "nota": 835.4,
+          "total_analisados": 10000,
+          "total_nao_conforme": 1646,
+          "arquivos_nao_conforme": null,
+          "responsavel": "Média histórica do Falcão"
+        }
+      ],
       "soma_evt": 200.0,
       "qtd_registros_eventos": 2.0,
       "qtd_dds": 0.0,
@@ -3406,6 +4520,21 @@
       "soma_doc": 783.28,
       "qtd_registros_documento": 1.0,
       "documentos_reprovados": "Gerenciamento de Risco Ocupacional – GRO • Laudo Técnico de Condições Ambientais de Trabalho – LTCAT • Permissão de Trabalho – PT • Permissão de Entrada e Trabalho – PET • Anotação de Responsabilidade Técnica – ART • Registro do SESMT",
+      "soma_total_analisados": 14.0,
+      "soma_total_nao_conforme": 3.0,
+      "soma_colaboradores_avaliados": 0.0,
+      "soma_treinamentos_nrs": 0.0,
+      "documentos_detalhe": [
+        {
+          "data": "2026-06-30",
+          "tipo": "Registro do SESMT • Gerenciamento de Risco Ocupacional – GRO • Anotação de Responsabilidade Técnica – ART • Laudo Técnico de Condições Ambientais de Trabalho – LTCAT • Permissão de Trabalho – PT • Permissão de Entrada e Trabalho – PET • Check-list – Veículo • Plano de Atendimento e Emergência – PAE • Programa de Controle Médico e Saúde Ocupacional – PCMSO • Comissão Interna de Prevenção de Acidentes e Assédios – CIPA • Programa de Proteção Respiratória – PPR • Programa de Conservação Auditiva – PCA • Programa de Gerenciamento de Risco – PGR • Laudo de Periculosidade • Laudo de Insalubridade • Auto de Vistoria do Corpo de Bombeiros – AVCB • Layout do Canteiro de Obras • Inventário de Máquinas e Equipamentos",
+          "nota": 783.28,
+          "total_analisados": 14,
+          "total_nao_conforme": 3,
+          "arquivos_nao_conforme": "Gerenciamento de Risco Ocupacional – GRO • Laudo Técnico de Condições Ambientais de Trabalho – LTCAT • Permissão de Trabalho – PT • Permissão de Entrada e Trabalho – PET • Anotação de Responsabilidade Técnica – ART • Registro do SESMT",
+          "responsavel": "Integração SABESP/WeHand"
+        }
+      ],
       "soma_evt": 1125.0,
       "qtd_registros_eventos": 18.0,
       "qtd_dds": 10.0,
@@ -3446,6 +4575,21 @@
       "soma_doc": 722.0,
       "qtd_registros_documento": 1.0,
       "documentos_reprovados": "Nenhum documento reprovado no período",
+      "soma_total_analisados": 10000.0,
+      "soma_total_nao_conforme": 2780.0,
+      "soma_colaboradores_avaliados": 0.0,
+      "soma_treinamentos_nrs": 0.0,
+      "documentos_detalhe": [
+        {
+          "data": "2026-06-15",
+          "tipo": null,
+          "nota": 722.0,
+          "total_analisados": 10000,
+          "total_nao_conforme": 2780,
+          "arquivos_nao_conforme": null,
+          "responsavel": "Média histórica"
+        }
+      ],
       "soma_evt": 100.0,
       "qtd_registros_eventos": 1.0,
       "qtd_dds": 0.0,
@@ -3486,6 +4630,21 @@
       "soma_doc": 600.0,
       "qtd_registros_documento": 1.0,
       "documentos_reprovados": "Nenhum documento reprovado no período",
+      "soma_total_analisados": 10000.0,
+      "soma_total_nao_conforme": 4000.0,
+      "soma_colaboradores_avaliados": 0.0,
+      "soma_treinamentos_nrs": 0.0,
+      "documentos_detalhe": [
+        {
+          "data": "2026-06-15",
+          "tipo": null,
+          "nota": 600.0,
+          "total_analisados": 10000,
+          "total_nao_conforme": 4000,
+          "arquivos_nao_conforme": null,
+          "responsavel": "Gerente SST"
+        }
+      ],
       "soma_evt": 500.0,
       "qtd_registros_eventos": 20.0,
       "qtd_dds": 20.0,
@@ -3526,6 +4685,21 @@
       "soma_doc": 915.1,
       "qtd_registros_documento": 1.0,
       "documentos_reprovados": "Nenhum documento reprovado no período",
+      "soma_total_analisados": 10000.0,
+      "soma_total_nao_conforme": 849.0,
+      "soma_colaboradores_avaliados": 0.0,
+      "soma_treinamentos_nrs": 0.0,
+      "documentos_detalhe": [
+        {
+          "data": "2026-06-15",
+          "tipo": null,
+          "nota": 915.1,
+          "total_analisados": 10000,
+          "total_nao_conforme": 849,
+          "arquivos_nao_conforme": null,
+          "responsavel": "Média histórica"
+        }
+      ],
       "soma_evt": 575.0,
       "qtd_registros_eventos": 20.0,
       "qtd_dds": 19.0,
@@ -3566,6 +4740,21 @@
       "soma_doc": 662.57,
       "qtd_registros_documento": 1.0,
       "documentos_reprovados": "Gerenciamento de Risco Ocupacional – GRO • Registro do SESMT • Anotação de Responsabilidade Técnica – ART • Permissão de Entrada e Trabalho – PET • Procedimentos para Escavações e Valas • Permissão de Trabalho – PT • Laudo Técnico de Condições Ambientais de Trabalho – LTCAT • Check-list – Veículo • Auto de Vistoria do Corpo de Bombeiros – AVCB • Programa de Controle Médico e Saúde Ocupacional – PCMSO • Inventário de Máquinas e Equipamentos • Programa de Conservação Auditiva – PCA • Programa de Gerenciamento de Risco – PGR • Plano de Atendimento e Emergência – PAE • Comissão Interna de Prevenção de Acidentes e Assédios – CIPA • Layout do Canteiro de Obras • Laudo de Insalubridade • Ficha de Dados de Segurança – FDS • Laudo de Periculosidade • Análise Preliminar de Risco – APR • Programa de Proteção Respiratória – PPR • Laudo Elétrico",
+      "soma_total_analisados": 20.0,
+      "soma_total_nao_conforme": 19.0,
+      "soma_colaboradores_avaliados": 0.0,
+      "soma_treinamentos_nrs": 0.0,
+      "documentos_detalhe": [
+        {
+          "data": "2026-06-30",
+          "tipo": "Gerenciamento de Risco Ocupacional – GRO • Registro do SESMT • Anotação de Responsabilidade Técnica – ART • Procedimentos para Escavações e Valas • Permissão de Entrada e Trabalho – PET • Permissão de Trabalho – PT • Laudo de Periculosidade • Comissão Interna de Prevenção de Acidentes e Assédios – CIPA • Plano de Atendimento e Emergência – PAE • Programa de Conservação Auditiva – PCA • Programa de Proteção Respiratória – PPR • Programa de Gerenciamento de Risco – PGR • Programa de Controle Médico e Saúde Ocupacional – PCMSO • Laudo Elétrico • Check-list – Veículo • Laudo Técnico de Condições Ambientais de Trabalho – LTCAT • Análise Preliminar de Risco – APR • Auto de Vistoria do Corpo de Bombeiros – AVCB • Ficha de Dados de Segurança – FDS • Layout do Canteiro de Obras • Laudo de Insalubridade • Inventário de Máquinas e Equipamentos • Laudo Ergonômico",
+          "nota": 662.57,
+          "total_analisados": 20,
+          "total_nao_conforme": 19,
+          "arquivos_nao_conforme": "Gerenciamento de Risco Ocupacional – GRO • Registro do SESMT • Anotação de Responsabilidade Técnica – ART • Permissão de Entrada e Trabalho – PET • Procedimentos para Escavações e Valas • Permissão de Trabalho – PT • Laudo Técnico de Condições Ambientais de Trabalho – LTCAT • Check-list – Veículo • Auto de Vistoria do Corpo de Bombeiros – AVCB • Programa de Controle Médico e Saúde Ocupacional – PCMSO • Inventário de Máquinas e Equipamentos • Programa de Conservação Auditiva – PCA • Programa de Gerenciamento de Risco – PGR • Plano de Atendimento e Emergência – PAE • Comissão Interna de Prevenção de Acidentes e Assédios – CIPA • Layout do Canteiro de Obras • Laudo de Insalubridade • Ficha de Dados de Segurança – FDS • Laudo de Periculosidade • Análise Preliminar de Risco – APR • Programa de Proteção Respiratória – PPR • Laudo Elétrico",
+          "responsavel": "Integração SABESP/WeHand"
+        }
+      ],
       "soma_evt": 1150.0,
       "qtd_registros_eventos": 25.0,
       "qtd_dds": 19.0,
@@ -3591,8 +4780,6 @@
           "data": "2026-06-18",
           "tipo_label": "Acidente – Com afastamento",
           "situacao": "Típico",
-          "cid": "M43.6",
-          "n_cat": "1.1.0000000041635833501",
           "dias_afastado": 1,
           "custo_afastamento": 128.0,
           "houve_tratativa": "sim",
@@ -3618,6 +4805,21 @@
       "soma_doc": 1000.0,
       "qtd_registros_documento": 1.0,
       "documentos_reprovados": "Nenhum documento reprovado no período",
+      "soma_total_analisados": 2.0,
+      "soma_total_nao_conforme": 0.0,
+      "soma_colaboradores_avaliados": 0.0,
+      "soma_treinamentos_nrs": 0.0,
+      "documentos_detalhe": [
+        {
+          "data": "2026-06-30",
+          "tipo": "Gerenciamento de Risco Ocupacional – GRO • Check-list – Veículo • Anotação de Responsabilidade Técnica – ART • Programa de Controle Médico e Saúde Ocupacional – PCMSO",
+          "nota": 1000.0,
+          "total_analisados": 2,
+          "total_nao_conforme": 0,
+          "arquivos_nao_conforme": null,
+          "responsavel": "Integração SABESP/WeHand"
+        }
+      ],
       "soma_evt": 475.0,
       "qtd_registros_eventos": 13.0,
       "qtd_dds": 11.0,
@@ -3658,6 +4860,21 @@
       "soma_doc": 966.67,
       "qtd_registros_documento": 1.0,
       "documentos_reprovados": "Nenhum documento reprovado no período",
+      "soma_total_analisados": 3.0,
+      "soma_total_nao_conforme": 0.0,
+      "soma_colaboradores_avaliados": 0.0,
+      "soma_treinamentos_nrs": 0.0,
+      "documentos_detalhe": [
+        {
+          "data": "2026-06-30",
+          "tipo": "Check-list – Veículo • Anotação de Responsabilidade Técnica – ART • Programa de Controle Médico e Saúde Ocupacional – PCMSO • Programa de Gerenciamento de Risco – PGR • Comissão Interna de Prevenção de Acidentes e Assédios – CIPA",
+          "nota": 966.67,
+          "total_analisados": 3,
+          "total_nao_conforme": 0,
+          "arquivos_nao_conforme": null,
+          "responsavel": "Integração SABESP/WeHand"
+        }
+      ],
       "soma_evt": 1025.0,
       "qtd_registros_eventos": 26.0,
       "qtd_dds": 21.0,
@@ -3698,6 +4915,21 @@
       "soma_doc": 984.3,
       "qtd_registros_documento": 1.0,
       "documentos_reprovados": "Nenhum documento reprovado no período",
+      "soma_total_analisados": 10000.0,
+      "soma_total_nao_conforme": 157.0,
+      "soma_colaboradores_avaliados": 0.0,
+      "soma_treinamentos_nrs": 0.0,
+      "documentos_detalhe": [
+        {
+          "data": "2026-06-15",
+          "tipo": null,
+          "nota": 984.3,
+          "total_analisados": 10000,
+          "total_nao_conforme": 157,
+          "arquivos_nao_conforme": null,
+          "responsavel": "Média histórica"
+        }
+      ],
       "soma_evt": 100.0,
       "qtd_registros_eventos": 1.0,
       "qtd_dds": 0.0,
@@ -3738,6 +4970,21 @@
       "soma_doc": 905.0,
       "qtd_registros_documento": 1.0,
       "documentos_reprovados": "Nenhum documento reprovado no período",
+      "soma_total_analisados": 10000.0,
+      "soma_total_nao_conforme": 950.0,
+      "soma_colaboradores_avaliados": 0.0,
+      "soma_treinamentos_nrs": 0.0,
+      "documentos_detalhe": [
+        {
+          "data": "2026-06-15",
+          "tipo": null,
+          "nota": 905.0,
+          "total_analisados": 10000,
+          "total_nao_conforme": 950,
+          "arquivos_nao_conforme": null,
+          "responsavel": "Média histórica"
+        }
+      ],
       "soma_evt": 50.0,
       "qtd_registros_eventos": 2.0,
       "qtd_dds": 2.0,
@@ -3778,6 +5025,21 @@
       "soma_doc": 665.42,
       "qtd_registros_documento": 1.0,
       "documentos_reprovados": "Gerenciamento de Risco Ocupacional – GRO • Registro do SESMT • Anotação de Responsabilidade Técnica – ART • Laudo Elétrico • Check-list – Veículo",
+      "soma_total_analisados": 18.0,
+      "soma_total_nao_conforme": 3.0,
+      "soma_colaboradores_avaliados": 0.0,
+      "soma_treinamentos_nrs": 0.0,
+      "documentos_detalhe": [
+        {
+          "data": "2026-06-30",
+          "tipo": "Gerenciamento de Risco Ocupacional – GRO • Procedimentos para Escavações e Valas • Registro do SESMT • Anotação de Responsabilidade Técnica – ART • Permissão de Trabalho – PT • Permissão de Entrada e Trabalho – PET • Auto de Vistoria do Corpo de Bombeiros – AVCB • Check-list – Veículo • Laudo Elétrico • Layout do Canteiro de Obras • Comissão Interna de Prevenção de Acidentes e Assédios – CIPA • Plano de Atendimento e Emergência – PAE • Programa de Gerenciamento de Risco – PGR • Programa de Controle Médico e Saúde Ocupacional – PCMSO • Laudo Técnico de Condições Ambientais de Trabalho – LTCAT • Laudo de Periculosidade • Programa de Proteção Respiratória – PPR • Laudo de Insalubridade • Programa de Conservação Auditiva – PCA • Inventário de Máquinas e Equipamentos • Análise Preliminar de Risco – APR",
+          "nota": 665.42,
+          "total_analisados": 18,
+          "total_nao_conforme": 3,
+          "arquivos_nao_conforme": "Gerenciamento de Risco Ocupacional – GRO • Registro do SESMT • Anotação de Responsabilidade Técnica – ART • Laudo Elétrico • Check-list – Veículo",
+          "responsavel": "Integração SABESP/WeHand"
+        }
+      ],
       "soma_evt": 50.0,
       "qtd_registros_eventos": 2.0,
       "qtd_dds": 2.0,
@@ -3818,6 +5080,21 @@
       "soma_doc": 949.7,
       "qtd_registros_documento": 1.0,
       "documentos_reprovados": "Anotação de Responsabilidade Técnica – ART • Registro do SESMT • Programa de Controle Médico e Saúde Ocupacional – PCMSO • Laudo Técnico de Condições Ambientais de Trabalho – LTCAT",
+      "soma_total_analisados": 19.0,
+      "soma_total_nao_conforme": 4.0,
+      "soma_colaboradores_avaliados": 0.0,
+      "soma_treinamentos_nrs": 0.0,
+      "documentos_detalhe": [
+        {
+          "data": "2026-06-30",
+          "tipo": "Gerenciamento de Risco Ocupacional – GRO • Anotação de Responsabilidade Técnica – ART • Procedimentos para Escavações e Valas • Permissão de Entrada e Trabalho – PET • Registro do SESMT • Permissão de Trabalho – PT • Auto de Vistoria do Corpo de Bombeiros – AVCB • Programa de Controle Médico e Saúde Ocupacional – PCMSO • Inventário de Máquinas e Equipamentos • Programa de Gerenciamento de Risco – PGR • Análise Preliminar de Risco – APR • Layout do Canteiro de Obras • Plano de Atendimento e Emergência – PAE • Laudo Técnico de Condições Ambientais de Trabalho – LTCAT • Laudo de Periculosidade • Programa de Proteção Respiratória – PPR • Laudo Ergonômico • Comissão Interna de Prevenção de Acidentes e Assédios – CIPA • Laudo de Insalubridade • Programa de Conservação Auditiva – PCA • Check-list – Veículo • Laudo Elétrico",
+          "nota": 949.7,
+          "total_analisados": 19,
+          "total_nao_conforme": 4,
+          "arquivos_nao_conforme": "Anotação de Responsabilidade Técnica – ART • Registro do SESMT • Programa de Controle Médico e Saúde Ocupacional – PCMSO • Laudo Técnico de Condições Ambientais de Trabalho – LTCAT",
+          "responsavel": "Integração SABESP/WeHand"
+        }
+      ],
       "soma_evt": 500.0,
       "qtd_registros_eventos": 5.0,
       "qtd_dds": 1.0,
@@ -3858,6 +5135,21 @@
       "soma_doc": 881.7,
       "qtd_registros_documento": 1.0,
       "documentos_reprovados": "Nenhum documento reprovado no período",
+      "soma_total_analisados": 10000.0,
+      "soma_total_nao_conforme": 1183.0,
+      "soma_colaboradores_avaliados": 0.0,
+      "soma_treinamentos_nrs": 0.0,
+      "documentos_detalhe": [
+        {
+          "data": "2026-06-15",
+          "tipo": null,
+          "nota": 881.7,
+          "total_analisados": 10000,
+          "total_nao_conforme": 1183,
+          "arquivos_nao_conforme": null,
+          "responsavel": "Média histórica"
+        }
+      ],
       "soma_evt": 150.0,
       "qtd_registros_eventos": 3.0,
       "qtd_dds": 2.0,
@@ -3898,6 +5190,21 @@
       "soma_doc": 600.0,
       "qtd_registros_documento": 1.0,
       "documentos_reprovados": "Nenhum documento reprovado no período",
+      "soma_total_analisados": 10000.0,
+      "soma_total_nao_conforme": 4000.0,
+      "soma_colaboradores_avaliados": 0.0,
+      "soma_treinamentos_nrs": 0.0,
+      "documentos_detalhe": [
+        {
+          "data": "2026-06-19",
+          "tipo": null,
+          "nota": 600.0,
+          "total_analisados": 10000,
+          "total_nao_conforme": 4000,
+          "arquivos_nao_conforme": null,
+          "responsavel": "Gerente SST"
+        }
+      ],
       "soma_evt": 100.0,
       "qtd_registros_eventos": 14.0,
       "qtd_dds": 10.0,
@@ -3938,6 +5245,21 @@
       "soma_doc": 581.67,
       "qtd_registros_documento": 1.0,
       "documentos_reprovados": "Anotação de Responsabilidade Técnica – ART • Procedimentos para Escavações e Valas • Registro do SESMT • Laudo Técnico de Condições Ambientais de Trabalho – LTCAT • Programa de Controle Médico e Saúde Ocupacional – PCMSO • Laudo de Insalubridade • Programa de Proteção Respiratória – PPR • Permissão de Trabalho – PT • Plano de Atendimento e Emergência – PAE • Laudo Elétrico • Comissão Interna de Prevenção de Acidentes e Assédios – CIPA • Laudo de Periculosidade • Laudo Ergonômico • Permissão de Entrada e Trabalho – PET • Ficha de Dados de Segurança – FDS • Programa de Conservação Auditiva – PCA • Inventário de Máquinas e Equipamentos • Auto de Vistoria do Corpo de Bombeiros – AVCB • Análise Preliminar de Risco – APR • Programa de Gerenciamento de Risco – PGR",
+      "soma_total_analisados": 19.0,
+      "soma_total_nao_conforme": 17.0,
+      "soma_colaboradores_avaliados": 0.0,
+      "soma_treinamentos_nrs": 0.0,
+      "documentos_detalhe": [
+        {
+          "data": "2026-06-30",
+          "tipo": "Anotação de Responsabilidade Técnica – ART • Procedimentos para Escavações e Valas • Registro do SESMT • Permissão de Entrada e Trabalho – PET • Permissão de Trabalho – PT • Comissão Interna de Prevenção de Acidentes e Assédios – CIPA • Laudo Técnico de Condições Ambientais de Trabalho – LTCAT • Programa de Controle Médico e Saúde Ocupacional – PCMSO • Programa de Gerenciamento de Risco – PGR • Laudo de Insalubridade • Auto de Vistoria do Corpo de Bombeiros – AVCB • Programa de Conservação Auditiva – PCA • Ficha de Dados de Segurança – FDS • Inventário de Máquinas e Equipamentos • Plano de Atendimento e Emergência – PAE • Programa de Proteção Respiratória – PPR • Laudo Elétrico • Laudo de Periculosidade • Laudo Ergonômico • Análise Preliminar de Risco – APR",
+          "nota": 581.67,
+          "total_analisados": 19,
+          "total_nao_conforme": 17,
+          "arquivos_nao_conforme": "Anotação de Responsabilidade Técnica – ART • Procedimentos para Escavações e Valas • Registro do SESMT • Laudo Técnico de Condições Ambientais de Trabalho – LTCAT • Programa de Controle Médico e Saúde Ocupacional – PCMSO • Laudo de Insalubridade • Programa de Proteção Respiratória – PPR • Permissão de Trabalho – PT • Plano de Atendimento e Emergência – PAE • Laudo Elétrico • Comissão Interna de Prevenção de Acidentes e Assédios – CIPA • Laudo de Periculosidade • Laudo Ergonômico • Permissão de Entrada e Trabalho – PET • Ficha de Dados de Segurança – FDS • Programa de Conservação Auditiva – PCA • Inventário de Máquinas e Equipamentos • Auto de Vistoria do Corpo de Bombeiros – AVCB • Análise Preliminar de Risco – APR • Programa de Gerenciamento de Risco – PGR",
+          "responsavel": "Integração SABESP/WeHand"
+        }
+      ],
       "soma_evt": 100.0,
       "qtd_registros_eventos": 1.0,
       "qtd_dds": 0.0,
@@ -3978,6 +5300,21 @@
       "soma_doc": 835.4,
       "qtd_registros_documento": 1.0,
       "documentos_reprovados": "Nenhum documento reprovado no período",
+      "soma_total_analisados": 10000.0,
+      "soma_total_nao_conforme": 1646.0,
+      "soma_colaboradores_avaliados": 0.0,
+      "soma_treinamentos_nrs": 0.0,
+      "documentos_detalhe": [
+        {
+          "data": "2026-06-15",
+          "tipo": null,
+          "nota": 835.4,
+          "total_analisados": 10000,
+          "total_nao_conforme": 1646,
+          "arquivos_nao_conforme": null,
+          "responsavel": "Média histórica do Falcão"
+        }
+      ],
       "soma_evt": 1150.0,
       "qtd_registros_eventos": 22.0,
       "qtd_dds": 14.0,
@@ -4018,6 +5355,21 @@
       "soma_doc": 100.0,
       "qtd_registros_documento": 1.0,
       "documentos_reprovados": "Nenhum documento reprovado no período",
+      "soma_total_analisados": 10000.0,
+      "soma_total_nao_conforme": 9000.0,
+      "soma_colaboradores_avaliados": 0.0,
+      "soma_treinamentos_nrs": 0.0,
+      "documentos_detalhe": [
+        {
+          "data": "2026-07-15",
+          "tipo": null,
+          "nota": 100.0,
+          "total_analisados": 10000,
+          "total_nao_conforme": 9000,
+          "arquivos_nao_conforme": null,
+          "responsavel": "Gerente SST"
+        }
+      ],
       "soma_evt": 450.0,
       "qtd_registros_eventos": 12.0,
       "qtd_dds": 10.0,
@@ -4058,6 +5410,21 @@
       "soma_doc": 462.24,
       "qtd_registros_documento": 1.0,
       "documentos_reprovados": "Gerenciamento de Risco Ocupacional – GRO • Anotação de Responsabilidade Técnica – ART • Registro do SESMT • Procedimentos para Escavações e Valas • Permissão de Trabalho – PT • Permissão de Entrada e Trabalho – PET",
+      "soma_total_analisados": 6.0,
+      "soma_total_nao_conforme": 6.0,
+      "soma_colaboradores_avaliados": 0.0,
+      "soma_treinamentos_nrs": 0.0,
+      "documentos_detalhe": [
+        {
+          "data": "2026-07-31",
+          "tipo": "Registro do SESMT • Gerenciamento de Risco Ocupacional – GRO • Anotação de Responsabilidade Técnica – ART • Procedimentos para Escavações e Valas • Permissão de Trabalho – PT • Permissão de Entrada e Trabalho – PET",
+          "nota": 462.24,
+          "total_analisados": 6,
+          "total_nao_conforme": 6,
+          "arquivos_nao_conforme": "Gerenciamento de Risco Ocupacional – GRO • Anotação de Responsabilidade Técnica – ART • Registro do SESMT • Procedimentos para Escavações e Valas • Permissão de Trabalho – PT • Permissão de Entrada e Trabalho – PET",
+          "responsavel": "Integração SABESP/WeHand"
+        }
+      ],
       "soma_evt": 100.0,
       "qtd_registros_eventos": 1.0,
       "qtd_dds": 0.0,
@@ -4083,8 +5450,6 @@
           "data": "2026-07-06",
           "tipo_label": "Acidente – Com afastamento",
           "situacao": "Típico",
-          "cid": "S61.0",
-          "n_cat": "1.1.0000000042005443673",
           "dias_afastado": 5,
           "custo_afastamento": 640.0,
           "houve_tratativa": "sim",
@@ -4110,6 +5475,21 @@
       "soma_doc": 835.4,
       "qtd_registros_documento": 1.0,
       "documentos_reprovados": "Nenhum documento reprovado no período",
+      "soma_total_analisados": 10000.0,
+      "soma_total_nao_conforme": 1646.0,
+      "soma_colaboradores_avaliados": 0.0,
+      "soma_treinamentos_nrs": 0.0,
+      "documentos_detalhe": [
+        {
+          "data": "2026-07-15",
+          "tipo": null,
+          "nota": 835.4,
+          "total_analisados": 10000,
+          "total_nao_conforme": 1646,
+          "arquivos_nao_conforme": null,
+          "responsavel": "Média histórica do Falcão"
+        }
+      ],
       "soma_evt": 200.0,
       "qtd_registros_eventos": 2.0,
       "qtd_dds": 0.0,
@@ -4150,6 +5530,21 @@
       "soma_doc": 835.4,
       "qtd_registros_documento": 1.0,
       "documentos_reprovados": "Nenhum documento reprovado no período",
+      "soma_total_analisados": 10000.0,
+      "soma_total_nao_conforme": 1646.0,
+      "soma_colaboradores_avaliados": 0.0,
+      "soma_treinamentos_nrs": 0.0,
+      "documentos_detalhe": [
+        {
+          "data": "2026-07-15",
+          "tipo": null,
+          "nota": 835.4,
+          "total_analisados": 10000,
+          "total_nao_conforme": 1646,
+          "arquivos_nao_conforme": null,
+          "responsavel": "Média histórica do Falcão"
+        }
+      ],
       "soma_evt": 200.0,
       "qtd_registros_eventos": 2.0,
       "qtd_dds": 0.0,
@@ -4190,6 +5585,21 @@
       "soma_doc": 583.58,
       "qtd_registros_documento": 1.0,
       "documentos_reprovados": "Gerenciamento de Risco Ocupacional – GRO",
+      "soma_total_analisados": 3.0,
+      "soma_total_nao_conforme": 1.0,
+      "soma_colaboradores_avaliados": 0.0,
+      "soma_treinamentos_nrs": 0.0,
+      "documentos_detalhe": [
+        {
+          "data": "2026-07-31",
+          "tipo": "Gerenciamento de Risco Ocupacional – GRO • Registro do SESMT • Anotação de Responsabilidade Técnica – ART",
+          "nota": 583.58,
+          "total_analisados": 3,
+          "total_nao_conforme": 1,
+          "arquivos_nao_conforme": "Gerenciamento de Risco Ocupacional – GRO",
+          "responsavel": "Integração SABESP/WeHand"
+        }
+      ],
       "soma_evt": 344.9994,
       "qtd_registros_eventos": 25.0,
       "qtd_dds": 23.0,
@@ -4230,6 +5640,21 @@
       "soma_doc": 722.0,
       "qtd_registros_documento": 1.0,
       "documentos_reprovados": "Nenhum documento reprovado no período",
+      "soma_total_analisados": 10000.0,
+      "soma_total_nao_conforme": 2780.0,
+      "soma_colaboradores_avaliados": 0.0,
+      "soma_treinamentos_nrs": 0.0,
+      "documentos_detalhe": [
+        {
+          "data": "2026-07-15",
+          "tipo": null,
+          "nota": 722.0,
+          "total_analisados": 10000,
+          "total_nao_conforme": 2780,
+          "arquivos_nao_conforme": null,
+          "responsavel": "Média histórica"
+        }
+      ],
       "soma_evt": 100.0,
       "qtd_registros_eventos": 1.0,
       "qtd_dds": 0.0,
@@ -4270,6 +5695,21 @@
       "soma_doc": 600.0,
       "qtd_registros_documento": 1.0,
       "documentos_reprovados": "Nenhum documento reprovado no período",
+      "soma_total_analisados": 10000.0,
+      "soma_total_nao_conforme": 4000.0,
+      "soma_colaboradores_avaliados": 0.0,
+      "soma_treinamentos_nrs": 0.0,
+      "documentos_detalhe": [
+        {
+          "data": "2026-07-15",
+          "tipo": null,
+          "nota": 600.0,
+          "total_analisados": 10000,
+          "total_nao_conforme": 4000,
+          "arquivos_nao_conforme": null,
+          "responsavel": "Gerente SST"
+        }
+      ],
       "soma_evt": 100.0,
       "qtd_registros_eventos": 1.0,
       "qtd_dds": 0.0,
@@ -4310,6 +5750,21 @@
       "soma_doc": 915.1,
       "qtd_registros_documento": 1.0,
       "documentos_reprovados": "Nenhum documento reprovado no período",
+      "soma_total_analisados": 10000.0,
+      "soma_total_nao_conforme": 849.0,
+      "soma_colaboradores_avaliados": 0.0,
+      "soma_treinamentos_nrs": 0.0,
+      "documentos_detalhe": [
+        {
+          "data": "2026-07-15",
+          "tipo": null,
+          "nota": 915.1,
+          "total_analisados": 10000,
+          "total_nao_conforme": 849,
+          "arquivos_nao_conforme": null,
+          "responsavel": "Média histórica"
+        }
+      ],
       "soma_evt": 550.0,
       "qtd_registros_eventos": 19.0,
       "qtd_dds": 18.0,
@@ -4350,6 +5805,21 @@
       "soma_doc": 611.83,
       "qtd_registros_documento": 1.0,
       "documentos_reprovados": "Gerenciamento de Risco Ocupacional – GRO • Anotação de Responsabilidade Técnica – ART • Registro do SESMT • Procedimentos para Escavações e Valas",
+      "soma_total_analisados": 6.0,
+      "soma_total_nao_conforme": 4.0,
+      "soma_colaboradores_avaliados": 0.0,
+      "soma_treinamentos_nrs": 0.0,
+      "documentos_detalhe": [
+        {
+          "data": "2026-07-31",
+          "tipo": "Gerenciamento de Risco Ocupacional – GRO • Registro do SESMT • Anotação de Responsabilidade Técnica – ART • Permissão de Trabalho – PT • Procedimentos para Escavações e Valas • Permissão de Entrada e Trabalho – PET",
+          "nota": 611.83,
+          "total_analisados": 6,
+          "total_nao_conforme": 4,
+          "arquivos_nao_conforme": "Gerenciamento de Risco Ocupacional – GRO • Anotação de Responsabilidade Técnica – ART • Registro do SESMT • Procedimentos para Escavações e Valas",
+          "responsavel": "Integração SABESP/WeHand"
+        }
+      ],
       "soma_evt": 530.0,
       "qtd_registros_eventos": 41.0,
       "qtd_dds": 34.0,
@@ -4375,8 +5845,6 @@
           "data": "2026-07-30",
           "tipo_label": "Acidente – Sem afastamento",
           "situacao": "Típico",
-          "cid": "R52.0",
-          "n_cat": "1.1.0000000042449331953",
           "dias_afastado": 0,
           "custo_afastamento": 0.0,
           "houve_tratativa": "sim",
@@ -4386,8 +5854,6 @@
           "data": "2026-07-30",
           "tipo_label": "Acidente – Sem afastamento",
           "situacao": "Trajeto",
-          "cid": "S09.0",
-          "n_cat": "1.1.0000000042512059514",
           "dias_afastado": 0,
           "custo_afastamento": 0.0,
           "houve_tratativa": "sim",
@@ -4413,6 +5879,21 @@
       "soma_doc": 810.0,
       "qtd_registros_documento": 1.0,
       "documentos_reprovados": "Nenhum documento reprovado no período",
+      "soma_total_analisados": 1.0,
+      "soma_total_nao_conforme": 0.0,
+      "soma_colaboradores_avaliados": 0.0,
+      "soma_treinamentos_nrs": 0.0,
+      "documentos_detalhe": [
+        {
+          "data": "2026-07-31",
+          "tipo": "Gerenciamento de Risco Ocupacional – GRO",
+          "nota": 810.0,
+          "total_analisados": 1,
+          "total_nao_conforme": 0,
+          "arquivos_nao_conforme": null,
+          "responsavel": "Integração SABESP/WeHand"
+        }
+      ],
       "soma_evt": 795.0006000000001,
       "qtd_registros_eventos": 47.0,
       "qtd_dds": 45.0,
@@ -4453,6 +5934,21 @@
       "soma_doc": 150.91,
       "qtd_registros_documento": 1.0,
       "documentos_reprovados": "Nenhum documento reprovado no período",
+      "soma_total_analisados": 10000.0,
+      "soma_total_nao_conforme": 333.0,
+      "soma_colaboradores_avaliados": 0.0,
+      "soma_treinamentos_nrs": 0.0,
+      "documentos_detalhe": [
+        {
+          "data": "2026-07-31",
+          "tipo": null,
+          "nota": 150.91,
+          "total_analisados": 10000,
+          "total_nao_conforme": 333,
+          "arquivos_nao_conforme": null,
+          "responsavel": "Integração SABESP/WeHand"
+        }
+      ],
       "soma_evt": 745.0006000000001,
       "qtd_registros_eventos": 45.0,
       "qtd_dds": 43.0,
@@ -4493,6 +5989,21 @@
       "soma_doc": 984.3,
       "qtd_registros_documento": 1.0,
       "documentos_reprovados": "Nenhum documento reprovado no período",
+      "soma_total_analisados": 10000.0,
+      "soma_total_nao_conforme": 157.0,
+      "soma_colaboradores_avaliados": 0.0,
+      "soma_treinamentos_nrs": 0.0,
+      "documentos_detalhe": [
+        {
+          "data": "2026-07-15",
+          "tipo": null,
+          "nota": 984.3,
+          "total_analisados": 10000,
+          "total_nao_conforme": 157,
+          "arquivos_nao_conforme": null,
+          "responsavel": "Média histórica"
+        }
+      ],
       "soma_evt": 25.0,
       "qtd_registros_eventos": 1.0,
       "qtd_dds": 1.0,
@@ -4533,6 +6044,21 @@
       "soma_doc": 905.0,
       "qtd_registros_documento": 1.0,
       "documentos_reprovados": "Nenhum documento reprovado no período",
+      "soma_total_analisados": 10000.0,
+      "soma_total_nao_conforme": 950.0,
+      "soma_colaboradores_avaliados": 0.0,
+      "soma_treinamentos_nrs": 0.0,
+      "documentos_detalhe": [
+        {
+          "data": "2026-07-15",
+          "tipo": null,
+          "nota": 905.0,
+          "total_analisados": 10000,
+          "total_nao_conforme": 950,
+          "arquivos_nao_conforme": null,
+          "responsavel": "Média histórica"
+        }
+      ],
       "soma_evt": 375.0,
       "qtd_registros_eventos": 9.0,
       "qtd_dds": 7.0,
@@ -4573,6 +6099,21 @@
       "soma_doc": 715.62,
       "qtd_registros_documento": 1.0,
       "documentos_reprovados": "Anotação de Responsabilidade Técnica – ART • Gerenciamento de Risco Ocupacional – GRO",
+      "soma_total_analisados": 6.0,
+      "soma_total_nao_conforme": 2.0,
+      "soma_colaboradores_avaliados": 0.0,
+      "soma_treinamentos_nrs": 0.0,
+      "documentos_detalhe": [
+        {
+          "data": "2026-07-31",
+          "tipo": "Registro do SESMT • Anotação de Responsabilidade Técnica – ART • Gerenciamento de Risco Ocupacional – GRO • Procedimentos para Escavações e Valas • Permissão de Entrada e Trabalho – PET • Permissão de Trabalho – PT",
+          "nota": 715.62,
+          "total_analisados": 6,
+          "total_nao_conforme": 2,
+          "arquivos_nao_conforme": "Anotação de Responsabilidade Técnica – ART • Gerenciamento de Risco Ocupacional – GRO",
+          "responsavel": "Integração SABESP/WeHand"
+        }
+      ],
       "soma_evt": 305.00059999999996,
       "qtd_registros_eventos": 28.0,
       "qtd_dds": 23.0,
@@ -4613,6 +6154,21 @@
       "soma_doc": 640.61,
       "qtd_registros_documento": 1.0,
       "documentos_reprovados": "Anotação de Responsabilidade Técnica – ART • Registro do SESMT",
+      "soma_total_analisados": 6.0,
+      "soma_total_nao_conforme": 2.0,
+      "soma_colaboradores_avaliados": 0.0,
+      "soma_treinamentos_nrs": 0.0,
+      "documentos_detalhe": [
+        {
+          "data": "2026-07-31",
+          "tipo": "Gerenciamento de Risco Ocupacional – GRO • Anotação de Responsabilidade Técnica – ART • Procedimentos para Escavações e Valas • Permissão de Entrada e Trabalho – PET • Registro do SESMT • Permissão de Trabalho – PT",
+          "nota": 640.61,
+          "total_analisados": 6,
+          "total_nao_conforme": 2,
+          "arquivos_nao_conforme": "Anotação de Responsabilidade Técnica – ART • Registro do SESMT",
+          "responsavel": "Integração SABESP/WeHand"
+        }
+      ],
       "soma_evt": 230.00009999999997,
       "qtd_registros_eventos": 23.0,
       "qtd_dds": 21.0,
@@ -4653,6 +6209,21 @@
       "soma_doc": 881.7,
       "qtd_registros_documento": 1.0,
       "documentos_reprovados": "Nenhum documento reprovado no período",
+      "soma_total_analisados": 10000.0,
+      "soma_total_nao_conforme": 1183.0,
+      "soma_colaboradores_avaliados": 0.0,
+      "soma_treinamentos_nrs": 0.0,
+      "documentos_detalhe": [
+        {
+          "data": "2026-07-15",
+          "tipo": null,
+          "nota": 881.7,
+          "total_analisados": 10000,
+          "total_nao_conforme": 1183,
+          "arquivos_nao_conforme": null,
+          "responsavel": "Média histórica"
+        }
+      ],
       "soma_evt": 125.0,
       "qtd_registros_eventos": 2.0,
       "qtd_dds": 1.0,
@@ -4693,6 +6264,21 @@
       "soma_doc": 600.0,
       "qtd_registros_documento": 1.0,
       "documentos_reprovados": "Nenhum documento reprovado no período",
+      "soma_total_analisados": 10000.0,
+      "soma_total_nao_conforme": 4000.0,
+      "soma_colaboradores_avaliados": 0.0,
+      "soma_treinamentos_nrs": 0.0,
+      "documentos_detalhe": [
+        {
+          "data": "2026-07-15",
+          "tipo": null,
+          "nota": 600.0,
+          "total_analisados": 10000,
+          "total_nao_conforme": 4000,
+          "arquivos_nao_conforme": null,
+          "responsavel": "Gerente SST"
+        }
+      ],
       "soma_evt": 125.0,
       "qtd_registros_eventos": 2.0,
       "qtd_dds": 1.0,
@@ -4733,6 +6319,21 @@
       "soma_doc": 642.68,
       "qtd_registros_documento": 1.0,
       "documentos_reprovados": "Anotação de Responsabilidade Técnica – ART • Gerenciamento de Risco Ocupacional – GRO • Procedimentos para Escavações e Valas • Registro do SESMT",
+      "soma_total_analisados": 6.0,
+      "soma_total_nao_conforme": 4.0,
+      "soma_colaboradores_avaliados": 0.0,
+      "soma_treinamentos_nrs": 0.0,
+      "documentos_detalhe": [
+        {
+          "data": "2026-07-31",
+          "tipo": "Gerenciamento de Risco Ocupacional – GRO • Registro do SESMT • Anotação de Responsabilidade Técnica – ART • Procedimentos para Escavações e Valas • Permissão de Entrada e Trabalho – PET • Permissão de Trabalho – PT",
+          "nota": 642.68,
+          "total_analisados": 6,
+          "total_nao_conforme": 4,
+          "arquivos_nao_conforme": "Anotação de Responsabilidade Técnica – ART • Gerenciamento de Risco Ocupacional – GRO • Procedimentos para Escavações e Valas • Registro do SESMT",
+          "responsavel": "Integração SABESP/WeHand"
+        }
+      ],
       "soma_evt": 367.3914,
       "qtd_registros_eventos": 34.0,
       "qtd_dds": 28.0,
@@ -4773,6 +6374,21 @@
       "soma_doc": 835.4,
       "qtd_registros_documento": 1.0,
       "documentos_reprovados": "Nenhum documento reprovado no período",
+      "soma_total_analisados": 10000.0,
+      "soma_total_nao_conforme": 1646.0,
+      "soma_colaboradores_avaliados": 0.0,
+      "soma_treinamentos_nrs": 0.0,
+      "documentos_detalhe": [
+        {
+          "data": "2026-07-15",
+          "tipo": null,
+          "nota": 835.4,
+          "total_analisados": 10000,
+          "total_nao_conforme": 1646,
+          "arquivos_nao_conforme": null,
+          "responsavel": "Média histórica do Falcão"
+        }
+      ],
       "soma_evt": 125.0,
       "qtd_registros_eventos": 2.0,
       "qtd_dds": 1.0,
@@ -4813,6 +6429,21 @@
       "soma_doc": 100.0,
       "qtd_registros_documento": 1.0,
       "documentos_reprovados": "Nenhum documento reprovado no período",
+      "soma_total_analisados": 10000.0,
+      "soma_total_nao_conforme": 9000.0,
+      "soma_colaboradores_avaliados": 0.0,
+      "soma_treinamentos_nrs": 0.0,
+      "documentos_detalhe": [
+        {
+          "data": "2026-08-15",
+          "tipo": null,
+          "nota": 100.0,
+          "total_analisados": 10000,
+          "total_nao_conforme": 9000,
+          "arquivos_nao_conforme": null,
+          "responsavel": "Gerente SST"
+        }
+      ],
       "soma_evt": 75.0,
       "qtd_registros_eventos": 3.0,
       "qtd_dds": 3.0,
@@ -4853,6 +6484,11 @@
       "soma_doc": 0.0,
       "qtd_registros_documento": 0.0,
       "documentos_reprovados": "Nenhum documento reprovado no período",
+      "soma_total_analisados": 0.0,
+      "soma_total_nao_conforme": 0.0,
+      "soma_colaboradores_avaliados": 0.0,
+      "soma_treinamentos_nrs": 0.0,
+      "documentos_detalhe": [],
       "soma_evt": 0.0,
       "qtd_registros_eventos": 0.0,
       "qtd_dds": 0.0,
@@ -4893,6 +6529,21 @@
       "soma_doc": 600.0,
       "qtd_registros_documento": 1.0,
       "documentos_reprovados": "Nenhum documento reprovado no período",
+      "soma_total_analisados": 10000.0,
+      "soma_total_nao_conforme": 4000.0,
+      "soma_colaboradores_avaliados": 0.0,
+      "soma_treinamentos_nrs": 0.0,
+      "documentos_detalhe": [
+        {
+          "data": "2026-08-15",
+          "tipo": null,
+          "nota": 600.0,
+          "total_analisados": 10000,
+          "total_nao_conforme": 4000,
+          "arquivos_nao_conforme": null,
+          "responsavel": "Gerente SST"
+        }
+      ],
       "soma_evt": 100.0,
       "qtd_registros_eventos": 1.0,
       "qtd_dds": 0.0,
@@ -4933,6 +6584,11 @@
       "soma_doc": 0.0,
       "qtd_registros_documento": 0.0,
       "documentos_reprovados": "Nenhum documento reprovado no período",
+      "soma_total_analisados": 0.0,
+      "soma_total_nao_conforme": 0.0,
+      "soma_colaboradores_avaliados": 0.0,
+      "soma_treinamentos_nrs": 0.0,
+      "documentos_detalhe": [],
       "soma_evt": 0.0,
       "qtd_registros_eventos": 0.0,
       "qtd_dds": 0.0,
@@ -4958,8 +6614,6 @@
           "data": "2026-08-04",
           "tipo_label": "Acidente – Sem afastamento",
           "situacao": "Típico",
-          "cid": "S801",
-          "n_cat": "1.1.0000000040351705613",
           "dias_afastado": 0,
           "custo_afastamento": 0.0,
           "houve_tratativa": "nao",
@@ -4985,6 +6639,11 @@
       "soma_doc": 0.0,
       "qtd_registros_documento": 0.0,
       "documentos_reprovados": "Nenhum documento reprovado no período",
+      "soma_total_analisados": 0.0,
+      "soma_total_nao_conforme": 0.0,
+      "soma_colaboradores_avaliados": 0.0,
+      "soma_treinamentos_nrs": 0.0,
+      "documentos_detalhe": [],
       "soma_evt": 0.0,
       "qtd_registros_eventos": 0.0,
       "qtd_dds": 0.0,
@@ -5025,6 +6684,11 @@
       "soma_doc": 0.0,
       "qtd_registros_documento": 0.0,
       "documentos_reprovados": "Nenhum documento reprovado no período",
+      "soma_total_analisados": 0.0,
+      "soma_total_nao_conforme": 0.0,
+      "soma_colaboradores_avaliados": 0.0,
+      "soma_treinamentos_nrs": 0.0,
+      "documentos_detalhe": [],
       "soma_evt": 0.0,
       "qtd_registros_eventos": 0.0,
       "qtd_dds": 0.0,
@@ -5065,6 +6729,21 @@
       "soma_doc": 600.0,
       "qtd_registros_documento": 1.0,
       "documentos_reprovados": "Nenhum documento reprovado no período",
+      "soma_total_analisados": 10000.0,
+      "soma_total_nao_conforme": 4000.0,
+      "soma_colaboradores_avaliados": 0.0,
+      "soma_treinamentos_nrs": 0.0,
+      "documentos_detalhe": [
+        {
+          "data": "2026-08-15",
+          "tipo": null,
+          "nota": 600.0,
+          "total_analisados": 10000,
+          "total_nao_conforme": 4000,
+          "arquivos_nao_conforme": null,
+          "responsavel": "Gerente SST"
+        }
+      ],
       "soma_evt": 100.0,
       "qtd_registros_eventos": 1.0,
       "qtd_dds": 0.0,
@@ -5105,6 +6784,11 @@
       "soma_doc": 0.0,
       "qtd_registros_documento": 0.0,
       "documentos_reprovados": "Nenhum documento reprovado no período",
+      "soma_total_analisados": 0.0,
+      "soma_total_nao_conforme": 0.0,
+      "soma_colaboradores_avaliados": 0.0,
+      "soma_treinamentos_nrs": 0.0,
+      "documentos_detalhe": [],
       "soma_evt": 0.0,
       "qtd_registros_eventos": 0.0,
       "qtd_dds": 0.0,
@@ -5145,6 +6829,11 @@
       "soma_doc": 0.0,
       "qtd_registros_documento": 0.0,
       "documentos_reprovados": "Nenhum documento reprovado no período",
+      "soma_total_analisados": 0.0,
+      "soma_total_nao_conforme": 0.0,
+      "soma_colaboradores_avaliados": 0.0,
+      "soma_treinamentos_nrs": 0.0,
+      "documentos_detalhe": [],
       "soma_evt": 25.0,
       "qtd_registros_eventos": 1.0,
       "qtd_dds": 1.0,
