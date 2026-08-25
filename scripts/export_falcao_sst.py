@@ -192,8 +192,6 @@ def _detalhe_acidentes(g):
             "data": row["data_registro"].strftime("%Y-%m-%d") if pd.notna(row["data_registro"]) else None,
             "tipo_label": row["acidenteLabel"],
             "situacao": SITUACAO_LABEL.get(situacao, situacao) if situacao else None,
-            "cid": _clean_text(row.get("cid")),
-            "n_cat": _clean_text(row.get("n_cat")),
             "dias_afastado": int(row["dias_afastado"]) if pd.notna(row.get("dias_afastado")) else 0,
             "custo_afastamento": float(row["custo_afastamento"]) if pd.notna(row.get("custo_afastamento")) else 0.0,
             "houve_tratativa": _clean_text(row.get("houve_tratativa")),
@@ -221,6 +219,29 @@ def mes_ano_label(dt):
 # AGRUPAMENTOS POR PC + MÊS
 # =====================================================================
 
+def _detalhe_documentos(g):
+    linhas = []
+    for _, row in g.sort_values("data_analise").iterrows():
+        tipo = unique_labels(
+            [row.get("tipo_documento_g1"), row.get("tipo_documento_g2")],
+            None,
+        )
+        nao_conforme = unique_labels(
+            [row.get("lista_nao_conforme"), row.get("lista_nao_conforme_g2")],
+            None,
+        )
+        linhas.append({
+            "data": row["data_analise"].strftime("%Y-%m-%d") if pd.notna(row["data_analise"]) else None,
+            "tipo": tipo or None,
+            "nota": round(float(row["nota_analise_documental"]), 2) if pd.notna(row.get("nota_analise_documental")) else None,
+            "total_analisados": int(row["total_analisados"]) if pd.notna(row.get("total_analisados")) else 0,
+            "total_nao_conforme": int(row["total_nao_conforme"]) if pd.notna(row.get("total_nao_conforme")) else 0,
+            "arquivos_nao_conforme": nao_conforme,
+            "responsavel": _clean_text(row.get("responsavel_analise")),
+        })
+    return linhas
+
+
 def agrupar_docs(df):
     linhas = []
     for (id_pc, mes_ano), g in df.groupby(["id_pc", "mes_ano"]):
@@ -237,6 +258,11 @@ def agrupar_docs(df):
                 list(g["lista_nao_conforme"]) + list(g["lista_nao_conforme_g2"]),
                 "Nenhum documento reprovado no período",
             ),
+            "soma_total_analisados": int(g["total_analisados"].fillna(0).sum()),
+            "soma_total_nao_conforme": int(g["total_nao_conforme"].fillna(0).sum()),
+            "soma_colaboradores_avaliados": int(g["n_colaboradores_avaliado"].fillna(0).sum()),
+            "soma_treinamentos_nrs": int(g["total_treinamentos_nrs"].fillna(0).sum()),
+            "documentos_detalhe": _detalhe_documentos(g),
         })
     return pd.DataFrame(linhas)
 
@@ -333,10 +359,16 @@ def main():
     ocorrencias = get_layer_data(
         token, 1,
         "parentglobalid,data_registro,tipo_ocorrencia,status_acidente,nota_ocorrencia,nota_analise_sst,"
-        "dias_afastado,custo_afastamento,cid,n_cat,situacao_ocorrencia,houve_tratativa,descricao_tratativas"
+        "dias_afastado,custo_afastamento,situacao_ocorrencia,houve_tratativa,descricao_tratativas"
+        # cid e n_cat (numero da CAT) foram deliberadamente deixados de fora:
+        # sao dados de saude/identificacao mais sensiveis do que o resto, e
+        # este JSON e publicado num repositorio publico do GitHub.
     )
     docs = get_layer_data(
-        token, 2, "parentglobalid,data_analise,nota_analise_documental,lista_nao_conforme,lista_nao_conforme_g2"
+        token, 2,
+        "parentglobalid,data_analise,nota_analise_documental,lista_nao_conforme,lista_nao_conforme_g2,"
+        "tipo_documento_g1,tipo_documento_g2,total_analisados,total_nao_conforme,responsavel_analise,"
+        "n_colaboradores_avaliado,total_treinamentos_nrs"
     )
     eventos = get_layer_data(
         token, 3, "parentglobalid,data_evento,tipo_evento,nota_evento,total_colaboradores_presente"
@@ -429,9 +461,11 @@ def main():
         "qtd_registros_ocorrencias_total", "soma_ocor", "qtd_ocor", "soma_def", "qtd_def", "qtd_acidentes",
         "qtd_fatalidades", "qtd_acidentes_afastamento", "qtd_acidentes_sem_afastamento",
         "soma_analise_sst", "qtd_analise_sst", "soma_dias_afastado", "soma_custo_afastamento",
+        "soma_total_analisados", "soma_total_nao_conforme", "soma_colaboradores_avaliados", "soma_treinamentos_nrs",
     ]
     final[num_cols] = final[num_cols].fillna(0)
     final["acidentes_detalhe"] = final["acidentes_detalhe"].apply(lambda v: v if isinstance(v, list) else [])
+    final["documentos_detalhe"] = final["documentos_detalhe"].apply(lambda v: v if isinstance(v, list) else [])
 
     final["documentos_reprovados"] = final["documentos_reprovados"].fillna("Nenhum documento reprovado no período")
     final["eventos_realizados"] = final["eventos_realizados"].fillna("Nenhum evento registrado no período")
