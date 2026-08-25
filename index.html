@@ -149,10 +149,14 @@
   .data-table tr:hover td{ background:var(--bg); }
   .data-table tr[data-farol="vermelho"] td{ background:#fdf3f2; }
   .data-table tr[data-farol="vermelho"]:hover td{ background:var(--farol-vermelho-bg); }
+  .data-table tr[data-acidentes="1"] td{ background:#fff8e1; }
+  .data-table tr[data-fatalidade="1"] td{ background:var(--farol-vermelho-bg); }
+  .data-table tr[data-fatalidade="1"] td.info-pc{ color:var(--farol-vermelho-tx); }
   .data-table tr.is-selected td{ background:var(--accent-tint); }
   .data-table td.info-pc{ font-weight:700; color:var(--text); font-size:13.5px; }
   .data-table td.info-line{ font-size:11.5px; color:var(--text-dim); font-weight:400; margin-top:2px; }
   .data-table td.final-score{ font-weight:700; color:var(--text); font-size:14px; }
+  .data-table td.wrap-cell{ text-align:left; font-variant-numeric:normal; min-width:220px; white-space:normal; color:var(--text-dim); font-size:12px; }
 
   .tag{
     font-size:11px; letter-spacing:0.01em; padding:3px 9px;
@@ -324,6 +328,23 @@
       </section>
       <aside class="panel detail-popup" id="panel-detalhe"></aside>
     </div>
+
+    <section class="panel">
+      <h3 id="acidentes-title">Acidentes por contrato</h3>
+      <table class="data-table" id="tabela-acidentes">
+        <thead>
+          <tr>
+            <th class="left">Contrato</th>
+            <th>Total</th>
+            <th>Com afastamento</th>
+            <th>Sem afastamento</th>
+            <th>Fatalidades</th>
+            <th class="left">Resumo</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
 
     <section class="split">
       <div class="panel" style="margin-bottom:0;">
@@ -563,6 +584,31 @@ function renderTop3(mesAno) {
   `;
 }
 
+function renderAcidentes(mesAno) {
+  const registros = registrosFiltrados(mesAno).slice().sort((a, b) => (b.qtd_acidentes ?? 0) - (a.qtd_acidentes ?? 0));
+  document.getElementById("acidentes-title").textContent =
+    `Acidentes por contrato — ${DATA.registros.find(r => r.mes_ano === mesAno)?.mes_ano_label || ""}`;
+
+  const tbody = document.querySelector("#tabela-acidentes tbody");
+  if (registros.length === 0) {
+    tbody.innerHTML = `<tr><td colspan="6">Nenhum registro para este filtro.</td></tr>`;
+    return;
+  }
+  tbody.innerHTML = registros.map(r => `
+    <tr data-acidentes="${(r.qtd_acidentes ?? 0) > 0 ? 1 : 0}" data-fatalidade="${(r.qtd_fatalidades ?? 0) > 0 ? 1 : 0}">
+      <td>
+        <div class="info-pc">${esc(r.projeto || ("PC " + r.id_pc))}</div>
+        <div class="info-line">${esc(r.diretor)} · ${esc(r.gerente)}</div>
+      </td>
+      <td>${r.qtd_acidentes ?? 0}</td>
+      <td>${r.qtd_acidentes_afastamento ?? 0}</td>
+      <td>${r.qtd_acidentes_sem_afastamento ?? 0}</td>
+      <td>${r.qtd_fatalidades ?? 0}</td>
+      <td class="wrap-cell">${esc(r.resumo_acidentes)}</td>
+    </tr>
+  `).join("");
+}
+
 function renderRanking(mesAno) {
   const registros = registrosFiltrados(mesAno).slice().sort((a, b) => (a.nota_effico_sst ?? 0) - (b.nota_effico_sst ?? 0));
   document.getElementById("ranking-title").textContent = `Ranking de contratos — ${DATA.registros.find(r => r.mes_ano === mesAno)?.mes_ano_label || ""}`;
@@ -754,6 +800,7 @@ function onFiltersChange() {
   renderTop3(mesAno);
   renderKPIs(mesAno);
   renderRanking(mesAno);
+  renderAcidentes(mesAno);
   renderDetalhe(mesAno);
   renderChartFarol(mesAno);
   renderChartEvolucao();
