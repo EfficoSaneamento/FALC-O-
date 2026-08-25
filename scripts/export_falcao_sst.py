@@ -405,7 +405,9 @@ def main():
     final["nota_documento"] = final.apply(
         lambda r: round(min(max(r["soma_doc"] / r["qtd_doc"] if r["qtd_doc"] > 0 else 0, 0), 1000), 2), axis=1
     )
-    final["nota_evento"] = final["soma_evt"].apply(lambda v: round(min(max(v, 0), 300), 2))
+    # Teto de 200 confirmado contra o painel oficial (PC 391 - JICA, JUN/2026:
+    # soma_evt=375 -> nota_evento=200, nao 300).
+    final["nota_evento"] = final["soma_evt"].apply(lambda v: round(min(max(v, 0), 200), 2))
     final["nota_ocorrencia"] = final.apply(
         lambda r: round(min(max(r["soma_ocor"] / r["qtd_ocor"] if r["qtd_ocor"] > 0 else 0, 0), 1000), 2), axis=1
     )
