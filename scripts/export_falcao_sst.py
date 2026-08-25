@@ -291,6 +291,13 @@ def main():
     token = get_token()
 
     pcs = get_layer_data(token, 0, "globalid,id_pc,diretor,gerente,projeto")
+
+    # Limpa espacos extras/duplicados nos campos de texto do ArcGIS (ex:
+    # "  PC 367 -  ..." com espacos irregulares). Isso NAO corrige grafias
+    # divergentes do mesmo nome (ex: "Cintia" vs "Cíntia") — decidir a
+    # grafia certa exige revisao humana dos registros no ArcGIS.
+    for _col in ("diretor", "gerente", "projeto"):
+        pcs[_col] = pcs[_col].astype(str).str.strip().str.replace(r"\s+", " ", regex=True)
     ocorrencias = get_layer_data(
         token, 1, "parentglobalid,data_registro,tipo_ocorrencia,status_acidente,nota_ocorrencia,nota_analise_sst"
     )

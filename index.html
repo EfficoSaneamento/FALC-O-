@@ -98,6 +98,12 @@
   .kpi__label{ font-size:10.5px; letter-spacing:0.03em; color:var(--text-dim); margin-bottom:7px; text-transform:uppercase; }
   .kpi__value{ font-weight:700; font-size:1.45rem; color:var(--text); font-variant-numeric:tabular-nums; }
   .kpi__sub{ font-size:11px; color:var(--text-dim); margin-top:4px; }
+  .kpi__delta{ margin-top:6px; }
+
+  .delta{ font-size:10.5px; font-weight:600; }
+  .delta-good{ color:var(--farol-verde-tx); }
+  .delta-bad{ color:var(--farol-vermelho-tx); }
+  .delta-neutral{ color:var(--text-dim); font-weight:500; }
   .kpi.is-negative{ border-left-color:var(--farol-vermelho-tx); }
   .kpi.is-negative .kpi__value{ color:var(--farol-vermelho-tx); }
   .kpi.is-highlight{ background:var(--accent-tint); border-color:var(--accent); border-left-color:var(--institutional); border-left-width:4px; }
@@ -206,6 +212,7 @@
   .farol-card--amarelo .farol-card__count{ color:var(--farol-amarelo-tx); }
   .farol-card--verde .farol-card__count{ color:var(--farol-verde-tx); }
   .farol-card__pct{ font-size:11px; color:var(--text-dim); margin-top:4px; }
+  .farol-card__delta{ margin-top:6px; }
 
   /* ---- indicadores gerais ---- */
   .indicador-list{ display:flex; flex-direction:column; gap:14px; }
@@ -400,21 +407,66 @@ function registrosFiltrados(mesAno) {
   return regs;
 }
 
+// Mes tecnico (ex: "2026-06") imediatamente anterior ao informado,
+// entre os meses que existem nos dados. Retorna null se nao houver.
+function mesAnterior(mesAno) {
+  const meses = [...new Set(DATA.registros.map(r => r.mes_ano))].sort();
+  const idx = meses.indexOf(mesAno);
+  return idx > 0 ? meses[idx - 1] : null;
+}
+
+// Monta o HTML de uma variacao (seta + valor) comparando com o mes
+// anterior. polarity define se "subir" e bom, ruim, ou neutro (sem
+// julgamento de valor — usado para grandezas onde nao da pra dizer
+// se mais e melhor, como a contagem de farol amarelo).
+function renderDelta(atual, anterior, opts = {}) {
+  const { polarity = "higher-better", decimals = 1, casas0 = false } = opts;
+  if (anterior === null || anterior === undefined) {
+    return `<span class="delta delta-neutral">sem dado do mês anterior</span>`;
+  }
+  const diff = atual - anterior;
+  const arredondado = casas0 ? Math.round(diff) : Number(diff.toFixed(2));
+  if (Math.abs(arredondado) < (casas0 ? 1 : 0.005)) {
+    return `<span class="delta delta-neutral">= estável vs. mês anterior</span>`;
+  }
+  const isUp = diff > 0;
+  let cls = "delta-neutral";
+  if (polarity === "higher-better") cls = isUp ? "delta-good" : "delta-bad";
+  else if (polarity === "lower-better") cls = isUp ? "delta-bad" : "delta-good";
+  const arrow = isUp ? "▲" : "▼";
+  const sign = isUp ? "+" : "";
+  return `<span class="delta ${cls}">${arrow} ${sign}${fmtNota(diff, { decimals: casas0 ? 0 : decimals })} vs. mês anterior</span>`;
+}
+
 function renderKPIs(mesAno) {
   const registros = registrosFiltrados(mesAno);
   const total = registros.length;
-  const avg = (key) => total > 0 ? registros.reduce((s, r) => s + (r[key] || 0), 0) / total : 0;
-  const sum = (key) => registros.reduce((s, r) => s + (r[key] || 0), 0);
-  const acidentes = sum("qtd_acidentes");
-  const fatalidades = sum("qtd_fatalidades");
-  const counts = { verde: 0, amarelo: 0, vermelho: 0 };
-  registros.forEach(r => { counts[r.farol] = (counts[r.farol] || 0) + 1; });
+  const avg = (key, regs) => regs.length > 0 ? regs.reduce((s, r) => s + (r[key] || 0), 0) / regs.length : 0;
+  const sum = (key, regs) => regs.reduce((s, r) => s + (r[key] || 0), 0);
+  const acidentes = sum("qtd_acidentes", registros);
+  const fatalidades = sum("qtd_fatalidades", registros);
+
+  const mesAnt = mesAnterior(mesAno);
+  const registrosAnt = mesAnt ? registrosFiltrados(mesAnt) : [];
+  const anteriorOuNull = (key, fn) => mesAnt ? fn(key, registrosAnt) : null;
 
   const tiles = [
-    { label: "Nota conformidade legal", value: fmtNota(avg("nota_documento")), sub: "média do período" },
-    { label: "Nota boas práticas", value: fmtNota(avg("nota_evento")), sub: "média do período" },
-    { label: "Nota conformidade campo", value: fmtNota(avg("nota_ocorrencia")), sub: "média do período" },
-    { label: "Nota deflatores", value: fmtNota(sum("nota_deflatores")), sub: "soma do período", negative: true },
+    {
+      label: "Nota conformidade legal", value: fmtNota(avg("nota_documento", registros)), sub: "média do período",
+      delta: renderDelta(avg("nota_documento", registros), anteriorOuNull("nota_documento", avg)),
+    },
+    {
+      label: "Nota boas práticas", value: fmtNota(avg("nota_evento", registros)), sub: "média do período",
+      delta: renderDelta(avg("nota_evento", registros), anteriorOuNull("nota_evento", avg)),
+    },
+    {
+      label: "Nota conformidade campo", value: fmtNota(avg("nota_ocorrencia", registros)), sub: "média do período",
+      delta: renderDelta(avg("nota_ocorrencia", registros), anteriorOuNull("nota_ocorrencia", avg)),
+    },
+    {
+      label: "Nota deflatores", value: fmtNota(sum("nota_deflatores", registros)), sub: "soma do período", negative: true,
+      delta: renderDelta(sum("nota_deflatores", registros), anteriorOuNull("nota_deflatores", sum)),
+    },
     { label: "Acidentes / fatalidades", value: `${acidentes} / ${fatalidades}`, sub: "no período" },
   ];
 
@@ -423,6 +475,7 @@ function renderKPIs(mesAno) {
       <div class="kpi__label">${esc(t.label)}</div>
       <div class="kpi__value">${t.value}</div>
       <div class="kpi__sub">${esc(t.sub)}</div>
+      ${t.delta ? `<div class="kpi__delta">${t.delta}</div>` : ""}
     </div>
   `).join("");
 }
@@ -434,10 +487,18 @@ function renderFarolSummary(mesAno) {
   registros.forEach(r => { counts[r.farol] = (counts[r.farol] || 0) + 1; });
   const pct = (n) => total > 0 ? ((n / total) * 100).toLocaleString("pt-BR", { minimumFractionDigits: 1, maximumFractionDigits: 1 }) : "0,0";
 
+  const mesAnt = mesAnterior(mesAno);
+  const countsAnt = { verde: 0, amarelo: 0, vermelho: 0 };
+  if (mesAnt) {
+    registrosFiltrados(mesAnt).forEach(r => { countsAnt[r.farol] = (countsAnt[r.farol] || 0) + 1; });
+  }
+
+  // Verde: subir e bom. Vermelho: subir e ruim. Amarelo: sem julgamento
+  // de valor (pode ser melhora vindo do vermelho ou piora vindo do verde).
   const cards = [
-    { key: "vermelho", label: "Vermelho", range: "Até 1.000 pontos", icon: "🔔" },
-    { key: "amarelo", label: "Amarelo", range: "1.001 a 1.600 pontos", icon: "⚠️" },
-    { key: "verde", label: "Verde", range: "Acima de 1.600 pontos", icon: "✅" },
+    { key: "vermelho", label: "Vermelho", range: "Até 1.000 pontos", icon: "🔔", polarity: "lower-better" },
+    { key: "amarelo", label: "Amarelo", range: "1.001 a 1.600 pontos", icon: "⚠️", polarity: "neutral" },
+    { key: "verde", label: "Verde", range: "Acima de 1.600 pontos", icon: "✅", polarity: "higher-better" },
   ];
 
   document.getElementById("farol-cards").innerHTML = cards.map(c => `
@@ -448,6 +509,7 @@ function renderFarolSummary(mesAno) {
         <div class="farol-card__icon">${c.icon}</div>
         <div class="farol-card__count">${counts[c.key]}</div>
         <div class="farol-card__pct">(${pct(counts[c.key])}%)</div>
+        <div class="farol-card__delta">${renderDelta(counts[c.key], mesAnt ? countsAnt[c.key] : null, { polarity: c.polarity, casas0: true })}</div>
       </div>
     </div>
   `).join("");
@@ -460,8 +522,15 @@ function renderIndicadoresGerais(mesAno) {
   let melhor = null;
   registros.forEach(r => { if (!melhor || (r.nota_effico_sst || 0) > (melhor.nota_effico_sst || 0)) melhor = r; });
 
+  const mesAnt = mesAnterior(mesAno);
+  let mediaAnt = null;
+  if (mesAnt) {
+    const registrosAnt = registrosFiltrados(mesAnt);
+    mediaAnt = registrosAnt.length > 0 ? registrosAnt.reduce((s, r) => s + (r.nota_effico_sst || 0), 0) / registrosAnt.length : 0;
+  }
+
   const items = [
-    { icon: "📈", label: "Pontuação média geral", value: `${fmtNota(media)} <small>pontos</small>` },
+    { icon: "📈", label: "Pontuação média geral", value: `${fmtNota(media)} <small>pontos</small>`, delta: renderDelta(media, mediaAnt) },
     { icon: "🎯", label: "Melhor pontuação", value: melhor ? `${fmtNota(melhor.nota_effico_sst)} <small>${esc(melhor.projeto || ("PC " + melhor.id_pc))}</small>` : "—" },
     { icon: "📋", label: "Contratos avaliados", value: `${total} <small>total</small>` },
   ];
@@ -472,6 +541,7 @@ function renderIndicadoresGerais(mesAno) {
       <div>
         <div class="indicador__label">${esc(i.label)}</div>
         <div class="indicador__value">${i.value}</div>
+        ${i.delta ? `<div class="kpi__delta">${i.delta}</div>` : ""}
       </div>
     </div>
   `).join("");
