@@ -173,6 +173,35 @@ def unique_labels(values, texto_padrao):
     return " • ".join(vistos) if vistos else texto_padrao
 
 
+def _clean_text(v):
+    if v is None or (isinstance(v, float) and pd.isna(v)):
+        return None
+    s = str(v).strip()
+    return s if s else None
+
+
+SITUACAO_LABEL = {"tipico": "Típico", "trajeto": "Trajeto"}
+
+
+def _detalhe_acidentes(g):
+    linhas = []
+    acidentes = g[g["isDeflator"]].sort_values("data_registro")
+    for _, row in acidentes.iterrows():
+        situacao = _clean_text(row.get("situacao_ocorrencia"))
+        linhas.append({
+            "data": row["data_registro"].strftime("%Y-%m-%d") if pd.notna(row["data_registro"]) else None,
+            "tipo_label": row["acidenteLabel"],
+            "situacao": SITUACAO_LABEL.get(situacao, situacao) if situacao else None,
+            "cid": _clean_text(row.get("cid")),
+            "n_cat": _clean_text(row.get("n_cat")),
+            "dias_afastado": int(row["dias_afastado"]) if pd.notna(row.get("dias_afastado")) else 0,
+            "custo_afastamento": float(row["custo_afastamento"]) if pd.notna(row.get("custo_afastamento")) else 0.0,
+            "houve_tratativa": _clean_text(row.get("houve_tratativa")),
+            "descricao_tratativa": _clean_text(row.get("descricao_tratativas")),
+        })
+    return linhas
+
+
 # =====================================================================
 # FUNÇÕES DE PERÍODO (equivalentes ao Arcade — Month() zero-indexado)
 # =====================================================================
@@ -257,6 +286,9 @@ def agrupar_ocorrencias(df):
             "soma_analise_sst": sst.sum(),
             "qtd_analise_sst": sst.shape[0],
             "resumo_acidentes": unique_labels(list(g["acidenteLabel"].dropna()), "Nenhum acidente registrado no período"),
+            "soma_dias_afastado": int(g.loc[g["isDeflator"], "dias_afastado"].fillna(0).sum()),
+            "soma_custo_afastamento": float(g.loc[g["isDeflator"], "custo_afastamento"].fillna(0).sum()),
+            "acidentes_detalhe": _detalhe_acidentes(g),
         })
     return pd.DataFrame(linhas)
 
@@ -299,7 +331,9 @@ def main():
     for _col in ("diretor", "gerente", "projeto"):
         pcs[_col] = pcs[_col].astype(str).str.strip().str.replace(r"\s+", " ", regex=True)
     ocorrencias = get_layer_data(
-        token, 1, "parentglobalid,data_registro,tipo_ocorrencia,status_acidente,nota_ocorrencia,nota_analise_sst"
+        token, 1,
+        "parentglobalid,data_registro,tipo_ocorrencia,status_acidente,nota_ocorrencia,nota_analise_sst,"
+        "dias_afastado,custo_afastamento,cid,n_cat,situacao_ocorrencia,houve_tratativa,descricao_tratativas"
     )
     docs = get_layer_data(
         token, 2, "parentglobalid,data_analise,nota_analise_documental,lista_nao_conforme,lista_nao_conforme_g2"
@@ -394,9 +428,10 @@ def main():
         "soma_doc", "qtd_doc", "soma_evt", "qtd_evt", "qtd_dds", "qtd_campanha_sst", "qtd_saude_mental",
         "qtd_registros_ocorrencias_total", "soma_ocor", "qtd_ocor", "soma_def", "qtd_def", "qtd_acidentes",
         "qtd_fatalidades", "qtd_acidentes_afastamento", "qtd_acidentes_sem_afastamento",
-        "soma_analise_sst", "qtd_analise_sst",
+        "soma_analise_sst", "qtd_analise_sst", "soma_dias_afastado", "soma_custo_afastamento",
     ]
     final[num_cols] = final[num_cols].fillna(0)
+    final["acidentes_detalhe"] = final["acidentes_detalhe"].apply(lambda v: v if isinstance(v, list) else [])
 
     final["documentos_reprovados"] = final["documentos_reprovados"].fillna("Nenhum documento reprovado no período")
     final["eventos_realizados"] = final["eventos_realizados"].fillna("Nenhum evento registrado no período")

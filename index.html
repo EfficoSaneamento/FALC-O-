@@ -112,7 +112,7 @@
   /* ---- layout ---- */
   .split{ display:grid; grid-template-columns:1.3fr 1fr; gap:16px; margin-bottom:16px; align-items:start; }
   @media (max-width:960px){ .split{ grid-template-columns:1fr; } }
-  .panel{ background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:18px 20px; margin-bottom:16px; box-shadow:var(--shadow); }
+  .panel{ background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:18px 20px; margin-bottom:16px; box-shadow:var(--shadow); scroll-margin-top:82px; }
   .panel h3{ font-size:12px; font-weight:700; letter-spacing:0.04em; color:var(--institutional); margin:0 0 14px; text-transform:uppercase; }
 
   .ranking-layout{ display:flex; gap:16px; align-items:stretch; margin-bottom:16px; }
@@ -156,7 +156,13 @@
   .data-table td.info-pc{ font-weight:700; color:var(--text); font-size:13.5px; }
   .data-table td.info-line{ font-size:11.5px; color:var(--text-dim); font-weight:400; margin-top:2px; }
   .data-table td.final-score{ font-weight:700; color:var(--text); font-size:14px; }
-  .data-table td.wrap-cell{ text-align:left; font-variant-numeric:normal; min-width:220px; white-space:normal; color:var(--text-dim); font-size:12px; }
+  .data-table td.wrap-cell{ text-align:left; font-variant-numeric:normal; min-width:280px; white-space:normal; color:var(--text-dim); font-size:12px; }
+
+  .acidente-item{ padding:6px 0; border-bottom:1px dashed var(--border); }
+  .acidente-item:last-child{ border-bottom:none; }
+  .acidente-item__head{ color:var(--text); font-weight:600; font-size:12px; }
+  .acidente-item__meta{ color:var(--text-dim); font-size:11px; margin-top:2px; }
+  .acidente-item__tratativa{ color:var(--text-dim); font-size:11px; margin-top:2px; font-style:italic; }
 
   .tag{
     font-size:11px; letter-spacing:0.01em; padding:3px 9px;
@@ -339,7 +345,9 @@
             <th>Com afastamento</th>
             <th>Sem afastamento</th>
             <th>Fatalidades</th>
-            <th class="left">Resumo</th>
+            <th>Dias afastado</th>
+            <th>Custo</th>
+            <th class="left">Detalhamento</th>
           </tr>
         </thead>
         <tbody></tbody>
@@ -584,6 +592,32 @@ function renderTop3(mesAno) {
   `;
 }
 
+function fmtMoeda(v) {
+  if (!v) return "—";
+  return Number(v).toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
+}
+
+function fmtDataBR(isoDate) {
+  if (!isoDate) return "—";
+  const [ano, mes, dia] = isoDate.split("-");
+  return `${dia}/${mes}/${ano}`;
+}
+
+function acidenteDetalheHtml(detalhes) {
+  if (!detalhes || detalhes.length === 0) {
+    return `<span style="color:var(--text-dim);">Nenhum acidente registrado no período</span>`;
+  }
+  return detalhes.map(a => `
+    <div class="acidente-item">
+      <div class="acidente-item__head">📅 ${esc(fmtDataBR(a.data))} · ${esc(a.tipo_label)}${a.situacao ? ` (${esc(a.situacao)})` : ""}</div>
+      <div class="acidente-item__meta">
+        ${a.cid ? `CID: ${esc(a.cid)}` : ""}${a.n_cat ? ` · CAT: ${esc(a.n_cat)}` : ""}${a.dias_afastado ? ` · ${a.dias_afastado} dia(s) afastado` : ""}${a.custo_afastamento ? ` · ${fmtMoeda(a.custo_afastamento)}` : ""}
+      </div>
+      ${a.descricao_tratativa ? `<div class="acidente-item__tratativa">Tratativa: ${esc(a.descricao_tratativa)}</div>` : ""}
+    </div>
+  `).join("");
+}
+
 function renderAcidentes(mesAno) {
   const registros = registrosFiltrados(mesAno).slice().sort((a, b) => (b.qtd_acidentes ?? 0) - (a.qtd_acidentes ?? 0));
   document.getElementById("acidentes-title").textContent =
@@ -591,7 +625,7 @@ function renderAcidentes(mesAno) {
 
   const tbody = document.querySelector("#tabela-acidentes tbody");
   if (registros.length === 0) {
-    tbody.innerHTML = `<tr><td colspan="6">Nenhum registro para este filtro.</td></tr>`;
+    tbody.innerHTML = `<tr><td colspan="8">Nenhum registro para este filtro.</td></tr>`;
     return;
   }
   tbody.innerHTML = registros.map(r => `
@@ -604,7 +638,9 @@ function renderAcidentes(mesAno) {
       <td>${r.qtd_acidentes_afastamento ?? 0}</td>
       <td>${r.qtd_acidentes_sem_afastamento ?? 0}</td>
       <td>${r.qtd_fatalidades ?? 0}</td>
-      <td class="wrap-cell">${esc(r.resumo_acidentes)}</td>
+      <td>${r.soma_dias_afastado ?? 0}</td>
+      <td>${fmtMoeda(r.soma_custo_afastamento)}</td>
+      <td class="wrap-cell">${acidenteDetalheHtml(r.acidentes_detalhe)}</td>
     </tr>
   `).join("");
 }
