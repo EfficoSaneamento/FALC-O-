@@ -24,6 +24,11 @@
     --farol-amarelo-bg:  #fff8e1; --farol-amarelo-bd:  #ffd54f; --farol-amarelo-tx:  #8a6100;
     --farol-vermelho-bg: #fdecea; --farol-vermelho-bd: #ef9a9a; --farol-vermelho-tx: #a01f1f;
 
+    --falcao-tx: #1b5e20;
+    --sabesp-tx: #1a5fb4;
+    --sabesp-bg: #eaf1fc;
+    --sabesp-bd: #a9c6ec;
+
     --f-display: 'Inter', -apple-system, 'Segoe UI', sans-serif;
     --f-body:    'Inter', -apple-system, 'Segoe UI', sans-serif;
 
@@ -207,6 +212,36 @@
   .detail-block__label{ font-size:11px; letter-spacing:0.02em; text-transform:uppercase; color:var(--institutional); font-weight:700; margin-bottom:8px; }
   .detail-block__prose{ font-size:12.5px; color:var(--text); line-height:1.5; }
 
+  /* ---- comparativo Falcao x SABESP ---- */
+  .comparativo{ border-top:1px solid var(--border); margin-top:20px; padding-top:20px; }
+  .comparativo__label{ font-size:11px; letter-spacing:0.02em; text-transform:uppercase; color:var(--text-dim); margin-bottom:4px; }
+  .comparativo__fonte{ font-size:10.5px; color:var(--text-dim); margin-bottom:14px; }
+
+  .comp-final{ display:flex; align-items:center; justify-content:center; gap:18px; margin-bottom:18px; }
+  .comp-final__side{ text-align:center; flex:1; }
+  .comp-final__tag{ font-size:10.5px; font-weight:700; letter-spacing:0.04em; }
+  .comp-final__tag.falcao{ color:var(--falcao-tx); }
+  .comp-final__tag.sabesp{ color:var(--sabesp-tx); }
+  .comp-final__value{ font-size:1.5rem; font-weight:700; margin-top:2px; }
+  .comp-final__value.falcao{ color:var(--falcao-tx); }
+  .comp-final__value.sabesp{ color:var(--sabesp-tx); }
+  .comp-final__scale{ font-size:10px; color:var(--text-dim); }
+  .comp-final__delta{ text-align:center; flex-shrink:0; }
+  .comp-final__delta-value{ font-size:12px; font-weight:700; }
+  .comp-final__delta-pct{ font-size:10px; color:var(--text-dim); }
+
+  .comp-cards{ display:grid; grid-template-columns:repeat(2,1fr); gap:10px; }
+  .comp-card{ background:var(--bg); border:1px solid var(--border); border-radius:6px; padding:10px 12px; }
+  .comp-card__head{ display:flex; align-items:center; gap:6px; font-size:11px; font-weight:700; color:var(--text); margin-bottom:8px; }
+  .comp-card__row{ display:flex; justify-content:space-between; font-size:10.5px; margin-top:6px; }
+  .comp-card__row .dot{ display:inline-block; width:7px; height:7px; border-radius:50%; margin-right:5px; }
+  .comp-card__row .dot.falcao{ background:var(--falcao-tx); }
+  .comp-card__row .dot.sabesp{ background:var(--sabesp-tx); }
+  .comp-card__bar{ height:5px; background:var(--border); border-radius:3px; overflow:hidden; margin-top:3px; }
+  .comp-card__bar-fill{ height:100%; border-radius:3px; }
+  .comp-card__bar-fill.falcao{ background:var(--falcao-tx); }
+  .comp-card__bar-fill.sabesp{ background:var(--sabesp-tx); }
+
   canvas{ max-width:100%; }
 
   .farol-legend{ display:flex; flex-wrap:wrap; gap:6px 16px; margin-top:14px; padding-top:14px; border-top:1px solid var(--border); }
@@ -347,48 +382,6 @@
       <aside class="panel detail-popup" id="panel-detalhe"></aside>
     </div>
 
-    <section class="panel">
-      <div class="panel-head">
-        <h3 id="acidentes-title">Acidentes por contrato</h3>
-        <button class="btn-export" onclick="exportarTabelaCSV('tabela-acidentes', 'acidentes-por-contrato.csv')">⬇ Exportar CSV</button>
-      </div>
-      <table class="data-table" id="tabela-acidentes">
-        <thead>
-          <tr>
-            <th class="left">Contrato</th>
-            <th>Total</th>
-            <th>Com afastamento</th>
-            <th>Sem afastamento</th>
-            <th>Fatalidades</th>
-            <th>Dias afastado</th>
-            <th>Custo</th>
-            <th class="left">Detalhamento</th>
-          </tr>
-        </thead>
-        <tbody></tbody>
-      </table>
-    </section>
-
-    <section class="panel">
-      <div class="panel-head">
-        <h3 id="documentos-title">Documentos por contrato</h3>
-        <button class="btn-export" onclick="exportarTabelaCSV('tabela-documentos', 'documentos-por-contrato.csv')">⬇ Exportar CSV</button>
-      </div>
-      <table class="data-table" id="tabela-documentos">
-        <thead>
-          <tr>
-            <th class="left">Contrato</th>
-            <th>Nota</th>
-            <th>Analisados</th>
-            <th>Não conforme</th>
-            <th>Colaboradores avaliados</th>
-            <th class="left">Detalhamento</th>
-          </tr>
-        </thead>
-        <tbody></tbody>
-      </table>
-    </section>
-
     <section class="split">
       <div class="panel" style="margin-bottom:0;">
         <h3 id="evolucao-title">Evolução da nota média SST</h3>
@@ -432,7 +425,8 @@ function esc(v) {
 
 function fmtNota(v, opts) {
   if (v === null || v === undefined) return "—";
-  return Number(v).toLocaleString("pt-BR", { maximumFractionDigits: (opts && opts.decimals) ?? 1 });
+  const n = Number(v) || 0; // normaliza -0 para 0
+  return n.toLocaleString("pt-BR", { maximumFractionDigits: (opts && opts.decimals) ?? 1 });
 }
 
 // Remove acentos e espacos duplos para agrupar/filtrar nomes com
@@ -475,6 +469,7 @@ function exportarTabelaCSV(tableId, filename) {
 }
 
 let DATA = null;
+let WEHANDLE = [];  // comparativo Falcao x SABESP (data/wehandle_comparativo.json), importado manualmente
 let selectedPc = null;      // contrato exibido no painel de detalhamento
 let pcFilter = "todos";     // filtro: "todos" ou um id_pc especifico
 let farolFilter = "todos";  // filtro: "todos" | "verde" | "amarelo" | "vermelho"
@@ -679,33 +674,6 @@ function acidenteDetalheHtml(detalhes) {
   `).join("");
 }
 
-function renderAcidentes(mesAno) {
-  const registros = registrosFiltrados(mesAno).slice().sort((a, b) => (b.qtd_acidentes ?? 0) - (a.qtd_acidentes ?? 0));
-  document.getElementById("acidentes-title").textContent =
-    `Acidentes por contrato — ${DATA.registros.find(r => r.mes_ano === mesAno)?.mes_ano_label || ""}`;
-
-  const tbody = document.querySelector("#tabela-acidentes tbody");
-  if (registros.length === 0) {
-    tbody.innerHTML = `<tr><td colspan="8">Nenhum registro para este filtro.</td></tr>`;
-    return;
-  }
-  tbody.innerHTML = registros.map(r => `
-    <tr data-acidentes="${(r.qtd_acidentes ?? 0) > 0 ? 1 : 0}" data-fatalidade="${(r.qtd_fatalidades ?? 0) > 0 ? 1 : 0}">
-      <td>
-        <div class="info-pc">${esc(r.projeto || ("PC " + r.id_pc))}</div>
-        <div class="info-line">${esc(r.diretor)} · ${esc(r.gerente)}</div>
-      </td>
-      <td>${r.qtd_acidentes ?? 0}</td>
-      <td>${r.qtd_acidentes_afastamento ?? 0}</td>
-      <td>${r.qtd_acidentes_sem_afastamento ?? 0}</td>
-      <td>${r.qtd_fatalidades ?? 0}</td>
-      <td>${r.soma_dias_afastado ?? 0}</td>
-      <td>${fmtMoeda(r.soma_custo_afastamento)}</td>
-      <td class="wrap-cell">${acidenteDetalheHtml(r.acidentes_detalhe)}</td>
-    </tr>
-  `).join("");
-}
-
 function documentoDetalheHtml(detalhes) {
   if (!detalhes || detalhes.length === 0) {
     return `<span style="color:var(--text-dim);">Nenhuma análise registrada no período</span>`;
@@ -718,31 +686,6 @@ function documentoDetalheHtml(detalhes) {
       </div>
       ${d.arquivos_nao_conforme ? `<div class="acidente-item__tratativa">Reprovados: ${esc(d.arquivos_nao_conforme)}</div>` : ""}
     </div>
-  `).join("");
-}
-
-function renderDocumentos(mesAno) {
-  const registros = registrosFiltrados(mesAno).slice().sort((a, b) => (b.soma_total_nao_conforme ?? 0) - (a.soma_total_nao_conforme ?? 0));
-  document.getElementById("documentos-title").textContent =
-    `Documentos por contrato — ${DATA.registros.find(r => r.mes_ano === mesAno)?.mes_ano_label || ""}`;
-
-  const tbody = document.querySelector("#tabela-documentos tbody");
-  if (registros.length === 0) {
-    tbody.innerHTML = `<tr><td colspan="6">Nenhum registro para este filtro.</td></tr>`;
-    return;
-  }
-  tbody.innerHTML = registros.map(r => `
-    <tr data-acidentes="${(r.soma_total_nao_conforme ?? 0) > 0 ? 1 : 0}">
-      <td>
-        <div class="info-pc">${esc(r.projeto || ("PC " + r.id_pc))}</div>
-        <div class="info-line">${esc(r.diretor)} · ${esc(r.gerente)}</div>
-      </td>
-      <td>${fmtNota(r.nota_documento)}</td>
-      <td>${r.soma_total_analisados ?? 0}</td>
-      <td>${r.soma_total_nao_conforme ?? 0}</td>
-      <td>${r.soma_colaboradores_avaliados ?? 0}</td>
-      <td class="wrap-cell">${documentoDetalheHtml(r.documentos_detalhe)}</td>
-    </tr>
   `).join("");
 }
 
@@ -827,12 +770,17 @@ function renderDetalhe(mesAno) {
         <tr><td>Sem afastamento</td><td>${r.qtd_acidentes_sem_afastamento ?? 0}</td></tr>
         <tr><td>Fatalidades</td><td>${r.qtd_fatalidades ?? 0}</td></tr>
       </table>
-      <div class="detail-block__prose">${esc(r.resumo_acidentes)}</div>
+      ${r.acidentes_detalhe ? acidenteDetalheHtml(r.acidentes_detalhe) : `<div class="detail-block__prose">${esc(r.resumo_acidentes)}</div>`}
     </div>
 
     <div class="detail-block">
-      <div class="detail-block__label">Documentos reprovados</div>
-      <div class="tag-list">${docs}</div>
+      <div class="detail-block__label">Documentação</div>
+      <table class="mini-table">
+        <tr><td>Total analisados</td><td>${r.soma_total_analisados ?? "—"}</td></tr>
+        <tr><td>Não conforme</td><td>${r.soma_total_nao_conforme ?? "—"}</td></tr>
+        <tr><td>Colaboradores avaliados</td><td>${r.soma_colaboradores_avaliados ?? "—"}</td></tr>
+      </table>
+      ${r.documentos_detalhe ? documentoDetalheHtml(r.documentos_detalhe) : `<div class="tag-list">${docs}</div>`}
     </div>
 
     <div class="detail-block">
@@ -844,6 +792,83 @@ function renderDetalhe(mesAno) {
         <tr><td>Saúde mental</td><td>${r.qtd_saude_mental ?? 0}</td></tr>
       </table>
       <div class="detail-block__prose">${esc(r.eventos_realizados)}</div>
+    </div>
+
+    ${comparativoHtml(r)}
+  `;
+}
+
+// Escala usada so para dimensionar a barra visual (nao e um teto oficial
+// dos dois sistemas — Falcao e SABESP tem tetos diferentes por categoria).
+const ESCALA_COMPARATIVO = { documentacao: 1000, eventos: 300, campo: 1000 };
+
+function comparativoHtml(r) {
+  const comp = WEHANDLE.find(w => w.id_pc === r.id_pc && w.mes_ano === r.mes_ano);
+  if (!comp) return "";
+
+  const f = comp.falcao;
+  const s = comp.sabesp;
+  if (f.nota_final === null || f.nota_final === undefined) return "";
+
+  const delta = f.nota_final - s.nota_final;
+  const deltaPct = s.nota_final ? (delta / Math.abs(s.nota_final)) * 100 : 0;
+  const deltaCls = delta > 0 ? "delta-good" : delta < 0 ? "delta-bad" : "delta-neutral";
+  const deltaArrow = delta > 0 ? "▲" : delta < 0 ? "▼" : "=";
+
+  const categorias = [
+    { key: "documentacao", label: "Documentação", icon: "📄" },
+    { key: "eventos", label: "Eventos SST", icon: "🗓️" },
+    { key: "campo", label: "Campo", icon: "🛠️" },
+  ];
+
+  const cards = categorias.map(c => {
+    const max = ESCALA_COMPARATIVO[c.key];
+    const vf = f[c.key] ?? 0;
+    const vs = s[c.key] ?? 0;
+    const pf = Math.max(0, Math.min(100, (vf / max) * 100));
+    const ps = Math.max(0, Math.min(100, (vs / max) * 100));
+    return `
+      <div class="comp-card">
+        <div class="comp-card__head">${c.icon} ${esc(c.label)}</div>
+        <div class="comp-card__row"><span><span class="dot falcao"></span>Falcão</span><span>${fmtNota(vf)}</span></div>
+        <div class="comp-card__bar"><div class="comp-card__bar-fill falcao" style="width:${pf}%"></div></div>
+        <div class="comp-card__row"><span><span class="dot sabesp"></span>Sabesp</span><span>${fmtNota(vs)}</span></div>
+        <div class="comp-card__bar"><div class="comp-card__bar-fill sabesp" style="width:${ps}%"></div></div>
+      </div>
+    `;
+  }).join("");
+
+  const defCard = `
+    <div class="comp-card">
+      <div class="comp-card__head">⚠️ Deflatores</div>
+      <div class="comp-card__row"><span><span class="dot falcao"></span>Falcão</span><span>${fmtNota(f.deflatores)}</span></div>
+      <div class="comp-card__row"><span><span class="dot sabesp"></span>Sabesp</span><span>${fmtNota(s.deflatores)}</span></div>
+    </div>
+  `;
+
+  return `
+    <div class="comparativo">
+      <div class="comparativo__label">Comparativo Falcão × SABESP</div>
+      <div class="comparativo__fonte">Fonte: ${esc(comp.fonte)} · arquivo ${esc(comp.arquivo_origem)}</div>
+
+      <div class="comp-final">
+        <div class="comp-final__side">
+          <div class="comp-final__tag falcao">FALCÃO</div>
+          <div class="comp-final__value falcao">${fmtNota(f.nota_final)}</div>
+          <div class="comp-final__scale">de 2.300 pts</div>
+        </div>
+        <div class="comp-final__delta">
+          <div class="comp-final__delta-value ${deltaCls}">${deltaArrow} ${delta > 0 ? "+" : ""}${fmtNota(delta)}</div>
+          <div class="comp-final__delta-pct">${deltaPct > 0 ? "+" : ""}${fmtNota(deltaPct)}%</div>
+        </div>
+        <div class="comp-final__side">
+          <div class="comp-final__tag sabesp">SABESP</div>
+          <div class="comp-final__value sabesp">${fmtNota(s.nota_final)}</div>
+          <div class="comp-final__scale">de 2.300 pts</div>
+        </div>
+      </div>
+
+      <div class="comp-cards">${cards}${defCard}</div>
     </div>
   `;
 }
@@ -938,15 +963,14 @@ function onFiltersChange() {
   renderTop3(mesAno);
   renderKPIs(mesAno);
   renderRanking(mesAno);
-  renderAcidentes(mesAno);
-  renderDocumentos(mesAno);
   renderDetalhe(mesAno);
   renderChartFarol(mesAno);
   renderChartEvolucao();
 }
 
-function init(data) {
+function init(data, wehandleData) {
   DATA = data;
+  WEHANDLE = wehandleData || [];
   document.getElementById("state-msg").hidden = true;
   document.getElementById("app").hidden = false;
   document.getElementById("updated-at").textContent = data.gerado_em
@@ -1022,12 +1046,16 @@ function init(data) {
   onFiltersChange();
 }
 
+const fetchWehandle = fetch("data/wehandle_comparativo.json")
+  .then(r => r.ok ? r.json() : [])
+  .catch(() => []);
+
 fetch("data/falcao_sst.json")
   .then(r => {
     if (!r.ok) throw new Error(`HTTP ${r.status}`);
     return r.json();
   })
-  .then(init)
+  .then(data => fetchWehandle.then(wehandleData => init(data, wehandleData)))
   .catch(err => {
     document.getElementById("state-msg").innerHTML =
       `Não foi possível carregar <code>data/falcao_sst.json</code>.<br>` +
