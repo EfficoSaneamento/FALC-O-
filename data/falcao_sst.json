@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-08-25T11:56:01Z",
+  "gerado_em": "2026-08-25T12:03:24Z",
   "resumo": {
     "total_contratos": 19,
     "mes_mais_recente": "2026-07",
@@ -287,7 +287,7 @@
     {
       "id_pc": 10391,
       "mes_ano": "2026-00",
-      "diretor": " Rodrigo da Silva Worms",
+      "diretor": "Rodrigo da Silva Worms",
       "gerente": "Fernanda Carvalho Matos",
       "projeto": "PC 391 - JICA COMISSIONAMENTO DE DMCs",
       "mes_ano_label": "JAN/2026",
@@ -398,7 +398,7 @@
     {
       "id_pc": 10394,
       "mes_ano": "2026-00",
-      "diretor": " Rodrigo da Silva Worms",
+      "diretor": "Rodrigo da Silva Worms",
       "gerente": "Alessandro Foganholi Cimino",
       "projeto": "PC 394 - SANEPAR CALIBRAÇÃO",
       "mes_ano_label": "JAN/2026",
@@ -805,7 +805,7 @@
     {
       "id_pc": 10391,
       "mes_ano": "2026-01",
-      "diretor": " Rodrigo da Silva Worms",
+      "diretor": "Rodrigo da Silva Worms",
       "gerente": "Fernanda Carvalho Matos",
       "projeto": "PC 391 - JICA COMISSIONAMENTO DE DMCs",
       "mes_ano_label": "FEV/2026",
@@ -916,7 +916,7 @@
     {
       "id_pc": 10394,
       "mes_ano": "2026-01",
-      "diretor": " Rodrigo da Silva Worms",
+      "diretor": "Rodrigo da Silva Worms",
       "gerente": "Alessandro Foganholi Cimino",
       "projeto": "PC 394 - SANEPAR CALIBRAÇÃO",
       "mes_ano_label": "FEV/2026",
@@ -1323,7 +1323,7 @@
     {
       "id_pc": 10391,
       "mes_ano": "2026-02",
-      "diretor": " Rodrigo da Silva Worms",
+      "diretor": "Rodrigo da Silva Worms",
       "gerente": "Fernanda Carvalho Matos",
       "projeto": "PC 391 - JICA COMISSIONAMENTO DE DMCs",
       "mes_ano_label": "MAR/2026",
@@ -1434,7 +1434,7 @@
     {
       "id_pc": 10394,
       "mes_ano": "2026-02",
-      "diretor": " Rodrigo da Silva Worms",
+      "diretor": "Rodrigo da Silva Worms",
       "gerente": "Alessandro Foganholi Cimino",
       "projeto": "PC 394 - SANEPAR CALIBRAÇÃO",
       "mes_ano_label": "MAR/2026",
@@ -1841,7 +1841,7 @@
     {
       "id_pc": 10391,
       "mes_ano": "2026-03",
-      "diretor": " Rodrigo da Silva Worms",
+      "diretor": "Rodrigo da Silva Worms",
       "gerente": "Fernanda Carvalho Matos",
       "projeto": "PC 391 - JICA COMISSIONAMENTO DE DMCs",
       "mes_ano_label": "ABR/2026",
@@ -1952,7 +1952,7 @@
     {
       "id_pc": 10394,
       "mes_ano": "2026-03",
-      "diretor": " Rodrigo da Silva Worms",
+      "diretor": "Rodrigo da Silva Worms",
       "gerente": "Alessandro Foganholi Cimino",
       "projeto": "PC 394 - SANEPAR CALIBRAÇÃO",
       "mes_ano_label": "ABR/2026",
@@ -2287,7 +2287,7 @@
       "mes_ano": "2026-04",
       "diretor": "Maria Conceição Lima Lafaiete",
       "gerente": "Maria Conceição Lima Lafaiete",
-      "projeto": " PC 367 - PERFORMANCE CAMPINA GRANDE",
+      "projeto": "PC 367 - PERFORMANCE CAMPINA GRANDE",
       "mes_ano_label": "MAI/2026",
       "soma_doc": 835.4,
       "qtd_registros_documento": 1.0,
@@ -2507,7 +2507,7 @@
     {
       "id_pc": 10391,
       "mes_ano": "2026-04",
-      "diretor": " Rodrigo da Silva Worms",
+      "diretor": "Rodrigo da Silva Worms",
       "gerente": "Fernanda Carvalho Matos",
       "projeto": "PC 391 - JICA COMISSIONAMENTO DE DMCs",
       "mes_ano_label": "MAI/2026",
@@ -2618,7 +2618,7 @@
     {
       "id_pc": 10394,
       "mes_ano": "2026-04",
-      "diretor": " Rodrigo da Silva Worms",
+      "diretor": "Rodrigo da Silva Worms",
       "gerente": "Alessandro Foganholi Cimino",
       "projeto": "PC 394 - SANEPAR CALIBRAÇÃO",
       "mes_ano_label": "MAI/2026",
@@ -2953,7 +2953,7 @@
       "mes_ano": "2026-05",
       "diretor": "Maria Conceição Lima Lafaiete",
       "gerente": "Maria Conceição Lima Lafaiete",
-      "projeto": " PC 367 - PERFORMANCE CAMPINA GRANDE",
+      "projeto": "PC 367 - PERFORMANCE CAMPINA GRANDE",
       "mes_ano_label": "JUN/2026",
       "soma_doc": 835.4,
       "qtd_registros_documento": 1.0,
@@ -3173,7 +3173,7 @@
     {
       "id_pc": 10391,
       "mes_ano": "2026-05",
-      "diretor": " Rodrigo da Silva Worms",
+      "diretor": "Rodrigo da Silva Worms",
       "gerente": "Fernanda Carvalho Matos",
       "projeto": "PC 391 - JICA COMISSIONAMENTO DE DMCs",
       "mes_ano_label": "JUN/2026",
@@ -3284,7 +3284,7 @@
     {
       "id_pc": 10394,
       "mes_ano": "2026-05",
-      "diretor": " Rodrigo da Silva Worms",
+      "diretor": "Rodrigo da Silva Worms",
       "gerente": "Alessandro Foganholi Cimino",
       "projeto": "PC 394 - SANEPAR CALIBRAÇÃO",
       "mes_ano_label": "JUN/2026",
@@ -3656,7 +3656,7 @@
       "mes_ano": "2026-06",
       "diretor": "Maria Conceição Lima Lafaiete",
       "gerente": "Maria Conceição Lima Lafaiete",
-      "projeto": " PC 367 - PERFORMANCE CAMPINA GRANDE",
+      "projeto": "PC 367 - PERFORMANCE CAMPINA GRANDE",
       "mes_ano_label": "JUL/2026",
       "soma_doc": 835.4,
       "qtd_registros_documento": 1.0,
@@ -3876,7 +3876,7 @@
     {
       "id_pc": 10391,
       "mes_ano": "2026-06",
-      "diretor": " Rodrigo da Silva Worms",
+      "diretor": "Rodrigo da Silva Worms",
       "gerente": "Fernanda Carvalho Matos",
       "projeto": "PC 391 - JICA COMISSIONAMENTO DE DMCs",
       "mes_ano_label": "JUL/2026",
@@ -3987,7 +3987,7 @@
     {
       "id_pc": 10394,
       "mes_ano": "2026-06",
-      "diretor": " Rodrigo da Silva Worms",
+      "diretor": "Rodrigo da Silva Worms",
       "gerente": "Alessandro Foganholi Cimino",
       "projeto": "PC 394 - SANEPAR CALIBRAÇÃO",
       "mes_ano_label": "JUL/2026",
