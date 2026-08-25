@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-08-25T16:47:52Z",
+  "gerado_em": "2026-08-25T17:28:58Z",
   "resumo": {
     "total_contratos": 19,
     "mes_mais_recente": "2026-07",
@@ -39,7 +39,7 @@
     {
       "mes_ano": "2026-04",
       "mes_ano_label": "MAI/2026",
-      "media_nota_sst": 1619.95,
+      "media_nota_sst": 1675.5,
       "qtd_contratos": 18
     },
     {
@@ -2549,41 +2549,29 @@
       "qtd_campanha_sst": 2.0,
       "qtd_saude_mental": 0.0,
       "eventos_realizados": "Campanha SST • Diálogo Semanal de Segurança – DDS",
-      "qtd_registros_ocorrencias_total": 29.0,
+      "qtd_registros_ocorrencias_total": 28.0,
       "soma_ocor": 24520.0,
       "qtd_registros_campo_pontuaveis": 28.0,
-      "soma_def": -1000.0,
-      "qtd_deflatores": 1.0,
-      "qtd_acidentes": 1.0,
+      "soma_def": 0.0,
+      "qtd_deflatores": 0.0,
+      "qtd_acidentes": 0.0,
       "qtd_fatalidades": 0.0,
-      "qtd_acidentes_afastamento": 1.0,
+      "qtd_acidentes_afastamento": 0.0,
       "qtd_acidentes_sem_afastamento": 0.0,
       "soma_analise_sst": 2452.0,
-      "qtd_analise_sst": 29.0,
-      "resumo_acidentes": "Acidente – Com afastamento",
-      "soma_dias_afastado": 60.0,
-      "soma_custo_afastamento": 7680.0,
-      "acidentes_detalhe": [
-        {
-          "data": "2026-05-26",
-          "tipo_label": "Acidente – Com afastamento",
-          "situacao": "Típico",
-          "cid": "S52.5",
-          "n_cat": "1.1.0000000042005425365",
-          "dias_afastado": 60,
-          "custo_afastamento": 7680.0,
-          "houve_tratativa": "sim",
-          "descricao_tratativa": "Prestados por pessoas que passavam pelo local, após chegada do resgate e encaminhamento ao pronto atendimento, o colaborador seguiu internado para avaliação médica aprofundada."
-        }
-      ],
+      "qtd_analise_sst": 28.0,
+      "resumo_acidentes": "Nenhum acidente registrado no período",
+      "soma_dias_afastado": 0.0,
+      "soma_custo_afastamento": 0.0,
+      "acidentes_detalhe": [],
       "nota_documento": 620.46,
       "nota_evento": 200.0,
       "nota_ocorrencia": 875.71,
-      "nota_deflatores": -1000.0,
-      "nota_analise_sst_media": 84.6,
-      "nota_effico_sst": 696.17,
-      "farol": "vermelho",
-      "status_sst": "🔴 VERMELHO"
+      "nota_deflatores": 0.0,
+      "nota_analise_sst_media": 87.6,
+      "nota_effico_sst": 1696.17,
+      "farol": "verde",
+      "status_sst": "🟢 VERDE"
     },
     {
       "id_pc": 10363,
