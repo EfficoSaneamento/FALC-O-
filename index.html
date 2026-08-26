@@ -531,11 +531,14 @@ let rankingDimensao = "pc"; // "pc" | "diretor" | "gerente"
 let top3Dimensao = "pc";    // "pc" | "diretor" | "gerente"
 let charts = {};
 
-// Classificacao PC Sabesp x Nao Sabesp, fornecida manualmente pelo
-// usuario em 2026-08-25 (nao vem de nenhum campo do ArcGIS). Contratos
-// fora desta lista sao tratados como Sabesp por padrao, ja que so 2 dos
-// 19 PCs conhecidos na epoca eram Nao Sabesp.
-const PC_NAO_SABESP = new Set([10363, 10367]);
+// Classificacao PC Sabesp x Nao Sabesp (nao vem de nenhum campo do
+// ArcGIS). Contratos fora desta lista sao tratados como Sabesp por
+// padrao. Base: 10363 (FIDIC YELLOW) e 10367 (PERFORMANCE CAMPINA
+// GRANDE) fornecidos manualmente pelo usuario em 2026-08-25. Em
+// 2026-08-26 o usuario confirmou que todo contrato de outras
+// concessionarias (Sanepar, Embasa, BRK) tambem e Nao Sabesp: 10383,
+// 10385, 10387 e 10394 (Sanepar), 10398 (Embasa) e 10401 (BRK).
+const PC_NAO_SABESP = new Set([10363, 10367, 10383, 10385, 10387, 10394, 10398, 10401]);
 function ehPcSabesp(idPc) {
   return !PC_NAO_SABESP.has(Number(idPc));
 }
