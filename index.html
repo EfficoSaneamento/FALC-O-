@@ -398,6 +398,8 @@
       </div>
     </section>
 
+    <section class="panel" id="painel-comparativo-geral" hidden></section>
+
     <section class="split">
       <div class="panel" style="margin-bottom:0;">
         <h3 id="evolucao-title">Evolução da nota média SST</h3>
@@ -1020,19 +1022,37 @@ function renderDetalhe(mesAno) {
 // dos dois sistemas — Falcao e SABESP tem tetos diferentes por categoria).
 const ESCALA_COMPARATIVO = { documentacao: 1000, eventos: 300, campo: 1000 };
 
-function comparativoHtml(r) {
-  const comp = WEHANDLE.find(w => w.id_pc === r.id_pc && w.mes_ano === r.mes_ano);
-  if (!comp) return "";
-
-  const f = comp.falcao;
-  const s = comp.sabesp;
-  if (f.nota_final === null || f.nota_final === undefined) return "";
-
+// Bloco com a nota final lado a lado (Falcao x Sabesp) e o delta entre
+// elas — reaproveitado tanto no comparativo por contrato quanto no
+// comparativo geral (agregado pelos contratos filtrados).
+function comparativoFinalHtml(f, s) {
   const delta = f.nota_final - s.nota_final;
   const deltaPct = s.nota_final ? (delta / Math.abs(s.nota_final)) * 100 : 0;
   const deltaCls = delta > 0 ? "delta-good" : delta < 0 ? "delta-bad" : "delta-neutral";
   const deltaArrow = delta > 0 ? "▲" : delta < 0 ? "▼" : "=";
+  return `
+    <div class="comp-final">
+      <div class="comp-final__side">
+        <div class="comp-final__tag falcao">FALCÃO</div>
+        <div class="comp-final__value falcao">${fmtNota(f.nota_final)}</div>
+        <div class="comp-final__scale">de 2.300 pts</div>
+      </div>
+      <div class="comp-final__delta">
+        <div class="comp-final__delta-value ${deltaCls}">${deltaArrow} ${delta > 0 ? "+" : ""}${fmtNota(delta)}</div>
+        <div class="comp-final__delta-pct">${deltaPct > 0 ? "+" : ""}${fmtNota(deltaPct)}%</div>
+      </div>
+      <div class="comp-final__side">
+        <div class="comp-final__tag sabesp">SABESP</div>
+        <div class="comp-final__value sabesp">${fmtNota(s.nota_final)}</div>
+        <div class="comp-final__scale">de 2.300 pts</div>
+      </div>
+    </div>
+  `;
+}
 
+// Grade de cards (Documentacao/Eventos/Campo + Deflatores) comparando
+// Falcao x Sabesp — idem, reaproveitado no card por contrato e no geral.
+function comparativoCardsHtml(f, s) {
   const categorias = [
     { key: "documentacao", label: "Documentação", icon: "📄" },
     { key: "eventos", label: "Eventos SST", icon: "🗓️" },
@@ -1064,30 +1084,63 @@ function comparativoHtml(r) {
     </div>
   `;
 
+  return cards + defCard;
+}
+
+function comparativoHtml(r) {
+  const comp = WEHANDLE.find(w => w.id_pc === r.id_pc && w.mes_ano === r.mes_ano);
+  if (!comp) return "";
+
+  const f = comp.falcao;
+  const s = comp.sabesp;
+  if (f.nota_final === null || f.nota_final === undefined) return "";
+
   return `
     <div class="comparativo">
       <div class="comparativo__label">Comparativo Falcão × SABESP</div>
       <div class="comparativo__fonte">Fonte: ${esc(comp.fonte)} · arquivo ${esc(comp.arquivo_origem)}</div>
-
-      <div class="comp-final">
-        <div class="comp-final__side">
-          <div class="comp-final__tag falcao">FALCÃO</div>
-          <div class="comp-final__value falcao">${fmtNota(f.nota_final)}</div>
-          <div class="comp-final__scale">de 2.300 pts</div>
-        </div>
-        <div class="comp-final__delta">
-          <div class="comp-final__delta-value ${deltaCls}">${deltaArrow} ${delta > 0 ? "+" : ""}${fmtNota(delta)}</div>
-          <div class="comp-final__delta-pct">${deltaPct > 0 ? "+" : ""}${fmtNota(deltaPct)}%</div>
-        </div>
-        <div class="comp-final__side">
-          <div class="comp-final__tag sabesp">SABESP</div>
-          <div class="comp-final__value sabesp">${fmtNota(s.nota_final)}</div>
-          <div class="comp-final__scale">de 2.300 pts</div>
-        </div>
-      </div>
-
-      <div class="comp-cards">${cards}${defCard}</div>
+      ${comparativoFinalHtml(f, s)}
+      <div class="comp-cards">${comparativoCardsHtml(f, s)}</div>
     </div>
+  `;
+}
+
+// Versao geral (agregada) do comparativo: media dos contratos que estao
+// dentro do filtro atual e tem dado importado do WeHandle no mes. Fica
+// oculto nos meses/filtros sem nenhum dado WeHandle (piloto jan-jun 2026).
+function renderComparativoGeral(mesAno) {
+  const painel = document.getElementById("painel-comparativo-geral");
+  if (!painel) return;
+
+  const idsAtuais = new Set(registrosFiltrados(mesAno).map(r => String(r.id_pc)));
+  const matches = WEHANDLE.filter(w => w.mes_ano === mesAno && idsAtuais.has(String(w.id_pc)));
+  if (matches.length === 0) {
+    painel.hidden = true;
+    return;
+  }
+
+  const media = (fn) => matches.reduce((acc, m) => acc + (fn(m) || 0), 0) / matches.length;
+  const f = {
+    documentacao: media(m => m.falcao.documentacao),
+    eventos: media(m => m.falcao.eventos),
+    campo: media(m => m.falcao.campo),
+    deflatores: media(m => m.falcao.deflatores),
+    nota_final: media(m => m.falcao.nota_final),
+  };
+  const s = {
+    documentacao: media(m => m.sabesp.documentacao),
+    eventos: media(m => m.sabesp.eventos),
+    campo: media(m => m.sabesp.campo),
+    deflatores: media(m => m.sabesp.deflatores),
+    nota_final: media(m => m.sabesp.nota_final),
+  };
+
+  painel.hidden = false;
+  painel.innerHTML = `
+    <h3>Comparativo Falcão × SABESP — geral</h3>
+    <div class="comparativo__fonte">Fonte: WeHandle · média de ${matches.length} contrato${matches.length > 1 ? "s" : ""} do filtro atual, no mês</div>
+    ${comparativoFinalHtml(f, s)}
+    <div class="comp-cards">${comparativoCardsHtml(f, s)}</div>
   `;
 }
 
@@ -1215,6 +1268,7 @@ function onFiltersChange() {
   }
   renderFarolSummary(mesAno);
   renderIndicadoresGerais(mesAno);
+  renderComparativoGeral(mesAno);
   renderTop3(mesAno);
   renderKPIs(mesAno);
   renderRanking(mesAno);
