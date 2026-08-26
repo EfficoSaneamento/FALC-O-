@@ -410,8 +410,8 @@
         <h3>Farol dos contratos no mês</h3>
         <canvas id="chart-farol" height="220"></canvas>
         <div class="farol-legend">
-          <span class="farol-legend__item"><span class="farol-legend__dot farol-verde"></span>Verde ≥ 1.600</span>
-          <span class="farol-legend__item"><span class="farol-legend__dot farol-amarelo"></span>Amarelo 1.000–1.599</span>
+          <span class="farol-legend__item"><span class="farol-legend__dot farol-verde"></span>Verde ≥ 2.000</span>
+          <span class="farol-legend__item"><span class="farol-legend__dot farol-amarelo"></span>Amarelo 1.000–1.999</span>
           <span class="farol-legend__item"><span class="farol-legend__dot farol-vermelho"></span>Vermelho &lt; 1.000</span>
         </div>
       </div>
@@ -667,8 +667,8 @@ function renderFarolSummary(mesAno) {
   // de valor (pode ser melhora vindo do vermelho ou piora vindo do verde).
   const cards = [
     { key: "vermelho", label: "Vermelho", range: "Até 1.000 pontos", icon: "🔔", polarity: "lower-better" },
-    { key: "amarelo", label: "Amarelo", range: "1.001 a 1.600 pontos", icon: "⚠️", polarity: "neutral" },
-    { key: "verde", label: "Verde", range: "Acima de 1.600 pontos", icon: "✅", polarity: "higher-better" },
+    { key: "amarelo", label: "Amarelo", range: "1.000 a 1.999 pontos", icon: "⚠️", polarity: "neutral" },
+    { key: "verde", label: "Verde", range: "Acima de 2.000 pontos", icon: "✅", polarity: "higher-better" },
   ];
 
   document.getElementById("farol-cards").innerHTML = cards.map(c => `
@@ -835,11 +835,12 @@ function documentoDetalheHtml(detalhes) {
 }
 
 // Faixas de farol usadas para recompor o farol de um grupo (diretoria/
-// gerencia) a partir da media das notas, nos mesmos limites do card de
-// resumo de farois (ate 1.000 / 1.001 a 1.600 / acima de 1.600).
+// gerencia) a partir da media das notas — mesmos limites do calculo
+// oficial Falcao (script Arcade "VERSAO CONSOLIDADA"): vermelho <1.000,
+// amarelo <2.000, verde >=2.000.
 function farolFromNota(nota) {
-  if (nota <= 1000) return "vermelho";
-  if (nota <= 1600) return "amarelo";
+  if (nota < 1000) return "vermelho";
+  if (nota < 2000) return "amarelo";
   return "verde";
 }
 
@@ -1004,6 +1005,7 @@ function renderDetalhe(mesAno) {
         <tr><td>Com afastamento</td><td>${r.qtd_acidentes_afastamento ?? 0}</td></tr>
         <tr><td>Sem afastamento</td><td>${r.qtd_acidentes_sem_afastamento ?? 0}</td></tr>
         <tr><td>Fatalidades</td><td>${r.qtd_fatalidades ?? 0}</td></tr>
+        <tr><td>Paralisações</td><td>${r.qtd_paralisacoes ?? 0}</td></tr>
       </table>
       ${r.acidentes_detalhe ? acidenteDetalheHtml(r.acidentes_detalhe) : `<div class="detail-block__prose">${esc(r.resumo_acidentes)}</div>`}
     </div>

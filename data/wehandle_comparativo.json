@@ -30,7 +30,7 @@
     "fonte": "WeHandle - exportação mensal",
     "arquivo_origem": "01-jan-EFFICO SANEAMENTO LTDA - 07.140.111-.xlsx",
     "aba_origem": "Pont - Contratos | DocsEmpresariais | docs Pessoais - analisePorPesso",
-    "gerado_em": "2026-08-26T11:45:29Z"
+    "gerado_em": "2026-08-26T20:19:14Z"
   },
   {
     "id_pc": 10372,
@@ -63,7 +63,7 @@
     "fonte": "WeHandle - exportação mensal",
     "arquivo_origem": "01-jan-EFFICO SANEAMENTO LTDA - 07.140.111-.xlsx",
     "aba_origem": "Pont - Contratos | DocsEmpresariais | docs Pessoais - analisePorPesso",
-    "gerado_em": "2026-08-26T11:45:29Z"
+    "gerado_em": "2026-08-26T20:19:14Z"
   },
   {
     "id_pc": 10389,
@@ -96,7 +96,7 @@
     "fonte": "WeHandle - exportação mensal",
     "arquivo_origem": "01-jan-EFFICO SANEAMENTO LTDA - 07.140.111-.xlsx",
     "aba_origem": "Pont - Contratos | DocsEmpresariais | docs Pessoais - analisePorPesso",
-    "gerado_em": "2026-08-26T11:45:29Z"
+    "gerado_em": "2026-08-26T20:19:14Z"
   },
   {
     "id_pc": 10391,
@@ -129,7 +129,7 @@
     "fonte": "WeHandle - exportação mensal",
     "arquivo_origem": "01-jan-EFFICO SANEAMENTO LTDA - 07.140.111-.xlsx",
     "aba_origem": "Pont - Contratos | DocsEmpresariais | docs Pessoais - analisePorPesso",
-    "gerado_em": "2026-08-26T11:45:29Z"
+    "gerado_em": "2026-08-26T20:19:14Z"
   },
   {
     "id_pc": 10392,
@@ -139,10 +139,10 @@
     "projeto": "PC 392 - DV EXTREMO NORTE II",
     "falcao": {
       "documentacao": 942.0,
-      "eventos": 125.0,
+      "eventos": 100.0,
       "campo": 1000.0,
       "deflatores": -1000.0,
-      "nota_final": 1067.0
+      "nota_final": 1042.0
     },
     "sabesp": {
       "documentacao": 973.68,
@@ -162,7 +162,7 @@
     "fonte": "WeHandle - exportação mensal",
     "arquivo_origem": "01-jan-EFFICO SANEAMENTO LTDA - 07.140.111-.xlsx",
     "aba_origem": "Pont - Contratos | DocsEmpresariais | docs Pessoais - analisePorPesso",
-    "gerado_em": "2026-08-26T11:45:29Z"
+    "gerado_em": "2026-08-26T20:19:14Z"
   },
   {
     "id_pc": 10395,
@@ -195,7 +195,7 @@
     "fonte": "WeHandle - exportação mensal",
     "arquivo_origem": "01-jan-EFFICO SANEAMENTO LTDA - 07.140.111-.xlsx",
     "aba_origem": "Pont - Contratos | DocsEmpresariais | docs Pessoais - analisePorPesso",
-    "gerado_em": "2026-08-26T11:45:29Z"
+    "gerado_em": "2026-08-26T20:19:14Z"
   },
   {
     "id_pc": 10396,
@@ -228,7 +228,7 @@
     "fonte": "WeHandle - exportação mensal",
     "arquivo_origem": "01-jan-EFFICO SANEAMENTO LTDA - 07.140.111-.xlsx",
     "aba_origem": "Pont - Contratos | DocsEmpresariais | docs Pessoais - analisePorPesso",
-    "gerado_em": "2026-08-26T11:45:29Z"
+    "gerado_em": "2026-08-26T20:19:14Z"
   },
   {
     "id_pc": 10348,
@@ -261,7 +261,7 @@
     "fonte": "WeHandle - exportação mensal",
     "arquivo_origem": "02-fev-EFFICO SANEAMENTO LTDA - 07.140.111-.xlsx",
     "aba_origem": "contratos | ListaDocsEmpresariais | statusPorPessoa",
-    "gerado_em": "2026-08-26T11:45:34Z"
+    "gerado_em": "2026-08-26T20:19:15Z"
   },
   {
     "id_pc": 10372,
@@ -294,7 +294,7 @@
     "fonte": "WeHandle - exportação mensal",
     "arquivo_origem": "02-fev-EFFICO SANEAMENTO LTDA - 07.140.111-.xlsx",
     "aba_origem": "contratos | ListaDocsEmpresariais | statusPorPessoa",
-    "gerado_em": "2026-08-26T11:45:35Z"
+    "gerado_em": "2026-08-26T20:19:15Z"
   },
   {
     "id_pc": 10389,
@@ -327,7 +327,7 @@
     "fonte": "WeHandle - exportação mensal",
     "arquivo_origem": "02-fev-EFFICO SANEAMENTO LTDA - 07.140.111-.xlsx",
     "aba_origem": "contratos | ListaDocsEmpresariais | statusPorPessoa",
-    "gerado_em": "2026-08-26T11:45:35Z"
+    "gerado_em": "2026-08-26T20:19:15Z"
   },
   {
     "id_pc": 10391,
@@ -360,7 +360,7 @@
     "fonte": "WeHandle - exportação mensal",
     "arquivo_origem": "02-fev-EFFICO SANEAMENTO LTDA - 07.140.111-.xlsx",
     "aba_origem": "contratos | ListaDocsEmpresariais | statusPorPessoa",
-    "gerado_em": "2026-08-26T11:45:35Z"
+    "gerado_em": "2026-08-26T20:19:15Z"
   },
   {
     "id_pc": 10392,
@@ -393,7 +393,7 @@
     "fonte": "WeHandle - exportação mensal",
     "arquivo_origem": "02-fev-EFFICO SANEAMENTO LTDA - 07.140.111-.xlsx",
     "aba_origem": "contratos | ListaDocsEmpresariais | statusPorPessoa",
-    "gerado_em": "2026-08-26T11:45:35Z"
+    "gerado_em": "2026-08-26T20:19:15Z"
   },
   {
     "id_pc": 10395,
@@ -403,10 +403,10 @@
     "projeto": "PC 395 - SMR MOOCA",
     "falcao": {
       "documentacao": 957.0,
-      "eventos": 200.0,
+      "eventos": 100.0,
       "campo": 1000.0,
       "deflatores": 0.0,
-      "nota_final": 2157.0
+      "nota_final": 2057.0
     },
     "sabesp": {
       "documentacao": 703.44,
@@ -426,7 +426,7 @@
     "fonte": "WeHandle - exportação mensal",
     "arquivo_origem": "02-fev-EFFICO SANEAMENTO LTDA - 07.140.111-.xlsx",
     "aba_origem": "contratos | ListaDocsEmpresariais | statusPorPessoa",
-    "gerado_em": "2026-08-26T11:45:35Z"
+    "gerado_em": "2026-08-26T20:19:15Z"
   },
   {
     "id_pc": 10396,
@@ -438,8 +438,8 @@
       "documentacao": 792.4,
       "eventos": 0.0,
       "campo": 800.0,
-      "deflatores": 0.0,
-      "nota_final": 1592.4
+      "deflatores": -200.0,
+      "nota_final": 1392.4
     },
     "sabesp": {
       "documentacao": 751.31,
@@ -459,7 +459,7 @@
     "fonte": "WeHandle - exportação mensal",
     "arquivo_origem": "02-fev-EFFICO SANEAMENTO LTDA - 07.140.111-.xlsx",
     "aba_origem": "contratos | ListaDocsEmpresariais | statusPorPessoa",
-    "gerado_em": "2026-08-26T11:45:35Z"
+    "gerado_em": "2026-08-26T20:19:15Z"
   },
   {
     "id_pc": 10348,
@@ -492,7 +492,7 @@
     "fonte": "WeHandle - exportação mensal",
     "arquivo_origem": "03-mar-EFFICO SANEAMENTO LTDA - 07.140.111-.xlsx",
     "aba_origem": "contratos | ListaDocsEmpresariais | prestadores funcionarios",
-    "gerado_em": "2026-08-26T11:45:39Z"
+    "gerado_em": "2026-08-26T20:19:16Z"
   },
   {
     "id_pc": 10372,
@@ -502,10 +502,10 @@
     "projeto": "PC 372 - CALIBRAÇÃO DE MACROMEDIDOR RMSP",
     "falcao": {
       "documentacao": 903.05,
-      "eventos": 200.0,
+      "eventos": 160.0,
       "campo": 800.0,
-      "deflatores": 0.0,
-      "nota_final": 1903.05
+      "deflatores": -200.0,
+      "nota_final": 1663.05
     },
     "sabesp": {
       "documentacao": 897.59,
@@ -525,7 +525,7 @@
     "fonte": "WeHandle - exportação mensal",
     "arquivo_origem": "03-mar-EFFICO SANEAMENTO LTDA - 07.140.111-.xlsx",
     "aba_origem": "contratos | ListaDocsEmpresariais | prestadores funcionarios",
-    "gerado_em": "2026-08-26T11:45:39Z"
+    "gerado_em": "2026-08-26T20:19:16Z"
   },
   {
     "id_pc": 10389,
@@ -558,7 +558,7 @@
     "fonte": "WeHandle - exportação mensal",
     "arquivo_origem": "03-mar-EFFICO SANEAMENTO LTDA - 07.140.111-.xlsx",
     "aba_origem": "contratos | ListaDocsEmpresariais | prestadores funcionarios",
-    "gerado_em": "2026-08-26T11:45:39Z"
+    "gerado_em": "2026-08-26T20:19:16Z"
   },
   {
     "id_pc": 10391,
@@ -591,7 +591,7 @@
     "fonte": "WeHandle - exportação mensal",
     "arquivo_origem": "03-mar-EFFICO SANEAMENTO LTDA - 07.140.111-.xlsx",
     "aba_origem": "contratos | ListaDocsEmpresariais | prestadores funcionarios",
-    "gerado_em": "2026-08-26T11:45:39Z"
+    "gerado_em": "2026-08-26T20:19:16Z"
   },
   {
     "id_pc": 10392,
@@ -601,10 +601,10 @@
     "projeto": "PC 392 - DV EXTREMO NORTE II",
     "falcao": {
       "documentacao": 993.5,
-      "eventos": 200.0,
+      "eventos": 170.0,
       "campo": 1000.0,
       "deflatores": 0.0,
-      "nota_final": 2193.5
+      "nota_final": 2163.5
     },
     "sabesp": {
       "documentacao": 930.77,
@@ -624,7 +624,7 @@
     "fonte": "WeHandle - exportação mensal",
     "arquivo_origem": "03-mar-EFFICO SANEAMENTO LTDA - 07.140.111-.xlsx",
     "aba_origem": "contratos | ListaDocsEmpresariais | prestadores funcionarios",
-    "gerado_em": "2026-08-26T11:45:39Z"
+    "gerado_em": "2026-08-26T20:19:16Z"
   },
   {
     "id_pc": 10395,
@@ -634,10 +634,10 @@
     "projeto": "PC 395 - SMR MOOCA",
     "falcao": {
       "documentacao": 964.3,
-      "eventos": 200.0,
+      "eventos": 100.0,
       "campo": 1000.0,
       "deflatores": 0.0,
-      "nota_final": 2164.3
+      "nota_final": 2064.3
     },
     "sabesp": {
       "documentacao": 716.02,
@@ -657,7 +657,7 @@
     "fonte": "WeHandle - exportação mensal",
     "arquivo_origem": "03-mar-EFFICO SANEAMENTO LTDA - 07.140.111-.xlsx",
     "aba_origem": "contratos | ListaDocsEmpresariais | prestadores funcionarios",
-    "gerado_em": "2026-08-26T11:45:39Z"
+    "gerado_em": "2026-08-26T20:19:16Z"
   },
   {
     "id_pc": 10396,
@@ -667,10 +667,10 @@
     "projeto": "PC 396 - PERFORMANCE SÃO BERNARDO DO CAMPO",
     "falcao": {
       "documentacao": 714.7,
-      "eventos": 138.6,
+      "eventos": 100.0,
       "campo": 1000.0,
       "deflatores": 0.0,
-      "nota_final": 1853.3
+      "nota_final": 1814.7
     },
     "sabesp": {
       "documentacao": 828.54,
@@ -690,7 +690,7 @@
     "fonte": "WeHandle - exportação mensal",
     "arquivo_origem": "03-mar-EFFICO SANEAMENTO LTDA - 07.140.111-.xlsx",
     "aba_origem": "contratos | ListaDocsEmpresariais | prestadores funcionarios",
-    "gerado_em": "2026-08-26T11:45:39Z"
+    "gerado_em": "2026-08-26T20:19:16Z"
   },
   {
     "id_pc": 10348,
@@ -723,7 +723,7 @@
     "fonte": "WeHandle - exportação mensal",
     "arquivo_origem": "04-abr-EFFICO SANEAMENTO LTDA - 07.140.111-.xlsx",
     "aba_origem": "contratos | documentos empresa | prestadores funcionarios",
-    "gerado_em": "2026-08-26T11:45:43Z"
+    "gerado_em": "2026-08-26T20:19:18Z"
   },
   {
     "id_pc": 10372,
@@ -733,10 +733,10 @@
     "projeto": "PC 372 - CALIBRAÇÃO DE MACROMEDIDOR RMSP",
     "falcao": {
       "documentacao": 1000.0,
-      "eventos": 200.0,
+      "eventos": 100.0,
       "campo": 1000.0,
       "deflatores": 0.0,
-      "nota_final": 2200.0
+      "nota_final": 2100.0
     },
     "sabesp": {
       "documentacao": 591.46,
@@ -756,7 +756,7 @@
     "fonte": "WeHandle - exportação mensal",
     "arquivo_origem": "04-abr-EFFICO SANEAMENTO LTDA - 07.140.111-.xlsx",
     "aba_origem": "contratos | documentos empresa | prestadores funcionarios",
-    "gerado_em": "2026-08-26T11:45:43Z"
+    "gerado_em": "2026-08-26T20:19:18Z"
   },
   {
     "id_pc": 10389,
@@ -789,7 +789,7 @@
     "fonte": "WeHandle - exportação mensal",
     "arquivo_origem": "04-abr-EFFICO SANEAMENTO LTDA - 07.140.111-.xlsx",
     "aba_origem": "contratos | documentos empresa | prestadores funcionarios",
-    "gerado_em": "2026-08-26T11:45:43Z"
+    "gerado_em": "2026-08-26T20:19:18Z"
   },
   {
     "id_pc": 10391,
@@ -799,10 +799,10 @@
     "projeto": "PC 391 - JICA COMISSIONAMENTO DE DMCs",
     "falcao": {
       "documentacao": 950.0,
-      "eventos": 200.0,
+      "eventos": 100.0,
       "campo": 0.0,
       "deflatores": 0.0,
-      "nota_final": 1150.0
+      "nota_final": 1050.0
     },
     "sabesp": {
       "documentacao": 492.86,
@@ -822,7 +822,7 @@
     "fonte": "WeHandle - exportação mensal",
     "arquivo_origem": "04-abr-EFFICO SANEAMENTO LTDA - 07.140.111-.xlsx",
     "aba_origem": "contratos | documentos empresa | prestadores funcionarios",
-    "gerado_em": "2026-08-26T11:45:43Z"
+    "gerado_em": "2026-08-26T20:19:18Z"
   },
   {
     "id_pc": 10392,
@@ -832,10 +832,10 @@
     "projeto": "PC 392 - DV EXTREMO NORTE II",
     "falcao": {
       "documentacao": 956.5,
-      "eventos": 200.0,
+      "eventos": 100.0,
       "campo": 1000.0,
       "deflatores": 0.0,
-      "nota_final": 2156.5
+      "nota_final": 2056.5
     },
     "sabesp": {
       "documentacao": 750.0,
@@ -855,7 +855,7 @@
     "fonte": "WeHandle - exportação mensal",
     "arquivo_origem": "04-abr-EFFICO SANEAMENTO LTDA - 07.140.111-.xlsx",
     "aba_origem": "contratos | documentos empresa | prestadores funcionarios",
-    "gerado_em": "2026-08-26T11:45:43Z"
+    "gerado_em": "2026-08-26T20:19:18Z"
   },
   {
     "id_pc": 10395,
@@ -865,10 +865,10 @@
     "projeto": "PC 395 - SMR MOOCA",
     "falcao": {
       "documentacao": 0.0,
-      "eventos": 177.2,
+      "eventos": 168.0,
       "campo": 984.62,
-      "deflatores": 0.0,
-      "nota_final": 1161.82
+      "deflatores": -200.0,
+      "nota_final": 952.62
     },
     "sabesp": {
       "documentacao": 751.04,
@@ -888,7 +888,7 @@
     "fonte": "WeHandle - exportação mensal",
     "arquivo_origem": "04-abr-EFFICO SANEAMENTO LTDA - 07.140.111-.xlsx",
     "aba_origem": "contratos | documentos empresa | prestadores funcionarios",
-    "gerado_em": "2026-08-26T11:45:43Z"
+    "gerado_em": "2026-08-26T20:19:18Z"
   },
   {
     "id_pc": 10396,
@@ -921,7 +921,7 @@
     "fonte": "WeHandle - exportação mensal",
     "arquivo_origem": "04-abr-EFFICO SANEAMENTO LTDA - 07.140.111-.xlsx",
     "aba_origem": "contratos | documentos empresa | prestadores funcionarios",
-    "gerado_em": "2026-08-26T11:45:43Z"
+    "gerado_em": "2026-08-26T20:19:18Z"
   },
   {
     "id_pc": 10348,
@@ -933,8 +933,8 @@
       "documentacao": 620.46,
       "eventos": 200.0,
       "campo": 875.71,
-      "deflatores": 0.0,
-      "nota_final": 1696.17
+      "deflatores": -200.0,
+      "nota_final": 1496.17
     },
     "sabesp": {
       "documentacao": 620.46,
@@ -954,7 +954,7 @@
     "fonte": "WeHandle - exportação mensal",
     "arquivo_origem": "05-mai-EFFICO SANEAMENTO LTDA - 07.140.111-.xlsx",
     "aba_origem": "contratos | documentos empresa | prestadores funcionarios",
-    "gerado_em": "2026-08-26T11:45:46Z"
+    "gerado_em": "2026-08-26T20:19:19Z"
   },
   {
     "id_pc": 10372,
@@ -964,10 +964,10 @@
     "projeto": "PC 372 - CALIBRAÇÃO DE MACROMEDIDOR RMSP",
     "falcao": {
       "documentacao": 840.43,
-      "eventos": 200.0,
+      "eventos": 100.0,
       "campo": 975.0,
       "deflatores": 0.0,
-      "nota_final": 2015.43
+      "nota_final": 1915.43
     },
     "sabesp": {
       "documentacao": 840.43,
@@ -987,7 +987,7 @@
     "fonte": "WeHandle - exportação mensal",
     "arquivo_origem": "05-mai-EFFICO SANEAMENTO LTDA - 07.140.111-.xlsx",
     "aba_origem": "contratos | documentos empresa | prestadores funcionarios",
-    "gerado_em": "2026-08-26T11:45:46Z"
+    "gerado_em": "2026-08-26T20:19:19Z"
   },
   {
     "id_pc": 10389,
@@ -997,10 +997,10 @@
     "projeto": "PC 389 - Integra Tietê",
     "falcao": {
       "documentacao": 654.94,
-      "eventos": 200.0,
+      "eventos": 300.0,
       "campo": 952.92,
       "deflatores": -2000.0,
-      "nota_final": -192.14
+      "nota_final": -92.14
     },
     "sabesp": {
       "documentacao": 654.94,
@@ -1020,7 +1020,7 @@
     "fonte": "WeHandle - exportação mensal",
     "arquivo_origem": "05-mai-EFFICO SANEAMENTO LTDA - 07.140.111-.xlsx",
     "aba_origem": "contratos | documentos empresa | prestadores funcionarios",
-    "gerado_em": "2026-08-26T11:45:46Z"
+    "gerado_em": "2026-08-26T20:19:19Z"
   },
   {
     "id_pc": 10391,
@@ -1030,10 +1030,10 @@
     "projeto": "PC 391 - JICA COMISSIONAMENTO DE DMCs",
     "falcao": {
       "documentacao": 966.67,
-      "eventos": 200.0,
+      "eventos": 100.0,
       "campo": 1000.0,
       "deflatores": 0.0,
-      "nota_final": 2166.67
+      "nota_final": 2066.67
     },
     "sabesp": {
       "documentacao": 966.67,
@@ -1053,7 +1053,7 @@
     "fonte": "WeHandle - exportação mensal",
     "arquivo_origem": "05-mai-EFFICO SANEAMENTO LTDA - 07.140.111-.xlsx",
     "aba_origem": "contratos | documentos empresa | prestadores funcionarios",
-    "gerado_em": "2026-08-26T11:45:46Z"
+    "gerado_em": "2026-08-26T20:19:19Z"
   },
   {
     "id_pc": 10392,
@@ -1063,10 +1063,10 @@
     "projeto": "PC 392 - DV EXTREMO NORTE II",
     "falcao": {
       "documentacao": 928.57,
-      "eventos": 200.0,
+      "eventos": 100.0,
       "campo": 1000.0,
       "deflatores": 0.0,
-      "nota_final": 2128.57
+      "nota_final": 2028.57
     },
     "sabesp": {
       "documentacao": 928.57,
@@ -1086,7 +1086,7 @@
     "fonte": "WeHandle - exportação mensal",
     "arquivo_origem": "05-mai-EFFICO SANEAMENTO LTDA - 07.140.111-.xlsx",
     "aba_origem": "contratos | documentos empresa | prestadores funcionarios",
-    "gerado_em": "2026-08-26T11:45:46Z"
+    "gerado_em": "2026-08-26T20:19:19Z"
   },
   {
     "id_pc": 10395,
@@ -1096,10 +1096,10 @@
     "projeto": "PC 395 - SMR MOOCA",
     "falcao": {
       "documentacao": 464.05,
-      "eventos": 200.0,
+      "eventos": 100.0,
       "campo": 764.47,
-      "deflatores": 0.0,
-      "nota_final": 1428.52
+      "deflatores": -400.0,
+      "nota_final": 928.52
     },
     "sabesp": {
       "documentacao": 464.05,
@@ -1119,7 +1119,7 @@
     "fonte": "WeHandle - exportação mensal",
     "arquivo_origem": "05-mai-EFFICO SANEAMENTO LTDA - 07.140.111-.xlsx",
     "aba_origem": "contratos | documentos empresa | prestadores funcionarios",
-    "gerado_em": "2026-08-26T11:45:46Z"
+    "gerado_em": "2026-08-26T20:19:19Z"
   },
   {
     "id_pc": 10396,
@@ -1152,7 +1152,7 @@
     "fonte": "WeHandle - exportação mensal",
     "arquivo_origem": "05-mai-EFFICO SANEAMENTO LTDA - 07.140.111-.xlsx",
     "aba_origem": "contratos | documentos empresa | prestadores funcionarios",
-    "gerado_em": "2026-08-26T11:45:46Z"
+    "gerado_em": "2026-08-26T20:19:19Z"
   },
   {
     "id_pc": 10348,
@@ -1162,10 +1162,10 @@
     "projeto": "PC 348- GLOBAL PIMENTAS",
     "falcao": {
       "documentacao": 547.79,
-      "eventos": 200.0,
+      "eventos": 100.0,
       "campo": 924.29,
       "deflatores": 0.0,
-      "nota_final": 1672.08
+      "nota_final": 1572.08
     },
     "sabesp": {
       "documentacao": 547.79,
@@ -1185,7 +1185,7 @@
     "fonte": "WeHandle - exportação mensal",
     "arquivo_origem": "06-jun-EFFICO SANEAMENTO LTDA - 07.140.111-.xlsx",
     "aba_origem": "contratos | documentos empresa | prestadores funcionarios",
-    "gerado_em": "2026-08-26T11:45:49Z"
+    "gerado_em": "2026-08-26T20:19:21Z"
   },
   {
     "id_pc": 10372,
@@ -1218,7 +1218,7 @@
     "fonte": "WeHandle - exportação mensal",
     "arquivo_origem": "06-jun-EFFICO SANEAMENTO LTDA - 07.140.111-.xlsx",
     "aba_origem": "contratos | documentos empresa | prestadores funcionarios",
-    "gerado_em": "2026-08-26T11:45:49Z"
+    "gerado_em": "2026-08-26T20:19:21Z"
   },
   {
     "id_pc": 10389,
@@ -1228,10 +1228,10 @@
     "projeto": "PC 389 - Integra Tietê",
     "falcao": {
       "documentacao": 662.57,
-      "eventos": 200.0,
+      "eventos": 300.0,
       "campo": 927.29,
-      "deflatores": -1000.0,
-      "nota_final": 789.86
+      "deflatores": -1200.0,
+      "nota_final": 689.86
     },
     "sabesp": {
       "documentacao": 662.57,
@@ -1251,7 +1251,7 @@
     "fonte": "WeHandle - exportação mensal",
     "arquivo_origem": "06-jun-EFFICO SANEAMENTO LTDA - 07.140.111-.xlsx",
     "aba_origem": "contratos | documentos empresa | prestadores funcionarios",
-    "gerado_em": "2026-08-26T11:45:49Z"
+    "gerado_em": "2026-08-26T20:19:21Z"
   },
   {
     "id_pc": 10391,
@@ -1284,7 +1284,7 @@
     "fonte": "WeHandle - exportação mensal",
     "arquivo_origem": "06-jun-EFFICO SANEAMENTO LTDA - 07.140.111-.xlsx",
     "aba_origem": "contratos | documentos empresa | prestadores funcionarios",
-    "gerado_em": "2026-08-26T11:45:49Z"
+    "gerado_em": "2026-08-26T20:19:21Z"
   },
   {
     "id_pc": 10392,
@@ -1317,7 +1317,7 @@
     "fonte": "WeHandle - exportação mensal",
     "arquivo_origem": "06-jun-EFFICO SANEAMENTO LTDA - 07.140.111-.xlsx",
     "aba_origem": "contratos | documentos empresa | prestadores funcionarios",
-    "gerado_em": "2026-08-26T11:45:49Z"
+    "gerado_em": "2026-08-26T20:19:21Z"
   },
   {
     "id_pc": 10395,
@@ -1350,7 +1350,7 @@
     "fonte": "WeHandle - exportação mensal",
     "arquivo_origem": "06-jun-EFFICO SANEAMENTO LTDA - 07.140.111-.xlsx",
     "aba_origem": "contratos | documentos empresa | prestadores funcionarios",
-    "gerado_em": "2026-08-26T11:45:49Z"
+    "gerado_em": "2026-08-26T20:19:21Z"
   },
   {
     "id_pc": 10396,
@@ -1360,10 +1360,10 @@
     "projeto": "PC 396 - PERFORMANCE SÃO BERNARDO DO CAMPO",
     "falcao": {
       "documentacao": 949.7,
-      "eventos": 200.0,
+      "eventos": 300.0,
       "campo": 872.8,
-      "deflatores": 0.0,
-      "nota_final": 2022.5
+      "deflatores": -400.0,
+      "nota_final": 1722.5
     },
     "sabesp": {
       "documentacao": 949.7,
@@ -1383,7 +1383,7 @@
     "fonte": "WeHandle - exportação mensal",
     "arquivo_origem": "06-jun-EFFICO SANEAMENTO LTDA - 07.140.111-.xlsx",
     "aba_origem": "contratos | documentos empresa | prestadores funcionarios",
-    "gerado_em": "2026-08-26T11:45:49Z"
+    "gerado_em": "2026-08-26T20:19:21Z"
   },
   {
     "id_pc": 10399,
@@ -1416,6 +1416,6 @@
     "fonte": "WeHandle - exportação mensal",
     "arquivo_origem": "06-jun-EFFICO SANEAMENTO LTDA - 07.140.111-.xlsx",
     "aba_origem": "contratos | documentos empresa | prestadores funcionarios",
-    "gerado_em": "2026-08-26T11:45:49Z"
+    "gerado_em": "2026-08-26T20:19:21Z"
   }
 ]

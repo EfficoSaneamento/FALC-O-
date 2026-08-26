@@ -271,6 +271,8 @@ def agrupar_docs(df):
             "mes_ano_label": g["mes_ano_label"].iloc[0],
             "soma_doc": g["nota_analise_documental"].fillna(0).astype(float).sum(),
             "qtd_doc": len(g),
+            "soma_doc_integrado": g.loc[g["docIntegrado"], "nota_analise_documental"].fillna(0).astype(float).sum(),
+            "qtd_doc_integrado": int(g["docIntegrado"].sum()),
             "documentos_reprovados": unique_labels(
                 list(g["lista_nao_conforme"]) + list(g["lista_nao_conforme_g2"]),
                 "Nenhum documento reprovado no período",
@@ -288,6 +290,12 @@ def agrupar_eventos(df):
     linhas = []
     for (id_pc, mes_ano), g in df.groupby(["id_pc", "mes_ano"]):
         qual = g[g["qualifica"]]
+        dds = qual[qual["tipoEvento"] == "dds"]
+        campanha = qual[qual["tipoEvento"] == "campanha_sst"]
+        saude = qual[qual["tipoEvento"] == "saude_mental"]
+        # Cada categoria (DDS/Campanha/Saude Mental) tem teto proprio de
+        # 100 pontos — uma nao compensa a outra — e a soma final e capada
+        # em 300 (ver "final[nota_evento]" mais abaixo).
         linhas.append({
             "id_pc": id_pc,
             "mes_ano": mes_ano,
@@ -295,11 +303,13 @@ def agrupar_eventos(df):
             "gerente": g["gerente"].iloc[0],
             "projeto": g["projeto"].iloc[0],
             "mes_ano_label": g["mes_ano_label"].iloc[0],
-            "soma_evt": qual["notaEventoNum"].sum(),
+            "nota_dds": min(max(dds["notaEventoNum"].sum(), 0), 100),
+            "nota_campanha_sst": min(max(campanha["notaEventoNum"].sum(), 0), 100),
+            "nota_saude_mental": min(max(saude["notaEventoNum"].sum(), 0), 100),
             "qtd_evt": len(qual),
-            "qtd_dds": int((qual["tipoEvento"] == "dds").sum()),
-            "qtd_campanha_sst": int((qual["tipoEvento"] == "campanha_sst").sum()),
-            "qtd_saude_mental": int((qual["tipoEvento"] == "saude_mental").sum()),
+            "qtd_dds": len(dds),
+            "qtd_campanha_sst": len(campanha),
+            "qtd_saude_mental": len(saude),
             "eventos_realizados": unique_labels(list(qual["tipo_evento"]), "Nenhum evento registrado no período"),
         })
     return pd.DataFrame(linhas)
@@ -320,12 +330,13 @@ def agrupar_ocorrencias(df):
             "qtd_registros_ocorrencias_total": len(g),
             "soma_ocor": campo.sum(),
             "qtd_ocor": campo.shape[0],
-            "soma_def": g["deflatorValor"].sum(),
-            "qtd_def": int(g["isDeflator"].sum()),
-            "qtd_acidentes": int((g["tipo"] == "acidente").sum()),
-            "qtd_fatalidades": int((g["tipo"] == "fatalidade").sum()),
-            "qtd_acidentes_afastamento": int(((g["tipo"] == "acidente") & (g["statusAcidente"] == "afastamento")).sum()),
-            "qtd_acidentes_sem_afastamento": int(((g["tipo"] == "acidente") & (g["statusAcidente"] == "sem_afastamento")).sum()),
+            "soma_def": g["deflatorValor"].sum() + g["deflatorParalisacaoValor"].sum(),
+            "qtd_def": int(g["isDeflator"].sum() + g["ehParalisacao"].sum()),
+            "qtd_paralisacoes": int(g["ehParalisacao"].sum()),
+            "qtd_acidentes": int(((g["tipo"] == "acidente") & g["ehAcidenteReal"]).sum()),
+            "qtd_fatalidades": int(((g["tipo"] == "fatalidade") & g["ehAcidenteReal"]).sum()),
+            "qtd_acidentes_afastamento": int(((g["tipo"] == "acidente") & g["ehAcidenteReal"] & (g["statusAcidente"] == "afastamento")).sum()),
+            "qtd_acidentes_sem_afastamento": int(((g["tipo"] == "acidente") & g["ehAcidenteReal"] & (g["statusAcidente"] == "sem_afastamento")).sum()),
             "soma_analise_sst": sst.sum(),
             "qtd_analise_sst": sst.shape[0],
             "resumo_acidentes": unique_labels(list(g["acidenteLabel"].dropna()), "Nenhum acidente registrado no período"),
@@ -375,11 +386,15 @@ def main():
         pcs[_col] = pcs[_col].astype(str).str.strip().str.replace(r"\s+", " ", regex=True)
     ocorrencias = get_layer_data(
         token, 1,
-        "parentglobalid,data_registro,data_ocorreica,tipo_ocorrencia,status_acidente,nota_ocorrencia,nota_analise_sst,"
+        "parentglobalid,data_registro,data_ocorreica,registrar_ocorrencia,tipo_ocorrencia,status_acidente,"
+        "nota_ocorrencia,nota_analise_sst,paralisacao_obra,"
         "dias_afastado,custo_afastamento,situacao_ocorrencia,houve_tratativa,descricao_tratativas,cid,n_cat"
         # cid e n_cat (numero da CAT) foram reincluidos a pedido explicito do
         # usuario em 2026-08-25, revertendo a remocao anterior feita por
         # cautela de privacidade (dado de saude publicado num repo publico).
+        # registrar_ocorrencia e paralisacao_obra adicionados em 2026-08-26
+        # para bater com a logica oficial do calculo Falcao (ver script
+        # Arcade "VERSAO CONSOLIDADA" fornecido pelo usuario).
     )
     docs = get_layer_data(
         token, 2,
@@ -419,6 +434,8 @@ def main():
     eventos["mes_ano_label"] = eventos["data_evento"].apply(mes_ano_label)
 
     # ---- colunas auxiliares — ocorrências ----
+    # Logica alinhada ao script Arcade oficial "VERSAO CONSOLIDADA" (o que
+    # de fato gera a nota Falcao), fornecido pelo usuario em 2026-08-26.
     ocorrencias["tipo"] = ocorrencias["tipo_ocorrencia"].fillna("").astype(str).str.strip().str.lower()
     ocorrencias["nota"] = ocorrencias["nota_ocorrencia"].fillna(1000).astype(float)
     ocorrencias["possuiAnaliseSST"] = ocorrencias["nota_analise_sst"].notna()
@@ -427,18 +444,43 @@ def main():
     )
     ocorrencias["statusAcidente"] = ocorrencias["status_acidente"].fillna("").astype(str).str.strip().str.lower()
 
+    # ehOcorrenciaReal: registro explicitamente confirmado via
+    # registrar_ocorrencia. acidenteLegado: protecao para registros
+    # antigos, anteriores a esse campo existir, que ainda devem contar
+    # como acidente/fatalidade real (sem registrar_ocorrencia preenchido
+    # e sem analise SST associada).
+    ocorrencias["valorRegistrar"] = ocorrencias["registrar_ocorrencia"].fillna("").astype(str).str.strip().str.lower()
+    ocorrencias["ehOcorrenciaReal"] = ocorrencias["valorRegistrar"].isin(["sim", "yes", "1", "true"])
+    ocorrencias["acidenteLegado"] = (
+        (ocorrencias["valorRegistrar"] == "")
+        & (~ocorrencias["possuiAnaliseSST"])
+        & (ocorrencias["tipo"].isin(["acidente", "fatalidade"]))
+    )
+    ocorrencias["ehAcidenteReal"] = (
+        (ocorrencias["ehOcorrenciaReal"] | ocorrencias["acidenteLegado"])
+        & ocorrencias["tipo"].isin(["acidente", "fatalidade"])
+    )
+
     def _nota_campo_row(r):
-        if r["possuiAnaliseSST"] and r["tipo"] not in ("acidente", "fatalidade"):
+        if r["possuiAnaliseSST"] and not r["ehAcidenteReal"]:
             return min(max(r["notaSST"] * 10, 0), 1000)
-        elif r["tipo"] in ("desvio", "incidente") and not r["possuiAnaliseSST"]:
+        elif r["ehOcorrenciaReal"] and r["tipo"] in ("desvio", "incidente") and not r["possuiAnaliseSST"]:
             return r["nota"]
         return None
 
     ocorrencias["notaCampoRow"] = ocorrencias.apply(_nota_campo_row, axis=1)
-    ocorrencias["isDeflator"] = ocorrencias["tipo"].isin(["acidente", "fatalidade"])
-    ocorrencias["deflatorValor"] = ocorrencias.apply(lambda r: r["nota"] if r["isDeflator"] else 0.0, axis=1)
+    ocorrencias["isDeflator"] = ocorrencias["ehAcidenteReal"]
+    ocorrencias["deflatorValor"] = ocorrencias.apply(lambda r: r["nota"] if r["ehAcidenteReal"] else 0.0, axis=1)
+
+    # Paralisacao de obra: -200 pontos por registro, sempre como deflator
+    # adicional (independente de ser tambem um acidente/fatalidade real).
+    ocorrencias["valorParalisacao"] = ocorrencias["paralisacao_obra"].fillna("nao").astype(str).str.strip().str.lower()
+    ocorrencias["ehParalisacao"] = ocorrencias["valorParalisacao"].isin(["sim", "yes", "1", "true"])
+    ocorrencias["deflatorParalisacaoValor"] = ocorrencias["ehParalisacao"].apply(lambda v: -200.0 if v else 0.0)
 
     def _acidente_label(r):
+        if not r["ehAcidenteReal"]:
+            return None
         if r["tipo"] == "acidente":
             return f"Acidente – {label(r['statusAcidente'])}" if r["statusAcidente"] else "Acidente"
         elif r["tipo"] == "fatalidade":
@@ -446,6 +488,13 @@ def main():
         return None
 
     ocorrencias["acidenteLabel"] = ocorrencias.apply(_acidente_label, axis=1)
+
+    # ---- colunas auxiliares — documentos ----
+    # Registro documental "integrado" (SABESP/WeHandle): quando existe ao
+    # menos um no mes, ele tem prioridade sobre a media normal do Falcao
+    # (evita diluir a nota com registros antigos/padronizados).
+    docs["responsavelLower"] = docs["responsavel_analise"].fillna("").astype(str).str.lower()
+    docs["docIntegrado"] = docs["responsavelLower"].str.contains("wehand|sabesp|integra", regex=True)
 
     # ---- colunas auxiliares — eventos ----
     eventos["tipoEvento"] = eventos["tipo_evento"].fillna("").astype(str).str.strip().str.lower()
@@ -475,8 +524,9 @@ def main():
     )
 
     num_cols = [
-        "soma_doc", "qtd_doc", "soma_evt", "qtd_evt", "qtd_dds", "qtd_campanha_sst", "qtd_saude_mental",
-        "qtd_registros_ocorrencias_total", "soma_ocor", "qtd_ocor", "soma_def", "qtd_def", "qtd_acidentes",
+        "soma_doc", "qtd_doc", "soma_doc_integrado", "qtd_doc_integrado",
+        "nota_dds", "nota_campanha_sst", "nota_saude_mental", "qtd_evt", "qtd_dds", "qtd_campanha_sst", "qtd_saude_mental",
+        "qtd_registros_ocorrencias_total", "soma_ocor", "qtd_ocor", "soma_def", "qtd_def", "qtd_paralisacoes", "qtd_acidentes",
         "qtd_fatalidades", "qtd_acidentes_afastamento", "qtd_acidentes_sem_afastamento",
         "soma_analise_sst", "qtd_analise_sst", "soma_dias_afastado", "soma_custo_afastamento",
         "soma_total_analisados", "soma_total_nao_conforme", "soma_colaboradores_avaliados", "soma_treinamentos_nrs",
@@ -489,12 +539,21 @@ def main():
     final["eventos_realizados"] = final["eventos_realizados"].fillna("Nenhum evento registrado no período")
     final["resumo_acidentes"] = final["resumo_acidentes"].fillna("Nenhum acidente registrado no período")
 
+    # Nota documental: registro "integrado" (SABESP/WeHandle) tem
+    # prioridade sobre a media normal do Falcao, quando existe.
     final["nota_documento"] = final.apply(
-        lambda r: round(min(max(r["soma_doc"] / r["qtd_doc"] if r["qtd_doc"] > 0 else 0, 0), 1000), 2), axis=1
+        lambda r: round(min(max(
+            r["soma_doc_integrado"] / r["qtd_doc_integrado"] if r["qtd_doc_integrado"] > 0
+            else (r["soma_doc"] / r["qtd_doc"] if r["qtd_doc"] > 0 else 0),
+            0), 1000), 2),
+        axis=1,
     )
-    # Teto de 200 confirmado contra o painel oficial (PC 391 - JICA, JUN/2026:
-    # soma_evt=375 -> nota_evento=200, nao 300).
-    final["nota_evento"] = final["soma_evt"].apply(lambda v: round(min(max(v, 0), 200), 2))
+    # Nota de eventos: cada categoria (DDS/Campanha/Saude Mental) ja vem
+    # capada em 100 de agrupar_eventos(); a soma das tres e capada em 300
+    # (confirmado contra o script Arcade oficial "VERSAO CONSOLIDADA").
+    final["nota_evento"] = (
+        final["nota_dds"] + final["nota_campanha_sst"] + final["nota_saude_mental"]
+    ).apply(lambda v: round(min(max(v, 0), 300), 2))
     final["nota_ocorrencia"] = final.apply(
         lambda r: round(min(max(r["soma_ocor"] / r["qtd_ocor"] if r["qtd_ocor"] > 0 else 0, 0), 1000), 2), axis=1
     )
@@ -507,8 +566,10 @@ def main():
         final["nota_documento"] + final["nota_evento"] + final["nota_ocorrencia"] + final["soma_def"]
     ).clip(-10000, 2300).round(2)
 
+    # Farol confirmado contra o script Arcade oficial "VERSAO CONSOLIDADA"
+    # em 2026-08-26 (substitui o teto anterior de 1.600 para o amarelo).
     final["farol"] = final["nota_effico_sst"].apply(
-        lambda v: "vermelho" if v < 1000 else ("amarelo" if v < 1600 else "verde")
+        lambda v: "vermelho" if v < 1000 else ("amarelo" if v < 2000 else "verde")
     )
     final["status_sst"] = final["farol"].map({
         "vermelho": "🔴 VERMELHO", "amarelo": "🟡 AMARELO", "verde": "🟢 VERDE",
