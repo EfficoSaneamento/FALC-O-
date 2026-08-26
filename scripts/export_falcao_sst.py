@@ -188,11 +188,28 @@ def _detalhe_acidentes(g):
     acidentes = g[g["isDeflator"]].sort_values("data_registro")
     for _, row in acidentes.iterrows():
         situacao = _clean_text(row.get("situacao_ocorrencia"))
+        # Data do acidente: prioriza data_ocorreica (data real do evento);
+        # cai para data_registro se a primeira nao estiver preenchida.
+        data_evento = row.get("data_ocorreica")
+        if pd.isna(data_evento):
+            data_evento = row["data_registro"]
+        dias_afastado = int(row["dias_afastado"]) if pd.notna(row.get("dias_afastado")) else 0
+
+        data_retorno_estimada = None
+        if pd.notna(data_evento) and dias_afastado > 0:
+            data_retorno_estimada = (data_evento + pd.Timedelta(days=dias_afastado)).strftime("%Y-%m-%d")
+
         linhas.append({
-            "data": row["data_registro"].strftime("%Y-%m-%d") if pd.notna(row["data_registro"]) else None,
+            "data": data_evento.strftime("%Y-%m-%d") if pd.notna(data_evento) else None,
             "tipo_label": row["acidenteLabel"],
             "situacao": SITUACAO_LABEL.get(situacao, situacao) if situacao else None,
-            "dias_afastado": int(row["dias_afastado"]) if pd.notna(row.get("dias_afastado")) else 0,
+            "cid": _clean_text(row.get("cid")),
+            "n_cat": _clean_text(row.get("n_cat")),
+            "dias_afastado": dias_afastado,
+            # Estimada por soma de dias corridos a partir da data do
+            # acidente - o ArcGIS nao tem um campo proprio de "data de
+            # retorno", entao isso e derivado, nunca um valor de origem.
+            "data_retorno_estimada": data_retorno_estimada,
             "custo_afastamento": float(row["custo_afastamento"]) if pd.notna(row.get("custo_afastamento")) else 0.0,
             "houve_tratativa": _clean_text(row.get("houve_tratativa")),
             "descricao_tratativa": _clean_text(row.get("descricao_tratativas")),
@@ -358,11 +375,11 @@ def main():
         pcs[_col] = pcs[_col].astype(str).str.strip().str.replace(r"\s+", " ", regex=True)
     ocorrencias = get_layer_data(
         token, 1,
-        "parentglobalid,data_registro,tipo_ocorrencia,status_acidente,nota_ocorrencia,nota_analise_sst,"
-        "dias_afastado,custo_afastamento,situacao_ocorrencia,houve_tratativa,descricao_tratativas"
-        # cid e n_cat (numero da CAT) foram deliberadamente deixados de fora:
-        # sao dados de saude/identificacao mais sensiveis do que o resto, e
-        # este JSON e publicado num repositorio publico do GitHub.
+        "parentglobalid,data_registro,data_ocorreica,tipo_ocorrencia,status_acidente,nota_ocorrencia,nota_analise_sst,"
+        "dias_afastado,custo_afastamento,situacao_ocorrencia,houve_tratativa,descricao_tratativas,cid,n_cat"
+        # cid e n_cat (numero da CAT) foram reincluidos a pedido explicito do
+        # usuario em 2026-08-25, revertendo a remocao anterior feita por
+        # cautela de privacidade (dado de saude publicado num repo publico).
     )
     docs = get_layer_data(
         token, 2,
@@ -385,6 +402,7 @@ def main():
         _df["parentglobalid"] = _df["parentglobalid"].astype(str).str.strip().str.upper()
 
     ocorrencias["data_registro"] = pd.to_datetime(ocorrencias["data_registro"], unit="ms", utc=True)
+    ocorrencias["data_ocorreica"] = pd.to_datetime(ocorrencias["data_ocorreica"], unit="ms", utc=True, errors="coerce")
     docs["data_analise"] = pd.to_datetime(docs["data_analise"], unit="ms", utc=True)
     eventos["data_evento"] = pd.to_datetime(eventos["data_evento"], unit="ms", utc=True)
 

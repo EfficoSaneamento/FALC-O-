@@ -2,6 +2,1161 @@
   {
     "id_pc": 10348,
     "idWehandle": 147167,
+    "mes_ano": "2026-00",
+    "mes_ano_label": "JAN/2026",
+    "projeto": "PC 348- GLOBAL PIMENTAS",
+    "falcao": {
+      "documentacao": 790.4,
+      "eventos": 100.0,
+      "campo": 1000.0,
+      "deflatores": 0.0,
+      "nota_final": 1890.4
+    },
+    "sabesp": {
+      "documentacao": 361.83,
+      "eventos": 0.0,
+      "campo": 927.87,
+      "deflatores": 0.0,
+      "nota_final": 1290.0
+    },
+    "auditoria": {
+      "total_documentos_empresa": 71,
+      "total_nao_conformes_empresa": 27,
+      "documentos_nao_conformes": "APR - Análise Preliminar de Risco • CND Municipal - IPTU e ISS • Comprovante de pagamento FGTS Digital (GFD) (antigo comprovante GRF) • Comprovante de pagamento GPS,DARF (INSS) • Constituição da Cipa (Específico para o serviço) • Contrato Social Consolidado - Inicial e Atualizações ou Registro de Microempreendedor Individual MEI - Requerimento de Empresario - Estatuto social consolidado • Folha de Pagamento (Específico por serviço) • GFD - Guia do FGTS Digital (antiga GRF) • GPS/DARF - Documento de Arrecadação Fiscal / DCTFweb (Relatórios Gerais: Recibo de Entrega, Resumo de Débitos e Resumo de Créditos) e PER/DCOMP (quando houver), DAS-MEI ou DAE (Documento de Arrecadação do e-Social) • Insalubridade específico do serviço • Periculosidade específico do serviço • Plano de atendimento a emergência (PAE) - Especifico por Serviço • Relatórios do FGTS Digital: Detalhe da Guia Emitida - Relação de Trabalhadores e/ou Relação de Tomadores de Serviço • Termo de Constituição do Consórcio",
+      "total_colaboradores_avaliados": 279,
+      "total_pendencias_funcionarios": 250,
+      "qtd_pessoas_oficial": 195
+    },
+    "fonte": "WeHandle - exportação mensal",
+    "arquivo_origem": "01-jan-EFFICO SANEAMENTO LTDA - 07.140.111-.xlsx",
+    "aba_origem": "Pont - Contratos | DocsEmpresariais | docs Pessoais - analisePorPesso",
+    "gerado_em": "2026-08-26T11:45:29Z"
+  },
+  {
+    "id_pc": 10372,
+    "idWehandle": 145344,
+    "mes_ano": "2026-00",
+    "mes_ano_label": "JAN/2026",
+    "projeto": "PC 372 - CALIBRAÇÃO DE MACROMEDIDOR RMSP",
+    "falcao": {
+      "documentacao": 963.6,
+      "eventos": 25.0,
+      "campo": 1000.0,
+      "deflatores": 0.0,
+      "nota_final": 1988.6
+    },
+    "sabesp": {
+      "documentacao": 856.42,
+      "eventos": 0.0,
+      "campo": 1000.0,
+      "deflatores": 0.0,
+      "nota_final": 1856.0
+    },
+    "auditoria": {
+      "total_documentos_empresa": 37,
+      "total_nao_conformes_empresa": 6,
+      "documentos_nao_conformes": "Comprovante de pagamento GPS,DARF (INSS) • GPS/DARF - Documento de Arrecadação Fiscal / DCTFweb (Relatórios Gerais: Recibo de Entrega, Resumo de Débitos e Resumo de Créditos) e PER/DCOMP (quando houver), DAS-MEI ou DAE (Documento de Arrecadação do e-Social)",
+      "total_colaboradores_avaliados": 8,
+      "total_pendencias_funcionarios": 1,
+      "qtd_pessoas_oficial": 5
+    },
+    "fonte": "WeHandle - exportação mensal",
+    "arquivo_origem": "01-jan-EFFICO SANEAMENTO LTDA - 07.140.111-.xlsx",
+    "aba_origem": "Pont - Contratos | DocsEmpresariais | docs Pessoais - analisePorPesso",
+    "gerado_em": "2026-08-26T11:45:29Z"
+  },
+  {
+    "id_pc": 10389,
+    "idWehandle": 140862,
+    "mes_ano": "2026-00",
+    "mes_ano_label": "JAN/2026",
+    "projeto": "PC 389 - Integra Tietê",
+    "falcao": {
+      "documentacao": 919.6,
+      "eventos": 0.0,
+      "campo": 1000.0,
+      "deflatores": 0.0,
+      "nota_final": 1919.6
+    },
+    "sabesp": {
+      "documentacao": 512.14,
+      "eventos": 0.0,
+      "campo": 1000.0,
+      "deflatores": 0.0,
+      "nota_final": 1512.0
+    },
+    "auditoria": {
+      "total_documentos_empresa": 561,
+      "total_nao_conformes_empresa": 251,
+      "documentos_nao_conformes": "13º Folha de Pagamento - 1º Parcela • 13º Folha de Pagamento - Residual Dezembro • 13º parcela GPS/DARF - Comprovante de pagamento • 13º parcela GPS/DARF - Documento de Arrecadação Fiscal / DCTFweb (Relatórios Gerais: Recibo de Entrega, Resumo de Débitos e Resumo de Créditos) e PER/DCOMP (quando houver), DAS-MEI ou DAE (Documento de Arrecadação do e-Social) • APR - Análise Preliminar de Risco • ART (especifico por serviço) • Alvará do bombeiro (AVCB) - Especifico por Serviço • CND Municipal - IPTU e ISS • Comprovante de pagamento FGTS Digital (GFD) (antigo comprovante GRF) • Comprovante de pagamento GPS,DARF (INSS) • Constituição da Cipa (Específico para o serviço) • Contrato Social Consolidado - Inicial e Atualizações ou Registro de Microempreendedor Individual MEI - Requerimento de Empresario - Estatuto social consolidado • Contrato de prestação de serviço • Convenção Coletiva • Folha de Pagamento (Específico por serviço) • GFD - Guia do FGTS Digital (antiga GRF) • GPS/DARF - Documento de Arrecadação Fiscal / DCTFweb (Relatórios Gerais: Recibo de Entrega, Resumo de Débitos e Resumo de Créditos) e PER/DCOMP (quando houver), DAS-MEI ou DAE (Documento de Arrecadação do e-Social) • Insalubridade específico do serviço • LTCAT (Específico para o serviço) • NR 17 Avaliação Ergonômica Preliminar (AEP) - Especifico por Serviço • PCA - Programa de Conservação Auditiva • PCMSO (Específico para o serviço) • PGR - Programa de Gerenciamento de Riscos ou Declaração de Informação Digital (para empresas dispensadas da elaboração de PGR) (específico por serviço) • PPR - Programa de Proteção Respiratória (especifico por serviço) • Periculosidade específico do serviço • Plano de Rigging (Içamento de Carga) • Plano de atendimento a emergência (PAE) - Especifico por Serviço • Registro de SESMT • Relatórios do FGTS Digital: Detalhe da Guia Emitida - Relação de Trabalhadores e/ou Relação de Tomadores de Serviço • Termo de Constituição do Consórcio",
+      "total_colaboradores_avaliados": 106,
+      "total_pendencias_funcionarios": 56,
+      "qtd_pessoas_oficial": 73
+    },
+    "fonte": "WeHandle - exportação mensal",
+    "arquivo_origem": "01-jan-EFFICO SANEAMENTO LTDA - 07.140.111-.xlsx",
+    "aba_origem": "Pont - Contratos | DocsEmpresariais | docs Pessoais - analisePorPesso",
+    "gerado_em": "2026-08-26T11:45:29Z"
+  },
+  {
+    "id_pc": 10391,
+    "idWehandle": 150925,
+    "mes_ano": "2026-00",
+    "mes_ano_label": "JAN/2026",
+    "projeto": "PC 391 - JICA COMISSIONAMENTO DE DMCs",
+    "falcao": {
+      "documentacao": 884.6,
+      "eventos": 75.0,
+      "campo": 1000.0,
+      "deflatores": 0.0,
+      "nota_final": 1959.6
+    },
+    "sabesp": {
+      "documentacao": 833.33,
+      "eventos": 0.0,
+      "campo": 1000.0,
+      "deflatores": 0.0,
+      "nota_final": 1833.0
+    },
+    "auditoria": {
+      "total_documentos_empresa": 12,
+      "total_nao_conformes_empresa": 0,
+      "documentos_nao_conformes": "Nenhum documento reprovado no período",
+      "total_colaboradores_avaliados": 3,
+      "total_pendencias_funcionarios": 1,
+      "qtd_pessoas_oficial": 1
+    },
+    "fonte": "WeHandle - exportação mensal",
+    "arquivo_origem": "01-jan-EFFICO SANEAMENTO LTDA - 07.140.111-.xlsx",
+    "aba_origem": "Pont - Contratos | DocsEmpresariais | docs Pessoais - analisePorPesso",
+    "gerado_em": "2026-08-26T11:45:29Z"
+  },
+  {
+    "id_pc": 10392,
+    "idWehandle": 144023,
+    "mes_ano": "2026-00",
+    "mes_ano_label": "JAN/2026",
+    "projeto": "PC 392 - DV EXTREMO NORTE II",
+    "falcao": {
+      "documentacao": 942.0,
+      "eventos": 125.0,
+      "campo": 1000.0,
+      "deflatores": -1000.0,
+      "nota_final": 1067.0
+    },
+    "sabesp": {
+      "documentacao": 973.68,
+      "eventos": 0.0,
+      "campo": 1000.0,
+      "deflatores": -2000.0,
+      "nota_final": -26.0
+    },
+    "auditoria": {
+      "total_documentos_empresa": 4,
+      "total_nao_conformes_empresa": 0,
+      "documentos_nao_conformes": "Nenhum documento reprovado no período",
+      "total_colaboradores_avaliados": 19,
+      "total_pendencias_funcionarios": 1,
+      "qtd_pessoas_oficial": 12
+    },
+    "fonte": "WeHandle - exportação mensal",
+    "arquivo_origem": "01-jan-EFFICO SANEAMENTO LTDA - 07.140.111-.xlsx",
+    "aba_origem": "Pont - Contratos | DocsEmpresariais | docs Pessoais - analisePorPesso",
+    "gerado_em": "2026-08-26T11:45:29Z"
+  },
+  {
+    "id_pc": 10395,
+    "idWehandle": 172821,
+    "mes_ano": "2026-00",
+    "mes_ano_label": "JAN/2026",
+    "projeto": "PC 395 - SMR MOOCA",
+    "falcao": {
+      "documentacao": 959.0,
+      "eventos": 75.0,
+      "campo": 1000.0,
+      "deflatores": 0.0,
+      "nota_final": 2034.0
+    },
+    "sabesp": {
+      "documentacao": 891.17,
+      "eventos": 0.0,
+      "campo": 1000.0,
+      "deflatores": 0.0,
+      "nota_final": 1891.0
+    },
+    "auditoria": {
+      "total_documentos_empresa": 123,
+      "total_nao_conformes_empresa": 10,
+      "documentos_nao_conformes": "Comprovante de pagamento FGTS Digital (GFD) (antigo comprovante GRF) • Comprovante de pagamento GPS,DARF (INSS) • Contrato de prestação de serviço • Folha de Pagamento (Específico por serviço) • GFD - Guia do FGTS Digital (antiga GRF) • GPS/DARF - Documento de Arrecadação Fiscal / DCTFweb (Relatórios Gerais: Recibo de Entrega, Resumo de Débitos e Resumo de Créditos) e PER/DCOMP (quando houver), DAS-MEI ou DAE (Documento de Arrecadação do e-Social) • Relatórios do FGTS Digital: Detalhe da Guia Emitida - Relação de Trabalhadores e/ou Relação de Tomadores de Serviço",
+      "total_colaboradores_avaliados": 22,
+      "total_pendencias_funcionarios": 3,
+      "qtd_pessoas_oficial": 19
+    },
+    "fonte": "WeHandle - exportação mensal",
+    "arquivo_origem": "01-jan-EFFICO SANEAMENTO LTDA - 07.140.111-.xlsx",
+    "aba_origem": "Pont - Contratos | DocsEmpresariais | docs Pessoais - analisePorPesso",
+    "gerado_em": "2026-08-26T11:45:29Z"
+  },
+  {
+    "id_pc": 10396,
+    "idWehandle": 156613,
+    "mes_ano": "2026-00",
+    "mes_ano_label": "JAN/2026",
+    "projeto": "PC 396 - PERFORMANCE SÃO BERNARDO DO CAMPO",
+    "falcao": {
+      "documentacao": 345.9,
+      "eventos": 0.0,
+      "campo": 975.0,
+      "deflatores": 0.0,
+      "nota_final": 1320.9
+    },
+    "sabesp": {
+      "documentacao": 755.01,
+      "eventos": 0.0,
+      "campo": 1000.0,
+      "deflatores": 0.0,
+      "nota_final": 1755.0
+    },
+    "auditoria": {
+      "total_documentos_empresa": 133,
+      "total_nao_conformes_empresa": 43,
+      "documentos_nao_conformes": "APR - Análise Preliminar de Risco • ART (especifico por serviço) • Alvará do bombeiro (AVCB) - Especifico por Serviço • CND Municipal - IPTU e ISS • Comprovante de pagamento FGTS Digital (GFD) (antigo comprovante GRF) • Comprovante de pagamento GPS,DARF (INSS) • Constituição da Cipa (Específico para o serviço) • Contrato Social Consolidado - Inicial e Atualizações ou Registro de Microempreendedor Individual MEI - Requerimento de Empresario - Estatuto social consolidado • Folha de Pagamento (Específico por serviço) • GFD - Guia do FGTS Digital (antiga GRF) • GPS/DARF - Documento de Arrecadação Fiscal / DCTFweb (Relatórios Gerais: Recibo de Entrega, Resumo de Débitos e Resumo de Créditos) e PER/DCOMP (quando houver), DAS-MEI ou DAE (Documento de Arrecadação do e-Social) • LTCAT (Específico para o serviço) • NR 17 Avaliação Ergonômica Preliminar (AEP) - Especifico por Serviço • PCMSO (Específico para o serviço) • PGR - Programa de Gerenciamento de Riscos ou Declaração de Informação Digital (para empresas dispensadas da elaboração de PGR) (específico por serviço) • PPR - Programa de Proteção Respiratória (especifico por serviço) • Periculosidade específico do serviço • Plano de atendimento a emergência (PAE) - Especifico por Serviço • Relatórios do FGTS Digital: Detalhe da Guia Emitida - Relação de Trabalhadores e/ou Relação de Tomadores de Serviço • Termo de Constituição do Consórcio",
+      "total_colaboradores_avaliados": 36,
+      "total_pendencias_funcionarios": 6,
+      "qtd_pessoas_oficial": 32
+    },
+    "fonte": "WeHandle - exportação mensal",
+    "arquivo_origem": "01-jan-EFFICO SANEAMENTO LTDA - 07.140.111-.xlsx",
+    "aba_origem": "Pont - Contratos | DocsEmpresariais | docs Pessoais - analisePorPesso",
+    "gerado_em": "2026-08-26T11:45:29Z"
+  },
+  {
+    "id_pc": 10348,
+    "idWehandle": 147167,
+    "mes_ano": "2026-01",
+    "mes_ano_label": "FEV/2026",
+    "projeto": "PC 348- GLOBAL PIMENTAS",
+    "falcao": {
+      "documentacao": 284.9,
+      "eventos": 33.7,
+      "campo": 1000.0,
+      "deflatores": -2000.0,
+      "nota_final": -681.4
+    },
+    "sabesp": {
+      "documentacao": 439.33,
+      "eventos": 0.0,
+      "campo": 892.93,
+      "deflatores": -1000.0,
+      "nota_final": 332.0
+    },
+    "auditoria": {
+      "total_documentos_empresa": 82,
+      "total_nao_conformes_empresa": 22,
+      "documentos_nao_conformes": "19 • 20 • 24 • 25 • 26 • 28 • 43 • 44 • 46 • 90 • 93 • 97",
+      "total_colaboradores_avaliados": 279,
+      "total_pendencias_funcionarios": 238,
+      "qtd_pessoas_oficial": 195
+    },
+    "fonte": "WeHandle - exportação mensal",
+    "arquivo_origem": "02-fev-EFFICO SANEAMENTO LTDA - 07.140.111-.xlsx",
+    "aba_origem": "contratos | ListaDocsEmpresariais | statusPorPessoa",
+    "gerado_em": "2026-08-26T11:45:34Z"
+  },
+  {
+    "id_pc": 10372,
+    "idWehandle": 145344,
+    "mes_ano": "2026-01",
+    "mes_ano_label": "FEV/2026",
+    "projeto": "PC 372 - CALIBRAÇÃO DE MACROMEDIDOR RMSP",
+    "falcao": {
+      "documentacao": 961.5,
+      "eventos": 8.3,
+      "campo": 1000.0,
+      "deflatores": 0.0,
+      "nota_final": 1969.8
+    },
+    "sabesp": {
+      "documentacao": 860.47,
+      "eventos": 0.0,
+      "campo": 1000.0,
+      "deflatores": 0.0,
+      "nota_final": 1860.0
+    },
+    "auditoria": {
+      "total_documentos_empresa": 43,
+      "total_nao_conformes_empresa": 12,
+      "documentos_nao_conformes": "20 • 24 • 25 • 44 • 46 • 93",
+      "total_colaboradores_avaliados": 8,
+      "total_pendencias_funcionarios": 0,
+      "qtd_pessoas_oficial": 5
+    },
+    "fonte": "WeHandle - exportação mensal",
+    "arquivo_origem": "02-fev-EFFICO SANEAMENTO LTDA - 07.140.111-.xlsx",
+    "aba_origem": "contratos | ListaDocsEmpresariais | statusPorPessoa",
+    "gerado_em": "2026-08-26T11:45:35Z"
+  },
+  {
+    "id_pc": 10389,
+    "idWehandle": 140862,
+    "mes_ano": "2026-01",
+    "mes_ano_label": "FEV/2026",
+    "projeto": "PC 389 - Integra Tietê",
+    "falcao": {
+      "documentacao": 504.7,
+      "eventos": 0.0,
+      "campo": 1000.0,
+      "deflatores": 0.0,
+      "nota_final": 1504.7
+    },
+    "sabesp": {
+      "documentacao": 600.92,
+      "eventos": 0.0,
+      "campo": 1000.0,
+      "deflatores": 0.0,
+      "nota_final": 1601.0
+    },
+    "auditoria": {
+      "total_documentos_empresa": 793,
+      "total_nao_conformes_empresa": 306,
+      "documentos_nao_conformes": "1 • 19 • 20 • 24 • 25 • 26 • 27 • 28 • 29 • 3 • 4 • 42 • 43 • 44 • 46 • 47 • 48 • 49 • 5 • 50 • 51 • 6 • 68 • 69 • 7 • 70 • 71 • 73 • 74 • 75 • 76 • 77 • 78 • 80 • 82 • 84 • 88 • 89 • 90 • 93 • 97",
+      "total_colaboradores_avaliados": 114,
+      "total_pendencias_funcionarios": 47,
+      "qtd_pessoas_oficial": 74
+    },
+    "fonte": "WeHandle - exportação mensal",
+    "arquivo_origem": "02-fev-EFFICO SANEAMENTO LTDA - 07.140.111-.xlsx",
+    "aba_origem": "contratos | ListaDocsEmpresariais | statusPorPessoa",
+    "gerado_em": "2026-08-26T11:45:35Z"
+  },
+  {
+    "id_pc": 10391,
+    "idWehandle": 150925,
+    "mes_ano": "2026-01",
+    "mes_ano_label": "FEV/2026",
+    "projeto": "PC 391 - JICA COMISSIONAMENTO DE DMCs",
+    "falcao": {
+      "documentacao": 944.4,
+      "eventos": 125.0,
+      "campo": 1000.0,
+      "deflatores": 0.0,
+      "nota_final": 2069.4
+    },
+    "sabesp": {
+      "documentacao": 833.33,
+      "eventos": 0.0,
+      "campo": 1000.0,
+      "deflatores": 0.0,
+      "nota_final": 1833.0
+    },
+    "auditoria": {
+      "total_documentos_empresa": 12,
+      "total_nao_conformes_empresa": 0,
+      "documentos_nao_conformes": "Nenhum documento reprovado no período",
+      "total_colaboradores_avaliados": 3,
+      "total_pendencias_funcionarios": 1,
+      "qtd_pessoas_oficial": 1
+    },
+    "fonte": "WeHandle - exportação mensal",
+    "arquivo_origem": "02-fev-EFFICO SANEAMENTO LTDA - 07.140.111-.xlsx",
+    "aba_origem": "contratos | ListaDocsEmpresariais | statusPorPessoa",
+    "gerado_em": "2026-08-26T11:45:35Z"
+  },
+  {
+    "id_pc": 10392,
+    "idWehandle": 144023,
+    "mes_ano": "2026-01",
+    "mes_ano_label": "FEV/2026",
+    "projeto": "PC 392 - DV EXTREMO NORTE II",
+    "falcao": {
+      "documentacao": 974.7,
+      "eventos": 120.0,
+      "campo": 1000.0,
+      "deflatores": 0.0,
+      "nota_final": 2094.7
+    },
+    "sabesp": {
+      "documentacao": 950.0,
+      "eventos": 0.0,
+      "campo": 1000.0,
+      "deflatores": 0.0,
+      "nota_final": 1950.0
+    },
+    "auditoria": {
+      "total_documentos_empresa": 4,
+      "total_nao_conformes_empresa": 0,
+      "documentos_nao_conformes": "Nenhum documento reprovado no período",
+      "total_colaboradores_avaliados": 20,
+      "total_pendencias_funcionarios": 2,
+      "qtd_pessoas_oficial": 12
+    },
+    "fonte": "WeHandle - exportação mensal",
+    "arquivo_origem": "02-fev-EFFICO SANEAMENTO LTDA - 07.140.111-.xlsx",
+    "aba_origem": "contratos | ListaDocsEmpresariais | statusPorPessoa",
+    "gerado_em": "2026-08-26T11:45:35Z"
+  },
+  {
+    "id_pc": 10395,
+    "idWehandle": 172821,
+    "mes_ano": "2026-01",
+    "mes_ano_label": "FEV/2026",
+    "projeto": "PC 395 - SMR MOOCA",
+    "falcao": {
+      "documentacao": 957.0,
+      "eventos": 200.0,
+      "campo": 1000.0,
+      "deflatores": 0.0,
+      "nota_final": 2157.0
+    },
+    "sabesp": {
+      "documentacao": 703.44,
+      "eventos": 100.0,
+      "campo": 1000.0,
+      "deflatores": 0.0,
+      "nota_final": 1803.0
+    },
+    "auditoria": {
+      "total_documentos_empresa": 158,
+      "total_nao_conformes_empresa": 26,
+      "documentos_nao_conformes": "20 • 24 • 25 • 27 • 43 • 44 • 46 • 93",
+      "total_colaboradores_avaliados": 28,
+      "total_pendencias_funcionarios": 12,
+      "qtd_pessoas_oficial": 19
+    },
+    "fonte": "WeHandle - exportação mensal",
+    "arquivo_origem": "02-fev-EFFICO SANEAMENTO LTDA - 07.140.111-.xlsx",
+    "aba_origem": "contratos | ListaDocsEmpresariais | statusPorPessoa",
+    "gerado_em": "2026-08-26T11:45:35Z"
+  },
+  {
+    "id_pc": 10396,
+    "idWehandle": 156613,
+    "mes_ano": "2026-01",
+    "mes_ano_label": "FEV/2026",
+    "projeto": "PC 396 - PERFORMANCE SÃO BERNARDO DO CAMPO",
+    "falcao": {
+      "documentacao": 792.4,
+      "eventos": 0.0,
+      "campo": 800.0,
+      "deflatores": 0.0,
+      "nota_final": 1592.4
+    },
+    "sabesp": {
+      "documentacao": 751.31,
+      "eventos": 0.0,
+      "campo": 800.0,
+      "deflatores": 0.0,
+      "nota_final": 1551.0
+    },
+    "auditoria": {
+      "total_documentos_empresa": 147,
+      "total_nao_conformes_empresa": 23,
+      "documentos_nao_conformes": "20 • 26 • 43 • 5 • 50 • 51 • 6 • 69 • 7 • 70 • 71 • 73 • 82 • 97",
+      "total_colaboradores_avaliados": 44,
+      "total_pendencias_funcionarios": 15,
+      "qtd_pessoas_oficial": 32
+    },
+    "fonte": "WeHandle - exportação mensal",
+    "arquivo_origem": "02-fev-EFFICO SANEAMENTO LTDA - 07.140.111-.xlsx",
+    "aba_origem": "contratos | ListaDocsEmpresariais | statusPorPessoa",
+    "gerado_em": "2026-08-26T11:45:35Z"
+  },
+  {
+    "id_pc": 10348,
+    "idWehandle": 147167,
+    "mes_ano": "2026-02",
+    "mes_ano_label": "MAR/2026",
+    "projeto": "PC 348- GLOBAL PIMENTAS",
+    "falcao": {
+      "documentacao": 382.8,
+      "eventos": 160.0,
+      "campo": 1000.0,
+      "deflatores": 0.0,
+      "nota_final": 1542.8
+    },
+    "sabesp": {
+      "documentacao": 754.24,
+      "eventos": 200.0,
+      "campo": 1000.0,
+      "deflatores": 0.0,
+      "nota_final": 1954.0
+    },
+    "auditoria": {
+      "total_documentos_empresa": 64,
+      "total_nao_conformes_empresa": 7,
+      "documentos_nao_conformes": "Comprovante de pagamento GPS,DARF (INSS) • GPS/DARF - Documento de ArrecadaÃ§Ã£o Fiscal / DCTFweb (RelatÃ³rios Gerais: Recibo de Entrega, Resumo de DÃ©bitos e Resumo de CrÃ©ditos) e PER/DCOMP (quando houver), DAS-MEI ou DAE (Documento de ArrecadaÃ§Ã£o do e-Social) • InventÃ¡rio de mÃ¡quinas e equipamentos, que serÃ£o utilizados na atividade • Plano de SeguranÃ§a para atividades com escavaÃ§Ãµes • RelaÃ§Ã£o dos alojamentos ou canteiros de obras e sua localizaÃ§Ã£o (inventÃ¡rio) • RelaÃ§Ã£o dos profissionais responsÃ¡veis pelas questÃµes de SST - SaÃºde e SeguranÃ§a do Trabalho",
+      "total_colaboradores_avaliados": 220,
+      "total_pendencias_funcionarios": 96,
+      "qtd_pessoas_oficial": 224
+    },
+    "fonte": "WeHandle - exportação mensal",
+    "arquivo_origem": "03-mar-EFFICO SANEAMENTO LTDA - 07.140.111-.xlsx",
+    "aba_origem": "contratos | ListaDocsEmpresariais | prestadores funcionarios",
+    "gerado_em": "2026-08-26T11:45:39Z"
+  },
+  {
+    "id_pc": 10372,
+    "idWehandle": 145344,
+    "mes_ano": "2026-02",
+    "mes_ano_label": "MAR/2026",
+    "projeto": "PC 372 - CALIBRAÇÃO DE MACROMEDIDOR RMSP",
+    "falcao": {
+      "documentacao": 903.05,
+      "eventos": 200.0,
+      "campo": 800.0,
+      "deflatores": 0.0,
+      "nota_final": 1903.05
+    },
+    "sabesp": {
+      "documentacao": 897.59,
+      "eventos": 100.0,
+      "campo": 1000.0,
+      "deflatores": 0.0,
+      "nota_final": 1998.0
+    },
+    "auditoria": {
+      "total_documentos_empresa": 83,
+      "total_nao_conformes_empresa": 17,
+      "documentos_nao_conformes": "Comprovante de pagamento FGTS Digital (GFD) (antigo comprovante GRF) • Comprovante de pagamento GPS,DARF (INSS) • GFD - Guia do FGTS Digital (antiga GRF) • GPS/DARF - Documento de ArrecadaÃ§Ã£o Fiscal / DCTFweb (RelatÃ³rios Gerais: Recibo de Entrega, Resumo de DÃ©bitos e Resumo de CrÃ©ditos) e PER/DCOMP (quando houver), DAS-MEI ou DAE (Documento de ArrecadaÃ§Ã£o do e-Social) • PCMSO (EspecÃ­fico para o serviÃ§o) • RelatÃ³rios do FGTS Digital: Detalhe da Guia Emitida - RelaÃ§Ã£o de Trabalhadores e/ou RelaÃ§Ã£o de Tomadores de ServiÃ§o",
+      "total_colaboradores_avaliados": 5,
+      "total_pendencias_funcionarios": 0,
+      "qtd_pessoas_oficial": 5
+    },
+    "fonte": "WeHandle - exportação mensal",
+    "arquivo_origem": "03-mar-EFFICO SANEAMENTO LTDA - 07.140.111-.xlsx",
+    "aba_origem": "contratos | ListaDocsEmpresariais | prestadores funcionarios",
+    "gerado_em": "2026-08-26T11:45:39Z"
+  },
+  {
+    "id_pc": 10389,
+    "idWehandle": 140862,
+    "mes_ano": "2026-02",
+    "mes_ano_label": "MAR/2026",
+    "projeto": "PC 389 - Integra Tietê",
+    "falcao": {
+      "documentacao": 530.0,
+      "eventos": 0.0,
+      "campo": 1000.0,
+      "deflatores": -3000.0,
+      "nota_final": -1470.0
+    },
+    "sabesp": {
+      "documentacao": 459.84,
+      "eventos": 0.0,
+      "campo": 1000.0,
+      "deflatores": 0.0,
+      "nota_final": 1460.0
+    },
+    "auditoria": {
+      "total_documentos_empresa": 481,
+      "total_nao_conformes_empresa": 159,
+      "documentos_nao_conformes": "13Âº Folha de Pagamento - 1Âº Parcela • 13Âº parcela GPS/DARF - Comprovante de pagamento • 13Âº parcela GPS/DARF - Documento de ArrecadaÃ§Ã£o Fiscal / DCTFweb (RelatÃ³rios Gerais: Recibo de Entrega, Resumo de DÃ©bitos e Resumo de CrÃ©ditos) e PER/DCOMP (quando houver), DAS-MEI ou DAE (Documento de ArrecadaÃ§Ã£o do e-Social) • APR - AnÃ¡lise Preliminar de Risco • ART (especifico por serviÃ§o) • AlvarÃ¡ do bombeiro (AVCB) - Especifico por ServiÃ§o • CND Municipal - IPTU e ISS • CND Negativa de DÃ©bitos Trabalhistas (CNDT) • Comprovante de pagamento FGTS Digital (GFD) (antigo comprovante GRF) • Comprovante de pagamento GPS,DARF (INSS) • ConstituiÃ§Ã£o da Cipa (EspecÃ­fico para o serviÃ§o) • Contrato Social Consolidado - Inicial e AtualizaÃ§Ãµes ou Registro de Microempreendedor Individual MEI - Requerimento de Empresario - Estatuto social consolidado • Contrato de prestaÃ§Ã£o de serviÃ§o • ConvenÃ§Ã£o Coletiva • Folha de Pagamento (EspecÃ­fico por serviÃ§o) • GFD - Guia do FGTS Digital (antiga GRF) • GPS/DARF - Documento de ArrecadaÃ§Ã£o Fiscal / DCTFweb (RelatÃ³rios Gerais: Recibo de Entrega, Resumo de DÃ©bitos e Resumo de CrÃ©ditos) e PER/DCOMP (quando houver), DAS-MEI ou DAE (Documento de ArrecadaÃ§Ã£o do e-Social) • InventÃ¡rio de mÃ¡quinas e equipamentos, que serÃ£o utilizados na atividade • LTCAT (EspecÃ­fico para o serviÃ§o) • PCA - Programa de ConservaÃ§Ã£o Auditiva • PCMSO (EspecÃ­fico para o serviÃ§o) • PGR - Programa de Gerenciamento de Riscos ou DeclaraÃ§Ã£o de InformaÃ§Ã£o Digital (para empresas dispensadas da elaboraÃ§Ã£o de PGR) (especÃ­fico por serviÃ§o) • Periculosidade especÃ­fico do serviÃ§o • Plano de Resgate para Trabalho em EspaÃ§o Confinado (EspecÃ­fico por ServiÃ§o) • Plano de atendimento a emergÃªncia (PAE) - Especifico por ServiÃ§o • Plano de demoliÃ§Ã£o, conforme NR-18 • Projeto de Trabalho em Altura (EspecÃ­fico por ServiÃ§o) • Registro de SESMT • RelatÃ³rios do FGTS Digital: Detalhe da Guia Emitida - RelaÃ§Ã£o de Trabalhadores e/ou RelaÃ§Ã£o de Tomadores de ServiÃ§o • RelaÃ§Ã£o dos alojamentos ou canteiros de obras e sua localizaÃ§Ã£o (inventÃ¡rio) • RelaÃ§Ã£o dos profissionais responsÃ¡veis pelas questÃµes de SST - SaÃºde e SeguranÃ§a do Trabalho • Termo de ConstituiÃ§Ã£o do ConsÃ³rcio",
+      "total_colaboradores_avaliados": 200,
+      "total_pendencias_funcionarios": 175,
+      "qtd_pessoas_oficial": 203
+    },
+    "fonte": "WeHandle - exportação mensal",
+    "arquivo_origem": "03-mar-EFFICO SANEAMENTO LTDA - 07.140.111-.xlsx",
+    "aba_origem": "contratos | ListaDocsEmpresariais | prestadores funcionarios",
+    "gerado_em": "2026-08-26T11:45:39Z"
+  },
+  {
+    "id_pc": 10391,
+    "idWehandle": 150925,
+    "mes_ano": "2026-02",
+    "mes_ano_label": "MAR/2026",
+    "projeto": "PC 391 - JICA COMISSIONAMENTO DE DMCs",
+    "falcao": {
+      "documentacao": 964.9,
+      "eventos": 200.0,
+      "campo": 1000.0,
+      "deflatores": 0.0,
+      "nota_final": 2164.9
+    },
+    "sabesp": {
+      "documentacao": 1000.0,
+      "eventos": 100.0,
+      "campo": 1000.0,
+      "deflatores": 0.0,
+      "nota_final": 2100.0
+    },
+    "auditoria": {
+      "total_documentos_empresa": 12,
+      "total_nao_conformes_empresa": 0,
+      "documentos_nao_conformes": "Nenhum documento reprovado no período",
+      "total_colaboradores_avaliados": 3,
+      "total_pendencias_funcionarios": 0,
+      "qtd_pessoas_oficial": 3
+    },
+    "fonte": "WeHandle - exportação mensal",
+    "arquivo_origem": "03-mar-EFFICO SANEAMENTO LTDA - 07.140.111-.xlsx",
+    "aba_origem": "contratos | ListaDocsEmpresariais | prestadores funcionarios",
+    "gerado_em": "2026-08-26T11:45:39Z"
+  },
+  {
+    "id_pc": 10392,
+    "idWehandle": 144023,
+    "mes_ano": "2026-02",
+    "mes_ano_label": "MAR/2026",
+    "projeto": "PC 392 - DV EXTREMO NORTE II",
+    "falcao": {
+      "documentacao": 993.5,
+      "eventos": 200.0,
+      "campo": 1000.0,
+      "deflatores": 0.0,
+      "nota_final": 2193.5
+    },
+    "sabesp": {
+      "documentacao": 930.77,
+      "eventos": 0.0,
+      "campo": 1000.0,
+      "deflatores": 0.0,
+      "nota_final": 1931.0
+    },
+    "auditoria": {
+      "total_documentos_empresa": 4,
+      "total_nao_conformes_empresa": 0,
+      "documentos_nao_conformes": "Nenhum documento reprovado no período",
+      "total_colaboradores_avaliados": 13,
+      "total_pendencias_funcionarios": 2,
+      "qtd_pessoas_oficial": 13
+    },
+    "fonte": "WeHandle - exportação mensal",
+    "arquivo_origem": "03-mar-EFFICO SANEAMENTO LTDA - 07.140.111-.xlsx",
+    "aba_origem": "contratos | ListaDocsEmpresariais | prestadores funcionarios",
+    "gerado_em": "2026-08-26T11:45:39Z"
+  },
+  {
+    "id_pc": 10395,
+    "idWehandle": 172821,
+    "mes_ano": "2026-02",
+    "mes_ano_label": "MAR/2026",
+    "projeto": "PC 395 - SMR MOOCA",
+    "falcao": {
+      "documentacao": 964.3,
+      "eventos": 200.0,
+      "campo": 1000.0,
+      "deflatores": 0.0,
+      "nota_final": 2164.3
+    },
+    "sabesp": {
+      "documentacao": 716.02,
+      "eventos": 100.0,
+      "campo": 1000.0,
+      "deflatores": 0.0,
+      "nota_final": 1816.0
+    },
+    "auditoria": {
+      "total_documentos_empresa": 96,
+      "total_nao_conformes_empresa": 34,
+      "documentos_nao_conformes": "CND Municipal - IPTU e ISS • Comprovante de pagamento FGTS Digital (GFD) (antigo comprovante GRF) • Comprovante de pagamento GPS,DARF (INSS) • Folha de Pagamento (EspecÃ­fico por serviÃ§o) • GFD - Guia do FGTS Digital (antiga GRF) • GPS/DARF - Documento de ArrecadaÃ§Ã£o Fiscal / DCTFweb (RelatÃ³rios Gerais: Recibo de Entrega, Resumo de DÃ©bitos e Resumo de CrÃ©ditos) e PER/DCOMP (quando houver), DAS-MEI ou DAE (Documento de ArrecadaÃ§Ã£o do e-Social) • RelatÃ³rios do FGTS Digital: Detalhe da Guia Emitida - RelaÃ§Ã£o de Trabalhadores e/ou RelaÃ§Ã£o de Tomadores de ServiÃ§o • RelaÃ§Ã£o dos alojamentos ou canteiros de obras e sua localizaÃ§Ã£o (inventÃ¡rio) • RelaÃ§Ã£o dos profissionais responsÃ¡veis pelas questÃµes de SST - SaÃºde e SeguranÃ§a do Trabalho",
+      "total_colaboradores_avaliados": 29,
+      "total_pendencias_funcionarios": 6,
+      "qtd_pessoas_oficial": 29
+    },
+    "fonte": "WeHandle - exportação mensal",
+    "arquivo_origem": "03-mar-EFFICO SANEAMENTO LTDA - 07.140.111-.xlsx",
+    "aba_origem": "contratos | ListaDocsEmpresariais | prestadores funcionarios",
+    "gerado_em": "2026-08-26T11:45:39Z"
+  },
+  {
+    "id_pc": 10396,
+    "idWehandle": 156613,
+    "mes_ano": "2026-02",
+    "mes_ano_label": "MAR/2026",
+    "projeto": "PC 396 - PERFORMANCE SÃO BERNARDO DO CAMPO",
+    "falcao": {
+      "documentacao": 714.7,
+      "eventos": 138.6,
+      "campo": 1000.0,
+      "deflatores": 0.0,
+      "nota_final": 1853.3
+    },
+    "sabesp": {
+      "documentacao": 828.54,
+      "eventos": 100.0,
+      "campo": 1000.0,
+      "deflatores": 0.0,
+      "nota_final": 1929.0
+    },
+    "auditoria": {
+      "total_documentos_empresa": 130,
+      "total_nao_conformes_empresa": 9,
+      "documentos_nao_conformes": "Folha de Pagamento (EspecÃ­fico por serviÃ§o) • PCMSO (EspecÃ­fico para o serviÃ§o) • PGR - Programa de Gerenciamento de Riscos ou DeclaraÃ§Ã£o de InformaÃ§Ã£o Digital (para empresas dispensadas da elaboraÃ§Ã£o de PGR) (especÃ­fico por serviÃ§o) • Plano de atendimento a emergÃªncia (PAE) - Especifico por ServiÃ§o • RelaÃ§Ã£o dos alojamentos ou canteiros de obras e sua localizaÃ§Ã£o (inventÃ¡rio) • RelaÃ§Ã£o dos profissionais responsÃ¡veis pelas questÃµes de SST - SaÃºde e SeguranÃ§a do Trabalho",
+      "total_colaboradores_avaliados": 38,
+      "total_pendencias_funcionarios": 12,
+      "qtd_pessoas_oficial": 38
+    },
+    "fonte": "WeHandle - exportação mensal",
+    "arquivo_origem": "03-mar-EFFICO SANEAMENTO LTDA - 07.140.111-.xlsx",
+    "aba_origem": "contratos | ListaDocsEmpresariais | prestadores funcionarios",
+    "gerado_em": "2026-08-26T11:45:39Z"
+  },
+  {
+    "id_pc": 10348,
+    "idWehandle": 147167,
+    "mes_ano": "2026-03",
+    "mes_ano_label": "ABR/2026",
+    "projeto": "PC 348- GLOBAL PIMENTAS",
+    "falcao": {
+      "documentacao": 839.2,
+      "eventos": 0.0,
+      "campo": 1000.0,
+      "deflatores": 0.0,
+      "nota_final": 1839.2
+    },
+    "sabesp": {
+      "documentacao": 554.19,
+      "eventos": 200.0,
+      "campo": 700.0,
+      "deflatores": 0.0,
+      "nota_final": 1454.0
+    },
+    "auditoria": {
+      "total_documentos_empresa": 220,
+      "total_nao_conformes_empresa": 90,
+      "documentos_nao_conformes": "APR - Análise Preliminar de Risco • ART (especifico por serviço) • Alvará do bombeiro (AVCB) - Especifico por Serviço • Autorização de Subcontratação • CND Municipal - IPTU e ISS • CND Negativa de Débitos Trabalhistas (CNDT) • Constituição da Cipa (Específico para o serviço) • Contrato Social Consolidado - Inicial e Atualizações ou Registro de Microempreendedor Individual MEI - Requerimento de Empresario - Estatuto social consolidado • Contrato de prestação de serviço • Convenção Coletiva • Insalubridade específico do serviço • Inventário de máquinas e equipamentos, que serão utilizados na atividade • LTCAT (Específico para o serviço) • Laudo de Conformidade das Instalações Elétricas do canteiro de obras • PCA - Programa de Conservação Auditiva • PCMSO (Específico para o serviço) • PGR - Programa de Gerenciamento de Riscos ou Declaração de Informação Digital (para empresas dispensadas da elaboração de PGR) (específico por serviço) • PPR - Programa de Proteção Respiratória (especifico por serviço) • Periculosidade específico do serviço • Plano de Resgate para Trabalho em Espaço Confinado (Específico por Serviço) • Plano de Rigging (Içamento de Carga) • Plano de Segurança para atividades com escavações • Plano de Trabalho em Altura (Específico por Serviço) • Plano de atendimento a emergência (PAE) - Especifico por Serviço • Plano de resgate para trabalho em altura • Plano de ventilação dos espaços confinados • Projeto de Escoramento de Vala (Específico por Serviço) • Projeto de Trabalho em Altura (Específico por Serviço) • Projeto de Trabalho em Altura - quando aplicável (local sem linha de vida/ ponto de ancoragem acima de 2m do piso; ex.: passagens de cabos em cima de containers) Assinado pelo projetista e sua respectiva ART • Projeto de escavação de vala • Projeto de linha de vida para trabalhos em altura, assinado pelo projetista e sua respectiva ART • Registro de SESMT • Relatório de Inspeção dos alojamentos ou canteiro de obras • Relação de Endereços de Almoxarifados e Depósitos da Contratada (Específico por Serviço) • Relação de veículos utilizados no contrato da Sabesp (Específico por Serviço) • Relação dos alojamentos ou canteiros de obras e sua localização (inventário) • Relação dos profissionais responsáveis pelas questões de SST - Saúde e Segurança do Trabalho • Termo de Constituição do Consórcio",
+      "total_colaboradores_avaliados": 269,
+      "total_pendencias_funcionarios": 147,
+      "qtd_pessoas_oficial": 244
+    },
+    "fonte": "WeHandle - exportação mensal",
+    "arquivo_origem": "04-abr-EFFICO SANEAMENTO LTDA - 07.140.111-.xlsx",
+    "aba_origem": "contratos | documentos empresa | prestadores funcionarios",
+    "gerado_em": "2026-08-26T11:45:43Z"
+  },
+  {
+    "id_pc": 10372,
+    "idWehandle": 145344,
+    "mes_ano": "2026-03",
+    "mes_ano_label": "ABR/2026",
+    "projeto": "PC 372 - CALIBRAÇÃO DE MACROMEDIDOR RMSP",
+    "falcao": {
+      "documentacao": 1000.0,
+      "eventos": 200.0,
+      "campo": 1000.0,
+      "deflatores": 0.0,
+      "nota_final": 2200.0
+    },
+    "sabesp": {
+      "documentacao": 591.46,
+      "eventos": 100.0,
+      "campo": 1000.0,
+      "deflatores": 0.0,
+      "nota_final": 1691.0
+    },
+    "auditoria": {
+      "total_documentos_empresa": 96,
+      "total_nao_conformes_empresa": 17,
+      "documentos_nao_conformes": "Autorização de Subcontratação • Comprovante de pagamento GPS,DARF (INSS) • GPS/DARF - Documento de Arrecadação Fiscal / DCTFweb (Relatórios Gerais: Recibo de Entrega, Resumo de Débitos e Resumo de Créditos) e PER/DCOMP (quando houver), DAS-MEI ou DAE (Documento de Arrecadação do e-Social) • PCMSO (Específico para o serviço) • Relação de veículos utilizados no contrato da Sabesp (Específico por Serviço)",
+      "total_colaboradores_avaliados": 5,
+      "total_pendencias_funcionarios": 4,
+      "qtd_pessoas_oficial": 5
+    },
+    "fonte": "WeHandle - exportação mensal",
+    "arquivo_origem": "04-abr-EFFICO SANEAMENTO LTDA - 07.140.111-.xlsx",
+    "aba_origem": "contratos | documentos empresa | prestadores funcionarios",
+    "gerado_em": "2026-08-26T11:45:43Z"
+  },
+  {
+    "id_pc": 10389,
+    "idWehandle": 140862,
+    "mes_ano": "2026-03",
+    "mes_ano_label": "ABR/2026",
+    "projeto": "PC 389 - Integra Tietê",
+    "falcao": {
+      "documentacao": 766.4,
+      "eventos": 3.6,
+      "campo": 1000.0,
+      "deflatores": -1000.0,
+      "nota_final": 770.0
+    },
+    "sabesp": {
+      "documentacao": 380.59,
+      "eventos": 300.0,
+      "campo": 629.62,
+      "deflatores": 0.0,
+      "nota_final": 1310.0
+    },
+    "auditoria": {
+      "total_documentos_empresa": 838,
+      "total_nao_conformes_empresa": 358,
+      "documentos_nao_conformes": "13º Folha de Pagamento - 1º Parcela • 13º parcela GPS/DARF - Comprovante de pagamento • 13º parcela GPS/DARF - Documento de Arrecadação Fiscal / DCTFweb (Relatórios Gerais: Recibo de Entrega, Resumo de Débitos e Resumo de Créditos) e PER/DCOMP (quando houver), DAS-MEI ou DAE (Documento de Arrecadação do e-Social) • APR - Análise Preliminar de Risco • ART (especifico por serviço) • Alvará do bombeiro (AVCB) - Especifico por Serviço • Autorização de Subcontratação • CND Municipal - IPTU e ISS • CND Negativa de Débitos Trabalhistas (CNDT) • Comprovante de pagamento FGTS Digital (GFD) (antigo comprovante GRF) • Comprovante de pagamento GPS,DARF (INSS) • Constituição da Cipa (Específico para o serviço) • Contrato Social Consolidado - Inicial e Atualizações ou Registro de Microempreendedor Individual MEI - Requerimento de Empresario - Estatuto social consolidado • Contrato de prestação de serviço • Convenção Coletiva • FISPQ, Ficha com Dados de Segurança – FDS • Folha de Pagamento (Específico por serviço) • GFD - Guia do FGTS Digital (antiga GRF) • GPS/DARF - Documento de Arrecadação Fiscal / DCTFweb (Relatórios Gerais: Recibo de Entrega, Resumo de Débitos e Resumo de Créditos) e PER/DCOMP (quando houver), DAS-MEI ou DAE (Documento de Arrecadação do e-Social) • Insalubridade específico do serviço • Inventário de máquinas e equipamentos, que serão utilizados na atividade • LTCAT (Específico para o serviço) • Laudo de Conformidade das Instalações Elétricas do canteiro de obras • NR 17 Avaliação Ergonômica Preliminar (AEP) - Especifico por Serviço • PCA - Programa de Conservação Auditiva • PCMSO (Específico para o serviço) • PGR - Programa de Gerenciamento de Riscos ou Declaração de Informação Digital (para empresas dispensadas da elaboração de PGR) (específico por serviço) • PPR - Programa de Proteção Respiratória (especifico por serviço) • Periculosidade específico do serviço • Plano de Resgate para Trabalho em Espaço Confinado (Específico por Serviço) • Plano de Rigging (Içamento de Carga) • Plano de Segurança para atividades com escavações • Plano de Trabalho em Altura (Específico por Serviço) • Plano de atendimento a emergência (PAE) - Especifico por Serviço • Plano de demolição, conforme NR-18 • Plano de resgate para trabalho em altura • Plano de ventilação dos espaços confinados • Projeto de Escoramento de Vala (Específico por Serviço) • Projeto de Trabalho em Altura (Específico por Serviço) • Projeto de escavação de vala • Registro de SESMT • Relatório de Inspeção dos alojamentos ou canteiro de obras • Relatórios do FGTS Digital: Detalhe da Guia Emitida - Relação de Trabalhadores e/ou Relação de Tomadores de Serviço • Relação de Endereços de Almoxarifados e Depósitos da Contratada (Específico por Serviço) • Relação de veículos utilizados no contrato da Sabesp (Específico por Serviço) • Relação dos alojamentos ou canteiros de obras e sua localização (inventário) • Relação dos profissionais responsáveis pelas questões de SST - Saúde e Segurança do Trabalho • Termo de Constituição do Consórcio",
+      "total_colaboradores_avaliados": 224,
+      "total_pendencias_funcionarios": 213,
+      "qtd_pessoas_oficial": 222
+    },
+    "fonte": "WeHandle - exportação mensal",
+    "arquivo_origem": "04-abr-EFFICO SANEAMENTO LTDA - 07.140.111-.xlsx",
+    "aba_origem": "contratos | documentos empresa | prestadores funcionarios",
+    "gerado_em": "2026-08-26T11:45:43Z"
+  },
+  {
+    "id_pc": 10391,
+    "idWehandle": 150925,
+    "mes_ano": "2026-03",
+    "mes_ano_label": "ABR/2026",
+    "projeto": "PC 391 - JICA COMISSIONAMENTO DE DMCs",
+    "falcao": {
+      "documentacao": 950.0,
+      "eventos": 200.0,
+      "campo": 0.0,
+      "deflatores": 0.0,
+      "nota_final": 1150.0
+    },
+    "sabesp": {
+      "documentacao": 492.86,
+      "eventos": 100.0,
+      "campo": 1000.0,
+      "deflatores": 0.0,
+      "nota_final": 1593.0
+    },
+    "auditoria": {
+      "total_documentos_empresa": 14,
+      "total_nao_conformes_empresa": 3,
+      "documentos_nao_conformes": "Autorização de Subcontratação • PCMSO (Específico para o serviço) • Relação de veículos utilizados no contrato da Sabesp (Específico por Serviço)",
+      "total_colaboradores_avaliados": 3,
+      "total_pendencias_funcionarios": 3,
+      "qtd_pessoas_oficial": 3
+    },
+    "fonte": "WeHandle - exportação mensal",
+    "arquivo_origem": "04-abr-EFFICO SANEAMENTO LTDA - 07.140.111-.xlsx",
+    "aba_origem": "contratos | documentos empresa | prestadores funcionarios",
+    "gerado_em": "2026-08-26T11:45:43Z"
+  },
+  {
+    "id_pc": 10392,
+    "idWehandle": 144023,
+    "mes_ano": "2026-03",
+    "mes_ano_label": "ABR/2026",
+    "projeto": "PC 392 - DV EXTREMO NORTE II",
+    "falcao": {
+      "documentacao": 956.5,
+      "eventos": 200.0,
+      "campo": 1000.0,
+      "deflatores": 0.0,
+      "nota_final": 2156.5
+    },
+    "sabesp": {
+      "documentacao": 750.0,
+      "eventos": 0.0,
+      "campo": 1000.0,
+      "deflatores": 0.0,
+      "nota_final": 1750.0
+    },
+    "auditoria": {
+      "total_documentos_empresa": 6,
+      "total_nao_conformes_empresa": 3,
+      "documentos_nao_conformes": "Autorização de Subcontratação • PCMSO (Específico para o serviço) • Relação de veículos utilizados no contrato da Sabesp (Específico por Serviço)",
+      "total_colaboradores_avaliados": 11,
+      "total_pendencias_funcionarios": 0,
+      "qtd_pessoas_oficial": 11
+    },
+    "fonte": "WeHandle - exportação mensal",
+    "arquivo_origem": "04-abr-EFFICO SANEAMENTO LTDA - 07.140.111-.xlsx",
+    "aba_origem": "contratos | documentos empresa | prestadores funcionarios",
+    "gerado_em": "2026-08-26T11:45:43Z"
+  },
+  {
+    "id_pc": 10395,
+    "idWehandle": 172821,
+    "mes_ano": "2026-03",
+    "mes_ano_label": "ABR/2026",
+    "projeto": "PC 395 - SMR MOOCA",
+    "falcao": {
+      "documentacao": 0.0,
+      "eventos": 177.2,
+      "campo": 984.62,
+      "deflatores": 0.0,
+      "nota_final": 1161.82
+    },
+    "sabesp": {
+      "documentacao": 751.04,
+      "eventos": 100.0,
+      "campo": 855.93,
+      "deflatores": 0.0,
+      "nota_final": 1707.0
+    },
+    "auditoria": {
+      "total_documentos_empresa": 198,
+      "total_nao_conformes_empresa": 52,
+      "documentos_nao_conformes": "Alvará do bombeiro (AVCB) - Especifico por Serviço • Autorização de Subcontratação • Comprovante de pagamento FGTS Digital (GFD) (antigo comprovante GRF) • Comprovante de pagamento GPS,DARF (INSS) • Contrato de prestação de serviço • Folha de Pagamento (Específico por serviço) • GFD - Guia do FGTS Digital (antiga GRF) • GPS/DARF - Documento de Arrecadação Fiscal / DCTFweb (Relatórios Gerais: Recibo de Entrega, Resumo de Débitos e Resumo de Créditos) e PER/DCOMP (quando houver), DAS-MEI ou DAE (Documento de Arrecadação do e-Social) • Inventário de máquinas e equipamentos, que serão utilizados na atividade • Laudo de Conformidade das Instalações Elétricas do canteiro de obras • Plano de Segurança para atividades com escavações • Registro de SESMT • Relatórios do FGTS Digital: Detalhe da Guia Emitida - Relação de Trabalhadores e/ou Relação de Tomadores de Serviço • Relação de veículos utilizados no contrato da Sabesp (Específico por Serviço)",
+      "total_colaboradores_avaliados": 34,
+      "total_pendencias_funcionarios": 9,
+      "qtd_pessoas_oficial": 31
+    },
+    "fonte": "WeHandle - exportação mensal",
+    "arquivo_origem": "04-abr-EFFICO SANEAMENTO LTDA - 07.140.111-.xlsx",
+    "aba_origem": "contratos | documentos empresa | prestadores funcionarios",
+    "gerado_em": "2026-08-26T11:45:43Z"
+  },
+  {
+    "id_pc": 10396,
+    "idWehandle": 156613,
+    "mes_ano": "2026-03",
+    "mes_ano_label": "ABR/2026",
+    "projeto": "PC 396 - PERFORMANCE SÃO BERNARDO DO CAMPO",
+    "falcao": {
+      "documentacao": 866.7,
+      "eventos": 0.0,
+      "campo": 1000.0,
+      "deflatores": 0.0,
+      "nota_final": 1866.7
+    },
+    "sabesp": {
+      "documentacao": 816.81,
+      "eventos": 300.0,
+      "campo": 901.28,
+      "deflatores": 0.0,
+      "nota_final": 2018.0
+    },
+    "auditoria": {
+      "total_documentos_empresa": 155,
+      "total_nao_conformes_empresa": 16,
+      "documentos_nao_conformes": "Autorização de Subcontratação • CND Municipal - IPTU e ISS • CND Negativa de Débitos Trabalhistas (CNDT) • Comprovante de pagamento FGTS Digital (GFD) (antigo comprovante GRF) • Comprovante de pagamento GPS,DARF (INSS) • Contrato Social Consolidado - Inicial e Atualizações ou Registro de Microempreendedor Individual MEI - Requerimento de Empresario - Estatuto social consolidado • Folha de Pagamento (Específico por serviço) • GPS/DARF - Documento de Arrecadação Fiscal / DCTFweb (Relatórios Gerais: Recibo de Entrega, Resumo de Débitos e Resumo de Créditos) e PER/DCOMP (quando houver), DAS-MEI ou DAE (Documento de Arrecadação do e-Social) • LTCAT (Específico para o serviço) • PCMSO (Específico para o serviço) • Relação de veículos utilizados no contrato da Sabesp (Específico por Serviço) • Termo de Constituição do Consórcio",
+      "total_colaboradores_avaliados": 38,
+      "total_pendencias_funcionarios": 12,
+      "qtd_pessoas_oficial": 34
+    },
+    "fonte": "WeHandle - exportação mensal",
+    "arquivo_origem": "04-abr-EFFICO SANEAMENTO LTDA - 07.140.111-.xlsx",
+    "aba_origem": "contratos | documentos empresa | prestadores funcionarios",
+    "gerado_em": "2026-08-26T11:45:43Z"
+  },
+  {
+    "id_pc": 10348,
+    "idWehandle": 147167,
+    "mes_ano": "2026-04",
+    "mes_ano_label": "MAI/2026",
+    "projeto": "PC 348- GLOBAL PIMENTAS",
+    "falcao": {
+      "documentacao": 620.46,
+      "eventos": 200.0,
+      "campo": 875.71,
+      "deflatores": 0.0,
+      "nota_final": 1696.17
+    },
+    "sabesp": {
+      "documentacao": 620.46,
+      "eventos": 200.0,
+      "campo": 698.08,
+      "deflatores": -1000.0,
+      "nota_final": 519.0
+    },
+    "auditoria": {
+      "total_documentos_empresa": 301,
+      "total_nao_conformes_empresa": 92,
+      "documentos_nao_conformes": "APR - Análise Preliminar de Risco • ART (especifico por serviço) • Alvará do bombeiro (AVCB) - Especifico por Serviço • Apólice de Seguro Garantia (Construção/Fornecimento/Serviços) com cobertura adicional para ações trabalhistas e previdenciárias (específico por serviço) • Autorização de Subcontratação • CND Municipal - IPTU e ISS • CND Negativa de Débitos Trabalhistas (CNDT) • Comprovante de pagamento FGTS Digital (GFD) (antigo comprovante GRF) • Comprovante de pagamento GPS,DARF (INSS) • Constituição da Cipa (Específico para o serviço) • Contrato Social Consolidado - Inicial e Atualizações ou Registro de Microempreendedor Individual MEI - Requerimento de Empresario - Estatuto social consolidado • Contrato de prestação de serviço • Convenção Coletiva • Folha de Pagamento (Específico por serviço) • GFD - Guia do FGTS Digital (antiga GRF) • GPS/DARF - Documento de Arrecadação Fiscal / DCTFweb (Relatórios Gerais: Recibo de Entrega, Resumo de Débitos e Resumo de Créditos) e PER/DCOMP (quando houver), DAS-MEI ou DAE (Documento de Arrecadação do e-Social) • Insalubridade específico do serviço • Inventário de máquinas e equipamentos, que serão utilizados na atividade • LTCAT (Específico para o serviço) • Laudo de Conformidade das Instalações Elétricas do canteiro de obras • PCA - Programa de Conservação Auditiva • PCMSO (Específico para o serviço) • PGR - Programa de Gerenciamento de Riscos ou Declaração de Informação Digital (para empresas dispensadas da elaboração de PGR) (específico por serviço) • PPR - Programa de Proteção Respiratória (especifico por serviço) • Periculosidade específico do serviço • Plano de Resgate para Trabalho em Espaço Confinado (Específico por Serviço) • Plano de Rigging (Içamento de Carga) • Plano de Segurança para atividades com escavações • Plano de Trabalho em Altura (Específico por Serviço) • Plano de atendimento a emergência (PAE) - Especifico por Serviço • Plano de resgate para trabalho em altura • Plano de ventilação dos espaços confinados • Projeto de Escoramento de Vala (Específico por Serviço) • Projeto de Trabalho em Altura (Específico por Serviço) • Projeto de Trabalho em Altura - quando aplicável (local sem linha de vida/ ponto de ancoragem acima de 2m do piso; ex.: passagens de cabos em cima de containers) Assinado pelo projetista e sua respectiva ART • Projeto de escavação de vala • Projeto de linha de vida para trabalhos em altura, assinado pelo projetista e sua respectiva ART • Registro de SESMT • Relatório de Inspeção dos alojamentos ou canteiro de obras • Relatórios do FGTS Digital: Detalhe da Guia Emitida - Relação de Trabalhadores e/ou Relação de Tomadores de Serviço • Relação de Endereços de Almoxarifados e Depósitos da Contratada (Específico por Serviço) • Relação de veículos utilizados no contrato da Sabesp (Específico por Serviço) • Relação dos alojamentos ou canteiros de obras e sua localização (inventário) • Relação dos profissionais responsáveis pelas questões de SST - Saúde e Segurança do Trabalho • Termo de Constituição do Consórcio",
+      "total_colaboradores_avaliados": 277,
+      "total_pendencias_funcionarios": 143,
+      "qtd_pessoas_oficial": 248
+    },
+    "fonte": "WeHandle - exportação mensal",
+    "arquivo_origem": "05-mai-EFFICO SANEAMENTO LTDA - 07.140.111-.xlsx",
+    "aba_origem": "contratos | documentos empresa | prestadores funcionarios",
+    "gerado_em": "2026-08-26T11:45:46Z"
+  },
+  {
+    "id_pc": 10372,
+    "idWehandle": 145344,
+    "mes_ano": "2026-04",
+    "mes_ano_label": "MAI/2026",
+    "projeto": "PC 372 - CALIBRAÇÃO DE MACROMEDIDOR RMSP",
+    "falcao": {
+      "documentacao": 840.43,
+      "eventos": 200.0,
+      "campo": 975.0,
+      "deflatores": 0.0,
+      "nota_final": 2015.43
+    },
+    "sabesp": {
+      "documentacao": 840.43,
+      "eventos": 100.0,
+      "campo": 1000.0,
+      "deflatores": 0.0,
+      "nota_final": 1940.0
+    },
+    "auditoria": {
+      "total_documentos_empresa": 94,
+      "total_nao_conformes_empresa": 30,
+      "documentos_nao_conformes": "APR - Análise Preliminar de Risco • Comprovante de pagamento GPS,DARF (INSS) • Folha de Pagamento (Específico por serviço) • GPS/DARF - Documento de Arrecadação Fiscal / DCTFweb (Relatórios Gerais: Recibo de Entrega, Resumo de Débitos e Resumo de Créditos) e PER/DCOMP (quando houver), DAS-MEI ou DAE (Documento de Arrecadação do e-Social) • LTCAT (Específico para o serviço) • Plano de Resgate para Trabalho em Espaço Confinado (Específico por Serviço) • Plano de Trabalho em Altura (Específico por Serviço) • Plano de atendimento a emergência (PAE) - Especifico por Serviço • Relação de veículos utilizados no contrato da Sabesp (Específico por Serviço)",
+      "total_colaboradores_avaliados": 5,
+      "total_pendencias_funcionarios": 0,
+      "qtd_pessoas_oficial": 4
+    },
+    "fonte": "WeHandle - exportação mensal",
+    "arquivo_origem": "05-mai-EFFICO SANEAMENTO LTDA - 07.140.111-.xlsx",
+    "aba_origem": "contratos | documentos empresa | prestadores funcionarios",
+    "gerado_em": "2026-08-26T11:45:46Z"
+  },
+  {
+    "id_pc": 10389,
+    "idWehandle": 140862,
+    "mes_ano": "2026-04",
+    "mes_ano_label": "MAI/2026",
+    "projeto": "PC 389 - Integra Tietê",
+    "falcao": {
+      "documentacao": 654.94,
+      "eventos": 200.0,
+      "campo": 952.92,
+      "deflatores": -2000.0,
+      "nota_final": -192.14
+    },
+    "sabesp": {
+      "documentacao": 654.94,
+      "eventos": 300.0,
+      "campo": 949.01,
+      "deflatores": 0.0,
+      "nota_final": 1904.0
+    },
+    "auditoria": {
+      "total_documentos_empresa": 730,
+      "total_nao_conformes_empresa": 144,
+      "documentos_nao_conformes": "13º Folha de Pagamento - 1º Parcela • 13º parcela GPS/DARF - Comprovante de pagamento • 13º parcela GPS/DARF - Documento de Arrecadação Fiscal / DCTFweb (Relatórios Gerais: Recibo de Entrega, Resumo de Débitos e Resumo de Créditos) e PER/DCOMP (quando houver), DAS-MEI ou DAE (Documento de Arrecadação do e-Social) • APR - Análise Preliminar de Risco • ART (especifico por serviço) • Alvará do bombeiro (AVCB) - Especifico por Serviço • Apólice de Seguro Garantia (Construção/Fornecimento/Serviços) com cobertura adicional para ações trabalhistas e previdenciárias (específico por serviço) • Autorização de Subcontratação • CND Municipal - IPTU e ISS • CND Negativa de Débitos Trabalhistas (CNDT) • Comprovante de pagamento FGTS Digital (GFD) (antigo comprovante GRF) • Comprovante de pagamento GPS,DARF (INSS) • Constituição da Cipa (Específico para o serviço) • Contrato Social Consolidado - Inicial e Atualizações ou Registro de Microempreendedor Individual MEI - Requerimento de Empresario - Estatuto social consolidado • Contrato de prestação de serviço • Convenção Coletiva • FISPQ, Ficha com Dados de Segurança – FDS • Folha de Pagamento (Específico por serviço) • GFD - Guia do FGTS Digital (antiga GRF) • GPS/DARF - Documento de Arrecadação Fiscal / DCTFweb (Relatórios Gerais: Recibo de Entrega, Resumo de Débitos e Resumo de Créditos) e PER/DCOMP (quando houver), DAS-MEI ou DAE (Documento de Arrecadação do e-Social) • Insalubridade específico do serviço • Inventário de máquinas e equipamentos, que serão utilizados na atividade • LTCAT (Específico para o serviço) • Laudo de Conformidade das Instalações Elétricas do canteiro de obras • PCA - Programa de Conservação Auditiva • PCMSO (Específico para o serviço) • PGR - Programa de Gerenciamento de Riscos ou Declaração de Informação Digital (para empresas dispensadas da elaboração de PGR) (específico por serviço) • PPR - Programa de Proteção Respiratória (especifico por serviço) • Periculosidade específico do serviço • Plano de Resgate para Trabalho em Espaço Confinado (Específico por Serviço) • Plano de Rigging (Içamento de Carga) • Plano de Segurança para atividades com escavações • Plano de Trabalho em Altura (Específico por Serviço) • Plano de atendimento a emergência (PAE) - Especifico por Serviço • Plano de demolição, conforme NR-18 • Plano de resgate para trabalho em altura • Plano de ventilação dos espaços confinados • Projeto de Escoramento de Vala (Específico por Serviço) • Projeto de Trabalho em Altura (Específico por Serviço) • Projeto de escavação de vala • Registro de SESMT • Relatório de Inspeção dos alojamentos ou canteiro de obras • Relatórios do FGTS Digital: Detalhe da Guia Emitida - Relação de Trabalhadores e/ou Relação de Tomadores de Serviço • Relação de Endereços de Almoxarifados e Depósitos da Contratada (Específico por Serviço) • Relação de veículos utilizados no contrato da Sabesp (Específico por Serviço) • Relação dos alojamentos ou canteiros de obras e sua localização (inventário) • Relação dos profissionais responsáveis pelas questões de SST - Saúde e Segurança do Trabalho • Termo de Constituição do Consórcio",
+      "total_colaboradores_avaliados": 280,
+      "total_pendencias_funcionarios": 153,
+      "qtd_pessoas_oficial": 270
+    },
+    "fonte": "WeHandle - exportação mensal",
+    "arquivo_origem": "05-mai-EFFICO SANEAMENTO LTDA - 07.140.111-.xlsx",
+    "aba_origem": "contratos | documentos empresa | prestadores funcionarios",
+    "gerado_em": "2026-08-26T11:45:46Z"
+  },
+  {
+    "id_pc": 10391,
+    "idWehandle": 150925,
+    "mes_ano": "2026-04",
+    "mes_ano_label": "MAI/2026",
+    "projeto": "PC 391 - JICA COMISSIONAMENTO DE DMCs",
+    "falcao": {
+      "documentacao": 966.67,
+      "eventos": 200.0,
+      "campo": 1000.0,
+      "deflatores": 0.0,
+      "nota_final": 2166.67
+    },
+    "sabesp": {
+      "documentacao": 966.67,
+      "eventos": 100.0,
+      "campo": 1000.0,
+      "deflatores": 0.0,
+      "nota_final": 2067.0
+    },
+    "auditoria": {
+      "total_documentos_empresa": 15,
+      "total_nao_conformes_empresa": 1,
+      "documentos_nao_conformes": "Relação de veículos utilizados no contrato da Sabesp (Específico por Serviço)",
+      "total_colaboradores_avaliados": 3,
+      "total_pendencias_funcionarios": 0,
+      "qtd_pessoas_oficial": 2
+    },
+    "fonte": "WeHandle - exportação mensal",
+    "arquivo_origem": "05-mai-EFFICO SANEAMENTO LTDA - 07.140.111-.xlsx",
+    "aba_origem": "contratos | documentos empresa | prestadores funcionarios",
+    "gerado_em": "2026-08-26T11:45:46Z"
+  },
+  {
+    "id_pc": 10392,
+    "idWehandle": 144023,
+    "mes_ano": "2026-04",
+    "mes_ano_label": "MAI/2026",
+    "projeto": "PC 392 - DV EXTREMO NORTE II",
+    "falcao": {
+      "documentacao": 928.57,
+      "eventos": 200.0,
+      "campo": 1000.0,
+      "deflatores": 0.0,
+      "nota_final": 2128.57
+    },
+    "sabesp": {
+      "documentacao": 928.57,
+      "eventos": 100.0,
+      "campo": 1000.0,
+      "deflatores": 0.0,
+      "nota_final": 2029.0
+    },
+    "auditoria": {
+      "total_documentos_empresa": 7,
+      "total_nao_conformes_empresa": 1,
+      "documentos_nao_conformes": "Relação de veículos utilizados no contrato da Sabesp (Específico por Serviço)",
+      "total_colaboradores_avaliados": 12,
+      "total_pendencias_funcionarios": 0,
+      "qtd_pessoas_oficial": 12
+    },
+    "fonte": "WeHandle - exportação mensal",
+    "arquivo_origem": "05-mai-EFFICO SANEAMENTO LTDA - 07.140.111-.xlsx",
+    "aba_origem": "contratos | documentos empresa | prestadores funcionarios",
+    "gerado_em": "2026-08-26T11:45:46Z"
+  },
+  {
+    "id_pc": 10395,
+    "idWehandle": 172821,
+    "mes_ano": "2026-04",
+    "mes_ano_label": "MAI/2026",
+    "projeto": "PC 395 - SMR MOOCA",
+    "falcao": {
+      "documentacao": 464.05,
+      "eventos": 200.0,
+      "campo": 764.47,
+      "deflatores": 0.0,
+      "nota_final": 1428.52
+    },
+    "sabesp": {
+      "documentacao": 464.05,
+      "eventos": 0.0,
+      "campo": 454.79,
+      "deflatores": 0.0,
+      "nota_final": 919.0
+    },
+    "auditoria": {
+      "total_documentos_empresa": 177,
+      "total_nao_conformes_empresa": 61,
+      "documentos_nao_conformes": "Alvará do bombeiro (AVCB) - Especifico por Serviço • Apólice de Seguro Garantia (Construção/Fornecimento/Serviços) com cobertura adicional para ações trabalhistas e previdenciárias (específico por serviço) • Autorização de Subcontratação • CND Municipal - IPTU e ISS • Comprovante de pagamento FGTS Digital (GFD) (antigo comprovante GRF) • Comprovante de pagamento GPS,DARF (INSS) • Convenção Coletiva • Folha de Pagamento (Específico por serviço) • GFD - Guia do FGTS Digital (antiga GRF) • GPS/DARF - Documento de Arrecadação Fiscal / DCTFweb (Relatórios Gerais: Recibo de Entrega, Resumo de Débitos e Resumo de Créditos) e PER/DCOMP (quando houver), DAS-MEI ou DAE (Documento de Arrecadação do e-Social) • Inventário de máquinas e equipamentos, que serão utilizados na atividade • Laudo de Conformidade das Instalações Elétricas do canteiro de obras • Plano de Segurança para atividades com escavações • Registro de SESMT • Relatórios do FGTS Digital: Detalhe da Guia Emitida - Relação de Trabalhadores e/ou Relação de Tomadores de Serviço • Relação de veículos utilizados no contrato da Sabesp (Específico por Serviço)",
+      "total_colaboradores_avaliados": 33,
+      "total_pendencias_funcionarios": 29,
+      "qtd_pessoas_oficial": 30
+    },
+    "fonte": "WeHandle - exportação mensal",
+    "arquivo_origem": "05-mai-EFFICO SANEAMENTO LTDA - 07.140.111-.xlsx",
+    "aba_origem": "contratos | documentos empresa | prestadores funcionarios",
+    "gerado_em": "2026-08-26T11:45:46Z"
+  },
+  {
+    "id_pc": 10396,
+    "idWehandle": 156613,
+    "mes_ano": "2026-04",
+    "mes_ano_label": "MAI/2026",
+    "projeto": "PC 396 - PERFORMANCE SÃO BERNARDO DO CAMPO",
+    "falcao": {
+      "documentacao": 912.96,
+      "eventos": 200.0,
+      "campo": 948.0,
+      "deflatores": 0.0,
+      "nota_final": 2060.96
+    },
+    "sabesp": {
+      "documentacao": 912.96,
+      "eventos": 200.0,
+      "campo": 933.4,
+      "deflatores": 0.0,
+      "nota_final": 2046.0
+    },
+    "auditoria": {
+      "total_documentos_empresa": 137,
+      "total_nao_conformes_empresa": 12,
+      "documentos_nao_conformes": "Apólice de Seguro Garantia (Construção/Fornecimento/Serviços) com cobertura adicional para ações trabalhistas e previdenciárias (específico por serviço) • CND Municipal - IPTU e ISS • CND Negativa de Débitos Trabalhistas (CNDT) • Contrato Social Consolidado - Inicial e Atualizações ou Registro de Microempreendedor Individual MEI - Requerimento de Empresario - Estatuto social consolidado • Folha de Pagamento (Específico por serviço) • Termo de Constituição do Consórcio",
+      "total_colaboradores_avaliados": 37,
+      "total_pendencias_funcionarios": 4,
+      "qtd_pessoas_oficial": 34
+    },
+    "fonte": "WeHandle - exportação mensal",
+    "arquivo_origem": "05-mai-EFFICO SANEAMENTO LTDA - 07.140.111-.xlsx",
+    "aba_origem": "contratos | documentos empresa | prestadores funcionarios",
+    "gerado_em": "2026-08-26T11:45:46Z"
+  },
+  {
+    "id_pc": 10348,
+    "idWehandle": 147167,
     "mes_ano": "2026-05",
     "mes_ano_label": "JUN/2026",
     "projeto": "PC 348- GLOBAL PIMENTAS",
@@ -16,7 +1171,7 @@
       "documentacao": 547.79,
       "eventos": 100.0,
       "campo": 920.68,
-      "deflatores": -0.0,
+      "deflatores": 0.0,
       "nota_final": 1568.0
     },
     "auditoria": {
@@ -29,7 +1184,8 @@
     },
     "fonte": "WeHandle - exportação mensal",
     "arquivo_origem": "06-jun-EFFICO SANEAMENTO LTDA - 07.140.111-.xlsx",
-    "gerado_em": "2026-08-25T20:14:45Z"
+    "aba_origem": "contratos | documentos empresa | prestadores funcionarios",
+    "gerado_em": "2026-08-26T11:45:49Z"
   },
   {
     "id_pc": 10372,
@@ -48,7 +1204,7 @@
       "documentacao": 783.28,
       "eventos": 200.0,
       "campo": 96.8,
-      "deflatores": -0.0,
+      "deflatores": 0.0,
       "nota_final": 1080.0
     },
     "auditoria": {
@@ -61,7 +1217,8 @@
     },
     "fonte": "WeHandle - exportação mensal",
     "arquivo_origem": "06-jun-EFFICO SANEAMENTO LTDA - 07.140.111-.xlsx",
-    "gerado_em": "2026-08-25T20:14:45Z"
+    "aba_origem": "contratos | documentos empresa | prestadores funcionarios",
+    "gerado_em": "2026-08-26T11:45:49Z"
   },
   {
     "id_pc": 10389,
@@ -80,7 +1237,7 @@
       "documentacao": 662.57,
       "eventos": 300.0,
       "campo": 740.44,
-      "deflatores": -0.0,
+      "deflatores": 0.0,
       "nota_final": 1703.0
     },
     "auditoria": {
@@ -93,7 +1250,8 @@
     },
     "fonte": "WeHandle - exportação mensal",
     "arquivo_origem": "06-jun-EFFICO SANEAMENTO LTDA - 07.140.111-.xlsx",
-    "gerado_em": "2026-08-25T20:14:45Z"
+    "aba_origem": "contratos | documentos empresa | prestadores funcionarios",
+    "gerado_em": "2026-08-26T11:45:49Z"
   },
   {
     "id_pc": 10391,
@@ -112,7 +1270,7 @@
       "documentacao": 1000.0,
       "eventos": 100.0,
       "campo": 1000.0,
-      "deflatores": -0.0,
+      "deflatores": 0.0,
       "nota_final": 2100.0
     },
     "auditoria": {
@@ -125,7 +1283,8 @@
     },
     "fonte": "WeHandle - exportação mensal",
     "arquivo_origem": "06-jun-EFFICO SANEAMENTO LTDA - 07.140.111-.xlsx",
-    "gerado_em": "2026-08-25T20:14:45Z"
+    "aba_origem": "contratos | documentos empresa | prestadores funcionarios",
+    "gerado_em": "2026-08-26T11:45:49Z"
   },
   {
     "id_pc": 10392,
@@ -144,7 +1303,7 @@
       "documentacao": 966.67,
       "eventos": 100.0,
       "campo": 1000.0,
-      "deflatores": -0.0,
+      "deflatores": 0.0,
       "nota_final": 2067.0
     },
     "auditoria": {
@@ -157,7 +1316,8 @@
     },
     "fonte": "WeHandle - exportação mensal",
     "arquivo_origem": "06-jun-EFFICO SANEAMENTO LTDA - 07.140.111-.xlsx",
-    "gerado_em": "2026-08-25T20:14:45Z"
+    "aba_origem": "contratos | documentos empresa | prestadores funcionarios",
+    "gerado_em": "2026-08-26T11:45:49Z"
   },
   {
     "id_pc": 10395,
@@ -176,7 +1336,7 @@
       "documentacao": 665.42,
       "eventos": 0.0,
       "campo": 876.77,
-      "deflatores": -0.0,
+      "deflatores": 0.0,
       "nota_final": 1542.0
     },
     "auditoria": {
@@ -189,7 +1349,8 @@
     },
     "fonte": "WeHandle - exportação mensal",
     "arquivo_origem": "06-jun-EFFICO SANEAMENTO LTDA - 07.140.111-.xlsx",
-    "gerado_em": "2026-08-25T20:14:45Z"
+    "aba_origem": "contratos | documentos empresa | prestadores funcionarios",
+    "gerado_em": "2026-08-26T11:45:49Z"
   },
   {
     "id_pc": 10396,
@@ -208,7 +1369,7 @@
       "documentacao": 949.7,
       "eventos": 300.0,
       "campo": 520.62,
-      "deflatores": -0.0,
+      "deflatores": 0.0,
       "nota_final": 1770.0
     },
     "auditoria": {
@@ -221,7 +1382,8 @@
     },
     "fonte": "WeHandle - exportação mensal",
     "arquivo_origem": "06-jun-EFFICO SANEAMENTO LTDA - 07.140.111-.xlsx",
-    "gerado_em": "2026-08-25T20:14:45Z"
+    "aba_origem": "contratos | documentos empresa | prestadores funcionarios",
+    "gerado_em": "2026-08-26T11:45:49Z"
   },
   {
     "id_pc": 10399,
@@ -240,7 +1402,7 @@
       "documentacao": 581.67,
       "eventos": 0.0,
       "campo": 924.96,
-      "deflatores": -0.0,
+      "deflatores": 0.0,
       "nota_final": 1507.0
     },
     "auditoria": {
@@ -253,6 +1415,7 @@
     },
     "fonte": "WeHandle - exportação mensal",
     "arquivo_origem": "06-jun-EFFICO SANEAMENTO LTDA - 07.140.111-.xlsx",
-    "gerado_em": "2026-08-25T20:14:45Z"
+    "aba_origem": "contratos | documentos empresa | prestadores funcionarios",
+    "gerado_em": "2026-08-26T11:45:49Z"
   }
 ]

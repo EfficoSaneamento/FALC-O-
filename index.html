@@ -129,6 +129,16 @@
   }
   .btn-export:hover{ background:var(--bg); border-color:var(--institutional); }
 
+  .seg-group{ display:flex; border:1px solid var(--border); border-radius:6px; overflow:hidden; }
+  .seg-btn{
+    font-size:11px; font-weight:600; padding:6px 11px; white-space:nowrap;
+    border:none; border-right:1px solid var(--border); background:var(--surface);
+    color:var(--text-dim); cursor:pointer;
+  }
+  .seg-btn:last-child{ border-right:none; }
+  .seg-btn:hover:not(.is-active){ background:var(--bg); }
+  .seg-btn.is-active{ background:var(--accent-tint); color:var(--institutional); }
+
   .ranking-layout{ display:flex; gap:16px; align-items:stretch; margin-bottom:16px; }
   .ranking-layout .ranking-main{ flex:1 1 auto; min-width:0; margin-bottom:0; }
   .detail-popup{
@@ -172,11 +182,18 @@
   .data-table td.final-score{ font-weight:700; color:var(--text); font-size:14px; }
   .data-table td.wrap-cell{ text-align:left; font-variant-numeric:normal; min-width:280px; white-space:normal; color:var(--text-dim); font-size:12px; }
 
-  .acidente-item{ padding:6px 0; border-bottom:1px dashed var(--border); }
+  .acidente-item{ padding:8px 0; border-bottom:1px dashed var(--border); }
   .acidente-item:last-child{ border-bottom:none; }
   .acidente-item__head{ color:var(--text); font-weight:600; font-size:12px; }
   .acidente-item__meta{ color:var(--text-dim); font-size:11px; margin-top:2px; }
-  .acidente-item__tratativa{ color:var(--text-dim); font-size:11px; margin-top:2px; font-style:italic; }
+  .acidente-item__tratativa{ color:var(--text-dim); font-size:11px; margin-top:4px; font-style:italic; }
+  .acidente-item__grid{ display:flex; flex-wrap:wrap; gap:5px; margin-top:6px; }
+  .acidente-tag{
+    font-size:10.5px; letter-spacing:0.01em; padding:2px 8px;
+    border-radius:4px; border:1px solid var(--border); color:var(--text-dim);
+    background:var(--bg); white-space:nowrap; display:inline-block;
+  }
+  .acidente-tag.is-critico{ color:var(--farol-vermelho-tx); background:var(--farol-vermelho-bg); border-color:var(--farol-vermelho-bd); font-weight:600; }
 
   .tag{
     font-size:11px; letter-spacing:0.01em; padding:3px 9px;
@@ -275,6 +292,9 @@
   .indicador__label{ font-size:11px; color:var(--text-dim); }
   .indicador__value{ font-size:1.2rem; font-weight:700; color:var(--text); font-variant-numeric:tabular-nums; }
   .indicador__value small{ font-size:11px; font-weight:500; color:var(--text-dim); }
+  .indicador--destaque{ background:var(--accent-tint); border:1px solid var(--accent); border-radius:8px; padding:10px 12px; margin:-4px -4px 0; }
+  .indicador--destaque .indicador__value{ font-size:1.5rem; color:var(--institutional); }
+  .indicador__badge{ font-size:12px; font-weight:700; color:var(--institutional); margin-top:3px; }
 
   /* ---- top 3 contratos ---- */
   .top3{ display:flex; align-items:center; gap:14px; }
@@ -335,6 +355,14 @@
         <label for="gerente-select">Gerente</label>
         <select id="gerente-select"></select>
       </div>
+      <div class="filter-field">
+        <label for="sabesp-select">PC Sabesp</label>
+        <select id="sabesp-select">
+          <option value="todos">Todos</option>
+          <option value="sabesp">Apenas PC Sabesp</option>
+          <option value="nao_sabesp">Apenas Não Sabesp</option>
+        </select>
+      </div>
     </section>
 
     <section class="split" style="align-items:stretch;">
@@ -360,13 +388,20 @@
       <section class="panel ranking-main">
         <div class="panel-head">
           <h3 id="ranking-title">Ranking de contratos</h3>
-          <button class="btn-export" onclick="exportarTabelaCSV('tabela-ranking', 'ranking-contratos.csv')">⬇ Exportar CSV</button>
+          <div style="display:flex; gap:8px; align-items:center; flex-wrap:wrap;">
+            <div class="seg-group" id="ranking-dim-group">
+              <button class="seg-btn is-active" data-dim="pc">PC</button>
+              <button class="seg-btn" data-dim="diretor">Diretoria</button>
+              <button class="seg-btn" data-dim="gerente">Gerência</button>
+            </div>
+            <button class="btn-export" onclick="exportarTabelaCSV('tabela-ranking', 'ranking-contratos.csv')">⬇ Exportar CSV</button>
+          </div>
         </div>
         <div class="panel-scroll">
           <table class="data-table" id="tabela-ranking">
             <thead>
               <tr>
-                <th class="left">Contrato</th>
+                <th class="left" id="ranking-col-dimensao">Contrato</th>
                 <th>Boas práticas</th>
                 <th>Conf. legal</th>
                 <th>Conf. campo</th>
@@ -475,7 +510,18 @@ let pcFilter = "todos";     // filtro: "todos" ou um id_pc especifico
 let farolFilter = "todos";  // filtro: "todos" | "verde" | "amarelo" | "vermelho"
 let diretorFilter = "todos";
 let gerenteFilter = "todos";
+let sabespFilter = "todos"; // "todos" | "sabesp" | "nao_sabesp"
+let rankingDimensao = "pc"; // "pc" | "diretor" | "gerente"
 let charts = {};
+
+// Classificacao PC Sabesp x Nao Sabesp, fornecida manualmente pelo
+// usuario em 2026-08-25 (nao vem de nenhum campo do ArcGIS). Contratos
+// fora desta lista sao tratados como Sabesp por padrao, ja que so 2 dos
+// 19 PCs conhecidos na epoca eram Nao Sabesp.
+const PC_NAO_SABESP = new Set([10363, 10367]);
+function ehPcSabesp(idPc) {
+  return !PC_NAO_SABESP.has(Number(idPc));
+}
 
 Chart.defaults.font.family = "'Inter', -apple-system, 'Segoe UI', sans-serif";
 Chart.defaults.font.size = 11;
@@ -483,12 +529,14 @@ Chart.defaults.color = "#6b7566";
 
 // Registros do mes selecionado, respeitando todos os filtros ativos —
 // usado por KPIs, ranking e grafico de farol.
-function registrosFiltrados(mesAno) {
+function registrosFiltrados(mesAno, opts = {}) {
   let regs = DATA.registros.filter(r => r.mes_ano === mesAno);
-  if (pcFilter !== "todos") regs = regs.filter(r => String(r.id_pc) === String(pcFilter));
+  if (!opts.ignorePc && pcFilter !== "todos") regs = regs.filter(r => String(r.id_pc) === String(pcFilter));
   if (farolFilter !== "todos") regs = regs.filter(r => r.farol === farolFilter);
   if (diretorFilter !== "todos") regs = regs.filter(r => normalizeName(r.diretor) === diretorFilter);
   if (gerenteFilter !== "todos") regs = regs.filter(r => normalizeName(r.gerente) === gerenteFilter);
+  if (sabespFilter === "sabesp") regs = regs.filter(r => ehPcSabesp(r.id_pc));
+  if (sabespFilter === "nao_sabesp") regs = regs.filter(r => !ehPcSabesp(r.id_pc));
   return regs;
 }
 
@@ -614,14 +662,30 @@ function renderIndicadoresGerais(mesAno) {
     mediaAnt = registrosAnt.length > 0 ? registrosAnt.reduce((s, r) => s + (r.nota_effico_sst || 0), 0) / registrosAnt.length : 0;
   }
 
+  // Quando um contrato especifico esta filtrado, a "Nota Falcão" passa a
+  // ser a nota daquele contrato, com sua posicao no ranking geral do mes
+  // (respeitando os demais filtros ativos, exceto o de PC) e uma medalha
+  // para o top 3.
+  let notaFalcaoValue = melhor ? `${fmtNota(melhor.nota_effico_sst)} <small>${esc(melhor.projeto || ("PC " + melhor.id_pc))}</small>` : "—";
+  let notaFalcaoDestaque = false;
+  if (pcFilter !== "todos" && melhor) {
+    const universo = registrosFiltrados(mesAno, { ignorePc: true }).slice().sort((a, b) => (b.nota_effico_sst ?? 0) - (a.nota_effico_sst ?? 0));
+    const pos = universo.findIndex(r => String(r.id_pc) === String(melhor.id_pc)) + 1;
+    if (pos > 0) {
+      const medalha = pos === 1 ? "🥇 " : pos === 2 ? "🥈 " : pos === 3 ? "🥉 " : "";
+      notaFalcaoValue += `<div class="indicador__badge">${medalha}${pos}º colocado de ${universo.length}</div>`;
+    }
+    notaFalcaoDestaque = true;
+  }
+
   const items = [
     { icon: "📈", label: "Media Geral Nota Falcão", value: `${fmtNota(media)} <small>pontos</small>`, delta: renderDelta(media, mediaAnt) },
-    { icon: "🎯", label: "Nota Falcão", value: melhor ? `${fmtNota(melhor.nota_effico_sst)} <small>${esc(melhor.projeto || ("PC " + melhor.id_pc))}</small>` : "—" },
+    { icon: "🎯", label: "Nota Falcão", value: notaFalcaoValue, highlight: notaFalcaoDestaque },
     { icon: "📋", label: "Contratos avaliados", value: `${total} <small>total</small>` },
   ];
 
   document.getElementById("indicador-list").innerHTML = items.map(i => `
-    <div class="indicador">
+    <div class="indicador ${i.highlight ? "indicador--destaque" : ""}">
       <span class="indicador__icon">${i.icon}</span>
       <div>
         <div class="indicador__label">${esc(i.label)}</div>
@@ -663,15 +727,23 @@ function acidenteDetalheHtml(detalhes) {
   if (!detalhes || detalhes.length === 0) {
     return `<span style="color:var(--text-dim);">Nenhum acidente registrado no período</span>`;
   }
-  return detalhes.map(a => `
+  return detalhes.map(a => {
+    const afastado = (a.dias_afastado ?? 0) > 0;
+    const tags = [
+      a.cid ? `<span class="acidente-tag">CID: ${esc(a.cid)}</span>` : "",
+      a.n_cat ? `<span class="acidente-tag">CAT nº ${esc(a.n_cat)}</span>` : "",
+      afastado ? `<span class="acidente-tag is-critico">${a.dias_afastado} dia(s) afastado</span>` : "",
+      a.data_retorno_estimada ? `<span class="acidente-tag">Retorno previsto: ${esc(fmtDataBR(a.data_retorno_estimada))}</span>` : "",
+      a.custo_afastamento ? `<span class="acidente-tag">${fmtMoeda(a.custo_afastamento)}</span>` : "",
+    ].filter(Boolean).join("");
+    return `
     <div class="acidente-item">
       <div class="acidente-item__head">📅 ${esc(fmtDataBR(a.data))} · ${esc(a.tipo_label)}${a.situacao ? ` (${esc(a.situacao)})` : ""}</div>
-      <div class="acidente-item__meta">
-        ${a.dias_afastado ? `${a.dias_afastado} dia(s) afastado` : ""}${a.custo_afastamento ? ` · ${fmtMoeda(a.custo_afastamento)}` : ""}
-      </div>
+      ${tags ? `<div class="acidente-item__grid">${tags}</div>` : ""}
       ${a.descricao_tratativa ? `<div class="acidente-item__tratativa">Tratativa: ${esc(a.descricao_tratativa)}</div>` : ""}
     </div>
-  `).join("");
+  `;
+  }).join("");
 }
 
 function documentoDetalheHtml(detalhes) {
@@ -689,23 +761,91 @@ function documentoDetalheHtml(detalhes) {
   `).join("");
 }
 
+// Faixas de farol usadas para recompor o farol de um grupo (diretoria/
+// gerencia) a partir da media das notas, nos mesmos limites do card de
+// resumo de farois (ate 1.000 / 1.001 a 1.600 / acima de 1.600).
+function farolFromNota(nota) {
+  if (nota <= 1000) return "vermelho";
+  if (nota <= 1600) return "amarelo";
+  return "verde";
+}
+
+// Agrupa registros por diretor/gerente (usando a mesma normalizacao de
+// nome dos filtros, ja que o ArcGIS tem grafias inconsistentes) e faz a
+// media das notas dos contratos do grupo, para o ranking por dimensao.
+function agruparPorDimensao(registros, campo) {
+  const grupos = new Map();
+  registros.forEach(r => {
+    const raw = r[campo];
+    if (!raw) return;
+    const norm = normalizeName(raw);
+    if (!norm) return;
+    if (!grupos.has(norm)) grupos.set(norm, { label: raw, itens: [] });
+    grupos.get(norm).itens.push(r);
+  });
+  return [...grupos.entries()].map(([norm, g]) => {
+    const n = g.itens.length;
+    const avg = (key) => g.itens.reduce((s, r) => s + (r[key] || 0), 0) / n;
+    const nota = avg("nota_effico_sst");
+    return {
+      id_pc: norm,
+      projeto: g.label,
+      subLabel: `${n} contrato${n > 1 ? "s" : ""}`,
+      nota_evento: avg("nota_evento"),
+      nota_documento: avg("nota_documento"),
+      nota_ocorrencia: avg("nota_ocorrencia"),
+      nota_deflatores: avg("nota_deflatores"),
+      nota_effico_sst: nota,
+      farol: farolFromNota(nota),
+      _norm: norm,
+    };
+  }).sort((a, b) => a.nota_effico_sst - b.nota_effico_sst);
+}
+
+function setRankingDimensao(dim) {
+  rankingDimensao = dim;
+  document.querySelectorAll("#ranking-dim-group .seg-btn").forEach(btn => {
+    btn.classList.toggle("is-active", btn.dataset.dim === dim);
+  });
+  renderRanking(document.getElementById("mes-select").value);
+}
+
 function renderRanking(mesAno) {
-  const registros = registrosFiltrados(mesAno).slice().sort((a, b) => (a.nota_effico_sst ?? 0) - (b.nota_effico_sst ?? 0));
-  document.getElementById("ranking-title").textContent = `Ranking de contratos — ${DATA.registros.find(r => r.mes_ano === mesAno)?.mes_ano_label || ""}`;
+  const base = registrosFiltrados(mesAno);
+  const mesLabel = DATA.registros.find(r => r.mes_ano === mesAno)?.mes_ano_label || "";
+
+  let registros, tituloBase, colLabel;
+  if (rankingDimensao === "diretor") {
+    registros = agruparPorDimensao(base, "diretor");
+    tituloBase = "Ranking por diretoria";
+    colLabel = "Diretoria";
+  } else if (rankingDimensao === "gerente") {
+    registros = agruparPorDimensao(base, "gerente");
+    tituloBase = "Ranking por gerência";
+    colLabel = "Gerência";
+  } else {
+    registros = base.slice().sort((a, b) => (a.nota_effico_sst ?? 0) - (b.nota_effico_sst ?? 0));
+    tituloBase = "Ranking de contratos";
+    colLabel = "Contrato";
+  }
+  document.getElementById("ranking-title").textContent = `${tituloBase} — ${mesLabel}`;
+  document.getElementById("ranking-col-dimensao").textContent = colLabel;
 
   const tbody = document.querySelector("#tabela-ranking tbody");
   if (registros.length === 0) {
     tbody.innerHTML = `<tr><td colspan="7">Nenhum registro para este filtro.</td></tr>`;
     return;
   }
-  if (!registros.some(r => r.id_pc === selectedPc)) {
+
+  if (rankingDimensao === "pc" && !registros.some(r => r.id_pc === selectedPc)) {
     selectedPc = registros[0].id_pc;
   }
+
   tbody.innerHTML = registros.map(r => `
-    <tr data-pc="${esc(r.id_pc)}" data-farol="${esc(r.farol)}" class="${r.id_pc === selectedPc ? "is-selected" : ""}">
+    <tr data-pc="${esc(r.id_pc)}" data-farol="${esc(r.farol)}" class="${(rankingDimensao === "pc" && r.id_pc === selectedPc) ? "is-selected" : ""}">
       <td>
         <div class="info-pc">${esc(r.projeto || ("PC " + r.id_pc))}</div>
-        <div class="info-line">${esc(r.diretor)} · ${esc(r.gerente)}</div>
+        <div class="info-line">${rankingDimensao === "pc" ? `${esc(r.diretor)} · ${esc(r.gerente)}` : esc(r.subLabel)}</div>
       </td>
       <td>${fmtNota(r.nota_evento)}</td>
       <td>${fmtNota(r.nota_documento)}</td>
@@ -716,13 +856,31 @@ function renderRanking(mesAno) {
     </tr>
   `).join("");
 
-  tbody.querySelectorAll("tr[data-pc]").forEach(tr => {
+  tbody.querySelectorAll("tr[data-pc]").forEach((tr, idx) => {
     tr.addEventListener("click", () => {
-      selectedPc = isNaN(Number(tr.dataset.pc)) ? tr.dataset.pc : Number(tr.dataset.pc);
-      tbody.querySelectorAll("tr[data-pc]").forEach(row => {
-        row.classList.toggle("is-selected", row.dataset.pc === String(selectedPc));
+      if (rankingDimensao === "pc") {
+        selectedPc = isNaN(Number(tr.dataset.pc)) ? tr.dataset.pc : Number(tr.dataset.pc);
+        tbody.querySelectorAll("tr[data-pc]").forEach(row => {
+          row.classList.toggle("is-selected", row.dataset.pc === String(selectedPc));
+        });
+        renderDetalhe(mesAno);
+        return;
+      }
+      // Drill-down: clicar num grupo (diretoria/gerencia) aplica o filtro
+      // correspondente e volta o ranking para a visao por contrato.
+      const norm = registros[idx]._norm;
+      if (rankingDimensao === "diretor") {
+        diretorFilter = norm;
+        document.getElementById("diretor-select").value = norm;
+      } else {
+        gerenteFilter = norm;
+        document.getElementById("gerente-select").value = norm;
+      }
+      rankingDimensao = "pc";
+      document.querySelectorAll("#ranking-dim-group .seg-btn").forEach(btn => {
+        btn.classList.toggle("is-active", btn.dataset.dim === "pc");
       });
-      renderDetalhe(mesAno);
+      onFiltersChange();
     });
   });
 }
@@ -873,12 +1031,31 @@ function comparativoHtml(r) {
   `;
 }
 
+// Media da nota SABESP (WeHandle) por mes, respeitando o contrato ou o
+// conjunto de contratos atualmente filtrado — usado como linha de
+// comparacao no grafico de evolucao quando o filtro "PC Sabesp" esta
+// ativo. Retorna null nos meses sem dado importado do WeHandle.
+function notaSabespPorMes(mesAnoTecnico) {
+  return mesAnoTecnico.map(mesAno => {
+    let regs = WEHANDLE.filter(w => w.mes_ano === mesAno);
+    if (pcFilter !== "todos") {
+      regs = regs.filter(w => String(w.id_pc) === String(pcFilter));
+    } else {
+      const idsValidos = new Set(registrosFiltrados(mesAno).map(r => String(r.id_pc)));
+      regs = regs.filter(w => idsValidos.has(String(w.id_pc)));
+    }
+    if (regs.length === 0) return null;
+    return regs.reduce((s, w) => s + (w.sabesp?.nota_final || 0), 0) / regs.length;
+  });
+}
+
 function renderChartEvolucao() {
   // Quando um contrato especifico esta filtrado, a evolucao mostra a
   // nota daquele contrato mes a mes; com "todos", mostra a media geral.
-  let labels, valores;
+  let labels, mesAnoTecnico, valores;
   if (pcFilter === "todos") {
     labels = DATA.evolucao_mensal.map(e => e.mes_ano_label);
+    mesAnoTecnico = DATA.evolucao_mensal.map(e => e.mes_ano);
     valores = DATA.evolucao_mensal.map(e => e.media_nota_sst);
     document.getElementById("evolucao-title").textContent = "Evolução da nota média SST";
   } else {
@@ -887,31 +1064,49 @@ function renderChartEvolucao() {
       .slice()
       .sort((a, b) => a.mes_ano.localeCompare(b.mes_ano));
     labels = historico.map(r => r.mes_ano_label);
+    mesAnoTecnico = historico.map(r => r.mes_ano);
     valores = historico.map(r => r.nota_effico_sst);
     const nome = historico[0]?.projeto || `PC ${pcFilter}`;
     document.getElementById("evolucao-title").textContent = `Evolução da nota Falcão — ${nome}`;
+  }
+
+  const datasets = [{
+    label: "Nota Falcão",
+    data: valores,
+    borderColor: cssVar("--institutional"),
+    backgroundColor: cssVar("--institutional"),
+    borderWidth: 2,
+    pointRadius: 3,
+    pointHoverRadius: 5,
+    tension: 0.25,
+  }];
+
+  if (sabespFilter !== "todos" && WEHANDLE.length > 0) {
+    const valoresSabesp = notaSabespPorMes(mesAnoTecnico);
+    if (valoresSabesp.some(v => v !== null)) {
+      datasets.push({
+        label: "Nota SABESP",
+        data: valoresSabesp,
+        borderColor: cssVar("--sabesp-tx"),
+        backgroundColor: cssVar("--sabesp-tx"),
+        borderWidth: 2,
+        borderDash: [5, 3],
+        pointRadius: 3,
+        pointHoverRadius: 5,
+        tension: 0.25,
+        spanGaps: true,
+      });
+    }
   }
 
   const ctx = document.getElementById("chart-evolucao");
   if (charts.evolucao) charts.evolucao.destroy();
   charts.evolucao = new Chart(ctx, {
     type: "line",
-    data: {
-      labels,
-      datasets: [{
-        label: "Nota Falcão",
-        data: valores,
-        borderColor: cssVar("--institutional"),
-        backgroundColor: cssVar("--institutional"),
-        borderWidth: 2,
-        pointRadius: 3,
-        pointHoverRadius: 5,
-        tension: 0.25,
-      }],
-    },
+    data: { labels, datasets },
     options: {
       responsive: true,
-      plugins: { legend: { display: false } },
+      plugins: { legend: { display: datasets.length > 1, labels: { color: cssVar("--text-dim") } } },
       scales: {
         x: { grid: { color: cssVar("--border") }, ticks: { color: cssVar("--text-dim") } },
         y: { grid: { color: cssVar("--border") }, ticks: { color: cssVar("--text-dim") } },
@@ -1041,6 +1236,15 @@ function init(data, wehandleData) {
   document.getElementById("farol-select").addEventListener("change", (e) => {
     farolFilter = e.target.value;
     onFiltersChange();
+  });
+
+  document.getElementById("sabesp-select").addEventListener("change", (e) => {
+    sabespFilter = e.target.value;
+    onFiltersChange();
+  });
+
+  document.querySelectorAll("#ranking-dim-group .seg-btn").forEach(btn => {
+    btn.addEventListener("click", () => setRankingDimensao(btn.dataset.dim));
   });
 
   onFiltersChange();

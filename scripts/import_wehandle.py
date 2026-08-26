@@ -20,7 +20,14 @@ todos os casos, resultado de arredondamento, nao de formula errada):
       tipo de documento - "Integracao SST" - nao um componente separado)
     eventos_sabesp       = DDS + Campanhas + SaudeMental
     campo_sabesp         = Inspecoes
-    deflatores_sabesp    = -(Acidentes + Acidentes Fora do Prazo + NaoReportAcidentes)
+    deflatores_sabesp    = Acidentes + Acidentes Fora do Prazo + NaoReportAcidentes
+      (esses 3 campos JA vem negativos no dado bruto quando ha penalidade -
+      confirmado com JAN/2026, idWehandle 144023: Acidentes=-1000,
+      Acidentes Fora do Prazo=-1000, e a soma dos 4 componentes SEM negacao
+      extra reconstroi o TotalPontosMes oficial (-26) corretamente. Em
+      JUN/2026 esses campos eram todos 0 para os 8 contratos, entao o sinal
+      nao dava pra confirmar so com aquele mes - so negativar de novo aqui
+      se aparecer uma competencia futura com valor POSITIVO de Acidentes)
     nota_final_sabesp    = TotalPontosMes (oficial, nunca recalculado)
 
 Nao inventa idWehandle nao mapeado: se aparecer um idWehandle fora do
@@ -60,10 +67,43 @@ MESES_ARQUIVO = {
 }
 MESES_LABEL = ["JAN", "FEV", "MAR", "ABR", "MAI", "JUN", "JUL", "AGO", "SET", "OUT", "NOV", "DEZ"]
 
+# O nome das abas e colunas muda entre competencias (WeHandle evoluiu o
+# layout da exportacao ao longo do tempo). Cada tabela logica tem uma
+# lista de nomes possiveis, tentados nessa ordem.
+ABAS_CONTRATOS = ["contratos", "Pont - Contratos"]
+ABAS_DOCS_EMPRESA = ["documentos empresa", "DocsEmpresariais", "ListaDocsEmpresariais"]
+# "statusPorPessoa" vem primeiro porque em alguns meses (ex: fev/2026) a
+# aba "prestadores funcionarios" existe mas SEM coluna de status - o
+# status por pessoa fica numa aba separada.
+ABAS_PESSOAS = ["statusPorPessoa", "docs Pessoais - analisePorPesso", "prestadores funcionarios"]
 
-def inferir_competencia(caminho_arquivo, docs_emp):
-    """Mes vem do nome do arquivo (ex: '06-jun-...'); ano vem da data
-    mais comum na aba de documentos, ja que o nome do arquivo nao traz ano."""
+COL_STATUS_DOC = ["StatusRanking", "StatusRankingFinal", "StatusFinalRanking"]
+COL_PESSOA_CHAVE = ["wh-pessoa", "idWehandle-idPessoa", "Referência Funcionário"]
+COL_STATUS_PESSOA = ["StatusDocumentos", "StatusRankingFinal", "StatusPessoa", "StatusDocPessoais"]
+COL_DATA_DOC = ["Data da Postagem"]  # "Competência" existe em algumas abas mas e esparsa/pouco confiavel
+
+
+def _achar_aba(xls, candidatos):
+    for nome in candidatos:
+        if nome in xls.sheet_names:
+            return nome
+    raise ValueError(f"Nenhuma das abas esperadas {candidatos} encontrada. Abas do arquivo: {xls.sheet_names}")
+
+
+def _achar_coluna(df, candidatos, obrigatoria=True):
+    for nome in candidatos:
+        if nome in df.columns:
+            return nome
+    if obrigatoria:
+        raise ValueError(f"Nenhuma das colunas esperadas {candidatos} encontrada. Colunas disponiveis: {list(df.columns)}")
+    return None
+
+
+def inferir_competencia(caminho_arquivo, xls, docs_emp, col_data_doc):
+    """Mes vem do nome do arquivo (ex: '06-jun-...'); ano vem da data mais
+    comum disponivel, ja que o nome do arquivo nao traz ano. Tenta primeiro
+    a aba de documentos da empresa; se nao tiver datas utilizaveis (algumas
+    competencias nao preenchem essa coluna), cai para a aba de inspecoes."""
     nome = os.path.basename(caminho_arquivo).lower()
     mes = None
     for abrev, num in MESES_ARQUIVO.items():
@@ -73,9 +113,20 @@ def inferir_competencia(caminho_arquivo, docs_emp):
     if mes is None:
         raise ValueError(f"Nao foi possivel inferir o mes a partir do nome do arquivo: {nome}")
 
-    datas = pd.to_datetime(docs_emp["Data da Postagem"], errors="coerce").dropna()
+    datas = pd.Series(dtype="datetime64[ns]")
+    if col_data_doc:
+        datas = pd.to_datetime(docs_emp[col_data_doc], errors="coerce").dropna()
     if len(datas) == 0:
-        raise ValueError("Nao ha datas em 'Data da Postagem' para inferir o ano da competencia.")
+        for aba_insp in ("inspecoes", "Inspecoes"):
+            if aba_insp in xls.sheet_names:
+                insp = pd.read_excel(caminho_arquivo, sheet_name=aba_insp)
+                col = _achar_coluna(insp, ["Data", "Dados.DataInspecao", "DataInspecao"], obrigatoria=False)
+                if col:
+                    datas = pd.to_datetime(insp[col], errors="coerce").dropna()
+                    if len(datas) > 0:
+                        break
+    if len(datas) == 0:
+        raise ValueError("Nao foi possivel inferir o ano da competencia em nenhuma aba conhecida.")
     ano = int(datas.dt.year.mode()[0])
     return ano, mes
 
@@ -87,18 +138,33 @@ def _clean_text(v):
     return s if s else None
 
 
+def _num(v):
+    """Converte para float tratando None/NaN como 0. NAO usar 'v or 0' -
+    NaN e verdadeiro em Python (so 0 e falso), entao 'nan or 0' retorna
+    nan, nao 0, e o JSON final acaba com NaN literal (invalido, quebra
+    o fetch().json() no navegador)."""
+    if v is None or pd.isna(v):
+        return 0.0
+    return float(v)
+
+
 def montar_comparativo(caminho_arquivo):
     xls = pd.ExcelFile(caminho_arquivo)
-    abas_esperadas = {"contratos", "documentos empresa", "prestadores funcionarios"}
-    faltando = abas_esperadas - set(xls.sheet_names)
-    if faltando:
-        raise ValueError(f"Abas esperadas ausentes no arquivo: {faltando}")
 
-    contratos = pd.read_excel(caminho_arquivo, sheet_name="contratos")
-    docs_emp = pd.read_excel(caminho_arquivo, sheet_name="documentos empresa")
-    prest = pd.read_excel(caminho_arquivo, sheet_name="prestadores funcionarios")
+    aba_contratos = _achar_aba(xls, ABAS_CONTRATOS)
+    aba_docs = _achar_aba(xls, ABAS_DOCS_EMPRESA)
+    aba_pessoas = _achar_aba(xls, ABAS_PESSOAS)
 
-    ano, mes = inferir_competencia(caminho_arquivo, docs_emp)
+    contratos = pd.read_excel(caminho_arquivo, sheet_name=aba_contratos)
+    docs_emp = pd.read_excel(caminho_arquivo, sheet_name=aba_docs)
+    prest = pd.read_excel(caminho_arquivo, sheet_name=aba_pessoas)
+
+    col_status_doc = _achar_coluna(docs_emp, COL_STATUS_DOC)
+    col_pessoa_chave = _achar_coluna(prest, COL_PESSOA_CHAVE)
+    col_status_pessoa = _achar_coluna(prest, COL_STATUS_PESSOA)
+    col_data_doc = _achar_coluna(docs_emp, COL_DATA_DOC, obrigatoria=False)
+
+    ano, mes = inferir_competencia(caminho_arquivo, xls, docs_emp, col_data_doc)
     mes_ano_falcao = f"{ano}-{mes - 1:02d}"  # mesmo esquema zero-indexado do Falcao
     mes_ano_label = f"{MESES_LABEL[mes - 1]}/{ano}"
 
@@ -121,22 +187,24 @@ def montar_comparativo(caminho_arquivo):
         id_pc = MAPA_PC[id_wh]
 
         documentacao_sabesp = round(
-            float(row["Pont - DocsEmpresa"] or 0) + float(row["Pont - DocsFuncionarios"] or 0) + float(row["Integração"] or 0), 2
+            _num(row["Pont - DocsEmpresa"]) + _num(row["Pont - DocsFuncionarios"]) + _num(row["Integração"]), 2
         )
-        eventos_sabesp = round(float(row["DDS"] or 0) + float(row["Campanhas"] or 0) + float(row["SaudeMental"] or 0), 2)
-        campo_sabesp = round(float(row["Inspecoes"] or 0), 2)
+        eventos_sabesp = round(_num(row["DDS"]) + _num(row["Campanhas"]) + _num(row["SaudeMental"]), 2)
+        campo_sabesp = round(_num(row["Inspecoes"]), 2)
+        # Ja vem negativo no dado bruto quando ha penalidade - ver nota no
+        # topo do arquivo (validado contra JAN/2026, idWehandle 144023).
         deflatores_sabesp = round(
-            -(float(row["Acidentes"] or 0) + float(row["Acidentes Fora do Prazo"] or 0) + float(row["NaoReportAcidentes"] or 0)), 2
+            _num(row["Acidentes"]) + _num(row["Acidentes Fora do Prazo"]) + _num(row["NaoReportAcidentes"]), 2
         )
-        nota_final_sabesp = round(float(row["TotalPontosMes"] or 0), 2)
+        nota_final_sabesp = round(_num(row["TotalPontosMes"]), 2)
 
         docs_contrato = docs_emp[docs_emp["idWehandle"] == id_wh]
-        nao_conforme = docs_contrato[docs_contrato["StatusRanking"] != "Conforme"]
+        nao_conforme = docs_contrato[docs_contrato[col_status_doc] != "Conforme"]
         nomes_nao_conforme = sorted(set(nao_conforme["Documento"].dropna().astype(str).str.strip()))
 
         prest_contrato = prest[prest["idWehandle"] == id_wh]
-        total_colaboradores = int(prest_contrato["wh-pessoa"].nunique())
-        pendencias_func = int((prest_contrato["StatusDocumentos"] != "Conforme").sum())
+        total_colaboradores = int(prest_contrato[col_pessoa_chave].nunique())
+        pendencias_func = int((prest_contrato[col_status_pessoa] != "Conforme").sum())
 
         falcao_rec = falcao_por_pc_mes.get((id_pc, mes_ano_falcao))
 
@@ -170,6 +238,7 @@ def montar_comparativo(caminho_arquivo):
             },
             "fonte": "WeHandle - exportação mensal",
             "arquivo_origem": os.path.basename(caminho_arquivo),
+            "aba_origem": f"{aba_contratos} | {aba_docs} | {aba_pessoas}",
             "gerado_em": datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ"),
         })
 
@@ -201,7 +270,10 @@ def main():
 
     os.makedirs(os.path.dirname(OUTPUT_PATH), exist_ok=True)
     with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
-        json.dump(final, f, ensure_ascii=False, indent=2)
+        # allow_nan=False: se algum NaN/Infinity escapar, falha aqui com
+        # erro claro em vez de gravar um JSON invalido que quebra o
+        # fetch().json() no navegador silenciosamente (ja aconteceu).
+        json.dump(final, f, ensure_ascii=False, indent=2, allow_nan=False)
 
     print(f"OK: {len(registros)} contratos de {mes_ano_label} gravados em {os.path.abspath(OUTPUT_PATH)}")
     print(f"Total de registros no arquivo (todas as competencias importadas ate agora): {len(final)}")
