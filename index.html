@@ -116,6 +116,7 @@
   .kpi.is-highlight .kpi__value{ color:var(--institutional); font-size:1.85rem; }
   /* ---- layout ---- */
   .split{ display:grid; grid-template-columns:1.3fr 1fr; gap:16px; margin-bottom:16px; align-items:start; }
+  .split.split-3{ grid-template-columns:repeat(3,1fr); }
   @media (max-width:960px){ .split{ grid-template-columns:1fr; } }
   .panel{ background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:18px 20px; margin-bottom:16px; box-shadow:var(--shadow); scroll-margin-top:82px; }
   .panel h3{ font-size:12px; font-weight:700; letter-spacing:0.04em; color:var(--institutional); margin:0 0 14px; text-transform:uppercase; }
@@ -400,7 +401,7 @@
 
     <section class="panel" id="painel-comparativo-geral" hidden></section>
 
-    <section class="split">
+    <section class="split split-3">
       <div class="panel" style="margin-bottom:0;">
         <h3 id="evolucao-title">Evolução da nota média SST</h3>
         <canvas id="chart-evolucao" height="220"></canvas>
@@ -413,6 +414,11 @@
           <span class="farol-legend__item"><span class="farol-legend__dot farol-amarelo"></span>Amarelo 1.000–1.599</span>
           <span class="farol-legend__item"><span class="farol-legend__dot farol-vermelho"></span>Vermelho &lt; 1.000</span>
         </div>
+      </div>
+      <div class="panel" style="margin-bottom:0;">
+        <h3>Técnicos por PC</h3>
+        <canvas id="chart-tecnicos" height="220"></canvas>
+        <div class="indicador-list" id="tecnicos-legend" style="margin-top:14px;"></div>
       </div>
     </section>
 
@@ -543,6 +549,15 @@ let charts = {};
 const PC_NAO_SABESP = new Set([10363, 10367, 10383, 10385, 10387, 10394, 10398, 10401]);
 function ehPcSabesp(idPc) {
   return !PC_NAO_SABESP.has(Number(idPc));
+}
+
+// Classificacao "tem tecnico" x "nao tem tecnico" por PC, fornecida
+// manualmente pelo usuario em 2026-08-26 (nao vem de nenhum campo do
+// ArcGIS). PCs fora desta lista sao tratados como "com tecnico" por
+// padrao, ja que so 2 dos 19 PCs conhecidos nao tinham.
+const PC_SEM_TECNICO = new Set([10363, 10367]);
+function pcTemTecnico(idPc) {
+  return !PC_SEM_TECNICO.has(Number(idPc));
 }
 
 Chart.defaults.font.family = "'Inter', -apple-system, 'Segoe UI', sans-serif";
@@ -1259,6 +1274,54 @@ function renderChartFarol(mesAno) {
   });
 }
 
+function renderChartTecnicos(mesAno) {
+  const registros = registrosFiltrados(mesAno);
+  const comTecnico = registros.filter(r => pcTemTecnico(r.id_pc)).length;
+  const semTecnico = registros.length - comTecnico;
+
+  const ctx = document.getElementById("chart-tecnicos");
+  if (charts.tecnicos) charts.tecnicos.destroy();
+  charts.tecnicos = new Chart(ctx, {
+    type: "pie",
+    data: {
+      labels: ["Com técnico", "Sem técnico"],
+      datasets: [{
+        data: [comTecnico, semTecnico],
+        backgroundColor: [cssVar("--institutional"), cssVar("--farol-vermelho-tx")],
+        borderColor: cssVar("--surface"),
+        borderWidth: 2,
+      }],
+    },
+    options: {
+      responsive: true,
+      aspectRatio: 2,
+      plugins: {
+        legend: { display: false },
+        tooltip: { callbacks: { label: (c) => `${c.label}: ${c.raw} contrato(s)` } },
+      },
+    },
+  });
+
+  const total = registros.length;
+  const pct = (n) => total > 0 ? ((n / total) * 100).toLocaleString("pt-BR", { maximumFractionDigits: 1 }) : "0";
+  document.getElementById("tecnicos-legend").innerHTML = `
+    <div class="indicador">
+      <span class="indicador__icon" style="color:${cssVar("--institutional")};">●</span>
+      <div>
+        <div class="indicador__label">Com técnico</div>
+        <div class="indicador__value">${comTecnico} <small>(${pct(comTecnico)}%)</small></div>
+      </div>
+    </div>
+    <div class="indicador">
+      <span class="indicador__icon" style="color:${cssVar("--farol-vermelho-tx")};">●</span>
+      <div>
+        <div class="indicador__label">Sem técnico</div>
+        <div class="indicador__value">${semTecnico} <small>(${pct(semTecnico)}%)</small></div>
+      </div>
+    </div>
+  `;
+}
+
 function onFiltersChange() {
   const mesAno = document.getElementById("mes-select").value;
   if (pcFilter !== "todos") {
@@ -1274,6 +1337,7 @@ function onFiltersChange() {
   renderRanking(mesAno);
   renderDetalhe(mesAno);
   renderChartFarol(mesAno);
+  renderChartTecnicos(mesAno);
   renderChartEvolucao();
 }
 
