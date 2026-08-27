@@ -1,10 +1,10 @@
 {
-  "gerado_em": "2026-08-27T12:46:48Z",
+  "gerado_em": "2026-08-27T22:47:03Z",
   "resumo": {
     "total_contratos": 19,
     "mes_mais_recente": "2026-07",
     "mes_mais_recente_label": "AGO/2026",
-    "media_nota_sst_mes_recente": 730.75,
+    "media_nota_sst_mes_recente": 730.81,
     "farol_mes_recente": {
       "verde": 0,
       "amarelo": 5,
@@ -57,7 +57,7 @@
     {
       "mes_ano": "2026-07",
       "mes_ano_label": "AGO/2026",
-      "media_nota_sst": 730.75,
+      "media_nota_sst": 730.81,
       "qtd_contratos": 9
     }
   ],
@@ -7459,9 +7459,9 @@
       "qtd_campanha_sst": 0.0,
       "qtd_saude_mental": 0.0,
       "eventos_realizados": "Nenhum evento registrado no período",
-      "qtd_registros_ocorrencias_total": 43.0,
-      "soma_ocor": 42000.0,
-      "qtd_registros_campo_pontuaveis": 43.0,
+      "qtd_registros_ocorrencias_total": 44.0,
+      "soma_ocor": 43000.0,
+      "qtd_registros_campo_pontuaveis": 44.0,
       "soma_def": -1000.0,
       "qtd_deflatores": 5.0,
       "qtd_paralisacoes": 5.0,
@@ -7477,10 +7477,10 @@
       "acidentes_detalhe": [],
       "nota_documento": 0.0,
       "nota_evento": 0.0,
-      "nota_ocorrencia": 976.74,
+      "nota_ocorrencia": 977.27,
       "nota_deflatores": -1000.0,
       "nota_analise_sst_media": 0.0,
-      "nota_effico_sst": -23.26,
+      "nota_effico_sst": -22.73,
       "farol": "vermelho",
       "status_sst": "🔴 VERMELHO"
     },
