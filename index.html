@@ -71,6 +71,20 @@
   .navbar__name span{ font-size:11px; color:var(--text-dim); letter-spacing:0.03em; }
   .navbar__meta{ font-size:12px; color:var(--text-dim); }
 
+  .update-banner{
+    position:sticky; top:66px; z-index:99;
+    display:flex; align-items:center; justify-content:center; gap:14px;
+    background:var(--accent-tint); border-bottom:1px solid var(--accent);
+    color:var(--institutional); font-size:12.5px; font-weight:600;
+    padding:8px 16px; text-align:center;
+  }
+  .update-banner button{
+    font-size:11.5px; font-weight:700; padding:4px 12px; white-space:nowrap;
+    border:1px solid var(--institutional); border-radius:6px; background:var(--surface);
+    color:var(--institutional); cursor:pointer;
+  }
+  .update-banner button:hover{ background:var(--institutional); color:#fff; }
+
   /* ---- filter bar ---- */
   .filter-bar{
     display:flex; flex-wrap:wrap; gap:10px 16px; align-items:flex-end;
@@ -336,6 +350,11 @@
     <span class="navbar__meta" id="updated-at"></span>
   </div>
 </nav>
+
+<div class="update-banner" id="banner-atualizacao" hidden>
+  🔄 Esta página foi aberta antes da última atualização dos dados.
+  <button onclick="location.reload()">Atualizar agora</button>
+</div>
 
 <div id="app" hidden>
   <div class="container page-body">
@@ -1343,6 +1362,23 @@ function onFiltersChange() {
   renderChartEvolucao();
 }
 
+// Verifica periodicamente se ha uma versao mais nova de data/falcao_sst.json
+// (o cron do GitHub Actions roda a cada 15min) e avisa quem deixou a pagina
+// aberta numa aba antiga, para nao confundir dado desatualizado com bug.
+function iniciarChecagemAtualizacao(geradoEmAtual) {
+  const INTERVALO_MS = 5 * 60 * 1000;
+  setInterval(() => {
+    fetch("data/falcao_sst.json", { cache: "no-store" })
+      .then(r => r.ok ? r.json() : null)
+      .then(novo => {
+        if (novo && novo.gerado_em && novo.gerado_em !== geradoEmAtual) {
+          document.getElementById("banner-atualizacao").hidden = false;
+        }
+      })
+      .catch(() => {});
+  }, INTERVALO_MS);
+}
+
 function init(data, wehandleData) {
   DATA = data;
   WEHANDLE = wehandleData || [];
@@ -1351,6 +1387,7 @@ function init(data, wehandleData) {
   document.getElementById("updated-at").textContent = data.gerado_em
     ? `Atualizado em ${new Date(data.gerado_em).toLocaleString("pt-BR")}`
     : "";
+  if (data.gerado_em) iniciarChecagemAtualizacao(data.gerado_em);
 
   const meses = data.evolucao_mensal.map(e => ({ value: e.mes_ano, label: e.mes_ano_label }));
   const mesSelect = document.getElementById("mes-select");
