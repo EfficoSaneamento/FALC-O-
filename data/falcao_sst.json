@@ -1,14 +1,14 @@
 {
-  "gerado_em": "2026-09-01T06:32:00Z",
+  "gerado_em": "2026-09-01T12:01:35Z",
   "resumo": {
     "total_contratos": 19,
-    "mes_mais_recente": "2026-07",
-    "mes_mais_recente_label": "AGO/2026",
-    "media_nota_sst_mes_recente": 732.74,
+    "mes_mais_recente": "2026-08",
+    "mes_mais_recente_label": "SET/2026",
+    "media_nota_sst_mes_recente": 700.0,
     "farol_mes_recente": {
       "verde": 0,
-      "amarelo": 5,
-      "vermelho": 4
+      "amarelo": 0,
+      "vermelho": 1
     }
   },
   "evolucao_mensal": [
@@ -59,6 +59,12 @@
       "mes_ano_label": "AGO/2026",
       "media_nota_sst": 732.74,
       "qtd_contratos": 9
+    },
+    {
+      "mes_ano": "2026-08",
+      "mes_ano_label": "SET/2026",
+      "media_nota_sst": 700.0,
+      "qtd_contratos": 1
     }
   ],
   "registros": [
@@ -7531,6 +7537,56 @@
       "nota_deflatores": 0.0,
       "nota_analise_sst_media": 0.0,
       "nota_effico_sst": 25.0,
+      "farol": "vermelho",
+      "status_sst": "🔴 VERMELHO"
+    },
+    {
+      "id_pc": 10399,
+      "mes_ano": "2026-08",
+      "diretor": "Rodrigo da Silva Worms",
+      "gerente": "Rodrigo da Silva Worms",
+      "projeto": "PC 399 - UNIVERSALIZA LOTE 03",
+      "mes_ano_label": "SET/2026",
+      "soma_doc": 0.0,
+      "qtd_registros_documento": 0.0,
+      "soma_doc_integrado": 0.0,
+      "qtd_doc_integrado": 0.0,
+      "documentos_reprovados": "Nenhum documento reprovado no período",
+      "soma_total_analisados": 0.0,
+      "soma_total_nao_conforme": 0.0,
+      "soma_colaboradores_avaliados": 0.0,
+      "soma_treinamentos_nrs": 0.0,
+      "documentos_detalhe": [],
+      "nota_dds": 0.0,
+      "nota_campanha_sst": 0.0,
+      "nota_saude_mental": 0.0,
+      "qtd_registros_eventos": 0.0,
+      "qtd_dds": 0.0,
+      "qtd_campanha_sst": 0.0,
+      "qtd_saude_mental": 0.0,
+      "eventos_realizados": "Nenhum evento registrado no período",
+      "qtd_registros_ocorrencias_total": 2.0,
+      "soma_ocor": 1800.0,
+      "qtd_registros_campo_pontuaveis": 2.0,
+      "soma_def": -200.0,
+      "qtd_deflatores": 1.0,
+      "qtd_paralisacoes": 1.0,
+      "qtd_acidentes": 0.0,
+      "qtd_fatalidades": 0.0,
+      "qtd_acidentes_afastamento": 0.0,
+      "qtd_acidentes_sem_afastamento": 0.0,
+      "soma_analise_sst": 0.0,
+      "qtd_analise_sst": 0.0,
+      "resumo_acidentes": "Nenhum acidente registrado no período",
+      "soma_dias_afastado": 0.0,
+      "soma_custo_afastamento": 0.0,
+      "acidentes_detalhe": [],
+      "nota_documento": 0.0,
+      "nota_evento": 0.0,
+      "nota_ocorrencia": 900.0,
+      "nota_deflatores": -200.0,
+      "nota_analise_sst_media": 0.0,
+      "nota_effico_sst": 700.0,
       "farol": "vermelho",
       "status_sst": "🔴 VERMELHO"
     }
